@@ -2340,6 +2340,26 @@ class VideoCompiler:
                       (0, 0, 0)).save(black_img)
             black_abs = os.path.abspath(black_img).replace('\\', '/')
 
+            # ── Prepare intro clip (trimmed to fit the intro slot) ────────────
+            intro_clip = None
+            if intro_path and os.path.exists(intro_path) and intro_duration > 0.05:
+                intro_clip = os.path.join(temp_dir, "intro_trimmed.mp4")
+                r = subprocess.run([
+                    'ffmpeg', '-y', '-i', intro_path,
+                    '-t', f'{intro_duration:.6f}',
+                    '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
+                    '-pix_fmt', 'yuv420p', '-r', str(self.config.fps),
+                    '-vf', f'scale={self.config.image_width}:{self.config.image_height}:force_original_aspect_ratio=increase,crop={self.config.image_width}:{self.config.image_height}',
+                    '-c:a', 'copy',
+                    '-an',
+                    intro_clip
+                ], capture_output=True, text=True, timeout=120)
+                if r.returncode != 0:
+                    print(f"   ⚠ Intro trim failed, falling back to black gap: {r.stderr[-200:]}")
+                    intro_clip = None
+                else:
+                    print(f"   ✓ Intro trimmed to {intro_duration:.2f}s")
+
             # ── Ken Burns / crossfade path ────────────────────────────────────────
             use_clips = self.config.ken_burns or self.config.crossfade
             if use_clips:
@@ -2351,13 +2371,16 @@ class VideoCompiler:
                 # For Ken Burns, still need to prepend the intro gap if any
                 gap = images_sorted[0].start_time if images_sorted else 0.0
                 if gap > 0.05:
-                    gap_clip = os.path.join(temp_dir, "gap.mp4")
-                    subprocess.run([
-                        'ffmpeg', '-y', '-loop', '1', '-framerate', str(self.config.fps),
-                        '-i', black_img, '-t', f'{gap:.6f}',
-                        '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
-                        '-pix_fmt', 'yuv420p', '-r', str(self.config.fps), gap_clip
-                    ], capture_output=True, text=True, timeout=60)
+                    if intro_clip:
+                        gap_clip = intro_clip
+                    else:
+                        gap_clip = os.path.join(temp_dir, "gap.mp4")
+                        subprocess.run([
+                            'ffmpeg', '-y', '-loop', '1', '-framerate', str(self.config.fps),
+                            '-i', black_img, '-t', f'{gap:.6f}',
+                            '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
+                            '-pix_fmt', 'yuv420p', '-r', str(self.config.fps), gap_clip
+                        ], capture_output=True, text=True, timeout=60)
                     if os.path.exists(gap_clip):
                         gap_list = os.path.join(temp_dir, "gap_list.txt")
                         with open(gap_list, 'w') as f:
@@ -2417,9 +2440,13 @@ class VideoCompiler:
 
                         # Gap before this scene (intro gap or holes between scenes)
                         if t0 > cursor + 0.001:
-                            gap_clip = os.path.join(temp_dir, f'gap_{idx:04d}.mp4')
-                            jobs.append((black_img, t0 - cursor, gap_clip))
-                            clips.append(gap_clip)
+                            if intro_clip and cursor < 0.001:
+                                # First gap is the intro slot — use the trimmed intro video
+                                clips.append(intro_clip)
+                            else:
+                                gap_clip = os.path.join(temp_dir, f'gap_{idx:04d}.mp4')
+                                jobs.append((black_img, t0 - cursor, gap_clip))
+                                clips.append(gap_clip)
 
                         # Resolve image: real file → existing placeholder → new placeholder
                         snum     = entry['scene']
@@ -2480,6 +2507,7 @@ class VideoCompiler:
                     cursor      = 0.0
                     entries     = 0
                     images_sorted = sorted(images, key=lambda x: x.start_time)
+                    fallback_intro_handled = False
 
                     with open(concat_path, 'w') as f:
                         for img in images_sorted:
@@ -2489,7 +2517,11 @@ class VideoCompiler:
                             effective_dur   = img.end_time - effective_start
                             gap = effective_start - cursor
                             if gap > 0.001:
-                                f.write(f"file '{black_abs}'\nduration {gap:.6f}\n")
+                                if intro_clip and cursor < 0.001:
+                                    # Skip the intro gap — intro clip will be prepended after
+                                    fallback_intro_handled = True
+                                else:
+                                    f.write(f"file '{black_abs}'\nduration {gap:.6f}\n")
                             if effective_dur > 0:
                                 abs_path = os.path.abspath(img.image_path).replace('\\', '/')
                                 f.write(f"file '{abs_path}'\nduration {effective_dur:.6f}\n")
@@ -2520,6 +2552,22 @@ class VideoCompiler:
                         print(f"   FFmpeg concat FAILED (rc={r.returncode})")
                         print(r.stderr[:1000] if len(r.stderr) > 1000 else r.stderr)
                         return False
+
+                    # Prepend intro clip if it was skipped from the concat
+                    if fallback_intro_handled and intro_clip:
+                        prepend_list = os.path.join(temp_dir, "intro_prepend.txt")
+                        with open(prepend_list, 'w') as f:
+                            f.write(f"file '{os.path.abspath(intro_clip).replace(chr(92), '/')}'\n")
+                            f.write(f"file '{os.path.abspath(images_video).replace(chr(92), '/')}'\n")
+                        prepended = os.path.join(temp_dir, "with_intro.mp4")
+                        r = subprocess.run([
+                            'ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', prepend_list,
+                            '-c', 'copy', prepended
+                        ], capture_output=True, text=True, timeout=300)
+                        if r.returncode == 0:
+                            images_video = prepended
+                        else:
+                            print(f"   ⚠ Intro prepend failed: {r.stderr[-200:]}")
 
                 combined_video = images_video
 
