@@ -734,12 +734,29 @@ class App(tk.Tk):
                 cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 text=True, encoding="utf-8", errors="replace", env=env)
             self.after(0, lambda: self.stop_btn.config(state="normal"))
+            in_traceback = False
+            last_error = ""
             for line in self._proc.stdout:
+                stripped = line.strip()
+                # Detect start of a Python traceback
+                if stripped.startswith("Traceback (most recent call last)"):
+                    in_traceback = True
+                    last_error = ""
+                    continue
+                if in_traceback:
+                    # Capture the final error line (not indented, not 'File ...')
+                    if stripped.startswith("File ") or stripped.startswith("raise ") or not stripped or line.startswith("  "):
+                        continue
+                    # This is the actual error summary line
+                    last_error = stripped
+                    in_traceback = False
+                    self.after(0, self._log, f"ERROR: {last_error}\n")
+                    continue
                 self.after(0, self._log, line)
             self._proc.wait()
             self.after(0, self._log, "\n--- Done ---\n")
         except Exception as e:
-            self.after(0, self._log, f"\nERROR: {e}\n")
+            self.after(0, self._log, f"ERROR: {e}\n")
         finally:
             self._proc = None
             self.after(0, lambda: self.stop_btn.config(state="disabled"))
