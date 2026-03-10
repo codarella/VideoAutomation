@@ -1,0 +1,466 @@
+[
+  {
+    "scene": 167,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "940.00s - 946.56s",
+    "scene_text": "Number 3. Top Quark, predicted 1973, found 1995.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, bold amber-tinted nebula clouds billowing across the upper half, dense cold white star field, faint spiral galaxy arm curling at upper right. FOREGROUND: Flat 2D cartoon title reveal — one oversized amber-golden cartoon sphere (top quark, bold black outline, flat cel-shaded fill, 20% frame width) dominates center frame, radiating a subtle warm outer glow halo against the cosmic background. A bold cartoon numeral shape made of three stacked golden yellow rectangles (bold black outlines, flat fills) floats at far left, 15% frame height, representing the rank. Scientist stick figure at far-right edge, large round white head, solid black dot eyes, white rectangular torso, 12% frame height, one arm raised in announcement."
+  },
+  {
+    "scene": 168,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "946.56s - 951.66s",
+    "scene_text": "As the standard model of particle physics matured, a mathematical crisis emerged.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black with violet-pink nebula clouds pressing in from both upper corners, dense cold white star field, faint distant galaxy smear at center-right, atmosphere slightly ominous and dense. FOREGROUND: Flat 2D cartoon — a bold-outlined rectangular grid shape (Standard Model table, warm orange flat fill, bold black outline, 30% frame width, 25% frame height) sits at center frame, slightly tilted as if unstable. A jagged cartoon lightning bolt (coral red, bold black outline, flat fill, 12% frame height) strikes down from above center onto the grid, representing a mathematical crisis. Bold black outlines on all shapes, zero gradients."
+  },
+  {
+    "scene": 169,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "951.66s - 952.04s",
+    "scene_text": "To explain a phenomenon known as CP violation, the slight asymmetry",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy fading to black, violet-pink nebula clouds concentrated at upper left, dense cold white star field, faint galaxy glow at far right. FOREGROUND: Flat 2D cartoon — two large cartoon circles at center frame, nearly identical in size: left circle is clean white (bold black outline, flat fill, 14% frame width) representing matter, right circle is violet purple (bold black outline, flat fill, 13% frame width) representing antimatter, slightly smaller to show asymmetry. A bold coral red cartoon arrow points from the white circle toward the right, indicating the slight imbalance. Bold black outlines throughout, cel-shaded flat fills only."
+  },
+  {
+    "scene": 170,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "952.04s - 962.26s",
+    "scene_text": "that allows matter to exist without being perfectly canceled out by antimatter, physicists realized that two generations",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, swirling violet-pink nebula clouds across the upper two-thirds, dense cold white star field, elongated galaxy streak at lower left. FOREGROUND: Flat 2D cartoon — a large clean white cartoon sphere (bold black outline, flat fill, 16% frame width, left-center) and a large violet purple cartoon sphere (bold black outline, flat fill, 14% frame width, right-center) face each other but do NOT cancel; a bold coral red cartoon X-shape (12% frame width) hovers between them showing they fail to annihilate perfectly. Two small scientist stick figures at far-left edge, round white heads, solid black dot eyes, white torsos, 10% frame height each, gesturing with stick arms in concern. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 171,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "962.26s - 968.16s",
+    "scene_text": "of quarks, up, down, and charm, strange, weren't enough.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, thin violet-pink nebula wisps at upper right, dense cold white star field, faint galaxy core at far left. FOREGROUND: Flat 2D cartoon — four small cartoon spheres arranged in two pairs at center frame, each about 8% frame width: top-left warm orange (up quark), top-right coral red (down quark), bottom-left golden yellow (charm quark), bottom-right violet purple (strange quark), all bold black outlined, flat fills. A large bold cartoon X shape (coral red, bold black outline, flat fill, 15% frame width) overlays the group, indicating these four are insufficient. Scientist stick figure at far-right edge, round white head, dot eyes, white torso, 12% frame height, one stick arm raised with a question-mark thought bubble (bold outlined, white fill, 8% frame width)."
+  },
+  {
+    "scene": 172,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "968.16s - 972.24s",
+    "scene_text": "In 1973, Makoto Kobayashi and Toshihide Maskawa hypothesized that",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft violet-pink nebula clouds at upper center, dense cold white star field, faint spiral galaxy detail at lower right. FOREGROUND: Flat 2D cartoon — two scientist stick figures stand side by side at center frame, large round white heads, solid black dot eyes, white rectangular torsos, 12% frame height each. Between them floats a large bold-outlined thought bubble (white flat fill, bold black outline, 25% frame width) containing a simple question mark shape (coral red, bold black outline). Both figures gesture toward the bubble with raised stick arms, representing their joint hypothesis. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 173,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "972.24s - 975.92s",
+    "scene_text": "the math only worked if there was a third generation, the top and bottom quarks.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, warm amber-tinted nebula clouds building at upper left, dense cold white star field, faint galaxy arm at center-right. FOREGROUND: Flat 2D cartoon — the existing four small quark spheres from before (warm orange, coral red, golden yellow, violet purple, each 7% frame width) cluster at left side, now joined by two new larger cartoon spheres at right-center: one amber-golden (top quark, bold black outline, flat fill, 14% frame width) and one warm orange (bottom quark, bold black outline, flat fill, 11% frame width). A bold cartoon equals sign (coral red, bold black outline, 10% frame width) floats between the group and a cartoon checkmark (golden yellow, bold black outline, 10% frame height) at far right, indicating the math now works. Bold black outlines throughout."
+  },
+  {
+    "scene": 174,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "975.92s - 976.20s",
+    "scene_text": "The bottom quark was found relatively quickly in 1977.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds light and clean at upper right, dense cold white star field, faint distant galaxy at lower left. FOREGROUND: Flat 2D cartoon — a warm orange cartoon sphere (bottom quark, bold black outline, flat fill, 14% frame width) sits at center frame, surrounded by a bold golden yellow starburst shape (bold black outline, flat fill, 22% frame width) radiating outward to indicate discovery. A scientist stick figure at far-left edge, round white head, solid black dot eyes, white rectangular torso, 12% frame height, arms raised in celebration. Bold black outlines on all shapes, cel-shaded flat fills only."
+  },
+  {
+    "scene": 175,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "976.20s - 983.30s",
+    "scene_text": "The top quark, however, remained a ghost. For nearly two decades, the most powerful particle",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, heavy ominous violet-pink nebula clouds dominating upper two-thirds, dense cold white star field, dark atmosphere suggesting long searching. FOREGROUND: Flat 2D cartoon — a faint dashed-outline amber-golden circle (top quark ghost, no fill, just dashed bold black outline, 15% frame width) floats at center frame, semi-transparent to indicate absence. A cartoon clock-like circle (bold black outline, clean white flat fill, 12% frame width) sits at lower right with two bold stick hands indicating passage of time. Scientist stick figure at far-right edge, round white head, teardrop-shaped dot eyes suggesting frustration, white torso, 12% frame height, hands raised in search. Bold black outlines throughout."
+  },
+  {
+    "scene": 176,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "983.30s - 991.64s",
+    "scene_text": "accelerators on Earth smashed matter together, searching for it, and",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds at upper corners, dense cold white star field, faint galaxy spiral at center-right, Earth implied by context. FOREGROUND: Flat 2D cartoon — a large bold-outlined ring shape (particle accelerator, warm orange flat fill, bold black outline, 35% frame width) sits at lower center, tiny against the vastness of space. Two small cartoon spheres (one coral red, one golden yellow, each 5% frame width, bold black outlines) race along the ring toward each other from opposite sides, tiny arrows indicating direction. A bold cartoon starburst explosion shape (golden yellow + coral red, bold black outline, flat fills, 12% frame width) marks their collision point at top of ring. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 177,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "991.64s - 996.20s",
+    "scene_text": "found absolutely nothing. It wasn't until 1995 that the",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, heavy ominous violet-pink nebula clouds pressing in from all sides, dense cold white star field, dark and empty feeling. FOREGROUND: Flat 2D cartoon — the particle accelerator ring (warm orange, bold black outline, 30% frame width) sits at center, but where the collision should be is only a large bold cartoon X shape (coral red, bold black outline, flat fill, 12% frame width), indicating nothing found. A scientist stick figure at far-left edge, round white head, teardrop dot eyes, white torso, 12% frame height, slumped posture with stick arms hanging down in defeat. A dashed-outline ghost circle (top quark absent, no fill, 12% frame width) hovers at upper right. Bold black outlines throughout."
+  },
+  {
+    "scene": 178,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "996.20s - 1002.04s",
+    "scene_text": "Tevatron at Fermilab in Illinois, a four-mile underground ring of supercooled magnets, finally",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, amber-tinted nebula clouds building at upper left, dense cold white star field, faint galaxy arm at lower right, sense of anticipation. FOREGROUND: Flat 2D cartoon — a large bold-outlined ring shape (Tevatron accelerator, violet purple flat fill, bold black outline, 40% frame width) dominates center-lower frame, slightly larger and more imposing than previous accelerator depictions. Small bold arrows trace the ring in both directions indicating particle beams. The ring sits tiny against the vast cosmos above it. A small cartoon snowflake/magnet symbol (clean white, bold black outline, 6% frame width) decorates the ring to suggest supercooled magnets. A scientist stick figure stands at far-right edge, white head, dot eyes, white torso, 12% frame height, leaning forward in anticipation. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 179,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1002.04s - 1009.24s",
+    "scene_text": "generated enough raw energy to rip the top quark out of the quantum vacuum. The reason it took so long is what makes",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, explosive amber-orange nebula clouds bursting outward from center, dense cold white star field, dramatic and energetic atmosphere. FOREGROUND: Flat 2D cartoon — a massive bold starburst collision shape (golden yellow + coral red, bold black outline, flat fills, 30% frame width) explodes at center frame. Emerging from the center of the explosion is a brand-new amber-golden cartoon sphere (top quark, bold black outline, flat fill, 15% frame width), as if being ripped into existence. The accelerator ring (violet purple, bold black outline, 25% frame width) sits below, dwarfed by the energy. Bold outer glow halo around the top quark sphere (amber-golden, outer glow only, not internal gradient). Bold black outlines throughout."
+  },
+  {
+    "scene": 180,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1009.24s - 1015.14s",
+    "scene_text": "the top quark genuinely horrifying. It is absurdly, inexplicably massive.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, dense heavy violet-pink to amber nebula clouds filling upper two-thirds, cold white star field, ominous cosmic weight pressing down. FOREGROUND: Flat 2D cartoon — a single gigantic amber-golden cartoon sphere (top quark, bold black outline, flat cel-shaded fill, 25% frame width) dominates center frame, conveying enormity. Bold cartoon downward arrows (coral red, bold black outline, flat fill, 8% frame height each) press down from above onto the sphere, suggesting crushing mass. A tiny scientist stick figure at far-left edge, round white head, solid black dot eyes, white torso, 10% frame height, looking upward at the massive sphere in apparent shock. Bold black outlines on all shapes, zero internal gradients."
+  },
+  {
+    "scene": 181,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1015.14s - 1021.36s",
+    "scene_text": "A single top quark weighs as much as an entire atom of gold or tungsten. Let that sink in.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, amber-tinted nebula clouds at upper right, dense cold white star field, galaxy detail at lower left. FOREGROUND: Flat 2D cartoon — a large amber-golden cartoon sphere (top quark, bold black outline, flat fill, 18% frame width) sits at center-left with a bold cartoon equals sign (coral red, bold black outline, 8% frame width) beside it. At center-right, a complex cluster of tiny cartoon circles packed tightly together (atom shape, golden yellow flat fill, bold black outline overall, total cluster 18% frame width) representing a gold atom with hundreds of components. A bold cartoon balance scale (warm orange, bold black outline, flat fills, 20% frame width) stretches between them at lower center, with both sides perfectly level, showing equal mass. Bold black outlines throughout."
+  },
+  {
+    "scene": 182,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1021.36s - 1025.08s",
+    "scene_text": "A single, indivisible point of fundamental matter, something that has",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, soft violet-pink nebula clouds at upper center, dense cold white star field, faint galaxy spiral at far right. FOREGROUND: Flat 2D cartoon — a single amber-golden cartoon sphere (top quark, bold black outline, flat fill, 18% frame width) sits at center frame. Four bold cartoon arrows (coral red, bold black outline, flat fills, 8% frame height each) point inward at the sphere from all four compass directions, indicating it is fundamental and indivisible. A bold cartoon dividing line (clean white, bold black outline) tries to bisect the sphere but is blocked by a large bold X (coral red, 10% frame width), showing it cannot be split. Bold black outlines throughout, cel-shaded flat fills only."
+  },
+  {
+    "scene": 183,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1025.08s - 1028.40s",
+    "scene_text": "literally zero physical volume, carries the mass of a heavy, complex",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, heavy amber nebula clouds pressing in from upper left, dense cold white star field, ominous weight implied. FOREGROUND: Flat 2D cartoon — the amber-golden cartoon sphere (top quark, bold black outline, flat fill, 16% frame width) sits at center-left. A bold cartoon thought bubble (clean white, bold black outline, 20% frame width) floats upper-right of the sphere, containing a tiny cluster of tightly packed cartoon circles (complex atom, golden yellow fill, bold black outline, filling the bubble) representing its impossible mass. A bold downward arrow (coral red, bold black outline, 10% frame height) presses down from above the top quark sphere. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 184,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1028.40s - 1036.26s",
+    "scene_text": "atom composed of hundreds of protons and neutrons. Because it is so monstrously heavy, it",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, dense amber-pink nebula clouds dominating upper two-thirds, dense cold white star field, heavy and oppressive cosmic atmosphere. FOREGROUND: Flat 2D cartoon — a large amber-golden cartoon sphere (top quark, bold black outline, flat fill, 20% frame width) sits center-left. To its right, a towering pile of small cartoon spheres (protons and neutrons, alternating warm orange and clean white, each 4% frame width, bold black outlines) stacked as a column 30% frame height, representing hundreds of nucleons. The top quark sphere visually outweighs this pile as suggested by a cartoon scale tilting left (bold black outline, warm orange flat fill, 22% frame width) at lower center. Bold black outlines throughout."
+  },
+  {
+    "scene": 185,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1036.26s - 1040.20s",
+    "scene_text": "is incredibly unstable. A top quark exists for roughly 5 times 10 to the negative 25th seconds.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violent swirling violet-pink nebula clouds at upper center and right, dense cold white star field, frantic unstable atmosphere. FOREGROUND: Flat 2D cartoon — a large amber-golden cartoon sphere (top quark, bold black outline, flat fill, 18% frame width) sits at center frame, surrounded by jagged bold cartoon crack lines (coral red, bold black outline, flat fill) radiating outward from it in all directions, suggesting extreme instability. A cartoon hourglass (bold black outline, warm orange flat fill, 10% frame height) at far left is almost completely empty, its upper bulb nearly depleted. Bold black outlines throughout, cel-shaded flat fills only."
+  },
+  {
+    "scene": 186,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1040.20s - 1050.10s",
+    "scene_text": "That is a time frame so short that light itself cannot even cross the diameter of a single proton before",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, thin violet-pink nebula wisps at upper corners, dense cold white star field, faint galaxy core glowing at center-right. FOREGROUND: Flat 2D cartoon — a single tiny cartoon circle (proton, clean white, bold black outline, 8% frame width) sits at center frame. A bold cartoon lightning bolt (golden yellow, bold black outline, flat fill, 15% frame width) representing a light ray begins at the left edge of the proton but is cut off by a bold cartoon stop-sign shape (coral red, bold black outline, flat fill, 10% frame width) before it reaches the right edge, showing light cannot even cross this distance. An amber-golden sphere (top quark, bold black outline, flat fill, 10% frame width) at far right already shows bold crack lines indicating it has decayed. Bold black outlines throughout."
+  },
+  {
+    "scene": 187,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1050.10s - 1056.42s",
+    "scene_text": "the top quark violently decays into lighter particles. It lives and dies so fast that it doesn't",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, explosive coral-pink nebula burst at center-upper area, dense cold white star field, dramatic decay energy implied. FOREGROUND: Flat 2D cartoon — at center frame, a large bold cartoon explosion starburst (coral red + golden yellow, bold black outline, flat fills, 28% frame width) represents the top quark's violent decay. From the center of the explosion, three smaller cartoon spheres fly outward in different directions: one warm orange (8% frame width), one violet purple (8% frame width), one clean white (8% frame width), all bold black outlined, representing lighter decay products. A faint dashed amber-golden circle (ghost of top quark, no fill, dashed outline, 14% frame width) lingers at center behind the explosion. Bold black outlines throughout."
+  },
+  {
+    "scene": 188,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1056.42s - 1063.36s",
+    "scene_text": "even have time to bind with other quarks. The top quark shouldn't exist in our cold, low-energy universe.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, cold sparse violet-pink nebula very faint at upper edges, dense cold white star field, empty and cold atmosphere. FOREGROUND: Flat 2D cartoon — an amber-golden cartoon sphere (top quark, bold black outline, flat fill, 16% frame width) sits at center, surrounded by three smaller cartoon spheres (other quarks: warm orange, coral red, violet purple, each 7% frame width, bold black outlines) that reach toward it but cannot connect — bold cartoon dotted-line connectors between them are all broken with bold X marks (coral red, 5% frame width each). A large bold cartoon snowflake shape (clean white, bold black outline, 12% frame width) at lower right represents the cold universe where it doesn't belong. Bold black outlines throughout."
+  },
+  {
+    "scene": 189,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1063.36s - 1067.24s",
+    "scene_text": "It is a terrifying relic from the first microsecond of the Big Bang, a",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, intense amber-orange-pink nebula explosion filling the upper two-thirds, resembling primordial Big Bang energy, dense hot-feeling star field, ancient and violent atmosphere. FOREGROUND: Flat 2D cartoon — an amber-golden cartoon sphere (top quark, bold black outline, flat fill, 18% frame width) sits at center frame, wrapped in bold jagged flame shapes (coral red + warm orange, bold black outlines, flat fills) suggesting ancient primordial energy. A small cartoon timeline arrow (clean white, bold black outline, 15% frame width) at bottom points from a small starburst (representing the Big Bang, golden yellow, 6% frame width) on the left to the present on the right, with the top quark marked near the far left of the timeline. Bold black outlines throughout."
+  },
+  {
+    "scene": 190,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1067.24s - 1072.72s",
+    "scene_text": "monster of mass that can only be summoned by recreating the apocalyptic conditions of the universe's",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, extremely heavy ominous violet-amber nebula clouds filling almost the entire frame, dense cold white star field barely visible, apocalyptic oppressive atmosphere. FOREGROUND: Flat 2D cartoon — a massive amber-golden cartoon sphere (top quark, bold black outline, flat fill, 22% frame width) looms at upper center like a monster, surrounded by radiating bold coral red jagged lines (bold black outlines, flat fills) suggesting terrifying energy. Below it, the small accelerator ring (violet purple, bold black outline, 20% frame width) looks tiny and overwhelmed. A tiny scientist stick figure at far-right edge, round white head, teardrop dot eyes in fear, white torso, 10% frame height, backing away from the sphere. Bold black outlines throughout."
+  },
+  {
+    "scene": 191,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1072.72s - 1080.24s",
+    "scene_text": "birth. Its massive weight also threatens the stability of the very vacuum of space we live in, deeply tying",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violet-pink nebula clouds at all edges pressing inward, dense cold white star field, universe looking fragile and threatened. FOREGROUND: Flat 2D cartoon — an amber-golden cartoon sphere (top quark, bold black outline, flat fill, 18% frame width) sits at center-upper, connected by a bold cartoon chain (warm orange, bold black outline, flat fill links) to a golden yellow cartoon sphere with outer glow halo (Higgs boson, bold black outline, flat fill, 12% frame width) at center-lower, suggesting their deep physical connection. Around both spheres, bold cartoon crack lines (coral red, bold black outlines, flat fills) spread outward, suggesting vacuum instability. Bold black outlines throughout."
+  },
+  {
+    "scene": 192,
+    "segment": "#3 Top Quark, Predicted 1973, Found 1995.",
+    "time": "1080.24s - 1083.72s",
+    "scene_text": "into the terrifying nature of the next particle on our list.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, ominous violet-pink nebula heavy at upper center, dense cold white star field, atmosphere of dread and anticipation. FOREGROUND: Flat 2D cartoon — the amber-golden top quark sphere (bold black outline, flat fill, 15% frame width) sits at center-left, connected by a bold cartoon arrow (coral red, bold black outline, 15% frame width) pointing right toward a golden yellow cartoon sphere with warm outer glow halo (Higgs boson preview, bold black outline, flat fill, 12% frame width) at center-right. The golden sphere glows with a warm amber outer halo (outer glow only, not internal gradient). A scientist stick figure at far-right edge, round white head, solid black dot eyes, white torso, 12% frame height, leaning toward the Higgs sphere with clear curiosity. Bold black outlines throughout."
+  },
+  {
+    "scene": 194,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1083.72s - 1090.76s",
+    "scene_text": "Number 2. Higgs Boson, predicted 1964, found 2012.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, warm golden nebula clouds billowing across the upper half, dense cold white star field, faint spiral galaxy arm at lower right, sense of revelation. FOREGROUND: Flat 2D cartoon title reveal — one large golden yellow cartoon sphere (Higgs boson, bold black outline, flat cel-shaded fill, warm amber outer glow halo radiating outward, 20% frame width) dominates center frame. Small golden yellow dots scattered throughout the frame between cartoon and space layers (Higgs field), each 1-2% frame width, bold black outlines. A bold rank marker of two stacked golden yellow rectangles (bold black outline, flat fill) at far left, 15% frame height. Scientist stick figure at far-right edge, round white head, solid black dot eyes, white torso, 12% frame height, arms raised in reverence. Bold black outlines throughout."
+  },
+  {
+    "scene": 195,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1090.76s - 1096.26s",
+    "scene_text": "This was the Holy Grail, the missing keystone of reality.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, radiant golden-white nebula light emanating from center, dense cold white star field, majestic reverent atmosphere. FOREGROUND: Flat 2D cartoon — a large golden yellow cartoon sphere (Higgs boson, bold black outline, flat fill, warm amber outer glow halo, 20% frame width) sits at dead center, radiating a large bold outer glow ring (amber-golden color, outer glow only, 30% frame width total including glow). A bold-outlined arc shape (warm orange, bold black outline, flat fill, 30% frame width) curves above the sphere like an arch or keystone, its center gap perfectly fitting the sphere. Small golden yellow Higgs field dots (1-2% each, bold black outlines) scattered throughout upper and lower regions. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 196,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1096.26s - 1101.04s",
+    "scene_text": "By the 1960s, the equations of quantum mechanics worked perfectly, but they had one glaring, catastrophic",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds at upper corners, dense cold white star field, clean but with an ominous crack forming. FOREGROUND: Flat 2D cartoon — a bold-outlined rectangular equation grid (Standard Model table shape, warm orange flat fill, bold black outline, 30% frame width, 25% frame height) sits center-left, looking pristine. A large bold jagged crack shape (coral red, bold black outline, flat fill) cuts diagonally across the lower-right section of the grid, representing the catastrophic flaw. A scientist stick figure at far-right edge, round white head, solid black dot eyes, white torso, 12% frame height, pointing at the crack with a stick arm in alarm. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 197,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1101.04s - 1105.50s",
+    "scene_text": "flaw. According to the math, all fundamental particles should",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, soft violet-pink nebula clouds at upper right, dense cold white star field, faint galaxy glow at lower left. FOREGROUND: Flat 2D cartoon — multiple small cartoon spheres of different colors (representing all fundamental particles: warm orange, coral red, violet purple, golden yellow, clean white, each 6-8% frame width, bold black outlines, flat fills) are arranged in a loose cluster at center frame. Each sphere has a small bold cartoon equals-zero symbol (coral red, bold black outline) floating beside it, representing masslessness. A large bold cartoon arrow (golden yellow, bold black outline, 15% frame width) points rightward below the cluster. Bold black outlines throughout, cel-shaded flat fills only."
+  },
+  {
+    "scene": 198,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1105.50s - 1113.02s",
+    "scene_text": "be completely massless. They should all zip around the universe at the exact speed of light. If that were true, atoms",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, bright violet-pink nebula streaks at upper center suggesting speed, dense cold white star field with motion blur effect, dynamic fast atmosphere. FOREGROUND: Flat 2D cartoon — multiple small cartoon spheres (warm orange, coral red, violet purple, clean white, each 5% frame width, bold black outlines) streak across center frame from left to right with bold cartoon motion trail lines (matching sphere colors, bold black outlines, flat fills) behind each one. Below at center, a large bold cartoon X shape (coral red, bold black outline, flat fill, 14% frame width) overlays a simple outlined atom shape (bold black outline, no fill, 12% frame width), showing atoms could not form. Bold black outlines throughout."
+  },
+  {
+    "scene": 199,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1113.02s - 1116.30s",
+    "scene_text": "could never form. Chemistry wouldn't exist.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, sparse violet-pink nebula barely visible at edges, dense cold white star field, cold and empty feeling, sterile universe implied. FOREGROUND: Flat 2D cartoon — center frame shows a large bold cartoon X shape (coral red, bold black outline, flat fill, 18% frame width). Behind it, a simple bold-outlined molecule shape (two connected circles, clean white, bold black outlines, 20% frame width total) is crossed out, and a small chemistry flask shape (golden yellow, bold black outline, flat fill, 8% frame height) at lower center is also crossed out with a smaller coral red X. The scene communicates total absence of chemistry. Bold black outlines on all shapes, cel-shaded flat fills only."
+  },
+  {
+    "scene": 200,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1116.30s - 1122.92s",
+    "scene_text": "The universe would be a sterile, blinding flash of infinite speed. Yet, you have mass.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep white-bleached center fading to deep black at far edges, overexposed blinding nebula at center simulating infinite speed and sterility, cold white star field. FOREGROUND: Flat 2D cartoon — the center of frame is dominated by an enormous bold cartoon starburst/flash shape (clean white + golden yellow, bold black outline, flat fills, 35% frame width) representing infinite speed. At the far-right edge, a single scientist stick figure (round white head, solid black dot eyes, white torso, 12% frame height) stands solidly, pointing at themselves with a stick arm, representing real mass existing. A bold cartoon downward arrow (coral red, bold black outline, flat fill, 8% frame height) presses down on the stick figure, representing their actual mass. Bold black outlines throughout."
+  },
+  {
+    "scene": 201,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1122.92s - 1128.68s",
+    "scene_text": "The device you are reading this on has mass. Why? In 1964, Peter",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft violet-pink nebula clouds at upper right, dense cold white star field, faint galaxy at lower left. FOREGROUND: Flat 2D cartoon — a large bold-outlined rectangle (device shape, clean white flat fill, bold black outline, 20% frame width, 14% frame height) sits at center-left, representing a screen or device. A large bold cartoon question mark (coral red, bold black outline, flat fill, 12% frame height) floats at center-right beside it. A scientist stick figure at far-left edge, round white head, solid black dot eyes, white torso, 12% frame height, gesturing toward the question mark with a raised stick arm. Small golden yellow Higgs field dots (1-2% each, bold black outlines) scattered in the space between elements, hinting at the answer. Bold black outlines throughout."
+  },
+  {
+    "scene": 202,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1128.68s - 1135.24s",
+    "scene_text": "Higgs and several other theoretical physicists proposed an invisible field permeating all of space.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, faint golden-tinted nebula clouds at upper center, dense cold white star field, sense of something invisible pervading everything. FOREGROUND: Flat 2D cartoon — a subtle golden yellow dot-grid (Higgs field visualization, small dots 1-2% frame width each, bold black outlines, golden yellow flat fills) fills the entire frame area between cartoon and space layers, distributed evenly across the full frame to suggest all-pervasive invisible field. A golden yellow cartoon sphere with warm outer glow halo (Higgs boson, bold black outline, flat fill, 14% frame width) floats at center. Two scientist stick figures at far-left edge, round white heads, solid black dot eyes, white torsos, 12% frame height, gesturing outward toward the field. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 203,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1135.24s - 1139.64s",
+    "scene_text": "Imagine the universe filled with a thick cosmic molasses.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep amber-tinted navy to black, warm amber-golden nebula clouds thick and heavy across upper two-thirds, dense cold white star field barely visible, viscous feeling atmosphere. FOREGROUND: Flat 2D cartoon — the entire foreground is filled with an amber-tinted thick blob shape (cartoon molasses substance, amber-golden flat fill, bold black outline, filling 70% of frame area) with a lumpy irregular top edge. Small golden yellow cartoon spheres (Higgs field dots, 2-3% each, bold black outlines) are embedded throughout the blob substance. A small cartoon sphere (particle, coral red, bold black outline, flat fill, 7% frame width) is half-submerged in the molasses blob at center, showing drag. Bold black outlines on all shapes, cel-shaded flat fills only."
+  },
+  {
+    "scene": 204,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1139.64s - 1141.04s",
+    "scene_text": "As particles try to move through this field, they experience drag. That drag, that interaction",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep amber-navy to black, warm amber nebula clouds at upper half, dense cold white star field dimly visible, thick and resistant atmosphere. FOREGROUND: Flat 2D cartoon — the amber molasses blob (amber-golden flat fill, bold black outline, filling lower 60% of frame) contains multiple small cartoon spheres (warm orange, coral red, violet purple, clean white, each 6% frame width, bold black outlines) at different stages of movement through it. Bold cartoon curved arrows (coral red, bold black outline, flat fill) behind each sphere are bent and slowed, showing drag. Some spheres have bold cartoon wavy resistance lines (warm orange, bold black outline) in front of them. Golden yellow Higgs field dots (2% each) embedded in the molasses blob throughout. Bold black outlines throughout."
+  },
+  {
+    "scene": 205,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1141.04s - 1152.74s",
+    "scene_text": "with the field, is what we perceive as mass. To prove this field existed, scientists had to find its associated",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, golden-tinted nebula clouds at upper right, dense cold white star field, faint galaxy spiral at lower left. FOREGROUND: Flat 2D cartoon — the amber molasses blob (amber-golden, bold black outline, filling lower 50% of frame) persists with a cartoon sphere (warm orange, bold black outline, 8% frame width) embedded in it. A bold cartoon equals sign (coral red, bold black outline, 8% frame width) floats at center-right, with a small bold cartoon weight/mass symbol (clean white circle with bold black outline and a cartoon anchor shape below, total 10% frame height) to the right of it, showing drag equals mass. A scientist stick figure at far-right edge, round white head, dot eyes, white torso, 12% frame height, pointing at the equals sign with excited posture. Bold black outlines throughout."
+  },
+  {
+    "scene": 206,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1152.74s - 1159.30s",
+    "scene_text": "particle, the Higgs Boson. It took 48 years and the construction of the largest, most",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, golden-amber nebula clouds building at upper center, dense cold white star field, sense of enormous undertaking. FOREGROUND: Flat 2D cartoon — a golden yellow cartoon sphere with warm outer glow halo (Higgs boson, bold black outline, flat fill, 16% frame width) floats at center-upper as the target. Below it, a bold-outlined ring shape (LHC accelerator, violet purple flat fill, bold black outline, 35% frame width) dominates lower-center, looking vast. Small golden yellow Higgs field dots (1-2% each, bold black outlines) scattered throughout frame. A bold cartoon timeline line (warm orange, bold black outline, flat fill, 30% frame width) at bottom stretches left to right, with a small starburst at far left (prediction, 6% frame width) and a question mark at far right (not yet found, 8% frame height). Bold black outlines throughout."
+  },
+  {
+    "scene": 207,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1159.30s - 1167.14s",
+    "scene_text": "complex machine in human history, the Large Hadron Collider, LHC, at CERN, a 17-mile ring",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds at upper edges, dense cold white star field, faint galaxy at far right, machine dwarfed by cosmos. FOREGROUND: Flat 2D cartoon — a massive bold-outlined ring shape (LHC, violet purple flat fill, bold black outline, 45% frame width) dominates the lower two-thirds of frame, its scale emphasized against the vast space above. Bold arrows on the ring indicate two particle beams racing in opposite directions. Small cartoon maintenance symbols (bold-outlined wrenches, clean white, 4% each) decorate the ring exterior to suggest immense complexity. The ring is tiny against the cosmic background yet dominates the lower frame. A tiny scientist stick figure (round white head, dot eyes, white torso, 8% frame height) stands at the ring's edge for scale reference. Bold black outlines throughout."
+  },
+  {
+    "scene": 208,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1167.14s - 1173.56s",
+    "scene_text": "buried under the border of France and Switzerland. In July 2012, to the tears of aging",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, warm golden nebula light breaking through at upper center suggesting dawn of discovery, dense cold white star field, celebratory atmosphere building. FOREGROUND: Flat 2D cartoon — the LHC ring (violet purple, bold black outline, 35% frame width) sits at lower-center. A large golden yellow starburst collision explosion (bold black outline, flat fill, 20% frame width) erupts at the top of the ring where the beams meet. A scientist stick figure at far-left edge, round white head, teardrop dot eyes (crying), white torso, 12% frame height, hands near face in emotional tears of joy. Small golden yellow Higgs field dots (1-2% each, bold black outlines) scattered throughout frame. Bold black outlines throughout."
+  },
+  {
+    "scene": 209,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1173.56s - 1179.96s",
+    "scene_text": "physicists who had dedicated their lives to the hunt, the discovery of the Higgs Boson was confirmed.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, radiant golden nebula light flooding from upper center, dense cold white star field, triumphant and joyful cosmic atmosphere. FOREGROUND: Flat 2D cartoon — a golden yellow cartoon sphere with large warm amber outer glow halo (Higgs boson confirmed, bold black outline, flat fill, 20% frame width, outer glow 28% total) dominates center frame radiantly. Golden yellow Higgs field dots (1-2% each, bold black outlines) fill the entire frame area. Three scientist stick figures at far-left edge, round white heads, teardrop dot eyes (crying with joy), white torsos, 10% frame height each, arms raised in celebration. One scientist stick figure at far-right edge, same style, also arms raised. Bold starburst shapes (golden yellow + coral red, bold black outlines, flat fills, 12% each) at upper corners. Bold black outlines throughout."
+  },
+  {
+    "scene": 210,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1179.96s - 1185.36s",
+    "scene_text": "It was dubbed the God Particle by the media, much to the annoyance of scientists.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, golden nebula clouds at upper right, dense cold white star field, faint galaxy at lower left. FOREGROUND: Flat 2D cartoon — a golden yellow cartoon sphere with outer glow halo (Higgs boson, bold black outline, flat fill, 16% frame width) sits at center. A large bold cartoon speech bubble (clean white, bold black outline, 28% frame width) floats upper-left pointing to an implied media source, containing a star/crown shape (golden yellow, bold black outline, flat fill, 8% frame width) suggesting grandiose naming. A scientist stick figure at far-right edge, round white head, solid black dot eyes replaced with an annoyed squinting expression (bold black lines for eyes), white torso, 12% frame height, one stick arm raised in an irritated gesture. Bold black outlines throughout."
+  },
+  {
+    "scene": 211,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1185.36s - 1190.80s",
+    "scene_text": "But the confirmation of the Higgs field brought with it the most terrifying, apocalyptic scenario ever conceived",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, ominous heavy violet-pink to purple nebula clouds building dramatically across the entire upper two-thirds, cold white star field barely visible, foreboding and apocalyptic atmosphere. FOREGROUND: Flat 2D cartoon — a golden yellow cartoon sphere with outer glow halo (Higgs boson, bold black outline, flat fill, 14% frame width) sits center-left, but its outer glow is now tinged with dark violet at the edges, subtly ominous. Golden yellow Higgs field dots (1-2% each, bold black outlines) fill the frame but now look threatening. A large bold cartoon skull-and-crossbones replacement shape (coral red, bold black outline, flat fill, 15% frame width) looms at center-right, representing the apocalyptic scenario. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 212,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1190.80s - 1193.98s",
+    "scene_text": "by science. Vacuum Decay.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black almost total darkness, extremely heavy ominous violet-purple nebula clouds filling 80% of the frame, cold white star field nearly smothered, most ominous scene so far. FOREGROUND: Flat 2D cartoon — center frame features a bold large circle (vacuum bubble, bold black outline, violet-dark flat fill interior, 30% frame width) with a bold outer ring expanding outward. From the circle, four bold cartoon arrows (coral red, bold black outline, flat fills, 12% frame width each) point outward in all four directions, suggesting expansion. The vacuum bubble interior is flat dark violet fill. The title emphasis is on the terrifying emptiness. Bold black outlines throughout, cel-shaded flat fills only."
+  },
+  {
+    "scene": 213,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1193.98s - 1198.02s",
+    "scene_text": "Fields naturally want to rest in their lowest possible energy state, like a ball rolling to the bottom of a valley.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft violet-pink nebula clouds at upper edges, dense cold white star field, faint galaxy at lower right. FOREGROUND: Flat 2D cartoon — a bold-outlined landscape shape (valley/bowl cross-section, warm orange flat fill, bold black outline, 40% frame width, 20% frame height) sits at lower-center, forming a clear U-shape valley. A small cartoon sphere (energy ball, golden yellow, bold black outline, flat fill, 8% frame width) sits at the very bottom of the valley, having rolled there. A bold curved arrow (coral red, bold black outline, 10% frame width) traces the path from the valley rim down to the bottom where the ball rests. This is the natural lowest-energy resting state. Bold black outlines throughout."
+  },
+  {
+    "scene": 214,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1198.02s - 1204.76s",
+    "scene_text": "We assume the universe's vacuum is at its lowest state, but calculations",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, ominous violet-pink nebula clouds at upper corners, dense cold white star field, faint galaxy streak at center, ominous undercurrent. FOREGROUND: Flat 2D cartoon — the valley landscape (warm orange, bold black outline, 40% frame width) returns, the golden yellow ball sitting at its apparent bottom. But now a small bold scientist stick figure at far-right edge (round white head, solid black dot eyes, white torso, 12% frame height) holds up a large bold cartoon question mark (coral red, bold black outline, flat fill, 10% frame height) beside the landscape, challenging the assumption. A bold cartoon magnifying glass shape (clean white, bold black outline, 12% frame width) hovers over the valley, suggesting closer inspection is needed. Bold black outlines throughout."
+  },
+  {
+    "scene": 215,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1204.76s - 1211.56s",
+    "scene_text": "involving the mass of the newly discovered Higgs Boson and the top quark suggest our universe might be sitting in",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, heavy ominous violet-purple nebula clouds filling upper two-thirds, dense cold white star field barely visible, dread-filled atmosphere. FOREGROUND: Flat 2D cartoon — two cartoon spheres float side by side at upper-center: the golden yellow Higgs boson (with outer glow halo, bold black outline, flat fill, 12% frame width) and the amber-golden top quark (bold black outline, flat fill, 14% frame width). Between them, bold cartoon calculation lines (clean white, bold black outlines, flat fills) connect to a downward arrow (coral red, bold black outline, 10% frame height) pointing at the valley landscape (warm orange, bold black outline, 35% frame width) at lower-center, where the valley now clearly has a suspicious shallow dimple at the top of a slope. Bold black outlines throughout."
+  },
+  {
+    "scene": 216,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1211.56s - 1216.12s",
+    "scene_text": "a false vacuum. The ball is resting in a dimple on the side of a much deeper",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, extremely heavy violet-purple nebula clouds, dense cold white star field barely visible, most ominous atmosphere yet. FOREGROUND: Flat 2D cartoon — the energy landscape (warm orange, bold black outline, 50% frame width, 30% frame height) occupies lower-center and clearly shows a shallow dimple (small depression) partway down a steep slope, not at the bottom. A small golden yellow cartoon sphere (false vacuum ball, bold black outline, flat fill, 8% frame width) sits in the shallow dimple. Below the dimple, the slope continues steeply down to a much deeper valley at lower-right (the true vacuum). A bold coral red cartoon downward arrow (bold black outline, 10% frame height) points from the dimple toward the deeper valley below. Bold black outlines throughout."
+  },
+  {
+    "scene": 217,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1216.12s - 1224.04s",
+    "scene_text": "cliff. If a high energy event or a random quantum fluctuation were to push the Higgs field out of this dimple,",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violently swirling violet-purple nebula clouds, dense cold white star field nearly obscured, apocalyptic threatening atmosphere. FOREGROUND: Flat 2D cartoon — the energy landscape (warm orange, bold black outline, 50% frame width) shows the shallow dimple and the steep cliff below clearly. The small golden yellow ball (8% frame width, bold black outline) sits in the dimple, but now a bold cartoon jagged lightning bolt (coral red, bold black outline, flat fill, 10% frame height) strikes down from above representing a high-energy event, pushing toward the ball. A second small bold cartoon sphere (violet purple, 5% frame width, bold black outline, flat fill) hovers near the ball representing a quantum fluctuation. Both threaten to dislodge the ball. Bold black outlines throughout."
+  },
+  {
+    "scene": 218,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1224.04s - 1230.80s",
+    "scene_text": "it would plummet to the true bottom. This would trigger a cascading phase transition of reality itself.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, explosive violet-purple nebula cascade across entire frame, dense cold white star field overwhelmed, cascading and falling atmosphere. FOREGROUND: Flat 2D cartoon — the energy landscape (warm orange, bold black outline, 50% frame width) shows the ball (golden yellow, 8% frame width, bold black outline) now rolling rapidly down the cliff with a bold cartoon motion trail (coral red, bold black outline, flat fill) behind it, plummeting toward the true bottom. The true vacuum bottom is a deep dark violet bowl. Multiple bold crack shapes (coral red, bold black outlines, flat fills) spread outward from the rolling ball's path across the landscape, representing cascading phase transition. Bold black outlines throughout."
+  },
+  {
+    "scene": 219,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1230.80s - 1233.92s",
+    "scene_text": "A bubble of true vacuum would appear and expand outward in all directions at the speed of light.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, ominous heavy violet-dark nebula clouds pressing inward from all edges, dense cold white star field at center, vulnerable and threatened. FOREGROUND: Flat 2D cartoon — at center frame, a large bold-outlined circle (vacuum bubble, bold black outline, dark violet flat fill interior, 30% frame width) expands outward with bold cartoon speed lines (violet purple, bold black outlines) radiating in all directions. Four bold cartoon arrows (coral red, bold black outline, flat fills, 12% frame width each) point outward from the circle edges in all four directions, indicating expansion at speed of light. The bubble's dark violet interior is empty — the true vacuum. Bold black outlines on all shapes, cel-shaded flat fills only."
+  },
+  {
+    "scene": 220,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1233.92s - 1243.52s",
+    "scene_text": "Inside this bubble, the fundamental constants of physics would change. The mass of electrons would alter, atomic",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, dark violet nebula consuming the upper half, dense cold white star field rapidly disappearing into darkness, universe unraveling atmosphere. FOREGROUND: Flat 2D cartoon — the large expanding vacuum bubble circle (dark violet flat fill, bold black outline, 40% frame width) occupies center-left. Inside the bubble, small particle spheres (warm orange, coral red, clean white, each 5% frame width, bold black outlines) now look different — their bold outlines shift to dashed lines or wobble, suggesting altered constants. At the bubble's edge, a bold-outlined atom shape (clean white, bold black outline, 10% frame width) is beginning to dissolve, splitting apart. Bold black outlines on all exterior shapes, with distorted shapes inside the bubble. Bold black outlines throughout."
+  },
+  {
+    "scene": 221,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1243.52s - 1244.18s",
+    "scene_text": "bonds would instantly dissolve, and all structures, stars, planets, and humans would",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, dark violet nebula completely dominating, cold white star field vanishing into darkness, annihilation atmosphere. FOREGROUND: Flat 2D cartoon — the vacuum bubble (dark violet flat fill, bold black outline, 50% frame width) expands across the left side of frame, consuming everything. At the bubble edge, cartoon depictions of structures dissolve: a simple bold-outlined star circle (golden yellow, bold black outline, flat fill, 8% frame width) breaks into fragments, a small planet circle (warm orange, bold black outline, 7% frame width) cracks apart, and a scientist stick figure at far-right edge (round white head, dot eyes, white torso, 12% frame height) shows bold crack lines spreading across its body from left to right. All dissolving shapes have bold black outlines mid-dissolution. Bold black outlines throughout."
+  },
+  {
+    "scene": 222,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1244.18s - 1257.32s",
+    "scene_text": "be instantly wiped from existence. Because the bubble expands at the speed of light, we would never see it coming.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, total darkness at left half consumed by the bubble, faint cold white star field remains at right half, stark contrast of existence vs annihilation. FOREGROUND: Flat 2D cartoon — the left half of the frame is the vacuum bubble (dark violet flat fill, bold black outline along its expanding right edge, 50% frame width) with absolute emptiness inside. The right half shows a scientist stick figure (round white head, solid black dot eyes, white torso, 12% frame height) at far right, looking away, completely unaware. The bubble's advancing edge is a bold bright line of coral red (bold black outline, flat fill) rushing toward the unsuspecting figure. A bold cartoon lightning bolt shape (golden yellow, bold black outline, flat fill, 10% frame width) at the bubble edge represents light-speed expansion. Bold black outlines throughout."
+  },
+  {
+    "scene": 223,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1257.32s - 1264.52s",
+    "scene_text": "The universe wouldn't just be destroyed, the very rules that allow matter to exist would be permanently rewritten.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, vast dark violet nebula consuming nearly everything, cold white star field barely surviving at one small upper-right corner, universe nearly gone. FOREGROUND: Flat 2D cartoon — the Standard Model grid shape (warm orange, bold black outline, flat fill, 30% frame width, 20% frame height) sits at center frame, but now bold cartoon crack lines (coral red, bold black outlines, flat fills) shatter it completely into floating disconnected fragments. The fragments drift outward from center. The vacuum bubble edge (dark violet, bold black outline) is visible at left edge consuming space. A bold cartoon eraser shape (clean white, bold black outline, 12% frame width) at center-right sweeps across the broken grid. Bold black outlines throughout, cel-shaded flat fills only."
+  },
+  {
+    "scene": 224,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1264.52s - 1269.22s",
+    "scene_text": "The Higgs Boson confirmed why we exist, but it also revealed the fragile,",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, split atmosphere — golden warm nebula at upper-right suggesting existence and life, heavy dark violet nebula at upper-left suggesting fragility and threat, dense cold white star field at center, duality implied. FOREGROUND: Flat 2D cartoon — the golden yellow Higgs boson sphere with outer glow halo (bold black outline, flat fill, 16% frame width) sits at center, radiating warmth. On one side (right) a simple bold cartoon human figure (scientist stick, arms spread joyfully, 12% frame height) represents existence confirmed. On the other side (left) a large bold crack line (coral red, bold black outline, flat fill, 20% frame width) spreads outward from the sphere, representing fragility. Small golden yellow Higgs field dots scattered throughout. Bold black outlines throughout."
+  },
+  {
+    "scene": 225,
+    "segment": "#2 Higgs Boson, Predicted 1964, Found 2012.",
+    "time": "1269.22s - 1272.98s",
+    "scene_text": "metastable tightrope our reality is balanced upon.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, equal split of golden amber nebula at upper right and dark violet nebula at upper left, dense cold white star field at center, universe in perfect precarious balance. FOREGROUND: Flat 2D cartoon — a bold horizontal cartoon tightrope line (warm orange, bold black outline, flat fill, 50% frame width) stretches across center frame from left to right. On the tightrope, the golden yellow Higgs boson sphere with warm outer glow halo (bold black outline, flat fill, 14% frame width) balances precariously. Below the tightrope on the left side, the dark false-vacuum energy landscape dimple (warm orange, bold black outline) looms as a shallow trap. Below on the right, the true vacuum void (dark violet flat fill, bold black outline) yawns as a bottomless chasm. A tiny scientist stick figure (round white head, dot eyes, white torso, 8% frame height) balances on the tightrope beside the Higgs sphere, arms spread for balance. Golden yellow Higgs field dots scattered throughout. Bold black outlines on all shapes, cel-shaded flat fills only."
+  }
+]

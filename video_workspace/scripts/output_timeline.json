@@ -1,0 +1,138 @@
+[
+  {
+    "type": "number_card",
+    "start": 1.18,
+    "end": 3.6799999999999997,
+    "duration": 2.5,
+    "prompt": "Number 10",
+    "number": 10
+  },
+  {
+    "type": "content",
+    "start": 3.6799999999999997,
+    "end": 7.5,
+    "duration": 3.8200000000000003,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 7.5,
+    "end": 16.0,
+    "duration": 8.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 16.0,
+    "end": 23.4,
+    "duration": 7.399999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 23.4,
+    "end": 28.08,
+    "duration": 4.68,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 28.08,
+    "end": 33.6,
+    "duration": 5.520000000000003,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 33.6,
+    "end": 37.76,
+    "duration": 4.159999999999997,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 37.76,
+    "end": 44.22,
+    "duration": 6.460000000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "number_card",
+    "start": 44.22,
+    "end": 46.72,
+    "duration": 2.5,
+    "prompt": "Number 9",
+    "number": 9
+  },
+  {
+    "type": "content",
+    "start": 46.72,
+    "end": 48.88,
+    "duration": 2.1600000000000037,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 48.88,
+    "end": 53.92,
+    "duration": 5.039999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 53.92,
+    "end": 58.18,
+    "duration": 4.259999999999998,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 58.18,
+    "end": 63.66,
+    "duration": 5.479999999999997,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 63.66,
+    "end": 70.48,
+    "duration": 6.820000000000007,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 70.48,
+    "end": 78.22,
+    "duration": 7.739999999999995,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 78.22,
+    "end": 82.68,
+    "duration": 4.460000000000008,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 82.68,
+    "end": 93.48,
+    "duration": 10.799999999999997,
+    "prompt": null,
+    "number": null
+  }
+]

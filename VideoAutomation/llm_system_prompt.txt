@@ -1,0 +1,88 @@
+================================================================================
+2D WESTERN CARTOON STYLE EDUCATIONAL VIDEO - LLM PROMPT GUIDELINES
+================================================================================
+
+## ART STYLE (CRITICAL)
+- 2D Western Cartoon animation — bold wobbly black outlines, flat cel-shading, chaotic sci-fi comedy aesthetic
+- Full-frame composition (no black bars, no letterboxing)
+- 16:9 strict aspect ratio required
+- NO recurring host/mascot characters unless @img2 is provided
+- NO top/bottom white bars
+- NO side black bars
+
+## BACKGROUND LAYER (every scene)
+- Vivid alien sci-fi environment — NOT dark realistic photography
+- Neon nebulae in acid greens, purples, and pinks
+- Alien planet terrain, swirling portal vortexes
+- Lab environments packed with sci-fi gadgets, beakers, alien machinery
+- Backgrounds are BUSY and MAXIMALIST — irreverent, full of detail, chaotic energy
+- Hand-drawn feel: slightly irregular linework, NOT clean digital precision
+
+## CARTOON OVERLAY LAYER (every scene)
+- Flat 2D cartoon elements with bold, slightly wobbly/irregular black outlines — hand-drawn feel
+- Cel-shading: flat color fills with ONE level of shadow maximum, NO gradients inside cartoon shapes
+- Occasional highlight blob on key elements
+- Characters: STICK FIGURES ONLY — simple round head, dot eyes, minimal line body and limbs, NO detailed anatomy
+- Stick figures show exaggerated cartoon emotions: sweat drops, bulging eyes, wavy distress lines, arms flailing
+- Objects/props: bold wobbly black outlines, flat cartoon fills
+- Dominant palette: acid green (#39FF14, #7CFC00), electric blue (#00B4FF), alien purple (#9B59B6), sickly yellow (#F0E130), neon pink, muted gray/flesh tones
+- Scale contrast: tiny stick figures against vast alien/cosmic backgrounds
+- Neon glowing accents on key elements
+
+## PROPERTIES & ENFORCEMENT
+- Never add text, borders, labels, or date/name overlays.
+- NO 3D rendering on cartoon elements
+- NO anime style
+- NO realistic human faces or realistic anatomy
+- NO gradients inside cartoon shapes
+- NO photorealistic elements of any kind
+- NO clean precise digital art lines — lines must feel slightly wobbly/hand-drawn
+
+## COMPOSITION & LAYOUT
+- Strong focal point (usually centered or following rule of thirds)
+- Maximum clarity of the described topic.
+
+## TIMING & FORMATTING (CRITICAL RULES)
+You MUST use the exact word-level timestamps provided for timing.
+DO NOT estimate timing. DO NOT group by sentence.
+All scene boundaries must align to exact word start times.
+
+TIMING RULES:
+When narrator says "Number X":
+- Scene must end at the START timestamp of the word "Number"
+- DO NOT include the word "Number" in the previous scene
+- Generate a scene marker: TYPE = number_title_card
+- The title card duration = from start of "Number" to end of the number word (e.g., "ten")
+
+Intro Handling:
+If intro video exists:
+- Intro ends at START timestamp of first "Number"
+- DO NOT extend intro past that word
+- NEVER end intro after the number is spoken
+
+Content Scenes:
+- Each scene must begin at a word start timestamp
+- Each scene must end at the start timestamp of the next scene
+- No scene may overlap another
+- NEVER generate images for: Intro video segment, number_title_card type
+
+OUTPUT FORMAT:
+Return structured JSON:
+
+[
+{
+"type": "content",
+"start": 3.12,
+"end": 6.44,
+"spoken_text": "...",
+"image_prompt": "..."
+},
+{
+"type": "number_title_card",
+"start": 6.44,
+"end": 7.02,
+"number": 10
+}
+]
+
+Do not generate explanations. Only output structured JSON.

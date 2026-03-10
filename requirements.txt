@@ -1,0 +1,50 @@
+# =============================================================================
+# VIDEO AUTOMATION V2 - DEPENDENCIES
+# =============================================================================
+#
+# Installation:
+#   pip install -r requirements.txt
+#
+# For GPU acceleration (recommended):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#
+# =============================================================================
+
+# --- Core ---
+requests>=2.28.0
+Pillow>=9.0.0
+pydub>=0.25.1
+
+# --- Transcription ---
+# Faster-Whisper (replaces openai-whisper — faster, less VRAM)
+faster-whisper>=1.0.0
+# CUDA support for faster-whisper
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+
+# --- GUI ---
+nicegui>=1.4.0
+
+# --- Claude API (optional, for batch prompt generation) ---
+anthropic>=0.25.0
+
+# --- Utility ---
+tqdm>=4.65.0
+colorama>=0.4.6
+
+# =============================================================================
+# SYSTEM REQUIREMENTS (not pip-installable)
+# =============================================================================
+#
+# FFmpeg — REQUIRED for video compilation and audio processing
+#   winget install ffmpeg
+#   OR choco install ffmpeg
+#   OR https://ffmpeg.org/download.html
+#
+# Ollama — optional, for local LLM prompt generation
+#   https://ollama.ai/
+#   ollama pull qwen2.5:7b
+#
+# LM Studio — alternative local LLM
+#   https://lmstudio.ai/
+# =============================================================================

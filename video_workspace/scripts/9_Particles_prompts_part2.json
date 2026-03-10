@@ -1,0 +1,218 @@
+[
+  {
+    "scene": 29,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "156.12s - 163.86s",
+    "scene_text": "Number 8. Positron, predicted 1928, found 1932. In 1928, the",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft violet-pink nebula clouds drifting across the upper third, dense cold white star field with faint galactic core glow at center-right. FOREGROUND: Flat 2D cartoon title card arrangement — a large coral red cartoon sphere (positron, bold black outline, thin white halo ring, 18% frame width) floats center-left at mid-frame beside a small clean white cartoon sphere (electron, bold black outline, 10% frame width) at center-right, both flat cel-shaded with zero internal gradients. A bold golden yellow cartoon starburst shape (12% frame width) radiates between them, signaling discovery. Scientist stick figure stands at far-right edge, round white head, solid black dot eyes, white rectangular torso, 12% frame height, arms raised upward in announcement pose."
+  },
+  {
+    "scene": 30,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "163.86s - 169.36s",
+    "scene_text": "brilliant physicist Paul Dirac was trying to achieve the impossible, marrying the newborn theory",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — rich deep navy fading to black at edges, dense violet-pink nebula billowing across the upper left quadrant, cold white star field scattered throughout with faint distant galaxy smear at far right. FOREGROUND: Flat 2D cartoon scientist stick figure stands at far-left edge — large round white head (40% of figure height), solid black dot eyes, white rectangular lab-coat torso, stick limbs, 12% frame height — arms stretched wide as if attempting to bridge two separate objects. Two oversized flat cartoon books float at center frame: one warm orange (10% frame width) labeled with no text, one violet purple (10% frame width), separated by a gap, representing two theories being brought together. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 31,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "169.36s - 174.24s",
+    "scene_text": "of quantum mechanics with Albert Einstein's theory of special relativity.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black center surrounded by swirling violet-pink nebula clouds at both upper corners, dense cold white star field, faint elongated galaxy streak at lower right. FOREGROUND: Flat 2D cartoon — two large flat cartoon circles overlap at center frame like a Venn diagram: left circle is warm orange (14% frame width, bold black outline, flat fill), right circle is golden yellow (14% frame width, bold black outline, flat fill), overlap region is coral red (flat fill). A small clean white cartoon sphere (electron, bold black outline, 5% frame width) floats inside the overlap region, representing the electron being the subject of both theories. Scientist stick figure at far-right edge, 12% frame height, pointing at the overlap with one stick arm."
+  },
+  {
+    "scene": 32,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "174.24s - 179.46s",
+    "scene_text": "He formulated an equation to describe the behavior of electrons moving at near light speed.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, purple-pink nebula clouds concentrated at upper center and spilling right, cold white star field dense throughout, faint galactic band visible at bottom edge. FOREGROUND: Flat 2D cartoon — a clean white cartoon sphere (electron, bold black outline, 7% frame width) streaks across frame from right to left at mid-height, trailing three bold flat warm orange motion-line arcs behind it (each arc bold black outlined, flat fill), conveying extreme near-light speed. A large flat violet purple cartoon scroll shape (22% frame width, bold black outline) unfurls at center-left, blank inside. Scientist stick figure at far-left edge, 12% frame height, one stick arm extended toward the scroll as if writing."
+  },
+  {
+    "scene": 33,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "179.46s - 184.78s",
+    "scene_text": "The math worked flawlessly, but it harbored a dark, unintended secret.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black with a foreboding dark violet-pink nebula mass looming from the lower left, sparse cold white stars, faint deep-space darkness dominating the upper right conveying unease. FOREGROUND: Flat 2D cartoon — a large flat warm orange cartoon scroll (24% frame width, bold black outline, flat fill) sits at center frame, open and unfurled. Emerging from behind the scroll at lower-center is a flat coral red cartoon shadow-shape (bold black outlined spike burst, 14% frame width, flat fill) suggesting something hidden lurking within the equation. A small golden yellow cartoon exclamation mark shape (bold black outline, 6% frame height) floats above the scroll at center-top. Scientist stick figure at far-right edge, 12% frame height, leaning away with stick arms raised as if startled."
+  },
+  {
+    "scene": 34,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "184.78s - 190.52s",
+    "scene_text": "Just as the equation x squared equals 4 has two solutions, 2 and minus 2, Dirac's",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds drifting at upper right and lower left symmetrically, cold white star field, faint galactic core glow at far right. FOREGROUND: Flat 2D cartoon — two large flat golden yellow cartoon squares (each 16% frame width, bold black outlines, flat fills) face each other symmetrically at center-left and center-right of frame, one slightly above center and one slightly below, mirroring each other perfectly. A flat coral red cartoon equals-sign shape (bold black outline, 8% frame width, flat fill) floats between them at exact center. Below both squares, two flat cartoon circles: one clean white (left, 8% frame width, bold black outline) and one violet purple (right, 8% frame width, bold black outline), representing positive and negative solutions."
+  },
+  {
+    "scene": 35,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "190.52s - 195.16s",
+    "scene_text": "equation produced two answers. One described the standard electron.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft violet-pink nebula wisps at upper left, dense cold white star field, faint galaxy smear at lower right. FOREGROUND: Flat 2D cartoon — at center-left, a large flat warm orange cartoon scroll (20% frame width, bold black outline, flat fill) unrolls, and from its open end at center, one large clean white cartoon sphere (electron, bold black outline, 12% frame width, flat cel-shaded fill) floats out prominently at center-right. A second smaller flat violet purple cartoon sphere placeholder shape (6% frame width, bold black outline) sits dimly at lower center, suggesting the second answer is not yet shown. Scientist stick figure at far-left edge, 12% frame height, pointing right toward the electron sphere."
+  },
+  {
+    "scene": 36,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "195.16s - 201.12s",
+    "scene_text": "The other described an exact mirror image, a particle with the exact same mass, but a positive electrical charge.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violet-pink nebula clouds forming a subtle mirrored bilateral symmetry at left and right edges, cold white star field, faint distant galaxy at upper center. FOREGROUND: Flat 2D cartoon — at center frame, a large flat clean white cartoon sphere (electron, bold black outline, 12% frame width) floats on the left side, and its exact mirror, a large flat coral red cartoon sphere (positron, bold black outline, thin white halo ring, 12% frame width) floats on the right side. A flat golden yellow cartoon vertical mirror-line (bold black outline, dashed, full frame height) bisects the center between them. Both spheres are identical in size. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 37,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "201.12s - 207.92s",
+    "scene_text": "Dirac had inadvertently predicted antimatter. It was a concept so bizarre that many physicists",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, swirling violet-pink nebula at upper right expanding outward as if in shock, cold white star field, faint galactic core at bottom left. FOREGROUND: Flat 2D cartoon — a large flat coral red cartoon sphere (positron/antimatter, bold black outline, thin white halo ring, 15% frame width) floats at center frame radiating flat golden yellow cartoon zigzag shock lines (bold black outlined, flat fill) around it in all directions. Three small scientist stick figures at far-left edge stacked vertically (each 8% frame height, round white heads, black dot eyes, white torsos), all with stick arms raised in a dismissive crossed-out gesture. Bold black outlines on all cartoon elements."
+  },
+  {
+    "scene": 38,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "207.92s - 212.26s",
+    "scene_text": "initially dismissed it as a mere mathematical artifact. Why would the universe need a mirror double of everything?",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black center, sparse cold white stars, dark violet-pink nebula at upper and lower corners barely visible, vast empty cosmos conveying existential scale. FOREGROUND: Flat 2D cartoon — at center frame, a large flat warm orange cartoon question mark shape (bold black outline, flat fill, 20% frame height) dominates the composition. Flanking it symmetrically: at center-left, a clean white cartoon sphere (electron, bold black outline, 8% frame width) and at center-right, a coral red cartoon sphere (positron, bold black outline, thin white halo ring, 8% frame width) mirror each other. Scientist stick figure at far-right edge, 12% frame height, arms spread wide in a questioning shrug gesture."
+  },
+  {
+    "scene": 39,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "212.26s - 221.38s",
+    "scene_text": "But the universe doesn't care about human intuition. Just four years later, in 1932, Carl",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — vast deep navy to black, purple-pink nebula clouds swirling grandly across the upper half suggesting cosmic indifference, dense cold white star field, large glowing galactic arm sweeping from upper left to center right. FOREGROUND: Flat 2D cartoon — a massive flat violet purple cartoon circle outline (representing the universe, bold black outline only, no fill, 40% frame width) dominates center frame. Inside it, a tiny scientist stick figure (8% frame height, round white head, black dot eyes, white torso) stands at center-bottom looking upward. A flat coral red cartoon arrow (bold black outline, flat fill) points downward from the top of the circle toward the stick figure, suggesting the universe imposing its will. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 40,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "221.38s - 223.44s",
+    "scene_text": "Anderson was studying cosmic rays using a cloud chamber, a device filled with super saturated vapor",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, faint violet-pink nebula at upper left, cold white star field, faint cosmic ray streaks as actual photorealistic light traces across upper atmosphere hinting at the experiment's context. FOREGROUND: Flat 2D cartoon — a boxy rectangular cloud chamber device (bold black outline, flat light violet fill, 30% frame width, 22% frame height) sits at center frame. Inside the chamber, faint bold dotted white curved lines suggest particle tracks in vapor. Golden yellow cartoon vapor puffs (bold black outlined rounded cloud shapes, flat fill) float inside the chamber. Scientist stick figure at far-left edge, 12% frame height, one stick arm raised toward the cloud chamber, peering at it."
+  },
+  {
+    "scene": 41,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "223.44s - 230.84s",
+    "scene_text": "that allows charged particles to leave visible trails.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black with dense cold white star field, soft violet-pink nebula drifting at upper right, faint galaxy glow at lower left. FOREGROUND: Flat 2D cartoon — a boxy rectangular cloud chamber (bold black outline, flat light violet fill, 35% frame width, 28% frame height) dominates center frame. Inside, three bold dotted curved track lines (warm orange, golden yellow, coral red, each bold black outlined dots) arc across the interior at different angles and curvatures, representing visible particle trails. Small flat cartoon particle spheres (white, coral red, each 4% frame width, bold black outlined) sit at the start of each track. Scientist stick figure at far-right edge, 12% frame height, leaning forward with stick arm pointing into the chamber."
+  },
+  {
+    "scene": 42,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "230.84s - 236.88s",
+    "scene_text": "He photographed a track created by a particle curving in a magnetic field. The curve dictated it had the mass of",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, subtle violet-pink nebula wisps at upper center, cold white star field, sparse galactic dust at lower right. FOREGROUND: Flat 2D cartoon — a boxy rectangular cloud chamber (bold black outline, flat light violet fill, 32% frame width, 24% frame height) sits at left-center. Inside the chamber, a single bold curved dotted track line (warm orange, bold black outlined dots) arcs in a gentle curve from bottom to top. Above the chamber, a flat cartoon camera shape (warm orange body, bold black outline, flat fill, 12% frame width) points down at the chamber. Bold golden yellow cartoon magnetic field lines (parallel horizontal arrows, flat fill, bold black outlined) fill the background inside the chamber suggesting the field. Scientist stick figure at far-left edge, 12% frame height."
+  },
+  {
+    "scene": 43,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "236.88s - 241.04s",
+    "scene_text": "an electron, but it was bending in the completely wrong direction. It was a positive electron, a positron.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violet-pink nebula clouds flaring at upper right with heightened intensity suggesting the moment of discovery, dense cold white star field, faint galactic arc at lower left. FOREGROUND: Flat 2D cartoon — inside a boxy rectangular cloud chamber (bold black outline, flat light violet fill, 30% frame width, 22% frame height) at center-left, two bold dotted track lines arc: one clean white (bold black outlined dots) curving left, one coral red (bold black outlined dots) curving sharply right — the wrong direction. At the end of the coral red track, a large flat coral red cartoon sphere (positron, bold black outline, thin white halo ring, 10% frame width) is highlighted by a flat golden yellow cartoon starburst (bold black outline, flat fill) around it. Scientist stick figure at far-right edge, 12% frame height, arms raised in excitement."
+  },
+  {
+    "scene": 44,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "241.04s - 251.78s",
+    "scene_text": "Antimatter wasn't just a mathematical quirk, it was physically real, raining down upon us from the upper atmosphere.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy at top transitioning toward darker black at bottom, violet-pink nebula clouds swirling at the very top edge blending into a faint photorealistic atmosphere glow, dense cold white star field filling the upper two-thirds. FOREGROUND: Flat 2D cartoon — multiple flat coral red cartoon spheres (positrons, each bold black outline, thin white halo ring, 5% frame width) rain downward from the upper portion of the frame at various horizontal positions, trailing short bold warm orange motion lines. At bottom center, a tiny flat cartoon Earth-arc shape (bold black outline, flat violet purple and warm orange fill, 18% frame width) curves across the bottom edge. Scientist stick figure at far-left edge at ground level, 12% frame height, looking up with one stick arm raised."
+  },
+  {
+    "scene": 45,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "251.78s - 258.92s",
+    "scene_text": "The existence of the positron introduces one of the most terrifying existential paradoxes in modern science.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black with ominous dark violet-pink nebula masses looming at both left and right edges, cold white star field concentrated at center as a narrow band, overall composition conveying dread and cosmic scale. FOREGROUND: Flat 2D cartoon — a single large flat coral red cartoon sphere (positron, bold black outline, thin white halo ring, 16% frame width) floats at exact center frame, surrounded by flat golden yellow cartoon lightning bolt shapes (bold black outlined, flat fill, 4 bolts radiating at 45-degree angles from the sphere). Below it at center-bottom, a small clean white cartoon sphere (electron, bold black outline, 8% frame width) floats as if approaching. A flat warm orange cartoon infinity-loop shape (bold black outline, flat fill, 10% frame width) floats above the positron. Bold black outlines on all elements."
+  },
+  {
+    "scene": 46,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "258.92s - 264.70s",
+    "scene_text": "When matter and antimatter meet, they don't just collide, they perfectly and absolutely annihilate one",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, intense violet-pink nebula clouds expanding outward from center as if from an explosion, cold white star field visible at corners, the cosmic background itself seemingly disturbed. FOREGROUND: Flat 2D cartoon — at center frame, a clean white cartoon sphere (electron, bold black outline, 10% frame width) and a coral red cartoon sphere (positron, bold black outline, thin white halo ring, 10% frame width) rush toward each other from left and right, each trailing bold warm orange motion lines (bold black outlined, flat fill). The spheres are nearly touching at center. Bold black outlines on all elements. Dramatic scale: each sphere is 10% frame width against a vast cosmic background."
+  },
+  {
+    "scene": 47,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "264.70s - 270.76s",
+    "scene_text": "another, converting 100% of their mass into pure, catastrophic energy, according",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, massive violet-pink and coral-toned nebula explosion blooming outward from center, cold white star field at far edges barely visible, the photorealistic background itself lit by the implied annihilation. FOREGROUND: Flat 2D cartoon — at exact center, a massive flat cartoon starburst explosion shape (golden yellow and coral red combined, bold black outline, flat cel-shaded fill, 40% frame width) dominates the frame where the two particles collided. Eight bold flat cartoon energy rays (alternating golden yellow and warm orange, bold black outlined, flat fills) radiate outward from the starburst in all directions. No remaining particle spheres — only the explosion shape. Scientist stick figure at far-right edge, 12% frame height, shielding stick-arm eyes from the blast."
+  },
+  {
+    "scene": 48,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "270.76s - 277.16s",
+    "scene_text": "to E equals mc squared. According to our models of the Big Bang, the universe should have created exactly",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, symmetrical violet-pink nebula clouds at top-left and top-right mirroring each other, dense cold white star field, faint photorealistic Big Bang radial glow at center suggesting the primordial universe. FOREGROUND: Flat 2D cartoon — at center frame, an enormous flat golden yellow cartoon circle (representing the Big Bang origin point, bold black outline, flat fill, 20% frame width) radiates flat warm orange cartoon wave rings (bold black outlined concentric arcs, flat fill) outward. Flanking it symmetrically at equal distances left and right: one clean white cartoon sphere (matter/electron, bold black outline, 7% frame width) and one coral red cartoon sphere (antimatter/positron, bold black outline, thin white halo ring, 7% frame width), identical in size. Bold black outlines on all elements."
+  },
+  {
+    "scene": 49,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "277.16s - 284.56s",
+    "scene_text": "equal amounts of matter and antimatter. They should have immediately cancelled each other out in a blinding flash of radiation, leaving",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black with a blinding photorealistic white-gold radial light burst at center, fading to deep navy at edges, cold white star field barely visible at frame corners, the photorealistic background consumed by implied total annihilation. FOREGROUND: Flat 2D cartoon — a massive flat cartoon starburst explosion (golden yellow and coral red, bold black outline, flat fill, 50% frame width) fills center frame representing total mutual annihilation. Around the starburst perimeter, alternating small clean white and coral red cartoon spheres (each 4% frame width, bold black outlined) blink out of existence — shown as pairs of spheres each with a flat cartoon X-mark (bold black outline, warm orange flat fill) over them. Bold black outlines on all elements."
+  },
+  {
+    "scene": 50,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "284.56s - 291.50s",
+    "scene_text": "a cold, empty void filled with nothing but light. Yet we are here. For some completely unknown",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — nearly pure black, almost no stars, sparse tiny cold white pinprick stars at extreme edges only, a vast empty photorealistic void conveying total emptiness. FOREGROUND: Flat 2D cartoon — at center frame, a single tiny clean white cartoon sphere (6% frame width, bold black outline, flat fill) floats alone in the vast empty space. Around it, nothing — the emptiness is intentional and extreme. Below center, a small scientist stick figure (10% frame height, round white head, black dot eyes, white torso, stick limbs) stands looking up at the lone sphere, arms at sides, conveying awe and bewilderment. A small flat golden yellow cartoon question mark (bold black outline, flat fill, 5% frame height) floats above the stick figure's head."
+  },
+  {
+    "scene": 51,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "291.50s - 298.86s",
+    "scene_text": "reason, a microscopic fraction of a second after the dawn of time, the universe favored matter over antimatter by a",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds at upper center forming a dramatic dawn-like glow, dense cold white star field, faint photorealistic galactic arc at lower left suggesting the early universe. FOREGROUND: Flat 2D cartoon — at center frame, a balance scale cartoon shape (flat warm orange body and arms, bold black outline, flat fill, 28% frame width) tilts noticeably to the left side. On the left pan of the scale sits a cluster of ten small clean white cartoon spheres (matter, each 4% frame width, bold black outlined); on the right pan sits a cluster of nine small coral red cartoon spheres (antimatter, each 4% frame width, bold black outlined, each with thin white halo ring). The tenth white sphere on the left pan causes the tilt. Bold black outlines on all elements."
+  },
+  {
+    "scene": 52,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "298.86s - 306.62s",
+    "scene_text": "margin of about one extra matter particle for every billion antimatter particles. Everything you have ever known, every",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, rich violet-pink nebula clouds expanding across the upper two-thirds in spectacular density, dense cold white star field, faint photorealistic galaxy spiral at center-right conveying the vastness of everything that exists. FOREGROUND: Flat 2D cartoon — at far left, a single large clean white cartoon sphere (matter survivor, bold black outline, flat fill, 14% frame width) floats prominently. Radiating rightward from it across the frame, a vast dense field of tiny flat coral red cartoon spheres (annihilated antimatter, each 2% frame width, bold black outlined, with thin white halo rings) fills the remaining three-quarters of the frame — hundreds of them suggesting billions. A bold flat golden yellow cartoon arrow (bold black outline, flat fill) points from the lone white sphere outward to the right. Scientist stick figure at far-right edge, 12% frame height, arms raised wide."
+  },
+  {
+    "scene": 53,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "306.62s - 313.88s",
+    "scene_text": "star, planet, ocean, and living creature, is built from that tiny, statistically impossible leftover",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, stunning violet-pink nebula clouds forming sweeping cosmic structures across upper left and right, dense cold white star field, faint photorealistic planet surface curve at the very bottom edge. FOREGROUND: Flat 2D cartoon — at bottom center, a flat cartoon landscape scene: a violet purple mountain shape (bold black outline, flat fill, 20% frame width), a warm orange flat cartoon sun disk (bold black outline, flat fill, 8% frame width) above it at center-right, a golden yellow flat cartoon ocean wave shape (bold black outline, flat fill, 18% frame width) at lower center. Above all of it at upper center, a single small clean white cartoon sphere (bold black outline, flat fill, 5% frame width) floats with a flat golden yellow cartoon spotlight beam (bold black outlined cone, flat fill) shining down on it from the cosmos above. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 54,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "313.88s - 318.10s",
+    "scene_text": "anomaly. The positron proves that we are the survivors of",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, dramatic violet-pink nebula clouds forming battlefield-like churning masses at left and right flanks, cold white star field concentrated at upper center like a survivor's light, faint distant galaxy at lower right. FOREGROUND: Flat 2D cartoon — at center frame, a large flat coral red cartoon sphere (positron, bold black outline, thin white halo ring, 15% frame width) sits with a flat golden yellow cartoon trophy cup shape (bold black outline, flat fill, 12% frame height) placed atop it. A flat warm orange cartoon shield shape (bold black outline, flat fill, 10% frame width) is displayed at center-left. Scientist stick figure at far-left edge, 12% frame height, one stick arm raised in triumph. Bold black outlines on all elements."
+  },
+  {
+    "scene": 55,
+    "segment": "#8 Positron, Predicted 1928, Found 1932.",
+    "time": "318.10s - 324.86s",
+    "scene_text": "a cosmic war of annihilation, existing in a reality that, by all rights, shouldn't exist at all.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, vast violet-pink nebula clouds swirling dramatically across the full upper half like the aftermath of cosmic warfare, dense cold white star field forming a thin surviving band across the middle, faint photorealistic galaxy spiral at lower left suggesting the universe that remains. FOREGROUND: Flat 2D cartoon — at center frame, a single small clean white cartoon sphere (matter survivor, bold black outline, flat fill, 8% frame width) floats alone, surrounded by scattered flat coral red cartoon debris shapes (bold black outlined shards and fragments, flat fill, each 3-5% frame width) as the remnants of annihilated antimatter. A flat golden yellow cartoon halo ring (bold black outline, flat fill, 14% frame width) encircles the lone white sphere. Scientist stick figure at far-right edge, 12% frame height, arms at sides, head bowed in reverence at the improbability of existence. Bold black outlines on all elements."
+  }
+]

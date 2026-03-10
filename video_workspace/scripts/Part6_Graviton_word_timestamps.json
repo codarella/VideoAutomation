@@ -1,0 +1,2206 @@
+{
+  "text": " Number one, graviton, hypothesized, not observed. We have mapped the invisible fields of mass. We have fractured the proton. We have caught the ghost particles from the sun. But the most obvious everyday force in the universe, the force that keeps your feet tethered to the ground and holds the moon in the sky, is the one that fundamentally breaks our understanding of reality. Gravity is the glaring error in the standard model. Electromagnetism, the strong force, and the weak force all fit perfectly into quantum mechanics. They are all quantized. They operate via messenger particles. But gravity, as described by Einstein's general relativity, is smooth, continuous, and acts like a warping of the fabric of space-time itself. Quantum mechanics is chunky and probabilistic. The two theories violently reject each other. If you try to use quantum math to calculate gravity at microscopic scales, the equations output infinite nonsense. To bridge this impossible gap, physicists were forced to hypothesize the graviton, a massless particle that transmits the force of gravity. But the graviton has never been found. It remains a phantom, an unobserved specter haunting the halls of theoretical physics. The reason we haven't found it forces us to look into the abyss of our own ignorance. Gravity is incomprehensibly weak. Think about it. The entire mass of the Earth, all six septillion kilograms of it, is pulling down on a paperclip. Yet, you can easily pick that paperclip up with a tiny magnet. A fridge magnet effortlessly overpowers the gravity of an entire planet. Why is gravity so pathetically weak compared to the other forces? The terrifying hypothesis is that gravity isn't actually weak. We just aren't experiencing all of it. Advanced models like string theory and brain cosmology suggest that while the strong, weak, and electromagnetic forces are permanently glued to our three-dimensional reality, gravity is not. The graviton might be leaking. It could be bleeding out of our universe and diffusing into higher, hidden dimensions that we cannot see or interact with. The fact that the graviton remains undiscovered might be the universe's way of telling us that our perception of reality is fundamentally crippled. We are trapped on a three-dimensional membrane, watching the shadows of higher-dimensional physics play out across the cosmos, incapable of grasping the true architecture of the void. We can detect the cosmic microwave background from the birth of time, yet we cannot find the particle that allows us to stand. The graviton is the ultimate reminder of human insignificance, a mystery that suggests the universe is not just stranger than we imagine, but stranger than we can imagine.",
+  "entries": [
+    {
+      "text": "Number",
+      "start": 0.0,
+      "end": 0.18
+    },
+    {
+      "text": "one,",
+      "start": 0.18,
+      "end": 0.58
+    },
+    {
+      "text": "graviton,",
+      "start": 1.2,
+      "end": 1.74
+    },
+    {
+      "text": "hypothesized,",
+      "start": 2.04,
+      "end": 2.96
+    },
+    {
+      "text": "not",
+      "start": 3.2,
+      "end": 3.42
+    },
+    {
+      "text": "observed.",
+      "start": 3.42,
+      "end": 3.82
+    },
+    {
+      "text": "We",
+      "start": 4.88,
+      "end": 5.02
+    },
+    {
+      "text": "have",
+      "start": 5.02,
+      "end": 5.16
+    },
+    {
+      "text": "mapped",
+      "start": 5.16,
+      "end": 5.46
+    },
+    {
+      "text": "the",
+      "start": 5.46,
+      "end": 5.64
+    },
+    {
+      "text": "invisible",
+      "start": 5.64,
+      "end": 6.02
+    },
+    {
+      "text": "fields",
+      "start": 6.02,
+      "end": 6.42
+    },
+    {
+      "text": "of",
+      "start": 6.42,
+      "end": 6.58
+    },
+    {
+      "text": "mass.",
+      "start": 6.58,
+      "end": 6.86
+    },
+    {
+      "text": "We",
+      "start": 7.46,
+      "end": 7.68
+    },
+    {
+      "text": "have",
+      "start": 7.68,
+      "end": 7.8
+    },
+    {
+      "text": "fractured",
+      "start": 7.8,
+      "end": 8.3
+    },
+    {
+      "text": "the",
+      "start": 8.3,
+      "end": 8.42
+    },
+    {
+      "text": "proton.",
+      "start": 8.42,
+      "end": 8.78
+    },
+    {
+      "text": "We",
+      "start": 9.46,
+      "end": 9.68
+    },
+    {
+      "text": "have",
+      "start": 9.68,
+      "end": 9.78
+    },
+    {
+      "text": "caught",
+      "start": 9.78,
+      "end": 10.0
+    },
+    {
+      "text": "the",
+      "start": 10.0,
+      "end": 10.14
+    },
+    {
+      "text": "ghost",
+      "start": 10.14,
+      "end": 10.42
+    },
+    {
+      "text": "particles",
+      "start": 10.42,
+      "end": 10.86
+    },
+    {
+      "text": "from",
+      "start": 10.86,
+      "end": 11.1
+    },
+    {
+      "text": "the",
+      "start": 11.1,
+      "end": 11.22
+    },
+    {
+      "text": "sun.",
+      "start": 11.22,
+      "end": 11.56
+    },
+    {
+      "text": "But",
+      "start": 12.32,
+      "end": 12.54
+    },
+    {
+      "text": "the",
+      "start": 12.54,
+      "end": 12.66
+    },
+    {
+      "text": "most",
+      "start": 12.66,
+      "end": 12.84
+    },
+    {
+      "text": "obvious",
+      "start": 12.84,
+      "end": 13.4
+    },
+    {
+      "text": "everyday",
+      "start": 13.4,
+      "end": 13.9
+    },
+    {
+      "text": "force",
+      "start": 13.9,
+      "end": 14.38
+    },
+    {
+      "text": "in",
+      "start": 14.38,
+      "end": 14.56
+    },
+    {
+      "text": "the",
+      "start": 14.56,
+      "end": 14.66
+    },
+    {
+      "text": "universe,",
+      "start": 14.66,
+      "end": 15.02
+    },
+    {
+      "text": "the",
+      "start": 15.64,
+      "end": 15.78
+    },
+    {
+      "text": "force",
+      "start": 15.78,
+      "end": 16.06
+    },
+    {
+      "text": "that",
+      "start": 16.06,
+      "end": 16.26
+    },
+    {
+      "text": "keeps",
+      "start": 16.26,
+      "end": 16.5
+    },
+    {
+      "text": "your",
+      "start": 16.5,
+      "end": 16.68
+    },
+    {
+      "text": "feet",
+      "start": 16.68,
+      "end": 16.94
+    },
+    {
+      "text": "tethered",
+      "start": 16.94,
+      "end": 17.36
+    },
+    {
+      "text": "to",
+      "start": 17.36,
+      "end": 17.46
+    },
+    {
+      "text": "the",
+      "start": 17.46,
+      "end": 17.54
+    },
+    {
+      "text": "ground",
+      "start": 17.54,
+      "end": 17.88
+    },
+    {
+      "text": "and",
+      "start": 17.88,
+      "end": 18.36
+    },
+    {
+      "text": "holds",
+      "start": 18.36,
+      "end": 18.62
+    },
+    {
+      "text": "the",
+      "start": 18.62,
+      "end": 18.82
+    },
+    {
+      "text": "moon",
+      "start": 18.82,
+      "end": 19.02
+    },
+    {
+      "text": "in",
+      "start": 19.02,
+      "end": 19.16
+    },
+    {
+      "text": "the",
+      "start": 19.16,
+      "end": 19.3
+    },
+    {
+      "text": "sky,",
+      "start": 19.3,
+      "end": 19.58
+    },
+    {
+      "text": "is",
+      "start": 20.2,
+      "end": 20.44
+    },
+    {
+      "text": "the",
+      "start": 20.44,
+      "end": 20.56
+    },
+    {
+      "text": "one",
+      "start": 20.56,
+      "end": 20.74
+    },
+    {
+      "text": "that",
+      "start": 20.74,
+      "end": 20.9
+    },
+    {
+      "text": "fundamentally",
+      "start": 20.9,
+      "end": 21.56
+    },
+    {
+      "text": "breaks",
+      "start": 21.56,
+      "end": 22.02
+    },
+    {
+      "text": "our",
+      "start": 22.02,
+      "end": 22.24
+    },
+    {
+      "text": "understanding",
+      "start": 22.24,
+      "end": 22.7
+    },
+    {
+      "text": "of",
+      "start": 22.7,
+      "end": 22.96
+    },
+    {
+      "text": "reality.",
+      "start": 22.96,
+      "end": 23.38
+    },
+    {
+      "text": "Gravity",
+      "start": 24.32,
+      "end": 24.78
+    },
+    {
+      "text": "is",
+      "start": 24.78,
+      "end": 25.14
+    },
+    {
+      "text": "the",
+      "start": 25.14,
+      "end": 25.28
+    },
+    {
+      "text": "glaring",
+      "start": 25.28,
+      "end": 25.62
+    },
+    {
+      "text": "error",
+      "start": 25.62,
+      "end": 26.02
+    },
+    {
+      "text": "in",
+      "start": 26.02,
+      "end": 26.3
+    },
+    {
+      "text": "the",
+      "start": 26.3,
+      "end": 26.42
+    },
+    {
+      "text": "standard",
+      "start": 26.42,
+      "end": 26.7
+    },
+    {
+      "text": "model.",
+      "start": 26.7,
+      "end": 27.12
+    },
+    {
+      "text": "Electromagnetism,",
+      "start": 28.36,
+      "end": 29.08
+    },
+    {
+      "text": "the",
+      "start": 29.5,
+      "end": 29.56
+    },
+    {
+      "text": "strong",
+      "start": 29.56,
+      "end": 29.9
+    },
+    {
+      "text": "force,",
+      "start": 29.9,
+      "end": 30.22
+    },
+    {
+      "text": "and",
+      "start": 30.68,
+      "end": 30.88
+    },
+    {
+      "text": "the",
+      "start": 30.88,
+      "end": 30.96
+    },
+    {
+      "text": "weak",
+      "start": 30.96,
+      "end": 31.2
+    },
+    {
+      "text": "force",
+      "start": 31.2,
+      "end": 31.66
+    },
+    {
+      "text": "all",
+      "start": 31.66,
+      "end": 32.2
+    },
+    {
+      "text": "fit",
+      "start": 32.2,
+      "end": 32.46
+    },
+    {
+      "text": "perfectly",
+      "start": 32.46,
+      "end": 33.0
+    },
+    {
+      "text": "into",
+      "start": 33.0,
+      "end": 33.32
+    },
+    {
+      "text": "quantum",
+      "start": 33.32,
+      "end": 33.64
+    },
+    {
+      "text": "mechanics.",
+      "start": 33.64,
+      "end": 34.18
+    },
+    {
+      "text": "They",
+      "start": 34.94,
+      "end": 35.18
+    },
+    {
+      "text": "are",
+      "start": 35.18,
+      "end": 35.3
+    },
+    {
+      "text": "all",
+      "start": 35.3,
+      "end": 35.48
+    },
+    {
+      "text": "quantized.",
+      "start": 35.48,
+      "end": 36.28
+    },
+    {
+      "text": "They",
+      "start": 36.7,
+      "end": 36.84
+    },
+    {
+      "text": "operate",
+      "start": 36.84,
+      "end": 37.3
+    },
+    {
+      "text": "via",
+      "start": 37.3,
+      "end": 37.58
+    },
+    {
+      "text": "messenger",
+      "start": 37.58,
+      "end": 37.98
+    },
+    {
+      "text": "particles.",
+      "start": 37.98,
+      "end": 38.52
+    },
+    {
+      "text": "But",
+      "start": 39.5,
+      "end": 39.66
+    },
+    {
+      "text": "gravity,",
+      "start": 39.66,
+      "end": 40.04
+    },
+    {
+      "text": "as",
+      "start": 40.46,
+      "end": 40.64
+    },
+    {
+      "text": "described",
+      "start": 40.64,
+      "end": 41.04
+    },
+    {
+      "text": "by",
+      "start": 41.04,
+      "end": 41.26
+    },
+    {
+      "text": "Einstein's",
+      "start": 41.26,
+      "end": 41.86
+    },
+    {
+      "text": "general",
+      "start": 41.86,
+      "end": 42.12
+    },
+    {
+      "text": "relativity,",
+      "start": 42.12,
+      "end": 42.62
+    },
+    {
+      "text": "is",
+      "start": 43.22,
+      "end": 43.4
+    },
+    {
+      "text": "smooth,",
+      "start": 43.4,
+      "end": 43.82
+    },
+    {
+      "text": "continuous,",
+      "start": 44.34,
+      "end": 44.84
+    },
+    {
+      "text": "and",
+      "start": 45.4,
+      "end": 45.64
+    },
+    {
+      "text": "acts",
+      "start": 45.64,
+      "end": 45.9
+    },
+    {
+      "text": "like",
+      "start": 45.9,
+      "end": 46.08
+    },
+    {
+      "text": "a",
+      "start": 46.08,
+      "end": 46.2
+    },
+    {
+      "text": "warping",
+      "start": 46.2,
+      "end": 46.58
+    },
+    {
+      "text": "of",
+      "start": 46.58,
+      "end": 46.76
+    },
+    {
+      "text": "the",
+      "start": 46.76,
+      "end": 46.86
+    },
+    {
+      "text": "fabric",
+      "start": 46.86,
+      "end": 47.24
+    },
+    {
+      "text": "of",
+      "start": 47.24,
+      "end": 47.48
+    },
+    {
+      "text": "space",
+      "start": 47.48,
+      "end": 47.76
+    },
+    {
+      "text": "-time",
+      "start": 47.76,
+      "end": 48.08
+    },
+    {
+      "text": "itself.",
+      "start": 48.08,
+      "end": 48.44
+    },
+    {
+      "text": "Quantum",
+      "start": 49.44,
+      "end": 49.92
+    },
+    {
+      "text": "mechanics",
+      "start": 49.92,
+      "end": 50.4
+    },
+    {
+      "text": "is",
+      "start": 50.4,
+      "end": 50.7
+    },
+    {
+      "text": "chunky",
+      "start": 50.7,
+      "end": 51.1
+    },
+    {
+      "text": "and",
+      "start": 51.1,
+      "end": 51.46
+    },
+    {
+      "text": "probabilistic.",
+      "start": 51.46,
+      "end": 52.2
+    },
+    {
+      "text": "The",
+      "start": 52.84,
+      "end": 53.06
+    },
+    {
+      "text": "two",
+      "start": 53.06,
+      "end": 53.26
+    },
+    {
+      "text": "theories",
+      "start": 53.26,
+      "end": 53.6
+    },
+    {
+      "text": "violently",
+      "start": 53.6,
+      "end": 54.2
+    },
+    {
+      "text": "reject",
+      "start": 54.2,
+      "end": 54.62
+    },
+    {
+      "text": "each",
+      "start": 54.62,
+      "end": 54.9
+    },
+    {
+      "text": "other.",
+      "start": 54.9,
+      "end": 55.1
+    },
+    {
+      "text": "If",
+      "start": 55.900000000000006,
+      "end": 56.2
+    },
+    {
+      "text": "you",
+      "start": 56.2,
+      "end": 56.32
+    },
+    {
+      "text": "try",
+      "start": 56.32,
+      "end": 56.54
+    },
+    {
+      "text": "to",
+      "start": 56.54,
+      "end": 56.64
+    },
+    {
+      "text": "use",
+      "start": 56.64,
+      "end": 56.82
+    },
+    {
+      "text": "quantum",
+      "start": 56.82,
+      "end": 57.14
+    },
+    {
+      "text": "math",
+      "start": 57.14,
+      "end": 57.52
+    },
+    {
+      "text": "to",
+      "start": 57.52,
+      "end": 57.7
+    },
+    {
+      "text": "calculate",
+      "start": 57.7,
+      "end": 58.1
+    },
+    {
+      "text": "gravity",
+      "start": 58.1,
+      "end": 58.56
+    },
+    {
+      "text": "at",
+      "start": 58.56,
+      "end": 58.76
+    },
+    {
+      "text": "microscopic",
+      "start": 58.76,
+      "end": 59.16
+    },
+    {
+      "text": "scales,",
+      "start": 59.16,
+      "end": 59.78
+    },
+    {
+      "text": "the",
+      "start": 60.38,
+      "end": 60.46
+    },
+    {
+      "text": "equations",
+      "start": 60.46,
+      "end": 60.82
+    },
+    {
+      "text": "output",
+      "start": 60.82,
+      "end": 61.36
+    },
+    {
+      "text": "infinite",
+      "start": 61.36,
+      "end": 61.92
+    },
+    {
+      "text": "nonsense.",
+      "start": 61.92,
+      "end": 62.4
+    },
+    {
+      "text": "To",
+      "start": 63.3,
+      "end": 63.6
+    },
+    {
+      "text": "bridge",
+      "start": 63.6,
+      "end": 63.86
+    },
+    {
+      "text": "this",
+      "start": 63.86,
+      "end": 64.14
+    },
+    {
+      "text": "impossible",
+      "start": 64.14,
+      "end": 64.64
+    },
+    {
+      "text": "gap,",
+      "start": 64.64,
+      "end": 65.06
+    },
+    {
+      "text": "physicists",
+      "start": 65.52,
+      "end": 65.84
+    },
+    {
+      "text": "were",
+      "start": 65.84,
+      "end": 66.28
+    },
+    {
+      "text": "forced",
+      "start": 66.28,
+      "end": 66.62
+    },
+    {
+      "text": "to",
+      "start": 66.62,
+      "end": 66.78
+    },
+    {
+      "text": "hypothesize",
+      "start": 66.78,
+      "end": 67.56
+    },
+    {
+      "text": "the",
+      "start": 67.56,
+      "end": 67.7
+    },
+    {
+      "text": "graviton,",
+      "start": 67.7,
+      "end": 68.34
+    },
+    {
+      "text": "a",
+      "start": 68.84,
+      "end": 69.04
+    },
+    {
+      "text": "massless",
+      "start": 69.04,
+      "end": 69.56
+    },
+    {
+      "text": "particle",
+      "start": 69.56,
+      "end": 69.96
+    },
+    {
+      "text": "that",
+      "start": 69.96,
+      "end": 70.2
+    },
+    {
+      "text": "transmits",
+      "start": 70.2,
+      "end": 70.72
+    },
+    {
+      "text": "the",
+      "start": 70.72,
+      "end": 70.92
+    },
+    {
+      "text": "force",
+      "start": 70.92,
+      "end": 71.18
+    },
+    {
+      "text": "of",
+      "start": 71.18,
+      "end": 71.32
+    },
+    {
+      "text": "gravity.",
+      "start": 71.32,
+      "end": 71.72
+    },
+    {
+      "text": "But",
+      "start": 72.6,
+      "end": 72.86
+    },
+    {
+      "text": "the",
+      "start": 72.86,
+      "end": 72.96
+    },
+    {
+      "text": "graviton",
+      "start": 72.96,
+      "end": 73.52
+    },
+    {
+      "text": "has",
+      "start": 73.52,
+      "end": 73.7
+    },
+    {
+      "text": "never",
+      "start": 73.7,
+      "end": 73.92
+    },
+    {
+      "text": "been",
+      "start": 73.92,
+      "end": 74.12
+    },
+    {
+      "text": "found.",
+      "start": 74.12,
+      "end": 74.46
+    },
+    {
+      "text": "It",
+      "start": 75.24,
+      "end": 75.4
+    },
+    {
+      "text": "remains",
+      "start": 75.4,
+      "end": 75.72
+    },
+    {
+      "text": "a",
+      "start": 75.72,
+      "end": 75.92
+    },
+    {
+      "text": "phantom,",
+      "start": 75.92,
+      "end": 76.3
+    },
+    {
+      "text": "an",
+      "start": 76.84,
+      "end": 77.0
+    },
+    {
+      "text": "unobserved",
+      "start": 77.0,
+      "end": 77.54
+    },
+    {
+      "text": "specter",
+      "start": 77.54,
+      "end": 78.12
+    },
+    {
+      "text": "haunting",
+      "start": 78.12,
+      "end": 78.42
+    },
+    {
+      "text": "the",
+      "start": 78.42,
+      "end": 78.68
+    },
+    {
+      "text": "halls",
+      "start": 78.68,
+      "end": 78.96
+    },
+    {
+      "text": "of",
+      "start": 78.96,
+      "end": 79.18
+    },
+    {
+      "text": "theoretical",
+      "start": 79.18,
+      "end": 79.58
+    },
+    {
+      "text": "physics.",
+      "start": 79.58,
+      "end": 80.02
+    },
+    {
+      "text": "The",
+      "start": 81.08,
+      "end": 81.38
+    },
+    {
+      "text": "reason",
+      "start": 81.38,
+      "end": 81.62
+    },
+    {
+      "text": "we",
+      "start": 81.62,
+      "end": 81.8
+    },
+    {
+      "text": "haven't",
+      "start": 81.8,
+      "end": 82.06
+    },
+    {
+      "text": "found",
+      "start": 82.06,
+      "end": 82.32
+    },
+    {
+      "text": "it",
+      "start": 82.32,
+      "end": 82.52
+    },
+    {
+      "text": "forces",
+      "start": 82.52,
+      "end": 82.82
+    },
+    {
+      "text": "us",
+      "start": 82.82,
+      "end": 83.1
+    },
+    {
+      "text": "to",
+      "start": 83.1,
+      "end": 83.26
+    },
+    {
+      "text": "look",
+      "start": 83.26,
+      "end": 83.42
+    },
+    {
+      "text": "into",
+      "start": 83.42,
+      "end": 83.6
+    },
+    {
+      "text": "the",
+      "start": 83.6,
+      "end": 83.78
+    },
+    {
+      "text": "abyss",
+      "start": 83.78,
+      "end": 84.18
+    },
+    {
+      "text": "of",
+      "start": 84.18,
+      "end": 84.36
+    },
+    {
+      "text": "our",
+      "start": 84.36,
+      "end": 84.48
+    },
+    {
+      "text": "own",
+      "start": 84.48,
+      "end": 84.68
+    },
+    {
+      "text": "ignorance.",
+      "start": 84.68,
+      "end": 85.02
+    },
+    {
+      "text": "Gravity",
+      "start": 85.98,
+      "end": 86.44
+    },
+    {
+      "text": "is",
+      "start": 86.44,
+      "end": 86.8
+    },
+    {
+      "text": "incomprehensibly",
+      "start": 86.8,
+      "end": 87.78
+    },
+    {
+      "text": "weak.",
+      "start": 87.78,
+      "end": 88.04
+    },
+    {
+      "text": "Think",
+      "start": 88.82,
+      "end": 89.02
+    },
+    {
+      "text": "about",
+      "start": 89.02,
+      "end": 89.28
+    },
+    {
+      "text": "it.",
+      "start": 89.28,
+      "end": 89.44
+    },
+    {
+      "text": "The",
+      "start": 89.98,
+      "end": 90.2
+    },
+    {
+      "text": "entire",
+      "start": 90.2,
+      "end": 90.64
+    },
+    {
+      "text": "mass",
+      "start": 90.64,
+      "end": 90.9
+    },
+    {
+      "text": "of",
+      "start": 90.9,
+      "end": 91.1
+    },
+    {
+      "text": "the",
+      "start": 91.1,
+      "end": 91.22
+    },
+    {
+      "text": "Earth,",
+      "start": 91.22,
+      "end": 91.46
+    },
+    {
+      "text": "all",
+      "start": 91.98,
+      "end": 92.22
+    },
+    {
+      "text": "six",
+      "start": 92.22,
+      "end": 92.6
+    },
+    {
+      "text": "septillion",
+      "start": 92.6,
+      "end": 93.16
+    },
+    {
+      "text": "kilograms",
+      "start": 93.16,
+      "end": 93.56
+    },
+    {
+      "text": "of",
+      "start": 93.56,
+      "end": 93.96
+    },
+    {
+      "text": "it,",
+      "start": 93.96,
+      "end": 94.1
+    },
+    {
+      "text": "is",
+      "start": 94.54,
+      "end": 94.72
+    },
+    {
+      "text": "pulling",
+      "start": 94.72,
+      "end": 94.98
+    },
+    {
+      "text": "down",
+      "start": 94.98,
+      "end": 95.3
+    },
+    {
+      "text": "on",
+      "start": 95.3,
+      "end": 95.48
+    },
+    {
+      "text": "a",
+      "start": 95.48,
+      "end": 95.6
+    },
+    {
+      "text": "paperclip.",
+      "start": 95.6,
+      "end": 96.06
+    },
+    {
+      "text": "Yet,",
+      "start": 96.74,
+      "end": 97.08
+    },
+    {
+      "text": "you",
+      "start": 97.5,
+      "end": 97.66
+    },
+    {
+      "text": "can",
+      "start": 97.66,
+      "end": 97.8
+    },
+    {
+      "text": "easily",
+      "start": 97.8,
+      "end": 98.16
+    },
+    {
+      "text": "pick",
+      "start": 98.16,
+      "end": 98.46
+    },
+    {
+      "text": "that",
+      "start": 98.46,
+      "end": 98.62
+    },
+    {
+      "text": "paperclip",
+      "start": 98.62,
+      "end": 99.14
+    },
+    {
+      "text": "up",
+      "start": 99.14,
+      "end": 99.4
+    },
+    {
+      "text": "with",
+      "start": 99.4,
+      "end": 99.58
+    },
+    {
+      "text": "a",
+      "start": 99.58,
+      "end": 99.74
+    },
+    {
+      "text": "tiny",
+      "start": 99.74,
+      "end": 99.94
+    },
+    {
+      "text": "magnet.",
+      "start": 99.94,
+      "end": 100.34
+    },
+    {
+      "text": "A",
+      "start": 101.14,
+      "end": 101.32
+    },
+    {
+      "text": "fridge",
+      "start": 101.32,
+      "end": 101.56
+    },
+    {
+      "text": "magnet",
+      "start": 101.56,
+      "end": 101.98
+    },
+    {
+      "text": "effortlessly",
+      "start": 101.98,
+      "end": 102.68
+    },
+    {
+      "text": "overpowers",
+      "start": 102.68,
+      "end": 103.32
+    },
+    {
+      "text": "the",
+      "start": 103.32,
+      "end": 103.48
+    },
+    {
+      "text": "gravity",
+      "start": 103.48,
+      "end": 103.84
+    },
+    {
+      "text": "of",
+      "start": 103.84,
+      "end": 104.08
+    },
+    {
+      "text": "an",
+      "start": 104.08,
+      "end": 104.18
+    },
+    {
+      "text": "entire",
+      "start": 104.18,
+      "end": 104.54
+    },
+    {
+      "text": "planet.",
+      "start": 104.54,
+      "end": 104.96
+    },
+    {
+      "text": "Why",
+      "start": 105.7,
+      "end": 106.14
+    },
+    {
+      "text": "is",
+      "start": 106.14,
+      "end": 106.3
+    },
+    {
+      "text": "gravity",
+      "start": 106.3,
+      "end": 106.66
+    },
+    {
+      "text": "so",
+      "start": 106.66,
+      "end": 106.94
+    },
+    {
+      "text": "pathetically",
+      "start": 106.94,
+      "end": 107.56
+    },
+    {
+      "text": "weak",
+      "start": 107.56,
+      "end": 107.96
+    },
+    {
+      "text": "compared",
+      "start": 107.96,
+      "end": 108.36
+    },
+    {
+      "text": "to",
+      "start": 108.36,
+      "end": 108.58
+    },
+    {
+      "text": "the",
+      "start": 108.58,
+      "end": 108.68
+    },
+    {
+      "text": "other",
+      "start": 108.68,
+      "end": 108.86
+    },
+    {
+      "text": "forces?",
+      "start": 108.86,
+      "end": 109.28
+    },
+    {
+      "text": "The",
+      "start": 110.26,
+      "end": 110.56
+    },
+    {
+      "text": "terrifying",
+      "start": 110.56,
+      "end": 111.04
+    },
+    {
+      "text": "hypothesis",
+      "start": 111.04,
+      "end": 111.6
+    },
+    {
+      "text": "is",
+      "start": 111.6,
+      "end": 112.18
+    },
+    {
+      "text": "that",
+      "start": 112.18,
+      "end": 112.34
+    },
+    {
+      "text": "gravity",
+      "start": 112.34,
+      "end": 112.7
+    },
+    {
+      "text": "isn't",
+      "start": 112.7,
+      "end": 113.16
+    },
+    {
+      "text": "actually",
+      "start": 113.16,
+      "end": 113.54
+    },
+    {
+      "text": "weak.",
+      "start": 113.54,
+      "end": 113.86
+    },
+    {
+      "text": "We",
+      "start": 114.62,
+      "end": 114.8
+    },
+    {
+      "text": "just",
+      "start": 114.8,
+      "end": 115.0
+    },
+    {
+      "text": "aren't",
+      "start": 115.0,
+      "end": 115.28
+    },
+    {
+      "text": "experiencing",
+      "start": 115.28,
+      "end": 115.82
+    },
+    {
+      "text": "all",
+      "start": 115.82,
+      "end": 116.16
+    },
+    {
+      "text": "of",
+      "start": 116.16,
+      "end": 116.28
+    },
+    {
+      "text": "it.",
+      "start": 116.28,
+      "end": 116.42
+    },
+    {
+      "text": "Advanced",
+      "start": 117.22,
+      "end": 117.7
+    },
+    {
+      "text": "models",
+      "start": 117.7,
+      "end": 118.18
+    },
+    {
+      "text": "like",
+      "start": 118.18,
+      "end": 118.46
+    },
+    {
+      "text": "string",
+      "start": 118.46,
+      "end": 118.74
+    },
+    {
+      "text": "theory",
+      "start": 118.74,
+      "end": 119.16
+    },
+    {
+      "text": "and",
+      "start": 119.16,
+      "end": 119.4
+    },
+    {
+      "text": "brain",
+      "start": 119.4,
+      "end": 119.64
+    },
+    {
+      "text": "cosmology",
+      "start": 119.64,
+      "end": 120.4
+    },
+    {
+      "text": "suggest",
+      "start": 120.4,
+      "end": 121.14
+    },
+    {
+      "text": "that",
+      "start": 121.14,
+      "end": 121.5
+    },
+    {
+      "text": "while",
+      "start": 121.5,
+      "end": 121.66
+    },
+    {
+      "text": "the",
+      "start": 121.66,
+      "end": 121.84
+    },
+    {
+      "text": "strong,",
+      "start": 121.84,
+      "end": 122.3
+    },
+    {
+      "text": "weak,",
+      "start": 122.68,
+      "end": 122.86
+    },
+    {
+      "text": "and",
+      "start": 123.34,
+      "end": 123.4
+    },
+    {
+      "text": "electromagnetic",
+      "start": 123.4,
+      "end": 123.84
+    },
+    {
+      "text": "forces",
+      "start": 123.84,
+      "end": 124.62
+    },
+    {
+      "text": "are",
+      "start": 124.62,
+      "end": 124.96
+    },
+    {
+      "text": "permanently",
+      "start": 124.96,
+      "end": 125.4
+    },
+    {
+      "text": "glued",
+      "start": 125.4,
+      "end": 125.86
+    },
+    {
+      "text": "to",
+      "start": 125.86,
+      "end": 126.06
+    },
+    {
+      "text": "our",
+      "start": 126.06,
+      "end": 126.2
+    },
+    {
+      "text": "three",
+      "start": 126.2,
+      "end": 126.44
+    },
+    {
+      "text": "-dimensional",
+      "start": 126.44,
+      "end": 126.78
+    },
+    {
+      "text": "reality,",
+      "start": 126.78,
+      "end": 127.4
+    },
+    {
+      "text": "gravity",
+      "start": 127.9,
+      "end": 128.32
+    },
+    {
+      "text": "is",
+      "start": 128.32,
+      "end": 128.56
+    },
+    {
+      "text": "not.",
+      "start": 128.56,
+      "end": 128.8
+    },
+    {
+      "text": "The",
+      "start": 129.8,
+      "end": 129.96
+    },
+    {
+      "text": "graviton",
+      "start": 129.96,
+      "end": 130.54
+    },
+    {
+      "text": "might",
+      "start": 130.54,
+      "end": 130.74
+    },
+    {
+      "text": "be",
+      "start": 130.74,
+      "end": 130.92
+    },
+    {
+      "text": "leaking.",
+      "start": 130.92,
+      "end": 131.24
+    },
+    {
+      "text": "It",
+      "start": 132.02,
+      "end": 132.16
+    },
+    {
+      "text": "could",
+      "start": 132.16,
+      "end": 132.3
+    },
+    {
+      "text": "be",
+      "start": 132.3,
+      "end": 132.46
+    },
+    {
+      "text": "bleeding",
+      "start": 132.46,
+      "end": 132.74
+    },
+    {
+      "text": "out",
+      "start": 132.74,
+      "end": 133.0
+    },
+    {
+      "text": "of",
+      "start": 133.0,
+      "end": 133.1
+    },
+    {
+      "text": "our",
+      "start": 133.1,
+      "end": 133.22
+    },
+    {
+      "text": "universe",
+      "start": 133.22,
+      "end": 133.62
+    },
+    {
+      "text": "and",
+      "start": 133.62,
+      "end": 134.0
+    },
+    {
+      "text": "diffusing",
+      "start": 134.0,
+      "end": 134.44
+    },
+    {
+      "text": "into",
+      "start": 134.44,
+      "end": 134.7
+    },
+    {
+      "text": "higher,",
+      "start": 134.7,
+      "end": 135.12
+    },
+    {
+      "text": "hidden",
+      "start": 135.54,
+      "end": 135.74
+    },
+    {
+      "text": "dimensions",
+      "start": 135.74,
+      "end": 136.32
+    },
+    {
+      "text": "that",
+      "start": 136.62,
+      "end": 136.96
+    },
+    {
+      "text": "we",
+      "start": 136.96,
+      "end": 137.08
+    },
+    {
+      "text": "cannot",
+      "start": 137.08,
+      "end": 137.34
+    },
+    {
+      "text": "see",
+      "start": 137.34,
+      "end": 137.72
+    },
+    {
+      "text": "or",
+      "start": 137.72,
+      "end": 137.96
+    },
+    {
+      "text": "interact",
+      "start": 137.96,
+      "end": 138.34
+    },
+    {
+      "text": "with.",
+      "start": 138.34,
+      "end": 138.66
+    },
+    {
+      "text": "The",
+      "start": 139.42,
+      "end": 139.86
+    },
+    {
+      "text": "fact",
+      "start": 139.86,
+      "end": 140.06
+    },
+    {
+      "text": "that",
+      "start": 140.06,
+      "end": 140.28
+    },
+    {
+      "text": "the",
+      "start": 140.28,
+      "end": 140.38
+    },
+    {
+      "text": "graviton",
+      "start": 140.38,
+      "end": 140.92
+    },
+    {
+      "text": "remains",
+      "start": 140.92,
+      "end": 141.26
+    },
+    {
+      "text": "undiscovered",
+      "start": 141.26,
+      "end": 142.36
+    },
+    {
+      "text": "might",
+      "start": 142.36,
+      "end": 142.8
+    },
+    {
+      "text": "be",
+      "start": 142.8,
+      "end": 143.0
+    },
+    {
+      "text": "the",
+      "start": 143.0,
+      "end": 143.12
+    },
+    {
+      "text": "universe's",
+      "start": 143.12,
+      "end": 143.7
+    },
+    {
+      "text": "way",
+      "start": 143.7,
+      "end": 143.88
+    },
+    {
+      "text": "of",
+      "start": 143.88,
+      "end": 144.02
+    },
+    {
+      "text": "telling",
+      "start": 144.02,
+      "end": 144.26
+    },
+    {
+      "text": "us",
+      "start": 144.26,
+      "end": 144.62
+    },
+    {
+      "text": "that",
+      "start": 144.62,
+      "end": 145.06
+    },
+    {
+      "text": "our",
+      "start": 145.06,
+      "end": 145.16
+    },
+    {
+      "text": "perception",
+      "start": 145.16,
+      "end": 145.6
+    },
+    {
+      "text": "of",
+      "start": 145.6,
+      "end": 145.82
+    },
+    {
+      "text": "reality",
+      "start": 145.82,
+      "end": 146.22
+    },
+    {
+      "text": "is",
+      "start": 146.22,
+      "end": 146.58
+    },
+    {
+      "text": "fundamentally",
+      "start": 146.58,
+      "end": 147.08
+    },
+    {
+      "text": "crippled.",
+      "start": 147.08,
+      "end": 147.78
+    },
+    {
+      "text": "We",
+      "start": 148.74,
+      "end": 148.82
+    },
+    {
+      "text": "are",
+      "start": 148.82,
+      "end": 148.94
+    },
+    {
+      "text": "trapped",
+      "start": 148.94,
+      "end": 149.24
+    },
+    {
+      "text": "on",
+      "start": 149.24,
+      "end": 149.48
+    },
+    {
+      "text": "a",
+      "start": 149.48,
+      "end": 149.6
+    },
+    {
+      "text": "three",
+      "start": 149.6,
+      "end": 149.82
+    },
+    {
+      "text": "-dimensional",
+      "start": 149.82,
+      "end": 150.2
+    },
+    {
+      "text": "membrane,",
+      "start": 150.2,
+      "end": 150.74
+    },
+    {
+      "text": "watching",
+      "start": 151.34,
+      "end": 151.66
+    },
+    {
+      "text": "the",
+      "start": 151.66,
+      "end": 151.86
+    },
+    {
+      "text": "shadows",
+      "start": 151.86,
+      "end": 152.2
+    },
+    {
+      "text": "of",
+      "start": 152.2,
+      "end": 152.44
+    },
+    {
+      "text": "higher",
+      "start": 152.44,
+      "end": 152.74
+    },
+    {
+      "text": "-dimensional",
+      "start": 152.74,
+      "end": 153.14
+    },
+    {
+      "text": "physics",
+      "start": 153.14,
+      "end": 153.68
+    },
+    {
+      "text": "play",
+      "start": 153.68,
+      "end": 154.34
+    },
+    {
+      "text": "out",
+      "start": 154.34,
+      "end": 154.56
+    },
+    {
+      "text": "across",
+      "start": 154.56,
+      "end": 154.82
+    },
+    {
+      "text": "the",
+      "start": 154.82,
+      "end": 155.1
+    },
+    {
+      "text": "cosmos,",
+      "start": 155.1,
+      "end": 155.54
+    },
+    {
+      "text": "incapable",
+      "start": 156.18,
+      "end": 156.5
+    },
+    {
+      "text": "of",
+      "start": 156.5,
+      "end": 156.96
+    },
+    {
+      "text": "grasping",
+      "start": 156.96,
+      "end": 157.4
+    },
+    {
+      "text": "the",
+      "start": 157.4,
+      "end": 157.56
+    },
+    {
+      "text": "true",
+      "start": 157.56,
+      "end": 157.82
+    },
+    {
+      "text": "architecture",
+      "start": 157.82,
+      "end": 158.38
+    },
+    {
+      "text": "of",
+      "start": 158.38,
+      "end": 158.64
+    },
+    {
+      "text": "the",
+      "start": 158.64,
+      "end": 158.76
+    },
+    {
+      "text": "void.",
+      "start": 158.76,
+      "end": 159.04
+    },
+    {
+      "text": "We",
+      "start": 160.14,
+      "end": 160.32
+    },
+    {
+      "text": "can",
+      "start": 160.32,
+      "end": 160.46
+    },
+    {
+      "text": "detect",
+      "start": 160.46,
+      "end": 160.76
+    },
+    {
+      "text": "the",
+      "start": 160.76,
+      "end": 160.94
+    },
+    {
+      "text": "cosmic",
+      "start": 160.94,
+      "end": 161.3
+    },
+    {
+      "text": "microwave",
+      "start": 161.3,
+      "end": 161.8
+    },
+    {
+      "text": "background",
+      "start": 161.8,
+      "end": 162.3
+    },
+    {
+      "text": "from",
+      "start": 162.3,
+      "end": 162.54
+    },
+    {
+      "text": "the",
+      "start": 162.54,
+      "end": 162.68
+    },
+    {
+      "text": "birth",
+      "start": 162.68,
+      "end": 162.88
+    },
+    {
+      "text": "of",
+      "start": 162.88,
+      "end": 163.02
+    },
+    {
+      "text": "time,",
+      "start": 163.02,
+      "end": 163.4
+    },
+    {
+      "text": "yet",
+      "start": 163.66,
+      "end": 164.2
+    },
+    {
+      "text": "we",
+      "start": 164.2,
+      "end": 164.32
+    },
+    {
+      "text": "cannot",
+      "start": 164.32,
+      "end": 164.54
+    },
+    {
+      "text": "find",
+      "start": 164.54,
+      "end": 164.88
+    },
+    {
+      "text": "the",
+      "start": 164.88,
+      "end": 165.02
+    },
+    {
+      "text": "particle",
+      "start": 165.02,
+      "end": 165.4
+    },
+    {
+      "text": "that",
+      "start": 165.4,
+      "end": 165.62
+    },
+    {
+      "text": "allows",
+      "start": 165.62,
+      "end": 165.9
+    },
+    {
+      "text": "us",
+      "start": 165.9,
+      "end": 166.1
+    },
+    {
+      "text": "to",
+      "start": 166.1,
+      "end": 166.26
+    },
+    {
+      "text": "stand.",
+      "start": 166.26,
+      "end": 166.64
+    },
+    {
+      "text": "The",
+      "start": 166.94,
+      "end": 167.06
+    },
+    {
+      "text": "graviton",
+      "start": 167.06,
+      "end": 167.64
+    },
+    {
+      "text": "is",
+      "start": 167.64,
+      "end": 167.82
+    },
+    {
+      "text": "the",
+      "start": 167.82,
+      "end": 167.94
+    },
+    {
+      "text": "ultimate",
+      "start": 167.94,
+      "end": 168.28
+    },
+    {
+      "text": "reminder",
+      "start": 168.28,
+      "end": 168.72
+    },
+    {
+      "text": "of",
+      "start": 168.72,
+      "end": 168.94
+    },
+    {
+      "text": "human",
+      "start": 168.94,
+      "end": 169.24
+    },
+    {
+      "text": "insignificance,",
+      "start": 169.24,
+      "end": 170.16
+    },
+    {
+      "text": "a",
+      "start": 170.16,
+      "end": 170.8
+    },
+    {
+      "text": "mystery",
+      "start": 170.8,
+      "end": 171.08
+    },
+    {
+      "text": "that",
+      "start": 171.08,
+      "end": 171.34
+    },
+    {
+      "text": "suggests",
+      "start": 171.34,
+      "end": 171.64
+    },
+    {
+      "text": "the",
+      "start": 171.64,
+      "end": 171.9
+    },
+    {
+      "text": "universe",
+      "start": 171.9,
+      "end": 172.22
+    },
+    {
+      "text": "is",
+      "start": 172.22,
+      "end": 172.52
+    },
+    {
+      "text": "not",
+      "start": 172.52,
+      "end": 172.74
+    },
+    {
+      "text": "just",
+      "start": 172.74,
+      "end": 172.96
+    },
+    {
+      "text": "stranger",
+      "start": 172.96,
+      "end": 173.3
+    },
+    {
+      "text": "than",
+      "start": 173.3,
+      "end": 173.54
+    },
+    {
+      "text": "we",
+      "start": 173.54,
+      "end": 173.66
+    },
+    {
+      "text": "imagine,",
+      "start": 173.66,
+      "end": 174.06
+    },
+    {
+      "text": "but",
+      "start": 174.4,
+      "end": 174.78
+    },
+    {
+      "text": "stranger",
+      "start": 174.78,
+      "end": 175.12
+    },
+    {
+      "text": "than",
+      "start": 175.12,
+      "end": 175.36
+    },
+    {
+      "text": "we",
+      "start": 175.36,
+      "end": 175.5
+    },
+    {
+      "text": "can",
+      "start": 175.5,
+      "end": 175.86
+    },
+    {
+      "text": "imagine.",
+      "start": 175.86,
+      "end": 176.26
+    }
+  ],
+  "duration": 186.181
+}

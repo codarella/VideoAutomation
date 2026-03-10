@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"/c/Users/OVERLORD/Videos/VideoAutomation/dependencyinstallation/files \\(1\\)/\")",
+      "Bash(powershell -NoProfile -c \"[System.Media.SystemSounds]::Question.Play\\(\\); Start-Sleep -Milliseconds 500\")",
+      "Bash(powershell -NoProfile -c \"[System.Media.SystemSounds]::Exclamation.Play\\(\\); Start-Sleep -Milliseconds 500\")",
+      "Bash(powershell -NoProfile -c \"\\(New-Object Media.SoundPlayer ''C:\\\\Windows\\\\Media\\\\Windows Hardware Insert.wav''\\).PlaySync\\(\\)\")",
+      "Bash(python verify_installation.py)",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\OVERLORD\\\\Videos\\\\VideoAutomation\\\\run_verify.ps1\")",
+      "Bash(powershell -NoProfile -c \"Get-WmiObject Win32_VideoController | Select-Object Name, AdapterRAM\")",
+      "Bash(pip index versions openai-whisper)",
+      "Bash(pip install openai-whisper --dry-run)",
+      "Bash(pip show torch)",
+      "Bash(python -X utf8 video_automation_v2.py --audio \"C:\\\\Users\\\\OVERLORD\\\\Downloads\\\\test.aac\" --name \"output\" --ai33-key \"sk_ixdn5l6ymkwlnetx4dzrlaehlncwo3r2sy0v8igpjzpsjlrx\" --llm-provider ollama --llm-model qwen2.5-7b)",
+      "Bash(python -X utf8 -c \":*)",
+      "Bash(python -X utf8 simulate_wordsync.py)",
+      "Bash(ffprobe \"c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/images/Part6_Graviton/scene_0001.png\")",
+      "Bash(ffprobe \"c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/images/Part6_Graviton/scene_0003.png\")",
+      "Bash(python -X utf8 \"VideoAutomation/video_automation_v2.py\" --audio \"c:/Users/OVERLORD/Downloads/audio_parts/Part6_Graviton.mp3\" --name \"Part6_Graviton\" --workspace \"video_workspace\" --ai33-key \"sk_ixdn5l6ymkwlnetx4dzrlaehlncwo3r2sy0v8igpjzpsjlrx\" --model \"flux-1-1-ultra\" --compile-only --use-saved-prompts)",
+      "Bash(python -c \":*)",
+      "Bash(python3 -c \":*)",
+      "Bash(py -3 -c \":*)",
+      "Skill(claude-developer-platform)",
+      "Skill(claude-developer-platform:*)",
+      "Bash(ffmpeg -i \"C:\\\\Users\\\\OVERLORD\\\\Downloads\\\\Music\\\\6 Alien Scenarios Scientists Say Are Statistically Possible - Part 2.mp3\" -ss 0 -t 222.558 -c copy \"C:\\\\Users\\\\OVERLORD\\\\Downloads\\\\Music\\\\6 Alien Scenarios Scientists Say Are Statistically Possible - Part 2 \\(1of2\\).mp3\" -y)",
+      "Bash(ffmpeg -i \"C:\\\\Users\\\\OVERLORD\\\\Downloads\\\\Music\\\\6 Alien Scenarios Scientists Say Are Statistically Possible - Part 2.mp3\" -ss 222.558 -c copy \"C:\\\\Users\\\\OVERLORD\\\\Downloads\\\\Music\\\\6 Alien Scenarios Scientists Say Are Statistically Possible - Part 2 \\(2of2\\).mp3\" -y)",
+      "Bash(ls -la \"c:\\\\Users\\\\OVERLORD\\\\Videos\\\\VideoAutomation\\\\video_workspace\\\\characters\"\" 2>/dev/null || echo \"Directory not found or empty \")",
+      "WebFetch(domain:ai33.pro)",
+      "Bash(python -c \"import nicegui; print\\(''nicegui'', nicegui.__version__\\); import PIL; print\\(''pillow OK''\\)\")",
+      "Bash(python -c \"import gui_nicegui; print\\(''Import OK''\\)\")",
+      "Bash(python -c \"import gui_nicegui; print\\(''OK''\\)\")",
+      "Bash(grep -rn \"queued\\\\|Queued\\\\|queue\" \"c:\\\\Users\\\\OVERLORD\\\\Videos\\\\VideoAutomation\\\\VideoAutomation\"\" --include=\"*.py\" | grep -v \".pyc \")",
+      "Bash(powershell -NoProfile -c \"Stop-Process -Id 105200 -Force\")",
+      "Bash(ls \"c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/scripts/\"*prompts*)",
+      "Bash(python -c \"import json; d=json.load\\(open\\(r''c:\\\\Users\\\\OVERLORD\\\\Videos\\\\VideoAutomation\\\\video_workspace\\\\scripts\\\\ytmp3free.cc_10-discoveries-that-hint-alien-life-might-already-exist-youtubemp3free.org_prompts.json''\\)\\); print\\(type\\(d\\).__name__, len\\(d\\) if isinstance\\(d,list\\) else len\\(d.get\\(''scenes'',[]\\)\\)\\)\")",
+      "Bash(python -c \"import py_compile; py_compile.compile\\(''gui_nicegui.py'', doraise=True\\)\")",
+      "Bash(nvidia-smi)",
+      "Bash(findstr \"CUDA Version\")",
+      "Bash(python -c \"import subprocess,re;o=subprocess.check_output\\(''nvidia-smi'',text=True\\);m=re.search\\(r''CUDA Version:\\\\s*\\([\\\\d.]+\\)'',o\\);print\\(m.group\\(1\\) if m else ''0''\\)\")",
+      "Bash(python -c \"v=float\\(''13.0''\\);print\\(''cu128'' if v>=12.8 else ''cu126'' if v>=12.6 else ''cu124'' if v>=12.4 else ''cu121'' if v>=12.1 else ''cu118''\\)\")"
+    ]
+  }
+}

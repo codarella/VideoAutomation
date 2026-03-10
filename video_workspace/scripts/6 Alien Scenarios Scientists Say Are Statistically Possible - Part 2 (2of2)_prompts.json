@@ -1,0 +1,346 @@
+[
+  {
+    "scene": 1,
+    "segment": "#1 The Simulation Termination.",
+    "time": "63.42s - 64.66s",
+    "scene_text": "Number one,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, precise cold white star field of small distant dots only, no nebula. Viewer position: SCALE — viewer is dwarfed by an enormous dark void opening in the center of the frame. A single large bold numeral '1' rendered in electric blue glowing lines, centered and monumental, filling 60% of the frame, sharp and geometric. Cold blue and deep navy palette. Hard directional lighting from the left. Bold black outlines on the numeral form. No text anywhere."
+  },
+  {
+    "scene": 2,
+    "segment": "#1 The Simulation Termination.",
+    "time": "64.66s - 69.72s",
+    "scene_text": "the simulation termination. This is the ultimate existential threat.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space gradient, small cold white star dots only, no nebula. Viewer position: INSIDE — the viewer is positioned at the interior surface of a vast digital grid-cage representing a simulated universe, looking outward. The cage walls are made of precise thin teal and electric blue grid lines forming a perfect rectilinear lattice, stretching to infinity in all directions. The grid fills the frame, the viewer is trapped within it. Cold blue, teal, deep navy palette. Hard directional lighting from top-left. Bold black outlines on grid lines. No text anywhere."
+  },
+  {
+    "scene": 3,
+    "segment": "#1 The Simulation Termination.",
+    "time": "69.72s - 76.64s",
+    "scene_text": "It is the scenario where the universe itself is the trap. The simulation argument, popularized by Nick Bostrom,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white star field. Viewer position: WITNESS — viewer watches from close range. A single stick figure stands at center-left of frame, round head, stick body, dot eyes, simple lab coat lines, arms at sides, facing right toward an enormous wall of cascading teal code-like vertical lines filling the right half of the frame. The figure is dwarfed by the code wall. Electric blue, teal, deep navy palette. Hard cold directional lighting from the right. Bold black outlines on the stick figure and code lines. No text anywhere."
+  },
+  {
+    "scene": 4,
+    "segment": "#1 The Simulation Termination.",
+    "time": "76.64s - 81.94s",
+    "scene_text": "relies on three statistical premises. One, civilizations capable",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark deep space, precise cold white dot star field. Viewer position: SCALE — viewer looks at three massive floating geometric pillars arranged left to right, each a clean rectangular column of electric blue outlined in bold black, standing like monoliths in dark space. Each pillar is slightly larger than the one before it, reading left to right. Cold blue and deep navy palette. Hard directional lighting from top-left casting sharp shadows. Bold black outlines on all pillar surfaces. No text anywhere."
+  },
+  {
+    "scene": 5,
+    "segment": "#1 The Simulation Termination.",
+    "time": "81.94s - 85.98s",
+    "scene_text": "of running ancestor simulations are possible. Two",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — viewer watches a compact cluster of small identical stick-figure shapes arranged in neat rows, centered in the lower half of the frame, representing a civilization of simulated minds. Figures are tiny, round heads, stick bodies, viewed from the front. Above them a vast dark empty sky presses down. Electric blue and teal palette. Hard cold lighting from above. Bold black outlines on all figures. No text anywhere."
+  },
+  {
+    "scene": 6,
+    "segment": "#1 The Simulation Termination.",
+    "time": "85.98s - 87.54s",
+    "scene_text": "such civilizations would run many",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, small cold white dots only. Viewer position: SCALE — viewer is dwarfed by a massive horizontal stream of tiny electric blue dot-shapes flowing left-to-right across the full width of the frame, representing countless simulations. The stream is dense at center, thinning toward edges. Deep navy background. Cold hard lighting. Bold black outlines on each dot cluster. No text anywhere."
+  },
+  {
+    "scene": 7,
+    "segment": "#1 The Simulation Termination.",
+    "time": "87.54s - 89.68s",
+    "scene_text": "many simulations, billions of them. Three, therefore, there",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark deep space, precise cold white distant stars. Viewer position: SCALE — viewer sees an enormous field of identical small teal squares arranged in a vast grid pattern filling 80% of the frame, each square representing one simulation, extending beyond the edges of the frame in all directions. The scale is overwhelming. Electric blue and teal palette. Hard directional cold lighting. Bold black outlines on each square cell. No text anywhere."
+  },
+  {
+    "scene": 8,
+    "segment": "#1 The Simulation Termination.",
+    "time": "89.68s - 99.94s",
+    "scene_text": "are billions of simulated minds for every one real biological mind. Statistically, if",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white star field. Viewer position: BETWEEN — viewer is positioned between two distinct populations: on the LEFT, a single large electric blue outlined human silhouette stick figure representing one real mind; on the RIGHT, a vast swarm of hundreds of tiny identical teal stick figures packed densely, representing simulated minds. A thin white vertical dividing line separates the two sides. The scale contrast is dramatic. Cold blue, teal, deep navy palette. Hard directional lighting from center. Bold black outlines on all figures. No text anywhere."
+  },
+  {
+    "scene": 9,
+    "segment": "#1 The Simulation Termination.",
+    "time": "99.94s - 101.40s",
+    "scene_text": "you are a conscious being",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, precise cold white dot stars. Viewer position: AS — the viewer IS the conscious being. A single stick figure is centered in the frame, round head, dot eyes with a slightly tilted curious tilt, stick body, arms slightly spread, standing in deep dark space surrounded by cold stars. The figure is lit from directly above by a cold white beam. Electric blue and deep navy palette. Hard directional lighting. Bold black outlines on the stick figure. No text anywhere."
+  },
+  {
+    "scene": 10,
+    "segment": "#1 The Simulation Termination.",
+    "time": "101.40s - 103.20s",
+    "scene_text": "it is overwhelmingly likely",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: WITNESS — viewer watches a single electric blue probability arrow moving left-to-right, nearly filling the full width of the frame horizontally. The arrow is thick, bold, and points decisively right. Behind it a faint dashed trajectory line. Deep navy background. Cold hard lighting from the left. Bold black outlines on the arrow. No text anywhere."
+  },
+  {
+    "scene": 11,
+    "segment": "#1 The Simulation Termination.",
+    "time": "103.20s - 107.12s",
+    "scene_text": "99 .9999 % that",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: pure deep dark space, cold white stars as precise small dots. Viewer position: SCALE — a single enormous percentage symbol rendered in electric blue outlined lines dominates the center of the frame, occupying 70% of frame height. It is geometric, precise, and monumental. Behind it the dark star field recedes. Cold blue and deep navy palette. Hard directional lighting from top-left. Bold black outlines on the symbol. No text anywhere."
+  },
+  {
+    "scene": 12,
+    "segment": "#1 The Simulation Termination.",
+    "time": "107.12s - 113.42s",
+    "scene_text": "you are in a simulation, not in base reality. But here is the twist that makes it a horror scenario, the",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a stick figure stands off-center left, round head, stick body, dot eyes wide open, lab coat lines, one arm pointing toward a glowing teal rectangular frame in the right half of the image. Inside the teal frame is a representation of layered nested rectangles shrinking inward — a simulation within a simulation. The stick figure's expression is alarmed, head slightly tilted. Electric blue, teal, deep navy palette. Hard cold lighting from the right illuminating the nested frames. Bold black outlines on all elements. No text anywhere."
+  },
+  {
+    "scene": 13,
+    "segment": "#1 The Simulation Termination.",
+    "time": "113.42s - 115.44s",
+    "scene_text": "termination condition.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: WITNESS — viewer watches a massive bold 'X' shape rendered in electric blue lines descending from the top of the frame toward the center, representing termination. The X is sharp, angular, geometric, filling 65% of the frame. Cold darkness surrounds it. Deep navy and electric blue palette. Hard directional lighting from above. Bold black outlines on the X strokes. No text anywhere."
+  },
+  {
+    "scene": 14,
+    "segment": "#1 The Simulation Termination.",
+    "time": "115.44s - 117.66s",
+    "scene_text": "A simulation is run for a purpose.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white star field. Viewer position: INSIDE — the viewer is inside a clean geometric container, a simple rectangular box rendered in bold electric blue outline, viewed from inside looking at its walls. A faint arrow points inward from outside the box toward its interior, representing purpose entering the system. Teal and deep navy palette. Hard cold lighting from outside the box casting interior shadows. Bold black outlines on box walls. No text anywhere."
+  },
+  {
+    "scene": 15,
+    "segment": "#1 The Simulation Termination.",
+    "time": "117.66s - 119.86s",
+    "scene_text": "Maybe it is to study sociology.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — viewer watches a small cluster of tiny stick figures arranged in a loose social group, centered in the lower third of the frame. Above them a large dark empty space presses down. The figures have varied poses: one with arms spread, one leaning toward another, suggesting social interaction being observed. Electric blue and teal palette. Hard cold lighting from above. Bold black outlines on all figures. No text anywhere."
+  },
+  {
+    "scene": 16,
+    "segment": "#1 The Simulation Termination.",
+    "time": "119.86s - 121.90s",
+    "scene_text": "Maybe it is to study history.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, precise cold white dot stars. Viewer position: WITNESS — a single stick figure stands at center-right of frame, round head, stick body, dot eyes, simple lab coat, arms behind back in a scholarly pose. To the left, a large teal timeline arrow stretches horizontally left-to-right, with sharp geometric notches marking points along it. The figure examines the timeline. Electric blue and teal palette. Hard directional lighting from the left. Bold black outlines on figure and timeline. No text anywhere."
+  },
+  {
+    "scene": 17,
+    "segment": "#1 The Simulation Termination.",
+    "time": "121.90s - 124.10s",
+    "scene_text": "Maybe it is just a game.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a single stick figure sits slightly off-center, round head, stick body, dot eyes, holding a small simple rectangular controller shape. Around the figure, faint geometric grid lines suggest a game environment. The figure's expression is casual, slightly reclined posture. Electric blue and teal palette. Hard cold lighting from above-left. Bold black outlines on all elements. No text anywhere."
+  },
+  {
+    "scene": 18,
+    "segment": "#1 The Simulation Termination.",
+    "time": "124.10s - 126.30s",
+    "scene_text": "But all simulations have limits.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: SCALE — viewer sees a large clean rectangular container shape outlined in bold electric blue, centered in frame. Along its edges, hard limit markers — small perpendicular tick marks — indicate boundaries. The interior of the container is empty dark space. Cold blue, teal, deep navy. Hard directional lighting from top-left. Bold black outlines on all boundary lines. No text anywhere."
+  },
+  {
+    "scene": 19,
+    "segment": "#1 The Simulation Termination.",
+    "time": "126.30s - 131.26s",
+    "scene_text": "They have limited processing power, RAM, and they have a conclusion.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, precise cold white dot stars. Viewer position: INSIDE — the viewer is inside a mechanical-looking processing unit represented as a large clean circuit-board-like flat plane filling the bottom half of the frame. Teal circuit trace lines connect nodes represented as small white dots. A vertical progress bar on the right side is nearly full, indicated by its filled portion in electric blue. The top half is dark empty space pressing down. Cold blue and teal palette. Hard directional lighting from left. Bold black outlines on all circuit elements. No text anywhere."
+  },
+  {
+    "scene": 20,
+    "segment": "#1 The Simulation Termination.",
+    "time": "131.26s - 132.46s",
+    "scene_text": "If we are in a simulation",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: INSIDE — the viewer is inside the simulation grid. The grid walls are thin teal lines forming a box. A small cluster of blue dot-shapes representing civilization sits at the center-bottom, looking tiny within the vast geometric container. Cold blue, deep navy palette. Hard cold lighting from above. Bold black outlines on grid walls and dot cluster. No text anywhere."
+  },
+  {
+    "scene": 21,
+    "segment": "#1 The Simulation Termination.",
+    "time": "132.46s - 135.94s",
+    "scene_text": "we are consuming resources. As we expand",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a single stick figure stands at center-left, round head, stick body, dot eyes, arms slightly spread looking upward at a large rising teal bar chart column growing upward from the bottom of the frame, representing exponentially consuming resources. The column fills the right side of the frame and is still growing off the top edge. Electric blue and teal palette. Hard directional lighting from the right. Bold black outlines on figure and bar column. No text anywhere."
+  },
+  {
+    "scene": 22,
+    "segment": "#1 The Simulation Termination.",
+    "time": "135.94s - 137.12s",
+    "scene_text": "as we build supercomputers of",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, precise cold white dot stars. Viewer position: SCALE — a single enormous geometric supercomputer shape dominates the center of the frame: a tall clean rectangular monolith with precise teal circuit-line patterns etched across its surface, surrounded by cold hard light. It fills 70% of the frame height. Deep navy and teal palette. Hard directional lighting from the left. Bold black outlines on all surfaces. No text anywhere."
+  },
+  {
+    "scene": 23,
+    "segment": "#1 The Simulation Termination.",
+    "time": "137.12s - 138.60s",
+    "scene_text": "our own",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark deep space, cold white dot stars. Viewer position: SCALE — multiple large clean rectangular monolith shapes of varying heights stand side by side, filling the frame from left to right, each covered in precise teal circuit-line patterns, representing a growing array of supercomputers. They recede into the dark background. Electric blue, teal, deep navy palette. Hard cold directional lighting from top-left. Bold black outlines on all monolith surfaces. No text anywhere."
+  },
+  {
+    "scene": 24,
+    "segment": "#1 The Simulation Termination.",
+    "time": "138.60s - 140.76s",
+    "scene_text": "as we try to simulate our own universes",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: INSIDE — the viewer is inside a nested simulation: a large teal-outlined rectangle contains a medium one, which contains a smaller one, all centered concentrically in the frame. Each nested layer is slightly dimmer than the outer one. The innermost square is tiny, nearly dark. Represents a simulation trying to run its own simulation. Electric blue and teal palette. Hard cold lighting from outside the outermost frame. Bold black outlines on each rectangle. No text anywhere."
+  },
+  {
+    "scene": 25,
+    "segment": "#1 The Simulation Termination.",
+    "time": "140.76s - 141.98s",
+    "scene_text": "the computational load",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: WITNESS — a large bold upward-curving exponential graph line fills the frame, rendered in electric blue, starting flat at the lower-left and curving sharply upward to the upper-right, nearly vertical at the right edge. The line is thick and precise. Behind it the dark star field. The computational load is rising. Cold blue and deep navy palette. Hard directional lighting from the left. Bold black outlines on the graph curve. No text anywhere."
+  },
+  {
+    "scene": 26,
+    "segment": "#1 The Simulation Termination.",
+    "time": "141.98s - 145.10s",
+    "scene_text": "on the host machine increases exponentially.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a massive host machine shape — an enormous geometric rectangular form covered in precise teal circuit lines — sits in the center of the frame. From its surface, heat-ripple lines (precise parallel wavy teal lines) radiate upward, indicating overload stress. The machine is off-center slightly right. Electric blue, teal, deep navy. Hard cold directional lighting from the left. Bold black outlines on machine and ripple lines. No text anywhere."
+  },
+  {
+    "scene": 27,
+    "segment": "#1 The Simulation Termination.",
+    "time": "145.10s - 147.22s",
+    "scene_text": "We are entering a danger zone.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a single stick figure stands at center frame, round head, stick body, dot eyes wide open with small worry lines beside the head, arms slightly raised in alarm. Around the figure, a large red dashed warning border frames the edges of the entire frame like a danger zone indicator. The figure is illuminated from directly above by harsh cold white light. Electric blue and teal with a single red warning border only. Hard directional lighting. Bold black outlines on figure and border. No text anywhere."
+  },
+  {
+    "scene": 28,
+    "segment": "#1 The Simulation Termination.",
+    "time": "147.22s - 149.28s",
+    "scene_text": "We are beginning to understand the code.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: INSIDE — the viewer is inside the simulation code, seeing it from within. Precise vertical columns of thin teal abstract geometric symbol-shapes (not letters, not numbers — pure shapes: circles, lines, angles) cascade downward through the frame from top to bottom. The viewer looks up through the cascading columns. The columns are dense at the top, spacing out toward the bottom. Electric blue and teal palette. Hard directional lighting from above. Bold black outlines on all symbol shapes. No text anywhere."
+  },
+  {
+    "scene": 29,
+    "segment": "#1 The Simulation Termination.",
+    "time": "149.28s - 156.62s",
+    "scene_text": "Quantum mechanics, with its observer effects and pixel -like plank lengths, look suspiciously like optimization algorithms",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: BETWEEN — the viewer is positioned between two phenomena: on the LEFT, a small electric blue electron sphere (small bright white sphere with thin orbital ring) in observation; on the RIGHT, the same electron sphere shown differently — faint, partially rendered, as if only partially computed. A clean vertical gap divides them. The RIGHT side electron is slightly translucent, suggesting it is only rendered when observed. Cold blue, teal, deep navy. Hard cold lighting from the left. Bold black outlines on left sphere, faint outlines on right. No text anywhere."
+  },
+  {
+    "scene": 30,
+    "segment": "#1 The Simulation Termination.",
+    "time": "156.62s - 161.80s",
+    "scene_text": "in a video game engine, rendering only what is being looked at to save memory.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: INSIDE — viewer is inside a vast dark rendering engine. In the foreground, one small brightly-lit electric blue square tile representing a rendered pixel of reality, sharply defined. Surrounding it in all directions: identical square tile shapes growing progressively darker and less defined, fading into pure dark space beyond the view cone. Only what is directly observed is rendered; everything else is dark. Teal and electric blue palette. Hard directional lighting centered on the foreground tile. Bold black outlines on front tiles, fading on distant ones. No text anywhere."
+  },
+  {
+    "scene": 31,
+    "segment": "#1 The Simulation Termination.",
+    "time": "161.80s - 165.54s",
+    "scene_text": "If the purpose of the simulation was to answer the question, how does a civilization",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a clean horizontal timeline bar stretches across the full width of the frame at mid-height, rendered in teal. On the far left a small abstract atomic symbol shape. On the far right a stylized abstract AI-representing geometric circuit-node shape. A small glowing electric blue position marker dot sits at the three-quarters point along the bar, moving left-to-right. Below the bar a tiny civilization cluster of stick figures. Cold blue, teal, deep navy palette. Hard cold lighting from left. Bold black outlines on all elements. No text anywhere."
+  },
+  {
+    "scene": 32,
+    "segment": "#1 The Simulation Termination.",
+    "time": "165.54s - 171.28s",
+    "scene_text": "evolve from nuclear power to AI, then we are approaching the end of the data set.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a long horizontal teal timeline bar fills the frame. A small electric blue position-marker dot sits very close to the right end of the bar — near the edge of the frame — representing the civilization approaching the end of its data set. The right end of the bar terminates in a sharp vertical edge. Beyond that edge: pure dark void. Cold blue, teal, deep navy. Hard cold directional lighting from the left. Bold black outlines on bar and marker. No text anywhere."
+  },
+  {
+    "scene": 33,
+    "segment": "#1 The Simulation Termination.",
+    "time": "171.28s - 177.92s",
+    "scene_text": "Once the question is answered, the simulation is no longer useful. It is just a drain on power.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — a single stick figure stands off-center left, round head, stick body, dot eyes, arms at sides, head slightly bowed in resignation. To the right of the figure, a large drain-like circular shape rendered in electric blue outlines with a spiral of thin teal lines disappearing into its center, representing the simulation draining power. The drain is larger than the figure. Electric blue and teal palette. Hard cold directional lighting from the right illuminating the drain. Bold black outlines on figure and drain shape. No text anywhere."
+  },
+  {
+    "scene": 34,
+    "segment": "#1 The Simulation Termination.",
+    "time": "177.92s - 184.44s",
+    "scene_text": "The silence of the universe is a memory -saving feature. Why render billions of alien civilizations if",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: SCALE — a vast dark expanse fills the entire frame. The star field is sparse — only a handful of small cold white dots scattered widely. At the very center, one tiny electric blue dot representing Earth. The overwhelming emptiness is the subject. Deep navy and teal palette. Cold hard lighting focused on the single center dot. Bold black outline on the center dot. No text anywhere."
+  },
+  {
+    "scene": 35,
+    "segment": "#1 The Simulation Termination.",
+    "time": "184.44s - 192.60s",
+    "scene_text": "the simulation is only about Earth? The universe looks empty because the developers didn't bother to code the rest of the NPCs,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold white dot stars. Viewer position: SCALE — the viewer is dwarfed by a massive curved surface representing a skybox — a spherical interior wall with a faint teal grid pattern, curving away in all directions. The viewer is inside this empty shell. The star field painted on the skybox wall is flat and false-looking — stars are perfect circles, equally spaced, artificial. One tiny electric blue dot at the very bottom of the frame represents Earth, alone inside the shell. Cold blue, teal, deep navy palette. Hard cold lighting from above. Bold black outlines on grid lines and Earth dot. No text anywhere."
+  },
+  {
+    "scene": 36,
+    "segment": "#1 The Simulation Termination.",
+    "time": "192.60s - 196.18s",
+    "scene_text": "non -player characters. It's just a skybox. The terrifying implication is that the moment we truly understand",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space. Viewer position: WITNESS — a large clean rectangular shape representing a simulation container is centered in the frame, outlined in teal. Inside the container, only one small electric blue cluster in the center — Earth — is rendered and lit. The rest of the interior is completely empty dark space, no other elements coded. The edges of the container are bold and definitive. Cold blue, teal, deep navy. Hard cold directional lighting on the single center element only. Bold black outlines on container walls and Earth cluster. No text anywhere."
+  },
+  {
+    "scene": 37,
+    "segment": "#1 The Simulation Termination.",
+    "time": "196.18s - 207.00s",
+    "scene_text": "the theory of everything, the moment we crack the code of the universe, the experiment is over. The screen goes black.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: pure deep dark space, no stars. Viewer position: WITNESS — climax scene. A single amber/orange sphere sits dead center in the frame, occupying 65% of the frame, representing the completed Theory of Everything — the final answer. The sphere is the ONLY warm element in an otherwise completely cold dark scene. Around it: absolute cold dark space with a faint hint of cold teal light at the very edges of the frame. ONE amber sphere. Maximum contrast. The sphere has a bold black outline. No secondary elements. Hard directional lighting from directly above hitting only the amber sphere. No text anywhere."
+  },
+  {
+    "scene": 38,
+    "segment": "#1 The Simulation Termination.",
+    "time": "207.00s - 208.16s",
+    "scene_text": "No warning.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: pure deep dark space, no stars, no elements. Viewer position: WITNESS — the frame is almost entirely dark. A single thin horizontal teal line cuts across the center of the frame — the last visible trace before the screen goes black. The line is 80% of frame width, centered. Fading at both ends into pure dark. Deep navy and teal only. Hard cold lighting on the line itself. Bold black definition on the line edges. No text anywhere."
+  },
+  {
+    "scene": 39,
+    "segment": "#1 The Simulation Termination.",
+    "time": "208.16s - 210.02s",
+    "scene_text": "No apocalypse.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: pure dark space, almost entirely black. Viewer position: WITNESS — the frame is nearly completely dark. A single very small electric blue dot sits dead center, the very last rendered element. No stars, no other elements. Absolute emptiness surrounds it. The dot is tiny — only 2-3% of frame width. Cold blue palette. Hard pinpoint lighting on the single dot only. Bold black outline on the dot. No text anywhere."
+  },
+  {
+    "scene": 40,
+    "segment": "#1 The Simulation Termination.",
+    "time": "210.02s - 210.84s",
+    "scene_text": "Just...",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: pure absolute black. Viewer position: WITNESS — the frame is entirely black with only the faintest suggestion of a teal outline square at the extreme center — barely visible, almost gone, 10% of frame size. It is nearly invisible, dissolving into the dark. No stars, nothing else. Palette: near-total darkness, one faint teal square. No directional lighting — only the faintest cold ambient trace outlining the square. Bold black is the entire frame. No text anywhere."
+  },
+  {
+    "scene": 41,
+    "segment": "#1 The Simulation Termination.",
+    "time": "210.84s - 212.60s",
+    "scene_text": "end of program.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: pure absolute black. Viewer position: WITNESS — the entire frame is black. Nothing. No particles, no stars, no elements. A single pixel-thin cold white horizontal line sits at the exact center of the frame, stretching full width — the very last moment before total termination. The line is razor thin. Palette: black and one cold white line only. No other lighting. No text anywhere."
+  },
+  {
+    "scene": 42,
+    "segment": "#1 The Simulation Termination.",
+    "time": "212.60s - 213.14s",
+    "scene_text": "We are racing toward a finish line",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars at very low density. Viewer position: WITNESS — a small cluster of tiny stick figures runs left-to-right across the lower third of the frame, all figures leaning forward urgently in motion, arms back, suggesting sprinting. They are small, moving toward the right edge. Ahead of them on the right: nothing visible yet. Electric blue and teal palette. Hard cold directional lighting from the left. Bold black outlines on all figures. No text anywhere."
+  },
+  {
+    "scene": 43,
+    "segment": "#1 The Simulation Termination.",
+    "time": "213.14s - 222.47s",
+    "scene_text": "that is actually a cliff, and we are running faster every day.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold white dot stars. Viewer position: WITNESS — the viewer watches from close range as a group of tiny running stick figures approach the right edge of the frame. At the right edge, the ground they run on abruptly ends — a sharp cliff edge rendered as a bold electric blue ledge line — and beyond it is pure absolute black void, nothing, no stars, no space. The stick figures are very close to the edge, still running left-to-right, leaning forward, unaware. The cliff drop is total darkness. Electric blue and teal palette with deep navy. Hard cold directional lighting from the left. Bold black outlines on figures and cliff edge. No text anywhere."
+  }
+]

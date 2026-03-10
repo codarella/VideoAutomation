@@ -1,0 +1,2346 @@
+[
+  {
+    "type": "number_card",
+    "start": 1.02,
+    "end": 1.92,
+    "duration": 0.8999999999999999,
+    "prompt": "Number 10,",
+    "number": 10
+  },
+  {
+    "type": "content",
+    "start": 1.92,
+    "end": 5.5,
+    "duration": 3.58,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 5.5,
+    "end": 9.54,
+    "duration": 4.039999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 9.54,
+    "end": 14.08,
+    "duration": 4.540000000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 14.08,
+    "end": 19.08,
+    "duration": 4.999999999999998,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 19.08,
+    "end": 24.44,
+    "duration": 5.360000000000003,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 24.44,
+    "end": 28.94,
+    "duration": 4.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 28.94,
+    "end": 33.22,
+    "duration": 4.279999999999998,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 33.22,
+    "end": 38.2,
+    "duration": 4.980000000000004,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 38.2,
+    "end": 43.18,
+    "duration": 4.979999999999997,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 43.18,
+    "end": 48.54,
+    "duration": 5.359999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 48.54,
+    "end": 52.78,
+    "duration": 4.240000000000002,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 52.78,
+    "end": 57.62,
+    "duration": 4.839999999999996,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 57.62,
+    "end": 62.26,
+    "duration": 4.640000000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 62.26,
+    "end": 68.84,
+    "duration": 6.580000000000005,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 68.84,
+    "end": 75.2,
+    "duration": 6.359999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 75.2,
+    "end": 80.16,
+    "duration": 4.959999999999994,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 80.16,
+    "end": 85.96,
+    "duration": 5.799999999999997,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 85.96,
+    "end": 86.9,
+    "duration": 0.9400000000000119,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 86.9,
+    "end": 88.1,
+    "duration": 1.1999999999999886,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 88.1,
+    "end": 90.2,
+    "duration": 2.1000000000000085,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 90.2,
+    "end": 96.58,
+    "duration": 6.3799999999999955,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 96.58,
+    "end": 102.5,
+    "duration": 5.920000000000002,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 102.5,
+    "end": 109.38,
+    "duration": 6.8799999999999955,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 109.38,
+    "end": 113.54,
+    "duration": 4.160000000000011,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 113.54,
+    "end": 119.1,
+    "duration": 5.559999999999988,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 119.1,
+    "end": 125.98,
+    "duration": 6.88000000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 125.98,
+    "end": 132.22,
+    "duration": 6.239999999999995,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 132.22,
+    "end": 135.52,
+    "duration": 3.3000000000000114,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 135.52,
+    "end": 142.74,
+    "duration": 7.219999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 142.74,
+    "end": 148.28,
+    "duration": 5.539999999999992,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 148.28,
+    "end": 153.5,
+    "duration": 5.219999999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 153.5,
+    "end": 160.28,
+    "duration": 6.780000000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 160.28,
+    "end": 167.12,
+    "duration": 6.840000000000003,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 167.12,
+    "end": 172.28,
+    "duration": 5.159999999999997,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 172.28,
+    "end": 178.62,
+    "duration": 6.340000000000003,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 178.62,
+    "end": 180.98,
+    "duration": 2.359999999999985,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 180.98,
+    "end": 183.18,
+    "duration": 2.200000000000017,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 183.18,
+    "end": 184.22,
+    "duration": 1.039999999999992,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 184.22,
+    "end": 185.02,
+    "duration": 0.8000000000000114,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 185.02,
+    "end": 191.62,
+    "duration": 6.599999999999994,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 191.62,
+    "end": 197.48,
+    "duration": 5.859999999999985,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 197.48,
+    "end": 204.4,
+    "duration": 6.920000000000016,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 204.4,
+    "end": 210.84,
+    "duration": 6.439999999999998,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 210.84,
+    "end": 218.26,
+    "duration": 7.4199999999999875,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 218.26,
+    "end": 223.38,
+    "duration": 5.1200000000000045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 223.38,
+    "end": 230.78,
+    "duration": 7.400000000000006,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 230.78,
+    "end": 235.6,
+    "duration": 4.819999999999993,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 235.6,
+    "end": 240.44,
+    "duration": 4.840000000000003,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 240.44,
+    "end": 242.86,
+    "duration": 2.420000000000016,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 242.86,
+    "end": 248.2,
+    "duration": 5.339999999999975,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 248.2,
+    "end": 254.62,
+    "duration": 6.420000000000016,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 254.62,
+    "end": 260.44,
+    "duration": 5.819999999999993,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 260.44,
+    "end": 265.94,
+    "duration": 5.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 265.94,
+    "end": 271.2,
+    "duration": 5.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 271.2,
+    "end": 276.6,
+    "duration": 5.400000000000034,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 276.6,
+    "end": 283.66,
+    "duration": 7.060000000000002,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 283.66,
+    "end": 286.94,
+    "duration": 3.2799999999999727,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 286.94,
+    "end": 291.28,
+    "duration": 4.339999999999975,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 291.28,
+    "end": 294.12,
+    "duration": 2.840000000000032,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 294.12,
+    "end": 299.42,
+    "duration": 5.300000000000011,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 299.42,
+    "end": 306.58,
+    "duration": 7.159999999999968,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 306.58,
+    "end": 313.34,
+    "duration": 6.759999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 313.34,
+    "end": 317.6,
+    "duration": 4.260000000000048,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 317.6,
+    "end": 321.54,
+    "duration": 3.9399999999999977,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 321.54,
+    "end": 328.4,
+    "duration": 6.859999999999957,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 328.4,
+    "end": 330.02,
+    "duration": 1.6200000000000045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 330.02,
+    "end": 332.02,
+    "duration": 2.0,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 332.02,
+    "end": 334.14,
+    "duration": 2.1200000000000045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 334.14,
+    "end": 341.56,
+    "duration": 7.420000000000016,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 341.56,
+    "end": 346.96,
+    "duration": 5.399999999999977,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 346.96,
+    "end": 352.0,
+    "duration": 5.0400000000000205,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 352.0,
+    "end": 358.68,
+    "duration": 6.680000000000007,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 358.68,
+    "end": 363.16,
+    "duration": 4.480000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 363.16,
+    "end": 370.12,
+    "duration": 6.9599999999999795,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 370.12,
+    "end": 376.28,
+    "duration": 6.159999999999968,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 376.28,
+    "end": 380.6,
+    "duration": 4.32000000000005,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 380.6,
+    "end": 387.16,
+    "duration": 6.560000000000002,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 387.16,
+    "end": 392.96,
+    "duration": 5.7999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 392.96,
+    "end": 398.14,
+    "duration": 5.180000000000007,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 398.14,
+    "end": 402.8,
+    "duration": 4.660000000000025,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 402.8,
+    "end": 410.12,
+    "duration": 7.319999999999993,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 410.12,
+    "end": 416.28,
+    "duration": 6.159999999999968,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 416.28,
+    "end": 422.54,
+    "duration": 6.260000000000048,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 422.54,
+    "end": 424.74,
+    "duration": 2.1999999999999886,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 424.74,
+    "end": 426.14,
+    "duration": 1.3999999999999773,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 426.14,
+    "end": 427.74,
+    "duration": 1.6000000000000227,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 427.74,
+    "end": 431.88,
+    "duration": 4.139999999999986,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 431.88,
+    "end": 438.96,
+    "duration": 7.079999999999984,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 438.96,
+    "end": 441.1,
+    "duration": 2.140000000000043,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 441.1,
+    "end": 441.3,
+    "duration": 0.19999999999998863,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 441.3,
+    "end": 443.82,
+    "duration": 2.519999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 443.82,
+    "end": 446.38,
+    "duration": 2.5600000000000023,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 446.38,
+    "end": 451.92,
+    "duration": 5.5400000000000205,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 451.92,
+    "end": 457.36,
+    "duration": 5.439999999999998,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 457.36,
+    "end": 462.08,
+    "duration": 4.71999999999997,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 462.08,
+    "end": 466.66,
+    "duration": 4.580000000000041,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 466.66,
+    "end": 473.84,
+    "duration": 7.17999999999995,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 473.84,
+    "end": 479.56,
+    "duration": 5.720000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 479.56,
+    "end": 484.54,
+    "duration": 4.980000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 484.54,
+    "end": 492.32,
+    "duration": 7.779999999999973,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 492.32,
+    "end": 496.34,
+    "duration": 4.019999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 496.34,
+    "end": 503.32,
+    "duration": 6.980000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 503.32,
+    "end": 508.7,
+    "duration": 5.3799999999999955,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 508.7,
+    "end": 516.1,
+    "duration": 7.400000000000034,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 516.1,
+    "end": 524.16,
+    "duration": 8.059999999999945,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 524.16,
+    "end": 531.5,
+    "duration": 7.340000000000032,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 531.5,
+    "end": 538.44,
+    "duration": 6.940000000000055,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 538.44,
+    "end": 541.94,
+    "duration": 3.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 541.94,
+    "end": 547.36,
+    "duration": 5.419999999999959,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 547.36,
+    "end": 553.94,
+    "duration": 6.580000000000041,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 553.94,
+    "end": 559.2,
+    "duration": 5.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 559.2,
+    "end": 566.54,
+    "duration": 7.339999999999918,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 566.54,
+    "end": 567.44,
+    "duration": 0.900000000000091,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 567.44,
+    "end": 568.7,
+    "duration": 1.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 568.7,
+    "end": 571.72,
+    "duration": 3.019999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 571.72,
+    "end": 577.28,
+    "duration": 5.559999999999945,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 577.28,
+    "end": 584.6,
+    "duration": 7.32000000000005,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 584.6,
+    "end": 589.68,
+    "duration": 5.079999999999927,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 589.68,
+    "end": 596.36,
+    "duration": 6.680000000000064,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 596.36,
+    "end": 603.86,
+    "duration": 7.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 603.86,
+    "end": 608.84,
+    "duration": 4.980000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 608.84,
+    "end": 616.1,
+    "duration": 7.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 616.1,
+    "end": 622.72,
+    "duration": 6.6200000000000045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 622.72,
+    "end": 624.22,
+    "duration": 1.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 624.22,
+    "end": 625.7,
+    "duration": 1.4800000000000182,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 625.7,
+    "end": 627.32,
+    "duration": 1.6200000000000045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 627.32,
+    "end": 627.84,
+    "duration": 0.5199999999999818,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 627.84,
+    "end": 629.18,
+    "duration": 1.3399999999999181,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 629.18,
+    "end": 630.98,
+    "duration": 1.8000000000000682,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 630.98,
+    "end": 632.8,
+    "duration": 1.8199999999999363,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 632.8,
+    "end": 640.62,
+    "duration": 7.82000000000005,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 640.62,
+    "end": 644.36,
+    "duration": 3.740000000000009,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 644.36,
+    "end": 648.08,
+    "duration": 3.7200000000000273,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 648.08,
+    "end": 652.92,
+    "duration": 4.839999999999918,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 652.92,
+    "end": 659.68,
+    "duration": 6.759999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 659.68,
+    "end": 666.78,
+    "duration": 7.100000000000023,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 666.78,
+    "end": 673.78,
+    "duration": 7.0,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 673.78,
+    "end": 678.2,
+    "duration": 4.420000000000073,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 678.2,
+    "end": 684.98,
+    "duration": 6.779999999999973,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 684.98,
+    "end": 692.28,
+    "duration": 7.2999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 692.28,
+    "end": 699.16,
+    "duration": 6.8799999999999955,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 699.16,
+    "end": 704.26,
+    "duration": 5.100000000000023,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 704.26,
+    "end": 711.14,
+    "duration": 6.8799999999999955,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 711.14,
+    "end": 716.08,
+    "duration": 4.940000000000055,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 716.08,
+    "end": 721.86,
+    "duration": 5.779999999999973,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "number_card",
+    "start": 721.86,
+    "end": 722.78,
+    "duration": 0.9199999999999591,
+    "prompt": "Number 5.",
+    "number": 5
+  },
+  {
+    "type": "content",
+    "start": 722.78,
+    "end": 728.34,
+    "duration": 5.560000000000059,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 728.34,
+    "end": 731.88,
+    "duration": 3.5399999999999636,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 731.88,
+    "end": 736.36,
+    "duration": 4.480000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 736.36,
+    "end": 741.52,
+    "duration": 5.159999999999968,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 741.52,
+    "end": 745.84,
+    "duration": 4.32000000000005,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 745.84,
+    "end": 750.22,
+    "duration": 4.3799999999999955,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 750.22,
+    "end": 755.54,
+    "duration": 5.319999999999936,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 755.54,
+    "end": 762.44,
+    "duration": 6.900000000000091,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 762.44,
+    "end": 769.18,
+    "duration": 6.739999999999895,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 769.18,
+    "end": 774.58,
+    "duration": 5.400000000000091,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 774.58,
+    "end": 778.68,
+    "duration": 4.099999999999909,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 778.68,
+    "end": 785.9,
+    "duration": 7.220000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 785.9,
+    "end": 791.7,
+    "duration": 5.800000000000068,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 791.7,
+    "end": 796.72,
+    "duration": 5.019999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 796.72,
+    "end": 801.46,
+    "duration": 4.740000000000009,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 801.46,
+    "end": 806.9,
+    "duration": 5.439999999999941,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 806.9,
+    "end": 813.36,
+    "duration": 6.460000000000036,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 813.36,
+    "end": 819.78,
+    "duration": 6.419999999999959,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 819.78,
+    "end": 825.88,
+    "duration": 6.100000000000023,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 825.88,
+    "end": 830.68,
+    "duration": 4.7999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 830.68,
+    "end": 837.9,
+    "duration": 7.220000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 837.9,
+    "end": 844.68,
+    "duration": 6.779999999999973,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 844.68,
+    "end": 851.98,
+    "duration": 7.300000000000068,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 851.98,
+    "end": 853.66,
+    "duration": 1.67999999999995,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 853.66,
+    "end": 855.58,
+    "duration": 1.9200000000000728,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 855.58,
+    "end": 858.22,
+    "duration": 2.6399999999999864,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 858.22,
+    "end": 858.68,
+    "duration": 0.4599999999999227,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 858.68,
+    "end": 861.94,
+    "duration": 3.2600000000001046,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "number_card",
+    "start": 861.94,
+    "end": 862.82,
+    "duration": 0.8799999999999955,
+    "prompt": "Number 4,",
+    "number": 4
+  },
+  {
+    "type": "content",
+    "start": 862.82,
+    "end": 864.34,
+    "duration": 1.5199999999999818,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 864.34,
+    "end": 867.56,
+    "duration": 3.2199999999999136,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 867.56,
+    "end": 869.2,
+    "duration": 1.6400000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 869.2,
+    "end": 876.68,
+    "duration": 7.4799999999999045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 876.68,
+    "end": 883.4,
+    "duration": 6.720000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 883.4,
+    "end": 888.92,
+    "duration": 5.519999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 888.92,
+    "end": 896.06,
+    "duration": 7.139999999999986,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 896.06,
+    "end": 902.52,
+    "duration": 6.460000000000036,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 902.52,
+    "end": 907.08,
+    "duration": 4.560000000000059,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 907.08,
+    "end": 914.36,
+    "duration": 7.279999999999973,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 914.36,
+    "end": 920.56,
+    "duration": 6.199999999999932,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 920.56,
+    "end": 927.06,
+    "duration": 6.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 927.06,
+    "end": 934.04,
+    "duration": 6.980000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 934.04,
+    "end": 939.46,
+    "duration": 5.420000000000073,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 939.46,
+    "end": 945.76,
+    "duration": 6.2999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 945.76,
+    "end": 951.18,
+    "duration": 5.419999999999959,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 951.18,
+    "end": 956.28,
+    "duration": 5.100000000000023,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 956.28,
+    "end": 961.7,
+    "duration": 5.420000000000073,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 961.7,
+    "end": 966.96,
+    "duration": 5.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 966.96,
+    "end": 971.2,
+    "duration": 4.240000000000009,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 971.2,
+    "end": 978.44,
+    "duration": 7.240000000000009,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 978.44,
+    "end": 984.92,
+    "duration": 6.4799999999999045,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 984.92,
+    "end": 990.18,
+    "duration": 5.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 990.18,
+    "end": 995.34,
+    "duration": 5.160000000000082,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 995.34,
+    "end": 1001.78,
+    "duration": 6.439999999999941,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1001.78,
+    "end": 1009.02,
+    "duration": 7.240000000000009,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1009.02,
+    "end": 1014.96,
+    "duration": 5.940000000000055,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1014.96,
+    "end": 1022.04,
+    "duration": 7.079999999999927,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1022.04,
+    "end": 1026.8,
+    "duration": 4.759999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1026.8,
+    "end": 1031.46,
+    "duration": 4.660000000000082,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1031.46,
+    "end": 1034.92,
+    "duration": 3.4600000000000364,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1034.92,
+    "end": 1040.6,
+    "duration": 5.679999999999836,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1040.6,
+    "end": 1041.8,
+    "duration": 1.2000000000000455,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1041.8,
+    "end": 1043.32,
+    "duration": 1.5199999999999818,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1043.32,
+    "end": 1044.94,
+    "duration": 1.6200000000001182,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1044.94,
+    "end": 1048.38,
+    "duration": 3.4400000000000546,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1048.38,
+    "end": 1054.7,
+    "duration": 6.319999999999936,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1054.7,
+    "end": 1062.3,
+    "duration": 7.599999999999909,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1062.3,
+    "end": 1067.8,
+    "duration": 5.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1067.8,
+    "end": 1073.02,
+    "duration": 5.220000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1073.02,
+    "end": 1078.44,
+    "duration": 5.420000000000073,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1078.44,
+    "end": 1086.24,
+    "duration": 7.7999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1086.24,
+    "end": 1093.5,
+    "duration": 7.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1093.5,
+    "end": 1096.36,
+    "duration": 2.8599999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1096.36,
+    "end": 1103.9,
+    "duration": 7.540000000000191,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1103.9,
+    "end": 1108.82,
+    "duration": 4.919999999999845,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1108.82,
+    "end": 1114.02,
+    "duration": 5.2000000000000455,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1114.02,
+    "end": 1118.78,
+    "duration": 4.759999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1118.78,
+    "end": 1126.1,
+    "duration": 7.319999999999936,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1126.1,
+    "end": 1133.06,
+    "duration": 6.960000000000036,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1133.06,
+    "end": 1140.86,
+    "duration": 7.7999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1140.86,
+    "end": 1148.44,
+    "duration": 7.580000000000155,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1148.44,
+    "end": 1153.28,
+    "duration": 4.839999999999918,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1153.28,
+    "end": 1155.88,
+    "duration": 2.6000000000001364,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1155.88,
+    "end": 1156.86,
+    "duration": 0.9799999999997908,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1156.86,
+    "end": 1160.02,
+    "duration": 3.160000000000082,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1160.02,
+    "end": 1167.08,
+    "duration": 7.059999999999945,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1167.08,
+    "end": 1173.86,
+    "duration": 6.779999999999973,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1173.86,
+    "end": 1177.98,
+    "duration": 4.120000000000118,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1177.98,
+    "end": 1184.56,
+    "duration": 6.579999999999927,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1184.56,
+    "end": 1191.88,
+    "duration": 7.320000000000164,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1191.88,
+    "end": 1197.4,
+    "duration": 5.519999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1197.4,
+    "end": 1203.76,
+    "duration": 6.3599999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1203.76,
+    "end": 1210.36,
+    "duration": 6.599999999999909,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1210.36,
+    "end": 1214.0,
+    "duration": 3.6400000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1214.0,
+    "end": 1214.66,
+    "duration": 0.6600000000000819,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1214.66,
+    "end": 1217.22,
+    "duration": 2.5599999999999454,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1217.22,
+    "end": 1221.48,
+    "duration": 4.259999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1221.48,
+    "end": 1226.96,
+    "duration": 5.480000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1226.96,
+    "end": 1228.7,
+    "duration": 1.740000000000009,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1228.7,
+    "end": 1231.98,
+    "duration": 3.2799999999999727,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1231.98,
+    "end": 1234.38,
+    "duration": 2.400000000000091,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1234.38,
+    "end": 1235.68,
+    "duration": 1.2999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1235.68,
+    "end": 1237.46,
+    "duration": 1.7799999999999727,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1237.46,
+    "end": 1238.92,
+    "duration": 1.4600000000000364,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1238.92,
+    "end": 1243.94,
+    "duration": 5.019999999999982,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1243.94,
+    "end": 1251.38,
+    "duration": 7.440000000000055,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1251.38,
+    "end": 1257.14,
+    "duration": 5.759999999999991,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1257.14,
+    "end": 1262.22,
+    "duration": 5.079999999999927,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1262.22,
+    "end": 1267.26,
+    "duration": 5.039999999999964,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1267.26,
+    "end": 1272.48,
+    "duration": 5.220000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1272.48,
+    "end": 1274.38,
+    "duration": 1.900000000000091,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1274.38,
+    "end": 1275.9,
+    "duration": 1.5199999999999818,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1275.9,
+    "end": 1278.28,
+    "duration": 2.3799999999998818,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1278.28,
+    "end": 1281.86,
+    "duration": 3.5799999999999272,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1281.86,
+    "end": 1283.78,
+    "duration": 1.9200000000000728,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1283.78,
+    "end": 1287.42,
+    "duration": 3.6400000000001,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1287.42,
+    "end": 1288.7,
+    "duration": 1.2799999999999727,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1288.7,
+    "end": 1293.68,
+    "duration": 4.980000000000018,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1293.68,
+    "end": 1299.06,
+    "duration": 5.379999999999882,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1299.06,
+    "end": 1304.18,
+    "duration": 5.120000000000118,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1304.18,
+    "end": 1308.58,
+    "duration": 4.399999999999864,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "number_card",
+    "start": 1308.58,
+    "end": 1309.46,
+    "duration": 0.8800000000001091,
+    "prompt": "Number 1.",
+    "number": 1
+  },
+  {
+    "type": "content",
+    "start": 1309.46,
+    "end": 1316.78,
+    "duration": 7.319999999999936,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1316.78,
+    "end": 1324.16,
+    "duration": 7.380000000000109,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1324.16,
+    "end": 1331.66,
+    "duration": 7.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1331.66,
+    "end": 1338.52,
+    "duration": 6.8599999999999,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1338.52,
+    "end": 1342.22,
+    "duration": 3.7000000000000455,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1342.22,
+    "end": 1347.42,
+    "duration": 5.2000000000000455,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1347.42,
+    "end": 1352.98,
+    "duration": 5.559999999999945,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1352.98,
+    "end": 1357.56,
+    "duration": 4.579999999999927,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1357.56,
+    "end": 1365.0,
+    "duration": 7.440000000000055,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1365.0,
+    "end": 1370.16,
+    "duration": 5.160000000000082,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1370.16,
+    "end": 1374.88,
+    "duration": 4.720000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1374.88,
+    "end": 1382.56,
+    "duration": 7.679999999999836,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1382.56,
+    "end": 1385.76,
+    "duration": 3.2000000000000455,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1385.76,
+    "end": 1386.72,
+    "duration": 0.9600000000000364,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1386.72,
+    "end": 1388.4,
+    "duration": 1.6800000000000637,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1388.4,
+    "end": 1389.9,
+    "duration": 1.5,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1389.9,
+    "end": 1396.1,
+    "duration": 6.199999999999818,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1396.1,
+    "end": 1402.82,
+    "duration": 6.720000000000027,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1402.82,
+    "end": 1409.92,
+    "duration": 7.100000000000136,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1409.92,
+    "end": 1416.72,
+    "duration": 6.7999999999999545,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1416.72,
+    "end": 1423.34,
+    "duration": 6.619999999999891,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1423.34,
+    "end": 1430.46,
+    "duration": 7.120000000000118,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1430.46,
+    "end": 1436.1,
+    "duration": 5.639999999999873,
+    "prompt": null,
+    "number": null
+  },
+  {
+    "type": "content",
+    "start": 1436.1,
+    "end": 1443.337,
+    "duration": 7.23700000000008,
+    "prompt": null,
+    "number": null
+  }
+]

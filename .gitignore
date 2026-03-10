@@ -1,0 +1,37 @@
+# Generated images and videos
+video_workspace/images/
+video_workspace/videos/
+
+# Audio files
+video_workspace/audio/
+
+# Character reference images
+video_workspace/characters/
+
+# Style references
+video_workspace/style_references/
+
+# Intro assets
+video_workspace/intro/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment / secrets
+.env
+*.key
+gui_state.json
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,426 @@
+[
+  {
+    "scene": 112,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "644.36s - 646.58s",
+    "scene_text": "the 1960s, particle physics had descended into absolute",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy fading to black at center, turbulent violet-pink nebula clouds churning across the upper half, dense cold white star field, faint distant galaxy smear at far right. FOREGROUND: Flat 2D cartoon — dozens of small brightly colored cartoon spheres (electric blue, coral red, warm orange, golden yellow, violet purple, clean white, each bold black outlined, 3-5% frame width) scattered chaotically across the entire frame in no order, tumbling and overlapping, representing the particle zoo chaos. No organizing structure, pure disorder. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 113,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "646.58s - 651.34s",
+    "scene_text": "chaos. With the advent of powerful particle accelerators, scientists",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black center, purple-pink nebula clouds billowing at upper left and lower right corners, dense cold white star field throughout, faint spiral galaxy at upper right. FOREGROUND: Flat 2D cartoon — a long horizontal bold-outlined tube shape (particle accelerator, warm orange flat fill, 60% frame width, 8% frame height) extends from left edge to center-right at mid-frame. From its right opening, a cascade of small multicolored cartoon spheres (electric blue, coral red, violet purple, golden yellow, each 3% frame width, bold black outlined) explodes outward in a starburst spray pattern. Scientist stick figure stands at far-left edge at the accelerator controls, round white head, dot eyes, white torso, 12% frame height."
+  },
+  {
+    "scene": 114,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "651.34s - 656.70s",
+    "scene_text": "were discovering dozens, then hundreds of new, exotic subatomic particles.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, wide violet-pink nebula mass spread across the upper two-thirds, dense cold white star field, faint elongated galaxy streak at lower left. FOREGROUND: Flat 2D cartoon particle zoo — the full frame is crowded with cartoon spheres in every size from 2% to 7% frame width, all bold black outlined, in electric blue, coral red, warm orange, golden yellow, violet purple, and clean white flat fills. New spheres appear at the edges with small golden yellow starburst shapes marking each new discovery, as if more keep arriving. Total visual overwhelm conveying hundreds of particles. Scientist stick figure at far-right edge, round white head, dot eyes, white torso, 12% frame height, arms thrown up in bewilderment."
+  },
+  {
+    "scene": 115,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "656.70s - 663.06s",
+    "scene_text": "They called it the particle zoo. It made no sense. The universe was supposed to be elegant and simple,",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black with soft violet-pink nebula clouds drifting across the upper third, cold white star field, faint distant galaxy glow at center-right. FOREGROUND: Flat 2D cartoon split composition — left half of frame shows the chaotic particle zoo: dozens of small multicolored cartoon spheres (bold black outlined, 2-4% frame width) tumbling in disorder; right half shows a clean white cartoon circle (14% frame width, bold black outline) containing only two perfectly centered colored spheres (electric blue and coral red, 5% frame width each) representing the desired elegant simplicity. A bold black jagged vertical line divides the two halves like a torn edge, contrasting chaos versus order."
+  },
+  {
+    "scene": 116,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "663.06s - 668.76s",
+    "scene_text": "not a messy catalog of randomly generated matter. In 1964, physicists Murray",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, dense violet-pink nebula clouds at upper left quadrant, cold white star field scattered throughout, faint galactic core at far right. FOREGROUND: Flat 2D cartoon — the chaotic particle zoo (dozens of multicolored small spheres, bold outlined, 2-4% frame width) fills the background of the foreground layer, but a large clean white cartoon speech bubble (bold black outline, flat fill, 30% frame width) emerges from the left edge, containing a cartoon lightbulb shape (golden yellow, bold black outline, 10% frame width) indicating a solution being proposed. Scientist stick figure at far-left edge, round white head, dot eyes, white torso, 12% frame height, pointing finger toward the speech bubble."
+  },
+  {
+    "scene": 117,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "668.76s - 673.02s",
+    "scene_text": "Gell-Mann and George Zweig independently proposed a radical solution to",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, swirling violet-pink nebula clouds at upper right, dense cold white star field, faint elongated galaxy smear at lower right. FOREGROUND: Flat 2D cartoon — two scientist stick figures stand at opposite edges of the frame: one at far-left edge, one at far-right edge, each with round white head, dot eyes, white rectangular lab-coat torso, stick limbs, 12% frame height. Both point toward the frame center with one stick arm each. Between them at center frame, a large golden yellow cartoon lightbulb (bold black outline, flat fill, 14% frame width) glows with small radiating bold-outlined lines, representing independent simultaneous insight. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 118,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "673.02s - 680.80s",
+    "scene_text": "clean up the zoo. They suggested that protons and neutrons, the supposedly indivisible building blocks of the atomic nucleus,",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft purple-pink nebula drifting across the upper half, dense cold white star field, faint spiral galaxy at center-left. FOREGROUND: Flat 2D cartoon — a large cartoon proton shape at center frame: a clean white circle (bold black outline, 16% frame width) with a large bold-outlined question mark drawn inside it in electric blue, suggesting hidden interior structure. Surrounding it in the mid-frame area, small scattered multicolored zoo-particle spheres (2-3% frame width, bold black outlined) are being swept away to the sides by two bold-outlined broom shapes (golden yellow flat fill) moving from both sides toward the edges, representing cleaning up the zoo. Scientist stick figure at far-right edge, 12% frame height."
+  },
+  {
+    "scene": 119,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "680.80s - 686.98s",
+    "scene_text": "were actually not fundamental at all. They were made of even smaller, truly indivisible entities.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violet-pink nebula clouds billowing at upper left, dense cold white star field, faint distant galaxy at far right. FOREGROUND: Flat 2D cartoon — a large clean white cartoon circle (bold black outline, 20% frame width) representing a proton sits at center frame. Inside it, visible through a cartoon circular cutaway window, are three small cartoon spheres: two electric blue (bold black outline, 5% frame width) and one coral red (bold black outline, 5% frame width), arranged in a tight triangle. Bold golden yellow radiating lines emanate from the small spheres inside, suggesting they are the true fundamental entities. Bold black outlines on all shapes, flat cel-shaded fills."
+  },
+  {
+    "scene": 120,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "686.98s - 691.02s",
+    "scene_text": "Gell-Mann named them quarks, pulling the word from a nonsensical line",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy fading to black, soft violet-pink nebula at upper right quadrant, dense cold white star field, faint galaxy spiral at lower left. FOREGROUND: Flat 2D cartoon — at center frame, a flat cartoon open book (warm orange cover, clean white pages, bold black outline, 18% frame width) lies open. Above the book, three small cartoon spheres float in a loose cluster: two electric blue (bold black outline, 5% frame width) and one coral red (bold black outline, 5% frame width), with small golden yellow starburst shapes between them suggesting they were conjured from the book's text. Scientist stick figure stands at far-left edge, round white head, dot eyes, white torso, 12% frame height, one arm extended toward the book. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 121,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "691.02s - 695.86s",
+    "scene_text": "in James Joyce's novel, Finnegan's Wake. Furthermore, the math demanded that",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, wide purple-pink nebula mass across the upper two-thirds, dense cold white star field, faint elongated galaxy at center-right. FOREGROUND: Flat 2D cartoon — a flat cartoon open book (warm orange cover, bold black outline, 20% frame width) dominates center-left frame with decorative bold-outlined squiggly lines inside the pages representing text. Three small cartoon quark spheres (two electric blue, one coral red, each bold outlined, 5% frame width) orbit above the book at upper-right of center frame, linked by thin bold-outlined curved arrows in a circular dance. A bold golden yellow cartoon equals sign (8% frame width) floats between the book and the quarks, connecting them symbolically. Bold black outlines throughout."
+  },
+  {
+    "scene": 122,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "695.86s - 702.66s",
+    "scene_text": "these quarks possess fractional electrical charges, like plus two-thirds or minus one-third.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, turbulent violet-pink nebula clouds at upper left, dense cold white star field throughout, faint distant galaxy at lower right. FOREGROUND: Flat 2D cartoon — two large cartoon spheres dominate center frame: on the left an electric blue sphere (bold black outline, 8% frame width) with a small cartoon plus sign above it (golden yellow, bold outlined), representing plus two-thirds charge; on the right a coral red sphere (bold black outline, 8% frame width) with a small cartoon minus sign above it (clean white, bold outlined), representing minus one-third charge. Between the two spheres, a bold-outlined fraction bar shape (clean white, bold black outline) separates numerator and denominator cartoon blocks, suggesting fractional values. All shapes flat cel-shaded, zero gradients."
+  },
+  {
+    "scene": 123,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "702.66s - 709.46s",
+    "scene_text": "No one had ever seen a fractional charge in nature. It sounded like theoretical desperation.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, cold and sparse, thin violet-pink nebula wisps at upper right, dense cold white star field, faint galaxy smear at lower left. FOREGROUND: Flat 2D cartoon — at center frame, a large bold-outlined cartoon X mark (coral red, 16% frame width) overlays a small electric blue cartoon sphere (bold outlined, 7% frame width) indicating something never observed. Around the perimeter of the frame, small bold-outlined question mark shapes (golden yellow, 4% frame width each) float in a scattered ring pattern conveying skepticism and doubt. Scientist stick figure at far-right edge, round white head, dot eyes, white torso, 12% frame height, one hand raised palm-out in a doubting gesture. Bold black outlines on all shapes, flat fills only."
+  },
+  {
+    "scene": 124,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "709.46s - 712.42s",
+    "scene_text": "But in 1968, the Stanford Linear Accelerator Center, SLAC,",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds at upper half spreading left to right, dense cold white star field, faint spiral galaxy at far right. FOREGROUND: Flat 2D cartoon — a long horizontal bold-outlined tube shape (particle accelerator, electric blue flat fill, 70% frame width, 9% frame height) stretches from left edge to center-right at mid-frame, representing SLAC. The tube has small bold-outlined circular cross-section rings along its length for depth. A small clean white cartoon building silhouette (bold black outline, flat fill, 12% frame width) sits above the left end of the tube. Bold golden yellow star shape (10% frame width) glows at the right end of the tube. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 125,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "712.42s - 717.92s",
+    "scene_text": "built a two-mile long gun and fired high-energy electrons directly into protons.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, sweeping purple-pink nebula across the upper third, dense cold white star field, faint elongated galaxy at center. FOREGROUND: Flat 2D cartoon — a very long horizontal bold-outlined tube (accelerator gun, electric blue flat fill, bold black outline, 75% frame width, 7% frame height) stretches across the full width of the frame at mid-height. From the right end of the tube, a small clean white cartoon sphere (electron, bold black outline, 4% frame width) is shown as a bold-outlined arrow projectile mid-flight to the right, trailing small golden yellow motion lines. At the far right of the frame, a larger clean white circle (proton, bold black outline, 12% frame width) sits as the target. Bold black outlines throughout, flat cel-shaded fills."
+  },
+  {
+    "scene": 126,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "717.92s - 719.08s",
+    "scene_text": "Instead of passing through or bouncing off a solid sphere, the electrons ricocheted off hard, point",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula at upper left corner, dense cold white star field, faint distant galaxy spiral at lower right. FOREGROUND: Flat 2D cartoon — at center frame, a large clean white cartoon circle (proton, bold black outline, 18% frame width) is shown. Inside it, three tiny bright dots (two electric blue, one coral red, each 2% frame width, bold black outlined) sit at the triangle positions of a quark arrangement. A small clean white cartoon sphere (electron, bold black outline, 4% frame width) flies in from the left trailing golden yellow motion lines, then bounces off one of the inner dots with a bold-outlined starburst impact shape (warm orange, 6% frame width) at the collision point. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 127,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "719.08s - 730.28s",
+    "scene_text": "-like structures deep inside the proton. The proton had internal organs. The quarks were real.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black sky, dramatic violet-pink nebula blooming at upper center, dense cold white star field, faint galactic core glowing at lower right. FOREGROUND: Flat 2D cartoon — a large clean white cartoon circle (proton, bold black outline, 22% frame width) sits at center with its interior visible. Inside are three distinct cartoon spheres arranged in a triangle: two electric blue (bold black outline, 6% frame width) and one coral red (bold black outline, 6% frame width), bound by thick squiggly warm orange gluon lines connecting them. A large golden yellow cartoon starburst (18% frame width, bold black outline) radiates from behind the proton circle, celebrating confirmation. Scientist stick figure at far-right edge, 12% frame height, both arms raised in triumph. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 128,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "730.28s - 736.34s",
+    "scene_text": "However, confirming the existence of quarks introduced a concept so frustrating it almost breaks the",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, dense turbulent violet-pink nebula swirling across the upper half, cold white star field throughout, faint distant galaxy at far right. FOREGROUND: Flat 2D cartoon — a confirmed proton diagram at center-left: a clean white circle (bold black outline, 16% frame width) containing two electric blue and one coral red quark sphere (bold outlined, 5% frame width each), bound by warm orange squiggly gluon lines. From the right side of the proton, a bold-outlined jagged cartoon lightning bolt shape (golden yellow, 10% frame width) shoots rightward, representing the mental disruption of confinement. Scientist stick figure at far-right edge, 12% frame height, round white head clutched in stick hands, expressing frustration. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 129,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "736.34s - 744.10s",
+    "scene_text": "human mind. Quark confinement. You can never, under any circumstances, see a solitary quark.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, cold violet-pink nebula wisps at upper corners, dense cold white star field, faint galaxy smear at center-left. FOREGROUND: Flat 2D cartoon — at center frame, a single electric blue cartoon sphere (bold black outline, 8% frame width) sits inside a thick bold-outlined cartoon prison bar cage (clean white bars, bold black outline, 14% frame width tall, 12% frame width wide). The cage has bold-outlined padlock shapes on its sides. Around the outside of the cage, multiple bold-outlined X marks (coral red, 4% frame width each) float in a ring, reinforcing impossibility. The entire composition emphasizes a single quark permanently locked away. Bold black outlines on all shapes, flat cel-shaded fills, zero gradients."
+  },
+  {
+    "scene": 130,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "744.10s - 748.00s",
+    "scene_text": "The strong force holding them together works like a rubber band.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft purple-pink nebula clouds at upper right, dense cold white star field, faint spiral galaxy at lower left. FOREGROUND: Flat 2D cartoon — two cartoon quark spheres sit at center frame roughly 20% apart: one electric blue (bold black outline, 7% frame width) at center-left, one coral red (bold black outline, 7% frame width) at center-right. Between them, a thick bold-outlined elastic-looking band (warm orange flat fill, bold black outline, slightly wavy/loopy shape suggesting elasticity) stretches horizontally connecting both spheres. The band has slight wavy cartoon ripples along its length suggesting tension. Bold golden yellow radiating lines from the band center indicate force strength. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 131,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "748.00s - 751.70s",
+    "scene_text": "If you try to pull two quarks apart, the force between them doesn't weaken.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, violet-pink nebula clouds billowing at upper half, dense cold white star field, faint elongated galaxy at lower right. FOREGROUND: Flat 2D cartoon — two quark spheres have been pulled further apart: electric blue sphere (bold black outline, 7% frame width) at left quarter of frame, coral red sphere (bold black outline, 7% frame width) at right quarter. Bold-outlined arrows (golden yellow, bold outlined) pull each sphere further outward toward the frame edges. The elastic band between them (warm orange, bold black outline) is now stretched longer but visibly thicker and more taut, with zigzag tension lines along its length indicating growing rather than weakening force. Bold black outlines on all shapes, flat fills only."
+  },
+  {
+    "scene": 132,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "751.70s - 758.58s",
+    "scene_text": "It grows stronger. If you pull hard enough, the energy required to stretch that invisible bond becomes so immense that",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, wild turbulent violet-pink nebula churning across the upper two-thirds, dense cold white star field, faint galactic core glowing at center. FOREGROUND: Flat 2D cartoon — two quark spheres are now stretched near the extreme left and right edges of the frame: electric blue (bold black outline, 7% frame width) at far left, coral red (bold black outline, 7% frame width) at far right. The elastic band between them (warm orange, bold black outline) spans the full frame width, extremely stretched and visibly strained with bold jagged tension lines and bold golden yellow energy pulses along its length. The band is at maximum stretch. Bold black outlines on all shapes, flat cel-shaded fills."
+  },
+  {
+    "scene": 133,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "758.58s - 765.44s",
+    "scene_text": "it snaps. But instead of leaving two isolated quarks, the sheer energy of the snap instantly transforms",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, explosive violet-pink nebula flaring at center spreading outward, dense cold white star field, dramatic faint galaxy at far left. FOREGROUND: Flat 2D cartoon — at dead center frame, a large bold-outlined cartoon explosion starburst (warm orange and golden yellow, alternating spikes, 22% frame width, bold black outline) marks where the rubber-band snapped. The original electric blue and coral red quark spheres have flown to the far left and far right edges respectively (7% frame width each, bold outlined). The explosion center is bright and energetic. Bold small zigzag energy lines radiate outward from the starburst in all directions. Bold black outlines on all shapes, flat fills, zero gradients inside shapes."
+  },
+  {
+    "scene": 134,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "765.44s - 771.52s",
+    "scene_text": "into mass, creating two brand-new quarks out of the vacuum. They immediately pair up.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violet-pink nebula clouds at upper right blooming outward, dense cold white star field, faint spiral galaxy at lower left. FOREGROUND: Flat 2D cartoon — at center frame, two brand-new cartoon quark spheres (one electric blue, one coral red, each bold black outline, 7% frame width) appear from a golden yellow starburst birth shape (bold outlined, 12% frame width) at exact center. Each new quark immediately links by a short thick warm orange elastic band (bold black outline) to one of the original quarks at the frame edges: the new blue quark links to the original red at far right, the new red quark links to the original blue at far left. Result is two pairs. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 135,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "771.52s - 775.40s",
+    "scene_text": "It is the ultimate cosmic prison. The foundational building blocks",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black and cold, thin sparse violet-pink nebula wisps at far upper corners, very dense cold white star field creating a claustrophobic infinite backdrop. FOREGROUND: Flat 2D cartoon — a large bold-outlined cosmic prison cell shape dominates center frame: a clean white rectangle with bold-outlined vertical bars (14% frame height, 16% frame width). Inside the prison, three quark spheres (two electric blue, one coral red, each bold outlined, 5% frame width) are arranged in their triangle formation, bound by thick warm orange squiggly gluon lines. The prison occupies center frame, emphasizing permanence of confinement. Bold black outlines on all shapes, flat cel-shaded fills, zero gradients."
+  },
+  {
+    "scene": 136,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "775.40s - 781.40s",
+    "scene_text": "of our reality are permanently and irrevocably locked away from us. We are made of quarks.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, sweeping violet-pink nebula across the upper half, dense cold white star field, faint galactic core at far right. FOREGROUND: Flat 2D cartoon — a simplified bold-outlined cartoon human figure (large round white head, clean white oval body representing humanity, stick limbs, bold black outline, 16% frame height) stands at center frame. Around and inside the figure, tiny electric blue and coral red quark spheres (bold outlined, 2-3% frame width) are distributed throughout the body shape, suggesting we are built of quarks. Each quark sphere is visually trapped inside the body with small bold-outlined lock shapes nearby. Bold golden yellow radiating lines from the body suggest the fundamental energy within. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 137,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "781.40s - 784.94s",
+    "scene_text": "Our world is made of quarks. Yet the fundamental laws of the universe",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, expansive violet-pink nebula blooming across the full upper third, dense cold white star field throughout, faint distant spiral galaxy at center-left. FOREGROUND: Flat 2D cartoon — a simplified bold-outlined cartoon planet/world sphere (clean white and electric blue flat fill patches, bold black outline, 18% frame width) sits at center frame. Around and inside it, dozens of tiny electric blue and coral red quark spheres (bold outlined, 2% frame width each) are embedded as if composing its very substance. Above the planet, bold-outlined chain link shapes (warm orange, bold outlined) form an arc, representing the laws that confine quarks. Bold black outlines on all shapes, flat fills only."
+  },
+  {
+    "scene": 138,
+    "segment": "#5 Quarks, Predicted 1964, Confirmed 1968.",
+    "time": "784.94s - 792.50s",
+    "scene_text": "forbid us from ever holding a single one in isolation. Reality, at its lowest level, is censored.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black and vast, cold sparse violet-pink nebula wisps at the corners, extremely dense cold white star field, faint elongated galaxy at lower center, conveying the immensity of the universe and its hidden secrets. FOREGROUND: Flat 2D cartoon — at center frame, a single electric blue cartoon sphere (bold black outline, 8% frame width) is displayed inside a large bold-outlined black rectangle frame acting as a censorship bar (clean white rectangle with heavy bold black border, 20% frame width, 12% frame height), as if the quark is being redacted from observation. Bold-outlined chain links (warm orange) wrap around the censorship rectangle. Scientist stick figure at far-left edge, 12% frame height, arms reaching toward the censored quark but unable to reach. Bold black outlines on all shapes, flat cel-shaded fills."
+  },
+  {
+    "scene": 140,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "792.50s - 798.74s",
+    "scene_text": "Number four, Pion, predicted 1935, found 1947.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, warm violet-pink nebula clouds blooming at upper right and lower left, dense cold white star field, faint galaxy spiral at center. FOREGROUND: Flat 2D cartoon — a large violet cartoon sphere (pion, bold black outline, flat violet-purple fill, 18% frame width) floats at center frame with a bold golden yellow starburst halo behind it (22% frame width, bold outlined). Two smaller bold-outlined bracket shapes in warm orange flank the pion sphere left and right like a title display. A small scientist stick figure stands at far-left edge, round white head, dot eyes, white torso, 12% frame height, one arm gesturing toward the pion in announcement. Bold black outlines on all shapes, flat cel-shaded fills, zero gradients."
+  },
+  {
+    "scene": 141,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "798.74s - 802.12s",
+    "scene_text": "Before quarks and gluons were fully understood, physicists were",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, soft violet-pink nebula wisps drifting at upper half, dense cold white star field, faint elongated galaxy at far right. FOREGROUND: Flat 2D cartoon — at center frame, a large clean white cartoon circle (proton/nucleus, bold black outline, 18% frame width) sits with a bold-outlined question mark (golden yellow, 10% frame height) displayed prominently inside it, indicating unknown interior structure. Surrounding the circle, small bold-outlined scattered spheres (electric blue, coral red, each 3% frame width) float at a distance without clear organization, representing the pre-quark era of confusion. Scientist stick figure at far-right edge, round white head, dot eyes, white torso, 12% frame height, hand raised to chin in thinking pose. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 142,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "802.12s - 809.08s",
+    "scene_text": "grappling with the sheer mechanics of the nucleus. If protons and neutrons are tightly bound together, what exactly",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, purple-pink nebula clouds at upper left spreading inward, dense cold white star field, faint galaxy core at lower right. FOREGROUND: Flat 2D cartoon — a nucleus diagram at center frame: two clean white circles (protons, bold black outline, 10% frame width each) and one warm orange circle (neutron, bold black outline, 10% frame width) are packed tightly together in a cluster. Between the circles, a large bold-outlined question mark (golden yellow, 8% frame height) floats in the gap, representing the unanswered question of what binds them. Short bold wavy lines between the particles hint at an unknown force. Bold black outlines on all shapes, flat cel-shaded fills, zero gradients inside shapes."
+  },
+  {
+    "scene": 143,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "809.08s - 814.12s",
+    "scene_text": "is bouncing between them to transmit that force? In 1935, Japanese",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, soft violet-pink nebula at upper right quadrant, dense cold white star field, faint spiral galaxy at center-left. FOREGROUND: Flat 2D cartoon — two clean white proton circles (bold black outline, 10% frame width each) sit at left and right of center frame. Between them, a small violet cartoon sphere (pion, bold black outline, 6% frame width) bounces in a bold-outlined arc trajectory from one proton to the other, shown with a bold dashed arc line and motion lines in golden yellow. The bouncing pion has small velocity streaks behind it. Scientist stick figure at far-left edge, round white head, dot eyes, white torso, 12% frame height, pointing toward the bouncing pion. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 144,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "814.12s - 821.64s",
+    "scene_text": "physicist Hideki Yukawa predicted the existence of a new type of particle, a meson, which would act as the carrier",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, warm violet-pink nebula billowing across the upper half, dense cold white star field, faint distant galaxy at far right. FOREGROUND: Flat 2D cartoon — a scientist stick figure stands at far-left edge, round white head, dot eyes, white torso, 12% frame height, one arm extended pointing toward center frame. At center, a large bold-outlined delivery-carrier arrow (golden yellow, 20% frame width, bold black outline) points rightward. Carried on top of the arrow is a large violet cartoon sphere (pion/meson, bold black outline, 8% frame width) acting as the cargo. To the right of the arrow, two clean white proton circles (bold black outline, 8% frame width each) sit one above the other as the destination. Bold black outlines on all shapes, flat cel-shaded fills."
+  },
+  {
+    "scene": 145,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "821.64s - 827.50s",
+    "scene_text": "of the strong nuclear force between nucleons. Based on the size of the atomic nucleus, Yukawa",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, sparse violet-pink nebula clouds at upper corners, dense cold white star field, faint elongated galaxy at lower center. FOREGROUND: Flat 2D cartoon — a compact nucleus cluster at center frame: two clean white proton circles and one warm orange neutron circle (all bold outlined, 9% frame width each) packed tightly together. Bold-outlined wavy warm orange force lines (representing the strong force) radiate between the particles and slightly beyond the cluster. A violet cartoon sphere (pion, bold black outline, 7% frame width) shuttles between two of the nucleons mid-arc along a dashed bold arc line. Small golden yellow ruler/scale lines surround the nucleus cluster indicating size measurement. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 146,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "827.50s - 833.54s",
+    "scene_text": "calculated that this particle had to have a mass somewhere between an electron and a proton.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, soft purple-pink nebula drifting across the upper third, dense cold white star field, faint galaxy spiral at center-right. FOREGROUND: Flat 2D cartoon — a simple bold-outlined balance scale (warm orange, bold black outline, 18% frame width) sits at center frame. On the left pan, a tiny clean white cartoon sphere (electron, bold black outline, 2% frame width) sits nearly weightless. On the right pan, a large clean white circle (proton, bold black outline, 9% frame width) sits heavily. Balanced between the two pans on the scale beam, a medium-sized violet cartoon sphere (pion, bold black outline, 5% frame width) floats above the center fulcrum, positioned exactly in the middle of the weight spectrum. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 147,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "833.54s - 839.80s",
+    "scene_text": "It was a bold claim, predicting a brand-new mid-weight particle purely through mathematical deduction.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, dramatic violet-pink nebula blooming at upper center, dense cold white star field, faint galactic core glow at lower right. FOREGROUND: Flat 2D cartoon — a scientist stick figure stands at far-left edge, round white head, dot eyes, white torso, 12% frame height, one arm dramatically extended pointing at center frame. At center, a large bold-outlined cartoon scroll or equation parchment (golden yellow flat fill, bold black outline, 16% frame width) unrolls with bold squiggly lines representing mathematical equations. From the top of the scroll, a bold-outlined upward arrow emerges pointing to a violet cartoon sphere (pion, bold black outline, 7% frame width) floating above the scroll, being predicted into existence by math alone. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 148,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "839.80s - 846.18s",
+    "scene_text": "The hunt for Yukawa's meson was interrupted by the outbreak of World War II.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, cold violet-pink nebula clouds at upper corners, dense cold white star field, faint distant galaxy at far left. FOREGROUND: Flat 2D cartoon — at center-left frame, a violet cartoon sphere (pion, bold black outline, 7% frame width) has a large bold-outlined magnifying glass (warm orange frame, bold black outline, 12% frame width) searching for it, held by a stick arm from the far-left edge. But swooping down from upper right, a large bold-outlined jagged red lightning-bolt shape (coral red, bold black outline, 14% frame width) interrupts the scene, representing the war. Between the magnifying glass and the lightning bolt, a bold-outlined stop-hand symbol (clean white, bold outlined, 8% frame width) floats at center. Bold black outlines on all shapes, flat fills, zero gradients."
+  },
+  {
+    "scene": 149,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "846.18s - 850.10s",
+    "scene_text": "But in 1947, a team led by Cecil Powell decided to look for it not in expensive laboratory",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, soft violet-pink nebula at upper right, dense cold white star field, faint spiral galaxy at center-left. FOREGROUND: Flat 2D cartoon — at center-left, a large bold-outlined cartoon particle accelerator tube (electric blue, bold black outline, 40% frame width) with a large bold-outlined X mark (coral red, 10% frame width) crossing it out, indicating they chose not to use the accelerator. At center-right, a cartoon scientist stick figure (round white head, dot eyes, white torso, 12% frame height) holds a small flat rectangular cartoon photographic plate shape (clean white, bold black outline, 8% frame width) above their head. Above the scientist, a small bold-outlined mountain peak shape (golden yellow, 6% frame height) points upward suggesting the alternative approach. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 150,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "850.10s - 857.62s",
+    "scene_text": "accelerators, but in the laboratory of the cosmos. They coated glass plates with special photographic emulsions and",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, expansive violet-pink nebula filling the upper half like a cosmic laboratory ceiling, dense cold white star field, faint distant galaxy at lower right, the space itself framed as a vast natural laboratory. FOREGROUND: Flat 2D cartoon — at center frame, two or three flat rectangular cartoon photographic plates (clean white, bold black outline, 10% frame width each, 7% frame height each) are stacked slightly offset. Each plate has a smooth bold-outlined coating layer (violet-purple flat fill, bold outlined) applied on top representing the photographic emulsion. A scientist stick figure at far-left edge, round white head, dot eyes, white torso, 12% frame height, carefully holds one plate with both stick arms extended. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 151,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "857.62s - 863.70s",
+    "scene_text": "carried them to the tops of the Andes Mountains and the Pyrenees, exposing them to the raw, unfiltered",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black sky fading to a trace of atmosphere at the very bottom of frame, wild violet-pink nebula clouds at upper half, dense cold white star field filling the entire upper frame, faint galaxy at upper right, implying high altitude close to space. FOREGROUND: Flat 2D cartoon — at the bottom of the frame, simplified bold-outlined triangular mountain peaks (golden yellow, bold black outline, 18% frame height) rise sharply from the lower edge. Atop the tallest mountain peak, a scientist stick figure (round white head, dot eyes, white torso, 12% frame height) stands holding a stack of flat rectangular photographic plates (clean white, bold outlined, 8% frame width) raised overhead. From the upper frame, bold-outlined diagonal cosmic-ray streaks (warm orange arrows, bold outlined) rain down from space toward the plates. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 152,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "863.70s - 868.78s",
+    "scene_text": "bombardment of cosmic rays from deep space. When they developed the plates, they",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, dense turbulent violet-pink nebula churning across the full upper half, overwhelmingly dense cold white star field suggesting the raw bombardment from space, faint galactic core blazing at upper center. FOREGROUND: Flat 2D cartoon — multiple bold-outlined diagonal arrow streaks (cosmic rays, warm orange and golden yellow alternating, each 10-15% frame width, bold outlined) rain down from the upper frame at sharp angles toward the bottom of the frame. At the bottom-center, a scientist stick figure (round white head, dot eyes, white torso, 12% frame height) holds a flat photographic plate (clean white, bold black outline, 10% frame width) facing upward to receive the cosmic ray arrows. Bold black outlines on all shapes, flat fills, zero gradients inside shapes."
+  },
+  {
+    "scene": 153,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "868.78s - 875.32s",
+    "scene_text": "found the distinct, decaying tracks of a new particle. It was the pi-meson, or Pion.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, soft violet-pink nebula wisps at upper corners, dense cold white star field, faint spiral galaxy at center-right. FOREGROUND: Flat 2D cartoon — a large flat rectangular photographic plate (clean white rectangle, bold black outline, 22% frame width, 15% frame height) dominates center frame. On the plate's surface, two bold-outlined dotted curved track lines are visible: one longer bold-dotted curve entering from the top and curving to the right (the incoming particle), and a shorter bold-dotted curve branching off from a junction point (the decay track). At the junction point, a small violet cartoon sphere (pion, bold black outline, 5% frame width) is shown with a golden yellow starburst discovery glow behind it. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 154,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "875.32s - 881.64s",
+    "scene_text": "Yukawa's prediction was dead on. The discovery of the Pion via cosmic rays forces us to acknowledge a",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, triumphant violet-pink nebula blooming widely at upper center, dense cold white star field, faint galactic core at lower right. FOREGROUND: Flat 2D cartoon — at center-left, a bold-outlined cartoon scroll/equation parchment (golden yellow, bold outlined, 12% frame width) representing Yukawa's prediction. At center-right, a large violet cartoon sphere (pion, bold black outline, 9% frame width) confirmed and glowing with a bold golden yellow starburst behind it (14% frame width). Between the two, a bold-outlined checkmark shape (electric blue, bold black outline, 8% frame width) connects them, indicating perfect match. From the upper frame, bold-outlined diagonal cosmic-ray streak arrows (warm orange, bold outlined) still rain down, linking discovery to cosmic rays. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 155,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "881.64s - 886.74s",
+    "scene_text": "terrifying truth about our environment. We often think of space as something",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black and expansive, cold violet-pink nebula at the far upper corners barely visible, overwhelmingly dense cold white star field, faint distant galaxy at center, the vastness of space rendered in full detail to emphasize it is omnipresent. FOREGROUND: Flat 2D cartoon — at the bottom third of the frame, a simplified bold-outlined cartoon house shape (clean white walls, warm orange roof triangle, bold black outline, 16% frame width) sits at center-bottom. Above the house, a large bold-outlined curved bubble or glass dome (electric blue outline only, transparent interior, bold black outline, 24% frame width) surrounds the house protectively. But above the dome, bold diagonal cosmic-ray arrows (coral red, bold outlined) aim downward at the dome, suggesting the illusion of protection. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 156,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "886.74s - 893.00s",
+    "scene_text": "out there, separate from our terrestrial existence. But the Earth is under constant, relentless siege.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, violent swirling violet-pink nebula clouds at upper two-thirds, extremely dense cold white star field, distant stars blazing, faint multiple galaxy smears visible suggesting the enormous scale of the cosmic threat. FOREGROUND: Flat 2D cartoon — at center-bottom of frame, a simple bold-outlined cartoon Earth sphere (electric blue and golden yellow patches, bold black outline, 14% frame width) sits small and exposed. From all upper directions (upper-left, upper-center, upper-right), dozens of bold-outlined diagonal arrow streaks (cosmic rays, coral red and warm orange alternating, bold outlined) rain down densely toward the small Earth. The arrows fill the upper half of the frame. Bold black outlines on all shapes, flat cel-shaded fills, zero gradients."
+  },
+  {
+    "scene": 157,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "893.00s - 899.94s",
+    "scene_text": "Exploding stars, supermassive black holes, and unknown high-energy phenomena across the universe are",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, massive violet-pink and warm orange nebula explosion blooming at upper-left (representing a supernova), dense cold white star field, a second intense glow at upper-right suggesting a black hole's accretion disk, faint distant galaxy at center. FOREGROUND: Flat 2D cartoon — at upper-left, a large bold-outlined cartoon supernova starburst shape (golden yellow and coral red spikes alternating, bold black outline, 18% frame width). At upper-right, a bold-outlined black circle (black hole, bold black outline, 12% frame width) with a swirling flat-colored accretion ring (warm orange, bold outlined) around it. From both cosmic sources, bold-outlined arrow projectiles (warm orange, bold outlined) shoot downward toward the lower frame. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 158,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "899.94s - 904.56s",
+    "scene_text": "constantly accelerating protons to near-light speed and firing them across the",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, streaking violet-pink nebula trails suggesting extreme velocity across the upper half, dense cold white star field with motion-blur elongated stars indicating high speed, faint elongated galaxy at center. FOREGROUND: Flat 2D cartoon — at upper-left, a bold-outlined starburst explosion shape (golden yellow, bold outlined, 12% frame width) launches bold-outlined cartoon proton circles (clean white, bold black outline, 5% frame width each) rightward. Each proton has bold golden yellow speed-line streaks trailing behind it, suggesting near-light velocity. Multiple protons in a horizontal stream cross the frame from left to right at high speed. The motion lines are long and dramatic. Bold black outlines on all shapes, flat fills, zero gradients inside shapes."
+  },
+  {
+    "scene": 159,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "904.56s - 911.18s",
+    "scene_text": "cosmic void. When these cosmic bullets slam into the upper atmosphere of our planet, they shatter the atmospheric",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black above, faint blue atmospheric glow at the very bottom quarter of the frame, dense cold white star field in the upper half, purple-pink nebula at upper corners, establishing the boundary between space and atmosphere. FOREGROUND: Flat 2D cartoon — a flat horizontal bold-outlined band at the bottom third of frame represents the upper atmosphere (electric blue flat fill, bold black outline, full frame width, 6% frame height). From above, bold-outlined circular proton shapes (clean white, bold black outline, 5% frame width) zoom downward on steep diagonal angles with golden yellow speed streaks. At the atmosphere band, large bold-outlined explosion starburst shapes (warm orange and coral red, bold outlined, 10-12% frame width each) mark collision impacts where the protons shatter atmospheric atoms. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 160,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "911.18s - 917.32s",
+    "scene_text": "atoms, creating cascading showers of secondary particles, including pions.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black at the top, faint atmospheric layer at bottom, violet-pink nebula at upper corners, dense cold white star field, faint galaxy at upper center. FOREGROUND: Flat 2D cartoon — a particle shower cascade fills the frame from a single collision point at upper-center. From the starburst impact, branching bold-outlined lines split into multiple paths like a tree of decay. Along the branches, small multicolored cartoon spheres shower downward: violet purple spheres (pions, bold outlined, 4% frame width), electric blue spheres, coral red spheres, clean white spheres, all bold outlined, 2-4% frame width, distributed throughout the lower frame. The entire shower cascade structure is visible as bold branching lines with spheres at each branch end. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 161,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "917.32s - 922.02s",
+    "scene_text": "These unseen, radioactive showers are raining down on your head right now.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black at top, dense cold white star field, violet-pink nebula at upper half, faint galaxy at center, the night sky pressing down onto the scene. FOREGROUND: Flat 2D cartoon — from the full upper edge of the frame, dozens of small bold-outlined cartoon particle spheres (violet purple pions, electric blue, coral red, mix of types, each 2-4% frame width, bold outlined) rain vertically downward like a heavy shower filling the entire width. At the center-bottom of frame, a simplified cartoon person shape (large round white head, white oval body, stick limbs, bold black outline, 14% frame height) stands facing forward, with particle spheres passing through and around them from above. The particles continue below the person as if penetrating through. Bold black outlines on all shapes."
+  },
+  {
+    "scene": 162,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "922.02s - 926.30s",
+    "scene_text": "They penetrate the roofs of our homes and the tissues of our bodies.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, cold sparse violet-pink nebula at far upper corners, dense cold white star field, emphasizing the cosmic origin of the bombardment. FOREGROUND: Flat 2D cartoon — at center-bottom of frame, a bold-outlined cartoon house cross-section (clean white walls, warm orange roof, bold black outline, 20% frame width, 15% frame height) shows interior with a simplified cartoon person silhouette (large round white head, white oval body, stick limbs, bold outlined, 10% frame height) inside. Bold-outlined particle shower arrows (coral red and violet purple, bold outlined) rain straight down from the upper frame, passing through the roof and through the person figure with small dotted path lines continuing through both. Bold black outlines on all shapes, flat cel-shaded fills, zero gradients."
+  },
+  {
+    "scene": 163,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "926.30s - 931.24s",
+    "scene_text": "The discovery of the Pion proved that we are not shielded from the violence of the universe.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black, explosive violet-pink nebula blooming at upper center suggesting cosmic violence, dense cold white star field, distant supernova glow at upper left. FOREGROUND: Flat 2D cartoon — at center frame, a large bold-outlined shield shape (electric blue, bold black outline, 16% frame height) is shown shattered into bold-outlined fragments flying outward in all directions (the pieces are electric blue, bold outlined). Through the shattered gap in the shield, a large violet cartoon sphere (pion, bold outlined, 8% frame width) passes through unimpeded with golden yellow speed streaks. Below the broken shield, a simplified cartoon Earth sphere (electric blue patches, bold outlined, 10% frame width) sits exposed. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 164,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "931.24s - 935.50s",
+    "scene_text": "We are constantly bathing in its radioactive debris, intimately connected to the",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep navy to black, warm violet-pink nebula glowing softly across the full upper half, dense cold white star field creating an intimate connection between space and earth, faint spiral galaxy at center. FOREGROUND: Flat 2D cartoon — at center frame, a simplified cartoon person shape (large round white head, white oval body, stick limbs, bold black outline, 16% frame height) stands with arms slightly open in a receiving pose. From all around the person — above, left, right — small bold-outlined particle spheres (violet purple pions, electric blue, coral red, each 3% frame width, bold outlined) float toward and through the person in all directions, bathing them in cosmic debris. Bold golden yellow radiating glow lines emanate softly from the figure. Bold black outlines on all shapes, flat fills."
+  },
+  {
+    "scene": 165,
+    "segment": "#4 Pion, Predicted 1935, Found 1947.",
+    "time": "935.50s - 940.00s",
+    "scene_text": "explosive deaths of stars millions of light-years away.",
+    "prompt_source": "llm",
+    "prompt": "BACKGROUND: Photorealistic deep space — deep black and vast, a massive violet-pink and golden supernova explosion blooming at the far upper-left, extremely dense cold white star field, multiple distant galaxy smears spread across the frame, conveying millions of light-years of cosmic distance and the scale of stellar death. FOREGROUND: Flat 2D cartoon — at far upper-left, a large bold-outlined cartoon supernova starburst (golden yellow and coral red spikes, bold black outline, 18% frame width) represents the dying star. Flowing from the supernova all the way across the frame to the lower-right, a long bold-outlined dotted curved path line (warm orange, bold outlined) carries tiny violet purple pion spheres (bold outlined, 3% frame width each) spaced along the path, representing the journey of millions of light-years. At the far lower-right, a tiny simplified cartoon person silhouette (bold outlined, 8% frame height) stands at the end of the path receiving the particles. Bold black outlines on all shapes, flat fills."
+  }
+]

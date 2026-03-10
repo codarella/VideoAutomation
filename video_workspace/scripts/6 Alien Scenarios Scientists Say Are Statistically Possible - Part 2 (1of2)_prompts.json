@@ -1,0 +1,458 @@
+[
+  {
+    "scene": 1,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "15.96s - 17.28s",
+    "scene_text": "Number 3.",
+    "prompt_source": "claude-api",
+    "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 3 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image."
+  },
+  {
+    "scene": 2,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "17.28s - 22.12s",
+    "scene_text": "The Shadow Biosphere When we search for life, we look for what we know.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, precise cold white star field — small static dots only, no nebula. Viewer position: SCALE — viewer looks outward at a vast dark cosmos. Central subject: a single small bright white dot representing a star system at far center of frame, surrounded by immense cold dark space. A faint thin search beam of cold electric blue light sweeps left-to-right from the lower left corner toward that distant star. Cosmic zoom level — star occupies 3% of frame, vast blackness dominates. Cold hard directional lighting. Bold black outlines on the beam arc. Electric blue, deep navy, cool white palette. No text anywhere."
+  },
+  {
+    "scene": 3,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "22.12s - 26.30s",
+    "scene_text": "Carbon -based chemistry, liquid water, DNA.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, precise cold white star field. Viewer position: INSIDE — viewer is at molecular scale, surrounded by simple iconic molecular structures. Central subject: three distinct elements arranged in a loose triangle at center frame — a small blue carbon hexagon ring outline, a simple two-sphere water molecule in cool white and teal, and a compact double-helix ribbon in electric blue and purple with bold black outlines. Atomic zoom level — molecules fill 60% of frame. Cold hard directional lighting from upper left. Electric blue, teal, cool white palette. Bold black outlines on all molecular shapes. No text anywhere."
+  },
+  {
+    "scene": 4,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "26.30s - 29.22s",
+    "scene_text": "We scan the Goldilocks zones of stars.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, precise cold white star field — small cold dots only. Viewer position: SCALE — viewer dwarfed by the cosmic scene. Central subject: a medium-sized pale blue-white star centered in frame, with a precise dashed elliptical orbital ring around it. A small green circle dot sits on the orbital ring at the left portion — the Goldilocks zone planet — with a thin bracket marking a segment of the orbit in electric blue. Cosmic zoom level — star occupies 10% of frame, orbital ring spans 60% of frame width. Cold hard lighting. Electric blue, teal, cool white, deep navy palette. Bold black outlines on star, orbit, planet. No text anywhere."
+  },
+  {
+    "scene": 5,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "29.22s - 30.14s",
+    "scene_text": "But this approach assumes that life",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is positioned between two implied forces. Central subject: a single clean electric blue DNA double-helix ribbon, centered in frame, slightly off-center left, with a bold question mark shape formed by a faint teal arc hanging above it on the right side — suggesting uncertainty. Atomic zoom level — helix fills 55% of frame. Cold hard directional lighting from left. Electric blue, deep navy, cool white palette. Bold black outlines on helix structure. No text anywhere."
+  },
+  {
+    "scene": 6,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "30.14s - 31.98s",
+    "scene_text": "all life",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise white star field. Viewer position: SCALE — viewer looks at an overwhelming multiplicity. Central subject: a large cluster of varied simple cell-like rounded blob shapes in electric blue, teal, and purple, filling the center of frame — dozens of distinct blob outlines packed together, representing all forms of life. The cluster fills 70% of frame and bleeds toward edges. Cold hard directional lighting. Bold black outlines on every blob shape. Electric blue, teal, purple, deep navy palette. No text anywhere."
+  },
+  {
+    "scene": 7,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "31.98s - 32.60s",
+    "scene_text": "follows the",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer watches a single moment up close. Central subject: a single winding chemical pathway — a chain of small connected circle nodes in electric blue linked by bold white lines, snaking left-to-right across the center of frame. The path bends and diverges into two branches at the right side, one branch continuing boldly and one fading to muted grey. Subatomic zoom level — chain fills 80% of frame. Cold hard directional lighting. Electric blue, cool white, grey palette. Bold black outlines on all nodes and lines. No text anywhere."
+  },
+  {
+    "scene": 8,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "32.60s - 37.62s",
+    "scene_text": "specific chemical pathway that happened to occur on Earth. Scientist Carol Cleland and",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer observes a scientist at work. Central subject: ONE stick figure centered slightly left of frame — round head, stick body, dot eyes, small lab coat rectangle, leaning forward in concentrated pose with narrow eyes, standing before a simple branching tree diagram drawn in electric blue lines — two distinct branches diverging from a single root point, one branch labeled with DNA helix symbol in teal, one branch trailing off into a faint dashed line. Human zoom level — stick figure occupies 40% of frame height. Cold hard directional lighting. Electric blue, teal, deep navy palette. Bold black outlines on figure and tree. No text anywhere."
+  },
+  {
+    "scene": 9,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "37.62s - 41.50s",
+    "scene_text": "others have proposed the existence of a shadow biosphere.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer watches a key proposal moment. Central subject: ONE stick figure centered slightly right of frame — round head, stick body, dot eyes, lab coat, both arms raised in triumphant pose. In front of the figure floats a large faint ghost-like second tree structure in translucent purple outline, partially overlapping a bold solid electric blue tree on the left — two trees of life coexisting in the same space. Human zoom level — figure occupies 45% of frame height. Cold hard directional lighting. Electric blue, purple, deep navy palette. Bold black outlines on solid tree and figure. No text anywhere."
+  },
+  {
+    "scene": 10,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "41.50s - 46.04s",
+    "scene_text": "This isn't just about aliens on other planets. This is about aliens here.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: SCALE — viewer is inside a familiar environment rendered at cosmic scale. Central subject: a simplified overhead view of a small rocky planet (Earth-like, blue-teal sphere) centered in frame. On its surface, rendered at impossible micro-scale, two distinct clusters of cell-like blob shapes sit side by side — one cluster in bold electric blue, one cluster in faint translucent purple — both existing on the same world. Cosmic zoom level — planet occupies 25% of frame. Cold hard lighting from upper right. Electric blue, teal, purple, deep navy palette. Bold black outlines on planet outline and blob clusters. No text anywhere."
+  },
+  {
+    "scene": 11,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "46.04s - 50.48s",
+    "scene_text": "The theory suggests that life may have emerged on Earth more than once.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer watches two separate origin events. Central subject: frame shows two distinct explosion-burst shapes — starburst line patterns — on opposite sides of center frame, separated by dark space. Left burst is bold electric blue, right burst is teal-purple. Both bursts have thin dashed lines radiating outward from their center points left-to-right, suggesting separate origins diverging. Atomic zoom level — each burst occupies 30% of frame. Cold hard directional lighting. Electric blue, teal, purple, deep navy palette. Bold black outlines on burst lines. No text anywhere."
+  },
+  {
+    "scene": 12,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "50.48s - 53.82s",
+    "scene_text": "We are the descendants of the standard origin event, but there could be",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer stands between two lineages. Central subject: a single bold tree of life in electric blue with thick trunk centered at bottom of frame, branches spreading upward and left — representing the known lineage. On the right side of frame, a faint dashed tree outline in muted purple begins to emerge from the dark — incomplete, partial, barely visible. The gap between the two trees is the visual center. Atomic zoom level — trees fill 65% of frame. Cold hard lighting from left. Electric blue, purple, deep navy palette. Bold black outlines on solid tree. No text anywhere."
+  },
+  {
+    "scene": 13,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "53.82s - 54.78s",
+    "scene_text": "a second tree of life",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees a revelation. Central subject: a second complete tree shape in bold purple-teal outline, centered in frame, slightly off-center right, emerging from darkness as if suddenly visible. The tree has clean branch lines and a distinct root. Behind it, very faint, the outline of the first familiar electric blue tree is partially visible on the left edge. Subatomic zoom level — purple tree fills 70% of frame. Cold hard directional lighting from upper left, creating strong contrast. Purple, teal, deep navy palette. Bold black outlines on purple tree. No text anywhere."
+  },
+  {
+    "scene": 14,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "54.78s - 56.56s",
+    "scene_text": "chemically distinct",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: INSIDE — viewer is inside the chemical structure. Central subject: ONE stick figure off-center left — round head, stick body, dot eyes, lab coat, leaning forward in concentrated pose. Centered in frame: two side-by-side molecular chain diagrams — left chain uses standard circle-nodes in electric blue (normal chemistry), right chain uses different-shaped nodes: small squares and triangles in teal and purple — representing chemically distinct life. A visual gap separates the two chains. Atomic zoom level. Cold hard directional lighting. Electric blue, teal, purple palette. Bold black outlines on all molecular shapes and figure. No text anywhere."
+  },
+  {
+    "scene": 15,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "56.56s - 58.96s",
+    "scene_text": "existing right alongside us.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is between two coexisting forms. Central subject: ONE stick figure centered in frame — round head, stick body, dot eyes, lab coat, arms spread wide in confused or awe pose. On the left side of the figure floats a solid electric blue cell blob, on the right side floats a translucent purple ghost-cell blob of identical shape. Both overlap slightly with the figure's edges. Human zoom level — figure occupies 50% of frame height. Cold hard directional lighting. Electric blue, purple, deep navy palette. Bold black outlines on solid cell and figure. No text anywhere."
+  },
+  {
+    "scene": 16,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "58.96s - 63.20s",
+    "scene_text": "Microbes that don't have DNA. Organisms that process arsenic",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: INSIDE — viewer is at microscopic scale inside a petri-dish world. Central subject: two simple microbe blobs at atomic scale, side by side at center frame. Left microbe: bold electric blue oval blob with a faint internal DNA helix visible. Right microbe: teal-purple oval blob with NO internal structure — empty inside, smooth. The right microbe's interior is pure dark space — emphasizing the absence of DNA. Atomic zoom level — microbes each fill 25% of frame. Cold hard directional lighting. Electric blue, teal, purple palette. Bold black outlines on both blobs. No text anywhere."
+  },
+  {
+    "scene": 17,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "63.20s - 67.54s",
+    "scene_text": "instead of phosphorus. Life forms that exist in the deep crust or high",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: split environment — top half is pale blue atmospheric sky (deep blue gradient), bottom half is dark rocky crust with jagged horizontal lines representing deep rock layers in grey-navy tones. Viewer position: SCALE — viewer sees the full vertical range of an Earth cross-section. Central subject: a simplified vertical slice of Earth showing two zones — deep crust at bottom, high atmosphere at top. Two faint ghost-cell blobs (translucent purple outlines) exist — one near the bottom in the rock layers, one near the top in the atmosphere. Both are barely visible, ghost-like. Cosmic zoom level — Earth slice fills 80% of frame height. Cold hard directional lighting. Electric blue, navy, grey, purple palette. Bold black outlines on rock layer lines. No text anywhere."
+  },
+  {
+    "scene": 18,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "67.54s - 74.82s",
+    "scene_text": "atmosphere that remain invisible to our detection methods because our detection methods are built to find us.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees the failure of detection. Central subject: a large scanning beam — a cone of electric blue dashed lines — sweeping left-to-right from left edge of frame. The beam passes directly through the center where a faint translucent purple ghost-cell blob sits, completely undetected — the beam lines pass right through it without deflecting. The ghost cell is at the exact center of frame. Subatomic zoom level — ghost cell fills 50% of frame, beam cone fills 80% of frame width. Cold hard directional lighting. Electric blue, purple, deep navy palette. Bold black outlines on beam lines. No text anywhere."
+  },
+  {
+    "scene": 19,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "74.82s - 81.56s",
+    "scene_text": "Now, expand this to the cosmos. Dark matter makes up approximately 85 % of the matter in the universe.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, precise cold white star field — small cold static dots only. Viewer position: SCALE — viewer is dwarfed by cosmic scale. Central subject: a large semi-transparent dark purple haze region occupying 85% of the frame area — representing dark matter — with only a thin bright electric blue band at the bottom right of frame representing normal visible matter (15%). The dark matter region has a faint structural texture of very fine dotted lines suggesting invisible mass. Cosmic zoom level. Cold hard directional lighting from upper right illuminating only the thin blue band. Electric blue, deep purple, dark navy palette. Bold black outlines on the blue band border. No text anywhere."
+  },
+  {
+    "scene": 20,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "81.56s - 86.18s",
+    "scene_text": "Normal matter, the stuff we, stars, and planets are made",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: SCALE — viewer is dwarfed by cosmic structure. Central subject: a cluster of stars and planets — small bright white dots and tiny teal sphere-planets — gathered in a small tight bright region occupying only the bottom-right corner of frame (approximately 15% of total frame area). The rest of the frame — 85% — is pure dark space with faint cold dots. The cluster is tightly bounded by a thin electric blue line border, emphasizing its smallness. Cosmic zoom level. Cold hard directional lighting on the cluster only. Electric blue, teal, cool white, deep navy palette. Bold black outlines on cluster border and planet shapes. No text anywhere."
+  },
+  {
+    "scene": 21,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "86.18s - 90.82s",
+    "scene_text": "of, is the minority. It is the cosmic scum on top of the pond.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: SCALE — viewer looks at the cosmic scum metaphor. Central subject: ONE stick figure standing off-center right at the very bottom edge of frame — round head, stick body, dot eyes — head in hands, worry lines radiating from head in a horrified pose. The figure stands on a thin bright electric blue horizontal band representing all visible matter — a narrow bright strip at the bottom. Above the band, filling the top 85% of the frame, is pure featureless dark space — the dark matter domain. Cold hard directional lighting. Electric blue, deep navy, cool white palette. Bold black outlines on figure and band. No text anywhere."
+  },
+  {
+    "scene": 22,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "90.82s - 98.44s",
+    "scene_text": "If physics allows for complex structures in the dark sector, dark life, then the universe could be densely populated,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees the possibility of dark life. Central subject: ONE stick figure off-center left — round head, stick body, dot eyes, lab coat, both arms raised in triumphant-alarmed pose. Centered in the dark space filling the frame: multiple faint translucent purple complex structures — web-like geometric shapes made of thin purple lines — distributed throughout the dark background, suggesting intelligent complexity in the dark sector. Structures are barely visible but clearly organized and non-random. Cosmic zoom level — structures spread across 70% of frame. Cold hard directional lighting. Purple, electric blue, deep navy palette. Bold black outlines on stick figure only. No text anywhere."
+  },
+  {
+    "scene": 23,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "98.44s - 100.22s",
+    "scene_text": "just not with baryonic matter.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: INSIDE — viewer is surrounded by dark matter. Central subject: ONE stick figure centered in frame — round head, stick body, dot eyes, lab coat, arms spread wide in confused pose. Surrounding the figure from all sides: a dense field of faint translucent purple geometric web-structures passing through the frame, overlapping the figure's outline as if passing through them. A single small glowing teal atom cluster near the figure's feet represents baryonic matter — tiny compared to the dark structures. Subatomic zoom level — figure fills 50% of frame. Cold hard directional lighting. Purple, teal, deep navy palette. Bold black outlines on figure. No text anywhere."
+  },
+  {
+    "scene": 24,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "100.22s - 103.44s",
+    "scene_text": "The horror here is one of intangibility.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is between the tangible and intangible. Central subject: ONE stick figure off-center left — round head, stick body, dot eyes, lab coat, arms reaching forward toward empty dark space, concentrated narrow-eyed expression. The figure's outstretched hand reaches into a region of pure featureless darkness — nothing to grasp. Where the hand enters the dark region, the stick lines dissolve into faint dashes, suggesting intangibility. Human zoom level — figure occupies 55% of frame height. Cold hard directional lighting from left. Electric blue, deep navy palette. Bold black outlines on solid parts of figure. No text anywhere."
+  },
+  {
+    "scene": 25,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "103.44s - 104.84s",
+    "scene_text": "There could be a civilization existing in",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer observes an unseen presence. Central subject: ONE stick figure off-center right — round head, stick body, dot eyes, lab coat, horrified expression with head slightly turned, worry lines. The figure stands in a simple room indicated by two thin electric blue floor lines meeting in perspective. The room is otherwise occupied by faint translucent purple geometric web-structures — barely visible, ghostly, filling the space. Human zoom level — figure occupies 45% of frame height. Cold hard directional lighting from left. Electric blue, purple, deep navy palette. Bold black outlines on figure and floor lines. No text anywhere."
+  },
+  {
+    "scene": 26,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "104.84s - 112.38s",
+    "scene_text": "this room right now. Complex, intelligent structures made of dark matter could be passing through your body, through the Earth,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: AS — viewer IS an unseen dark matter structure looking outward. Central subject: a simplified human body silhouette in electric blue outline at center of frame, with multiple faint translucent purple arrow-shapes passing straight through the body left-to-right — the dark structures moving through without interaction. The body silhouette has no interior detail, just a clean outline. Below the body, a small teal circle represents the Earth — also being passed through by faint purple streaks. Atomic zoom level — body fills 60% of frame. Cold hard directional lighting. Electric blue, purple, teal, deep navy palette. Bold black outlines on body silhouette. No text anywhere."
+  },
+  {
+    "scene": 27,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "112.38s - 113.42s",
+    "scene_text": "through the Sun",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: SCALE — viewer sees the Sun being penetrated. Central subject: a large pale cold white circle representing the Sun, centered in frame, occupying 50% of frame width. Multiple thin translucent purple streaks pass through the Sun's disc at various angles, left-to-right, completely undisturbed — the dark structures passing through the star as if it does not exist. The Sun has no warm glow — cold white with a thin bold black outline border. Cosmic zoom level. Cold hard directional lighting. Cool white, purple, deep navy palette. Bold black outline on Sun circle. No text anywhere."
+  },
+  {
+    "scene": 28,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "113.42s - 115.76s",
+    "scene_text": "completely unaware of us",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is between awareness and blindness. Central subject: ONE stick figure centered in frame — round head, stick body, dot eyes, lab coat, arms spread wide in confused pose with a large question mark arc hovering above the head. Around the figure, faint translucent purple web-structures fill the space — but the figure looks straight ahead at empty dark space, unseeing. Human zoom level — figure occupies 55% of frame height. Cold hard directional lighting from upper left. Electric blue, purple, deep navy palette. Bold black outlines on figure and question mark. No text anywhere."
+  },
+  {
+    "scene": 29,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "115.76s - 118.10s",
+    "scene_text": "and us of them. Or worse",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer watches the dawning horror. Central subject: a pair of faint translucent purple geometric web-structures at center frame — but unlike before, ONE of these structures has two small dot-eyes rendered inside it — facing left-to-right, looking outward with awareness. The structure with eyes is positioned slightly off-center right. Next to it on the left, a tiny electric blue stick figure silhouette stands unaware. The eyed structure is clearly observing the tiny figure. Atomic zoom level — structures fill 60% of frame. Cold hard directional lighting. Purple, electric blue, deep navy palette. No text anywhere."
+  },
+  {
+    "scene": 30,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "118.10s - 118.98s",
+    "scene_text": "they are aware.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — maximum tension. Central subject: a single large translucent purple geometric web-structure filling 65% of the frame, centered. Two small cold white dot-eyes are clearly embedded in its center, looking directly outward toward the viewer — forward facing. The structure is the most detailed and visible it has been in any scene — its web-lines are bolder than before. The rest of the frame is pure cold dark space. Subatomic zoom level — structure fills 65% of frame. ONE amber/orange accent: the two eyes glow faintly amber — the single warm element. Cold hard directional lighting creating maximum contrast. Purple, deep navy, amber eye accent. Bold outlines on structure. No text anywhere."
+  },
+  {
+    "scene": 31,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "118.98s - 121.80s",
+    "scene_text": "If the shadow biosphere exists, we are the blind men in a crowded room.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is inside a crowded invisible room. Central subject: multiple electric blue stick figure silhouettes — four figures at varying scales — distributed across the frame, all facing different directions with arms spread in confused poses. Around and between them, the dark space is densely filled with faint purple web-structures — a crowded invisible presence they cannot perceive. The figures are visually isolated from each other by the dark structures between them. Human zoom level — figures range from 20-40% of frame height. Cold hard directional lighting. Electric blue, purple, deep navy palette. Bold black outlines on stick figures. No text anywhere."
+  },
+  {
+    "scene": 32,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "121.80s - 129.60s",
+    "scene_text": "We assume we are alone because we cannot see, but the statistical likelihood that only the 15 %",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: SCALE — viewer sees the proportion of visible to invisible. Central subject: a vertical bar chart rendered as two simple rectangular bars — LEFT bar: tall, broad, dark purple labeled with a faint texture of web-lines, occupying 85% of the bar chart height — RIGHT bar: short, narrow, bright electric blue, crisp and solid, occupying only 15% of the bar chart height. The two bars sit side by side at bottom center of frame. The tall dark bar towers over the short bright one. Cosmic zoom level — bars fill 70% of frame height. Cold hard directional lighting illuminating the blue bar brightly. Electric blue, dark purple, deep navy palette. Bold black outlines on both bars. No text anywhere."
+  },
+  {
+    "scene": 33,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "129.60s - 136.38s",
+    "scene_text": "of visible matter can support complexity is arrogant. We might be the ghosts to them, insubstantial,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: AS — viewer is the dark matter structure looking at something insubstantial. Central subject: a small translucent wisp-like human silhouette at center frame — rendered in faint electric blue outline, barely visible against the dark background, semi-transparent, edges dissolving. The silhouette appears ghostly and insubstantial. Surrounding it, implied by faint purple geometric outlines at the frame edges, is the dark matter realm — solid and real by comparison. Subatomic zoom level — ghost silhouette fills 40% of frame. Cold hard directional lighting. Electric blue (very faint), purple, deep navy palette. No bold outlines on the ghost — intentionally faint. No text anywhere."
+  },
+  {
+    "scene": 34,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "136.38s - 139.30s",
+    "scene_text": "wispy things that barely register.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees how faint we are to them. Central subject: a single electric blue human silhouette outline at center frame, rendered as semi-transparent — slightly more visible than the previous scene but still wispy and faint. The figure is mid-frame, no expression, no solid fill — just a barely-there outline. Around it, a single faint purple web-structure corner is visible at the right frame edge — suggesting an observer. Atomic zoom level — silhouette fills 50% of frame. Cold hard directional lighting from left, casting through the transparent figure. Faint electric blue, purple, deep navy palette. No text anywhere."
+  },
+  {
+    "scene": 35,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "139.30s - 141.78s",
+    "scene_text": "Or we might be the livestock.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is between predator and prey. Central subject: a small electric blue human silhouette at center-left of frame, solid and clear. Surrounding it from three sides: large dark purple web-structure shapes closing in from right, top, and bottom — their web-lines converging toward the small figure. The structures have small dot-eyes embedded in them, all focused on the central figure. The right side of frame is dense with purple structure. Human zoom level — human silhouette fills 25% of frame height. Cold hard directional lighting from left illuminating the blue figure. Electric blue, purple, deep navy palette. Bold black outline on human silhouette. No text anywhere."
+  },
+  {
+    "scene": 36,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "141.78s - 143.16s",
+    "scene_text": "We have no way of knowing.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer faces pure uncertainty. Central subject: a single electric blue question mark shape, large and bold, centered in frame. Behind it, both a small human silhouette (electric blue, faint) and a small web-structure shape (purple, faint) are visible — both equally small, equally uncertain. The question mark dominates. Subatomic zoom level — question mark fills 60% of frame. Cold hard directional lighting from upper right. Electric blue, purple, deep navy palette. Bold black outline on question mark. No text anywhere."
+  },
+  {
+    "scene": 37,
+    "segment": "#3 The Shadow Biosphere When We Search For ...",
+    "time": "143.16s - 146.82s",
+    "scene_text": "We are vulnerable to forces we literally cannot touch.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer stands between the known and unknowable. Central subject: ONE stick figure centered at bottom of frame — round head, stick body, dot eyes, lab coat, arms raised slightly with hands open in a helpless vulnerable pose, worry lines radiating from head. Above the figure, filling the top 70% of the frame: pure dense dark space with multiple translucent purple web-structures distributed throughout — all invisible forces the figure cannot touch. The figure is small and grounded at the bottom. Human zoom level — figure occupies 30% of frame height. Cold hard directional lighting from upper right. Electric blue, purple, deep navy palette. Bold black outlines on figure. No text anywhere."
+  },
+  {
+    "scene": 38,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "146.82s - 148.18s",
+    "scene_text": "Number two,",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: SCALE — establishing cosmic scale. Central subject: a single small spacecraft silhouette — simple geometric shape, two rectangular panels flanking a central box body, rendered in cool white with bold black outlines — centered in vast dark space. The spacecraft is tiny, occupying 8% of frame, surrounded by enormous cold dark space and distant star field. A faint number 2 rendered in thin electric blue line strokes floats above the craft — large, spanning 30% of frame height, minimalist. Cosmic zoom level. Cold hard directional lighting. Cool white, electric blue, deep navy palette. Bold black outlines on spacecraft. No text anywhere."
+  },
+  {
+    "scene": 39,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "148.18s - 152.52s",
+    "scene_text": "the berserker probe scenario. This is the militarized version of the von Neumann probe concept.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees the concept introduced. Central subject: ONE stick figure off-center left — round head, stick body, dot eyes, lab coat, concentrated leaning forward pose with narrow eyes — standing before a simple spacecraft silhouette rendered in cool white at center-right of frame. The spacecraft has bold geometric panels and a central body. Between the figure and the craft, a thin electric blue arrow points left-to-right from figure to craft. Human zoom level — figure occupies 45% of frame height, craft occupies 30% of frame height. Cold hard directional lighting from left. Cool white, electric blue, deep navy palette. Bold black outlines on figure and spacecraft. No text anywhere."
+  },
+  {
+    "scene": 40,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "152.52s - 157.48s",
+    "scene_text": "A von Neumann probe is a self -replicating spacecraft.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: SCALE — viewer is dwarfed by cosmic travel. Central subject: a single spacecraft silhouette in cool white — geometric panels, central body — centered in frame, moving left-to-right. Behind it, a clean dashed trajectory line trails from the left edge. Ahead of it, a small cold white star dot sits at the right edge of frame. The spacecraft is mid-journey in empty space. Cosmic zoom level — spacecraft occupies 15% of frame, vast dark space dominates. Cold hard directional lighting. Cool white, electric blue, deep navy palette. Bold black outlines on spacecraft. No text anywhere."
+  },
+  {
+    "scene": 41,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "157.48s - 159.64s",
+    "scene_text": "It goes to a star system",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field with one brighter cold white star visible upper right. Viewer position: SCALE — viewer watches approach to a star system. Central subject: a spacecraft silhouette in cool white at left-center of frame, moving left-to-right along a dashed trajectory line, approaching a pale cold white star at upper right that occupies 20% of frame. Around the star, a simple teal orbital ring is visible with a small rocky planet dot on it. Cosmic zoom level — spacecraft occupies 10% of frame. Cold hard directional lighting from the star. Cool white, teal, electric blue, deep navy palette. Bold black outlines on spacecraft and star. No text anywhere."
+  },
+  {
+    "scene": 42,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "159.64s - 161.20s",
+    "scene_text": "mines raw materials",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer watches resource extraction. Central subject: ONE stick figure off-center right — round head, stick body, dot eyes, lab coat, concentrated leaning forward pose. The figure stands on a small grey rocky asteroid surface at the bottom of frame. A simple mechanical arm extends from the spacecraft (partially visible at top of frame) down toward the asteroid, with three small square resource-block shapes being lifted upward along the arm from right to left. Atomic zoom level — figure occupies 40% of frame height. Cold hard directional lighting from upper left. Cool white, grey, electric blue, deep navy palette. Bold black outlines on figure, arm, blocks. No text anywhere."
+  },
+  {
+    "scene": 43,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "161.20s - 163.18s",
+    "scene_text": "builds two copies of itself",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees duplication. Central subject: three spacecraft silhouettes arranged in a tight triangular formation at center frame — one original craft at left (slightly larger), and two identical copies emerging right-to-left from it as if being assembled, positioned upper-right and lower-right of the original. Thin white construction lines connect the copies to the original. All three crafts are cool white geometric shapes with bold black outlines. Human zoom level — crafts fill 55% of frame combined. Cold hard directional lighting. Cool white, electric blue, deep navy palette. Bold black outlines on all three crafts. No text anywhere."
+  },
+  {
+    "scene": 44,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "163.18s - 163.44s",
+    "scene_text": "and sends",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: SCALE — viewer sees the dispatch of probes. Central subject: two small spacecraft silhouettes launching outward from center frame — one moving left-to-right toward upper right along a dashed trajectory, one moving toward lower right along a second dashed trajectory. Both crafts are cool white, small, with bold black outlines. Their trajectory lines diverge from a single central point. The divergence angle is wide. Cosmic zoom level — each craft occupies 8% of frame. Cold hard directional lighting. Cool white, electric blue, deep navy palette. Bold black outlines on crafts and trajectory lines. No text anywhere."
+  },
+  {
+    "scene": 45,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "163.44s - 170.84s",
+    "scene_text": "them to the next stars. Exponential growth means that a single probe could colonize the entire galaxy in",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: SCALE — viewer is overwhelmed by exponential spread. Central subject: a branching tree-like network of spacecraft silhouettes — starting with ONE craft at the left edge, branching into 2, then 4, then 8 — each generation moving left-to-right with dashed trajectory lines connecting them. The rightmost generation shows 8 small cool white craft dots distributed across the right side of frame. The branching lines create a perfect binary tree structure across the full frame width. Cosmic zoom level — full tree spans entire frame width. Cold hard directional lighting. Cool white, electric blue, deep navy palette. Bold black outlines on spacecraft. No text anywhere."
+  },
+  {
+    "scene": 46,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "170.84s - 175.20s",
+    "scene_text": "just a few million years, a blink of an eye in cosmic time.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. A faint spiral galaxy outline in teal-grey occupies the upper two-thirds of the frame — a simple sparse pinwheel shape, not dense or nebula-like. Viewer position: SCALE — viewer is dwarfed by galactic scale. Central subject: the spiral galaxy outline with dozens of tiny cool white spacecraft dots distributed throughout its arms — the galaxy fully seeded by probes. At the bottom of frame, a tiny electric blue arrow points upward toward the galaxy with a tiny clock-arc shape suggesting brief time passage. Cosmic zoom level — galaxy fills 70% of frame. Cold hard directional lighting. Teal, cool white, electric blue, deep navy palette. Bold black outlines on galaxy arms. No text anywhere."
+  },
+  {
+    "scene": 47,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "175.20s - 180.14s",
+    "scene_text": "The fact that we don't see these friendly probes suggests that either no one builds them or someone",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: WITNESS — viewer notices the absence. Central subject: a wide empty dark space filling most of the frame — the vast galaxy seeded scene, but now with NO spacecraft visible. Only a single cold white question mark arc floats at center frame. In the lower left, a tiny simplified radio telescope dish outline points left-to-right in cold electric blue — searching, receiving nothing. Cosmic zoom level. Cold hard directional lighting illuminating only the telescope. Electric blue, deep navy, cool white palette. Bold black outlines on telescope. No text anywhere."
+  },
+  {
+    "scene": 48,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "180.14s - 185.06s",
+    "scene_text": "built a different kind. The berserker scenario, named after the novels by Fred",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees a darker possibility introduced. Central subject: ONE stick figure off-center left — round head, stick body, dot eyes, lab coat, concentrated narrow-eyed pose — standing before a simple spacecraft silhouette but this one is DIFFERENT: darker, sharper angles, no solar panels, a more menacing geometric wedge shape in dark navy-grey with a thin red-orange accent edge — the berserker probe. Between the figure and the probe, a thin electric blue arrow points left-to-right. Human zoom level — figure occupies 45% of frame height. Cold hard directional lighting from left. Electric blue, navy-grey, cool white palette. Bold black outlines on figure and probe. No text anywhere."
+  },
+  {
+    "scene": 49,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "185.06s - 192.24s",
+    "scene_text": "Saberhagen, suggests that the first civilization to achieve interstellar travel might have a strong incentive to ensure",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: SCALE — viewer sees a civilization's choice. Central subject: a simplified planetary system — small teal sphere planet with orbital ring at center-right of frame. Approaching it from left along a precise dashed trajectory: a small dark wedge-shaped probe silhouette. The probe is moving left-to-right. Above the planet, a faint simple city outline (tiny box-buildings) on the planet surface. The probe trajectory aims directly at the planet. Cosmic zoom level — planet occupies 20% of frame. Cold hard directional lighting from upper left. Electric blue, teal, navy-grey, deep navy palette. Bold black outlines on planet, probe, city outline. No text anywhere."
+  },
+  {
+    "scene": 50,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "192.24s - 199.48s",
+    "scene_text": "no one else does. They build kill vehicles. These are self -replicating probes programmed with a simple directive.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees the directive revealed. Central subject: a dark angular berserker probe silhouette centered in frame — wedge shape, sharp edges, navy-grey with thin cool white internal line details. The probe has a single forward-pointing sensor cone outlined in electric blue lines extending from its front end. Below the probe, two smaller identical probe silhouettes emerge from its sides — self-replication happening. All moving left-to-right. Subatomic zoom level — main probe fills 55% of frame. Cold hard directional lighting. Navy-grey, electric blue, cool white, deep navy palette. Bold black outlines on all probe shapes. No text anywhere."
+  },
+  {
+    "scene": 51,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "199.48s - 201.36s",
+    "scene_text": "Detect intelligent life.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees the detection function. Central subject: a berserker probe silhouette (dark angular wedge, navy-grey) at upper left of frame, its sensor cone extending downward-right in electric blue dashed lines. At the point where the sensor cone converges: a tiny simple humanoid figure outline — electric blue, small, clearly in the crosshairs of the detection cone. The figure is at center-right frame. A single electric blue circle target ring surrounds the tiny figure. Human zoom level — probe occupies 25% of frame, figure at 10%. Cold hard directional lighting from probe. Navy-grey, electric blue, deep navy palette. Bold black outlines on probe and target ring. No text anywhere."
+  },
+  {
+    "scene": 52,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "201.36s - 202.64s",
+    "scene_text": "Extinguish it.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — the climax of destruction. Central subject: a bright electric-white starburst explosion at center frame — precise radiating lines from a central point, not a soft glow but hard geometric rays. The explosion fills 65% of frame. Surrounding the burst, faint debris lines scatter outward in all directions from center. The dark berserker probe silhouette is partially visible at the left edge of frame, having already passed through. ONE amber/orange accent: the very center of the explosion is a single amber circle — the single warm element. Cold dark space surrounds. Cosmic zoom level. Cold hard directional lighting. Cool white, amber accent, dark navy palette. Bold black outlines on explosion rays. No text anywhere."
+  },
+  {
+    "scene": 53,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "202.64s - 204.30s",
+    "scene_text": "Reset.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: REACTION — viewer sees the aftermath, the reset. Central subject: the same dark wedge-shaped berserker probe at center frame, now moving RIGHT-TO-LEFT — retreating or resetting. Behind it (to the right), the faint ghost remnants of an explosion starburst are visible as very faint cool-white rays barely brighter than the background. Ahead of the probe (to the left), empty dark space — another target system yet to come represented by a tiny cold white star dot at the far left edge. Cosmic zoom level — probe occupies 15% of frame. Palette slightly dimmer than previous scene. Navy-grey, cool white, deep navy palette. Bold black outlines on probe. No text anywhere."
+  },
+  {
+    "scene": 54,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "204.30s - 205.70s",
+    "scene_text": "These probes wouldn't need to be massive",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: SCALE — viewer sees stealth emphasized. Central subject: a large dark space field — nearly featureless — with three tiny dark berserker probe silhouettes distributed at different positions in the frame, very small, almost invisible against the dark background. Each probe occupies only 4% of frame. Their navy-grey color blends into the dark background deliberately. Only their bold black outlines make them distinguishable. A single cold electric blue dashed scan-line sweeps left-to-right across the frame but passes between the probes without detecting any of them. Cosmic zoom level. Cold hard directional lighting illuminating only the scan line. Navy-grey, electric blue, deep navy palette. Bold black outlines on probes. No text anywhere."
+  },
+  {
+    "scene": 55,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "205.70s - 210.46s",
+    "scene_text": "death stars. They could be small, stealthy, and dormant.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: deep dark space, cold precise star field. Viewer position: SCALE — viewer searches the darkness. Central subject: a vast field of dark space. At the very edge of an Oort Cloud — represented by a sparse ring of tiny grey-white rocky dots distributed in a loose ellipse pattern spanning 70% of frame — sits one dormant berserker probe silhouette, completely still, navy-grey, wedge-shaped, blending into the background. Its shape is barely distinguishable from the surrounding rocks. It sits at the right side of the ellipse. No motion, completely inert. Cosmic zoom level. Cold hard directional lighting creating minimal contrast. Navy-grey, grey-white, deep navy palette. Bold black outlines on probe and rock dots. No text anywhere."
+  },
+  {
+    "scene": 56,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "210.46s - 213.04s",
+    "scene_text": "They might lurk in the oar clouds of star systems, listening. Listening for radio waves.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: WITNESS — viewer sees the probe awakening, listening. Central subject: the dormant berserker probe (dark angular wedge, navy-grey) now at center frame, slightly off-center right, with a new element: thin precise concentric arc lines in electric blue radiating INWARD toward the probe from left — representing incoming radio waves. The arcs converge on the probe's sensor cone. The probe remains still but the inward-converging arcs give the impression of listening. Subatomic zoom level — probe fills 40% of frame. Cold hard directional lighting. Navy-grey, electric blue, deep navy palette. Bold black outlines on probe and arc lines. No text anywhere."
+  },
+  {
+    "scene": 57,
+    "segment": "#2 The Berserker Probe Scenario.",
+    "time": "213.04s - 222.54s",
+    "scene_text": "Listening for nuclear detonations. Listening for the telltale chemical signatures of an industrial atmosphere.",
+    "prompt_source": "claude-api",
+    "prompt": "Clean 2D sci-fi illustration. Background: dark space, cold precise star field. Viewer position: BETWEEN — viewer is between civilization's signals and the waiting probe. Central subject: the berserker probe (dark angular wedge, navy-grey) centered in frame, surrounded by three distinct types of incoming signal arcs all converging on it from the left — TOP: thin electric blue wave arcs (radio waves), MIDDLE: a small starburst of white rays (nuclear detonation signature), BOTTOM: faint teal chemical chain pattern (industrial atmosphere signature). All three signal types move right-to-left, converging on the probe. The probe's sensor cone faces left, collecting all three. Subatomic zoom level — probe fills 50% of frame. Cold hard directional lighting. Navy-grey, electric blue, teal, cool white, deep navy palette. Bold black outlines on probe and signal elements. No text anywhere."
+  }
+]

@@ -1,0 +1,87 @@
+# =============================================================================
+# VIDEO AUTOMATION V2 - DEPENDENCIES
+# =============================================================================
+# 
+# Installation:
+#   pip install -r requirements.txt
+#
+# For GPU acceleration (recommended for Whisper):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# CORE DEPENDENCIES
+# -----------------------------------------------------------------------------
+
+# HTTP requests for API calls (AI33, Local LLM)
+requests>=2.28.0
+
+# Image processing and manipulation
+Pillow>=9.0.0
+
+# Audio processing
+pydub>=0.25.1
+
+# Speech recognition (fallback if Whisper unavailable)
+SpeechRecognition>=3.10.0
+
+# -----------------------------------------------------------------------------
+# AI/ML DEPENDENCIES
+# -----------------------------------------------------------------------------
+
+# OpenAI Whisper for accurate transcription with timestamps
+# Note: Requires ffmpeg installed on system
+openai-whisper>=20231117
+
+# PyTorch - Required for Whisper
+# For CPU only:
+# torch>=2.0.0
+# For CUDA GPU (recommended, much faster):
+# Install separately: pip install torch --index-url https://download.pytorch.org/whl/cu118
+torch>=2.0.0
+
+# -----------------------------------------------------------------------------
+# OPTIONAL BUT RECOMMENDED
+# -----------------------------------------------------------------------------
+
+# Progress bars for long operations
+tqdm>=4.65.0
+
+# Faster JSON parsing
+orjson>=3.9.0
+
+# Better HTTP connection pooling
+urllib3>=2.0.0
+
+# Color terminal output (Windows compatible)
+colorama>=0.4.6
+
+# -----------------------------------------------------------------------------
+# SYSTEM REQUIREMENTS (Install separately, not via pip)
+# -----------------------------------------------------------------------------
+#
+# FFmpeg - REQUIRED for video compilation
+#   Windows: Download from https://ffmpeg.org/download.html
+#            Add to PATH or place in project folder
+#   
+#   Or via chocolatey: choco install ffmpeg
+#   Or via winget: winget install ffmpeg
+#
+# FFprobe - Usually included with FFmpeg
+#
+# -----------------------------------------------------------------------------
+# LOCAL LLM OPTIONS (Choose one)
+# -----------------------------------------------------------------------------
+#
+# Option 1: LM Studio (Recommended for Windows)
+#   Download from: https://lmstudio.ai/
+#   - Install and load a model (e.g., Qwen 2.5 7B Instruct)
+#   - Start the local server (localhost:1234)
+#
+# Option 2: Ollama
+#   Download from: https://ollama.ai/
+#   - Install and run: ollama pull qwen2.5:7b
+#   - Server runs on localhost:11434
+#
+# -----------------------------------------------------------------------------

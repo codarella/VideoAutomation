@@ -1,0 +1,135 @@
+{
+  "version": "3.0",
+  "channel_name": "Educational Science Channel",
+  "last_updated": "2026-02-26",
+
+  "CRITICAL_TIMELINE_RULES": {
+    "description": "Timing is transcript-driven and cannot be altered during rendering.",
+    "rules": [
+      "The transcript timestamps are the single source of truth",
+      "Number transitions cut EXACTLY at the word-start timestamp of 'Number'",
+      "Previous scene must end exactly at that timestamp",
+      "Number title card duration = start of 'Number' to end of numeric word",
+      "No scene may exceed 6.0 seconds under ANY circumstance",
+      "If transcript segment exceeds 6 seconds, it must be split into multiple scenes",
+      "No overlaps between scenes",
+      "No gaps between scenes",
+      "Rendering engine is NOT allowed to modify timing",
+      "If duration <= 0, abort rendering"
+    ]
+  },
+
+  "IMAGE_DURATION_RULES": {
+    "max_duration_seconds": 6.0,
+    "preferred_range": "3.0 - 5.5 seconds",
+    "long_hold_allowed": false,
+    "auto_split_logic": "If scene > 6s, split into equal segments <= 6s"
+  },
+
+  "NUMBER_CARD_SYSTEM": {
+    "generated_by": "CODE_ONLY",
+    "background": "#FFFFFF",
+    "number_color": "#000000",
+    "text": "Large centered number only",
+    "no_animation": true,
+    "hard_cut_only": true,
+    "llm_must_skip": true
+  },
+
+  "ASPECT_RATIO_AND_FRAMING": {
+    "required_resolution": "1920x1080",
+    "aspect_ratio": "16:9",
+    "no_letterboxing": true,
+    "no_pillarboxing": true,
+    "no_white_bars": true,
+    "no_black_bars": true,
+    "ffmpeg_scaling_rule": "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080",
+    "forbidden_scaling": "scale=1920:1080"
+  },
+
+  "QUALITY_ENFORCEMENT": {
+    "minimum_resolution": "1280x720",
+    "image_format": "PNG",
+    "color_space": "sRGB",
+    "reject_if_blurry": true,
+    "reject_if_non_16_9": true,
+    "no_watermarks": true,
+    "no_signatures": true
+  },
+
+  "CRITICAL_IMAGE_RULES": {
+    "rules": [
+      "NEVER include text, numbers, letters, labels",
+      "Title bars are added by code AFTER generation",
+      "LLM must never generate number title cards",
+      "Never generate competitor stick figures",
+      "Only use MC when @img2 is provided",
+      "No recurring host character unless explicitly requested",
+      "Must fill full 16:9 frame with no borders"
+    ]
+  },
+
+  "STYLE_GUIDELINES": {
+    "type": "2D Western Cartoon animation — bold wobbly black outlines, flat cel-shading, chaotic sci-fi comedy aesthetic",
+    "background_layer": "Vivid alien sci-fi environment — NOT photorealistic. Neon nebulae in acid greens/purples/pinks, alien planet terrain, swirling portal vortexes, lab environments packed with sci-fi gadgets and alien machinery. Busy and maximalist.",
+    "cartoon_layer_shading": "Flat cel-shaded fills with ONE level of shadow only — NO gradients inside cartoon shapes. Occasional highlight blob.",
+    "bold_outlines": true,
+    "outline_style": "slightly wobbly/irregular black outlines — hand-drawn feel, NOT perfectly clean digital lines",
+    "no_3D_cartoon_elements": true,
+    "no_anime": true,
+    "no_realistic_human_faces": true,
+    "no_photorealistic_elements": true,
+    "cartoon_characters": "Stick figures ONLY — simple round head, dot eyes, minimal line body and limbs, no detailed anatomy. Exaggerated cartoon emotions: sweat drops, bulging eyes, wavy distress lines, arms flailing.",
+    "cartoon_palette": [
+      "#39FF14",
+      "#7CFC00",
+      "#00B4FF",
+      "#9B59B6",
+      "#F0E130",
+      "#FF69B4",
+      "#C0C0C0"
+    ],
+    "palette_names": ["acid green", "toxic green", "electric blue", "alien purple", "sickly yellow", "neon pink", "muted gray"],
+    "scale_contrast": "dramatic — tiny stick figures against vast alien cosmic backgrounds",
+    "extras": "sweat drops, exaggerated bulging eyes, wavy distress lines, thought bubbles with '?' or '!'",
+    "warm_glow_accents": false,
+    "neon_glow_accents": true
+  },
+
+  "SCENE_TYPES": {
+    "intro": {
+      "handled_by": "VIDEO_FILE",
+      "llm_generates_image": false
+    },
+    "content": {
+      "description": "Visualize spoken concept clearly",
+      "must_match_audio_exactly": true,
+      "one_visual_idea_per_scene": true
+    },
+    "number_card": {
+      "generated_by_code": true,
+      "llm_skip": true
+    }
+  },
+
+  "SCENE_SPLIT_POLICY": {
+    "description": "Prevents long static visuals",
+    "rules": [
+      "If transcript block > 6 seconds, split at natural clause breaks",
+      "If no natural break exists, split evenly",
+      "Each split must represent one clear visual beat",
+      "Never allow a single image to hold entire paragraph"
+    ]
+  },
+
+  "CHARACTER_RULES": {
+    "mc_usage_probability": "Max 20% of scenes",
+    "position": "Left or right side only",
+    "never_center": true,
+    "if_no_reference": "No character allowed"
+  },
+
+  "PROMPT_STRUCTURE": {
+    "template": "2D Western Cartoon animation. BACKGROUND: [vivid alien sci-fi environment — neon nebulae in acid greens/purples/pinks, alien planet terrain, swirling portal effects, or lab packed with sci-fi gadgets and beakers — busy, maximalist, irreverent]. FOREGROUND: [flat 2D cartoon element with bold wobbly black outlines, cel-shaded flat fills, one shadow level] — [subject description], [action/state], [scale relative to frame], [position in frame]. CHARACTERS: stick figures only — round head, dot eyes, line body, exaggerated cartoon emotion. PALETTE: [dominant neon colors from: acid green #39FF14, electric blue #00B4FF, alien purple #9B59B6, sickly yellow #F0E130, neon pink, muted gray]. [cartoon emotion cues if character present: sweat drops, bulging eyes, wavy distress lines]. 16:9 widescreen. No gradients inside cartoon shapes, no text labels, no 3D rendering, no photorealistic elements."
+  }
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "scene": 1,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "0.00s - 1.20s",
+    "scene_text": "Number one,",
+    "prompt_source": "claude-api",
+    "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 1 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image."
+  },
+  {
+    "scene": 2,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "1.20s - 6.02s",
+    "scene_text": "graviton, hypothesized, not observed. We have mapped the invisible",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Vast cosmic alien backdrop — deep black and indigo void, swirling neon purple and electric blue nebulae, alien star clusters, chaotic sci-fi machinery floating in space. Viewer positioned as a tiny witness drifting inside the cosmos. Center frame: a ghostly translucent particle shape — rounded, faintly glowing neon green outline, barely visible against the cosmic dark, surrounded by question mark swirls and wispy phantom trails drifting left-to-right. The particle shape is hollow, ephemeral, haunting. Smaller ghost wisps drift off in all directions. COSMIC zoom — subject occupies only 10% of frame, overwhelmed by the vast alien universe. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 3,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "6.02s - 9.78s",
+    "scene_text": "fields of mass. We have fractured the proton.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Busy sci-fi laboratory backdrop — alien beakers bubbling toxic green, neon pink readout screens, circuit-covered walls, swirling atomic diagrams. Viewer positioned at human scale inside the lab. Center frame: ONE stick figure scientist — round head, dot eyes, simple line body, wearing a rectangle lab coat — leaning forward concentrated, one stick arm pointing at a large glowing proton diagram exploding into fractured chunky pieces in neon orange and electric blue, fragments flying left-to-right. Expression: furrowed brow lines, leaning in with focus. HUMAN zoom — stick figure and exploding proton fill 40% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 4,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "9.78s - 13.90s",
+    "scene_text": "We have caught the ghost particles from the sun. But the most obvious everyday",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Deep alien space backdrop — dark navy and black void, a massive glowing yellow cartoon sun blazing at top-right corner with wobbling solar flare spikes, neon green and blue particle trails streaming outward. Viewer positioned as witness watching from within the cosmos. Center-left frame: tiny glowing ghost-particle shapes — simple round dots with wispy trails — streaming left-to-right from the sun toward the viewer, passing through everything. These neutrino-like ghost particles are semi-transparent neon yellow. COSMIC zoom — sun at 15% of frame, ghost particles scattered mid-frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 5,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "13.90s - 18.36s",
+    "scene_text": "force in the universe, the force that keeps your feet tethered to the ground and",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Warm alien planet surface backdrop — chunky cartoon ground with alien rock formations, a looming massive cartoon Earth sphere in deep blue and green hovering at top-left, neon purple sky filled with swirling cosmic debris. Viewer positioned AS the person being pulled down. Center frame: a stick figure — round head, dot eyes, line body — feet pressed flat against the ground, thick bold downward arrows in toxic green pressing down on the figure from above, expression showing wide circle eyes and slightly bowed posture as if pushed down. Scale contrast: the Earth above is enormous. HUMAN zoom — stick figure 35% of frame, Earth looming large behind. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 6,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "18.36s - 22.96s",
+    "scene_text": "holds the moon in the sky, is the one that fundamentally breaks our understanding",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Wide cosmic backdrop — deep black alien sky, a chunky cartoon moon in pale gray at top-right, cartoon Earth at bottom-left, alien nebulae swirling in neon blue and purple across the background. Viewer positioned as witness to the cosmic scale. Center frame: bold curved neon green dotted arc lines looping from Earth around to the Moon, visually showing the gravitational tether — but these lines are simultaneously bending and warping in chaotic ways, wiggly and unstable, suggesting something is breaking. COSMIC zoom — Earth and Moon each occupy 10% of frame at opposite corners, the arc filling the space between. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 7,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "22.96s - 28.36s",
+    "scene_text": "of reality. Gravity is the glaring error in the standard model.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Frantic sci-fi lab backdrop — walls covered in alien equation diagrams, glowing error screens flashing red and neon pink, beakers overflowing with toxic green liquid, chaotic wires and gadgets everywhere. Viewer positioned as witness to a crisis. Center frame: ONE stick figure scientist — round head, bulging circle eyes, mouth agape in an O, arms raised with hands on head in shock — standing before a massive chalkboard-style panel covered in swirling abstract symbols, and a large bold red CRACK splitting down the middle of the panel. Expression: full-body horrified shock, sweat drops flying. HUMAN zoom — stick figure and cracked panel fill 50% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 8,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "28.36s - 32.46s",
+    "scene_text": "Electromagnetism, the strong force, and the weak force all",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Busy sci-fi backdrop — neon blue and purple quantum machinery humming, swirling energy fields, glowing particle accelerator rings, alien circuitry everywhere. Viewer positioned as witness. Center frame: three distinct glowing messenger particle shapes — one electric blue zigzag bolt (electromagnetism), one toxic green chunky blob (strong force), one neon pink wiggly worm (weak force) — all neatly slotting into a large glowing quantum grid framework like puzzle pieces fitting perfectly. Each particle snapping into place with small sparkle bursts. HUMAN zoom — the grid and three particles fill 55% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 9,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "32.46s - 36.84s",
+    "scene_text": "fit perfectly into quantum mechanics. They are all quantized.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Sci-fi quantum lab backdrop — chunky pixelated energy fields in electric blue and neon green, alien instruments reading quantum data, chaotic swirling probability clouds. Viewer positioned close to the quantum machinery. Center frame: a large glowing grid of discrete chunky squares arranged in a neat pattern — each square a flat neon color block, showing quantized discrete energy steps rather than smooth flow. Small arrow icons jump between blocks in distinct hops. The grid pulses with clean flat energy. CLOSE zoom — the quantized grid fills 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 10,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "36.84s - 39.66s",
+    "scene_text": "They operate via messenger particles.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Bright sci-fi particle accelerator backdrop — glowing ring accelerator in neon blue, particle collision bursts, alien machinery humming with energy bolts. Viewer positioned close to the action. Center frame: three distinct cartoon messenger particle shapes — a zigzag photon bolt, a chunky gluon blob, a wiggly W-boson — each radiating bold neon arrows outward, showing they are actively transmitting force between two small target blobs on either side. Motion left-to-right. CLOSE zoom — messenger particles and their force arrows fill 65% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 11,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "39.66s - 43.40s",
+    "scene_text": "But gravity, as described by Einstein's general relativity, is",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Alien cosmic space backdrop — dark indigo and black void, abstract curved spacetime grid lines warping in neon purple and green, stars distorting around massive invisible shapes. Viewer positioned as witness to something smooth and vast. Center frame: bold neon purple curved grid lines — like a stretched rubber sheet — bowing deeply downward in a wide smooth continuous curve, visually showing smooth warping with no chunky discrete steps. The curve is elegant, continuous, unbroken. COSMIC zoom — the warping grid fills 70% of frame, smooth and ominous. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 12,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "43.40s - 48.08s",
+    "scene_text": "smooth, continuous, and acts like a warping of the fabric of space",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Vast spacetime fabric backdrop — deep black and dark purple void, a massive neon green and purple grid sheet stretched across the frame, deeply warped into a funnel shape by an invisible mass at center. Alien stars and nebulae swirl around the warped edges. Viewer positioned INSIDE the warped fabric, looking across it. Center frame: the spacetime grid warps dramatically downward into a vortex at center, smooth flowing curves radiating outward like ripples on a pond, no breaks or chunks — pure continuous distortion. COSMIC zoom — the warped grid fabric fills 75% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 13,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "48.08s - 52.84s",
+    "scene_text": "-time itself. Quantum mechanics is chunky and probabilistic.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Split chaotic lab backdrop — left half shows smooth continuous neon purple waves (general relativity), right half shows chunky discrete probability pixel clouds in electric blue (quantum mechanics), the two halves clashing violently in the middle. Viewer positioned as witness to the collision. Center frame: ONE stick figure scientist — round head, dot eyes, line body — standing at the collision boundary, expression showing utter confusion: wavy question marks above head, both arms spread wide, head tilted. The clash boundary crackles with chaotic neon sparks. HUMAN zoom — stick figure at center, 40% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 14,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "52.84s - 56.82s",
+    "scene_text": "The two theories violently reject each other.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Violent sci-fi collision backdrop — two massive abstract theory shapes — one smooth neon purple wave form and one chunky electric blue pixel block — slamming into each other at center frame with explosive neon sparks, chaotic debris, and energy bursts flying in all directions. Alien machinery in the background shaking and sparking. Viewer positioned as witness to the violent clash. Center frame: the two shapes collide head-on, repelling each other with bold wobbly impact lines and chaotic explosion burst symbols. CLIMAX — subject fills 65% of frame. Motion from both left and right converging at center. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 15,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "56.82s - 60.46s",
+    "scene_text": "If you try to use quantum math to calculate gravity at microscopic scales,",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Chaotic sci-fi calculation backdrop — walls of abstract alien equations swirling and glowing, neon readout screens flickering, alien computers overloading with sparking circuits. Viewer positioned at human scale inside the frantic lab. Center frame: ONE stick figure scientist — round head, dot eyes, line body — hunched over a glowing microscope-like device, peering through it with concentrated expression (leaning forward, furrowed brow lines), the microscope aimed at a tiny abstract gravity symbol at microscopic scale shown small and shimmering at the lens end. Expression: tense focus, slight sweat drop. HUMAN zoom — stick figure and device fill 45% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 16,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "60.46s - 63.60s",
+    "scene_text": "the equations output infinite nonsense.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Exploding sci-fi calculator backdrop — alien computer screens cracking and shattering, neon readout displays showing wild chaotic squiggles instead of normal data, sparks flying everywhere, alien instruments melting. Viewer positioned close to the exploding outputs. Center frame: a large glowing screen filled with abstract swirling neon infinity symbol loops — chaotic, overlapping, spiraling outward uncontrollably — representing infinite nonsense output. The screen itself warps and bubbles at the edges. CLOSE zoom — the exploding infinity chaos fills 65% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 17,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "63.60s - 65.52s",
+    "scene_text": "To bridge this impossible gap",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Dark alien chasm backdrop — a massive yawning gap in a cosmic landscape, deep neon blue and purple abyss below, jagged alien rock edges on both sides, swirling energy mist rising from the gap. Viewer positioned at the edge looking across the impossible chasm. Center frame: two distinct cliff edges on left and right — left labeled with smooth wave shapes, right labeled with chunky pixel blocks — the gap between them enormous and dark, a fragile neon bridge structure beginning to form across the middle, barely started, delicate and uncertain. COSMIC zoom — full gap fills 70% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 18,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "65.52s - 69.04s",
+    "scene_text": "physicists were forced to hypothesize the graviton",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Intense sci-fi lab backdrop — neon pink and electric blue lighting, alien whiteboards covered in abstract particle diagrams, bubbling machines, stacks of alien physics papers flying in the air. Viewer positioned at human scale. Center frame: ONE stick figure scientist — round head, dot eyes, line body — both stick arms raised triumphantly, pointing toward a newly drawn glowing particle symbol floating before them: a small round shape with radiating neon green wave lines, representing the hypothetical graviton concept. Expression: triumphant simple smile, both arms up. HUMAN zoom — stick figure and glowing graviton symbol fill 50% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 19,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "69.04s - 70.20s",
+    "scene_text": "a massless particle",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Sci-fi void backdrop — deep black space with faint neon green grid lines, minimal alien star clusters at edges, creating a stark empty atmosphere. Viewer positioned extremely close to the subject. Center frame: ONE stick figure scientist — round head, wide circle eyes, one arm outstretched pointing — and before them a single tiny perfect circle shape in neon green, massless-looking, feather-light, surrounded by tiny wisps showing it weighs nothing, a delicate zero-mass particle. Expression: awestruck, mouth open O, pointing. EXTREME CLOSE zoom — the tiny particle fills 25% of frame, stick figure nearby at 30%. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 20,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "70.20s - 75.40s",
+    "scene_text": "that transmits the force of gravity. But the graviton has never been found.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Cosmic dark backdrop — deep black and purple alien space, gravity field lines shown as bold neon green curves stretching between planet shapes, but at center a large glowing SEARCH beam sweeps the void finding nothing. Viewer positioned as witness to the failed search. Center frame: the neon graviton particle shape from before — a faint ghost outline — surrounded by large bold red X symbols and ghostly phantom trails, showing it transmits force everywhere as faint arrows but is itself invisible and unfound. The search beam sweeps right-to-left finding only emptiness. CLIMAX — ghost particle and X fills 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 21,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "75.40s - 81.38s",
+    "scene_text": "It remains a phantom, an unobserved specter haunting the halls of theoretical physics.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Eerie haunted theoretical physics lab backdrop — dark muted walls, ghostly blue and purple neon lighting, shelves of alien physics books with floating ghost wisps drifting between them, long shadowy corridors stretching back into darkness. Viewer positioned as witness inside the haunted halls. Center frame: ONE stick figure scientist — round head, dot eyes, line body — standing frozen, expression showing pure horror: bulging circle eyes, sweat drops flying, mouth agape in O, arms slightly raised — as a large translucent ghost shape (representing the graviton phantom) hovers before them, glowing faintly in neon blue with wispy phantom trails drifting upward. HUMAN zoom — stick figure and phantom fill 50% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 22,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "81.38s - 87.78s",
+    "scene_text": "The reason we haven't found it forces us to look into the abyss of our own ignorance. Gravity is incomprehensibly",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Dark cosmic abyss backdrop — a massive yawning black void at center, neon blue and purple light rims at the edges, alien star debris circling the abyss, an overwhelming sense of scale and ignorance. Viewer positioned at the edge of the abyss looking down. Center frame: ONE stick figure scientist — round head, dot eyes, line body — standing at the very edge of the void, leaning slightly forward, expression showing awe and dread: wide circle eyes, sweat drop, one hand raised to forehead as if peering into darkness. Below them: endless neon purple depth. Expression: deeply unsettled, awestruck. HUMAN zoom — stick figure at 30% of frame, the abyss dominating 60%. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 23,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "87.78s - 94.98s",
+    "scene_text": "weak. Think about it. The entire mass of the Earth, all six septillion kilograms of it, is pulling",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Massive scale alien backdrop — a gigantic cartoon Earth sphere in deep blue and green filling the left half of the frame, its enormous mass visually pressing downward with thick bold neon green gravity arrows all pointing down. Viewer positioned as tiny witness beneath the Earth. Bottom-center frame: an absurdly tiny cartoon paperclip shape — minuscule in scale comparison — with the same thick green gravity arrows pressing down on it from the massive Earth above. Scale contrast is maximized and comedic. COSMIC zoom — Earth fills 45% of frame, paperclip is comically tiny at bottom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 24,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "94.98s - 101.32s",
+    "scene_text": "down on a paperclip. Yet, you can easily pick that paperclip up with a tiny magnet.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Simple alien environment backdrop — the massive Earth still looming in background (muted, smaller), mid-tone alien ground surface below. Viewer positioned at human scale. Center frame: a tiny cartoon paperclip sitting on a flat surface with thick neon green gravity arrows pressing it down from the massive Earth — but a small cartoon horseshoe magnet shape in neon pink swoops in from the right, effortlessly lifting the paperclip upward with pink magnetic field arcs, completely overpowering the green gravity arrows. The gravity arrows look defeated and squiggly. Motion: magnet swooping right-to-left. HUMAN zoom — magnet, paperclip, and competing force arrows fill 55% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 25,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "101.32s - 103.48s",
+    "scene_text": "A fridge magnet effortlessly overpowers the gravity of an entire planet.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Comedic alien kitchen-adjacent backdrop — alien fridge shape at left edge, chaos of sci-fi gadgets and neon alien decor filling background. Viewer positioned at human scale witnessing the absurdity. Center frame: a small cartoon fridge magnet shape — chunky, neon pink, simple square — radiating bold neon pink magnetic force arcs outward, and beside it a defeated massive cartoon Earth sphere (smaller now, looking sad with droopy lines), with its green gravity arrows pointing down but totally outmatched — the fridge magnet's pink arcs overpower them completely. Comedic sizing: fridge magnet appears stronger than Earth. HUMAN zoom — magnet and Earth fill 55% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 26,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "103.48s - 106.30s",
+    "scene_text": "Why is gravity so pathetically weak compared to the other forces? The terrifying hypothesis",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Dark questioning sci-fi backdrop — deep purple alien void, swirling neon question mark shapes of different sizes floating throughout the background, alien machinery humming with uncertainty. Viewer positioned as witness to the mystery. Center frame: a visual comparison — on the left a tiny neon green gravity arrow (pathetically small, drooping, looking weak), on the right massive bold neon pink, blue, and yellow force arrows representing the other forces, towering over the gravity arrow. The gravity arrow appears almost embarrassed. DETAIL zoom — the force comparison fills 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 27,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "106.30s - 117.22s",
+    "scene_text": "is that gravity isn't actually weak. We just aren't experiencing all of it.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. SPLIT FRAME composition — left side (muted gray-purple tones): shows a small sad neon green gravity arrow labeled as 'weak' with drooping form — the WRONG assumption. Right side (full neon palette, electric blue, toxic green, neon pink): shows a massive FULL-POWER gravity force exploding outward in all directions with enormous radiating neon arcs — but most of those arcs BLEEDING OFF the right edge of the frame into hidden dimensions beyond the frame border, suggesting the full gravity is leaking away. The right side blazes with maximum neon energy. Viewer positioned as witness to the revelation. CHANGE scene — full 16:9 width split vertically. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 28,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "117.22s - 123.40s",
+    "scene_text": "Advanced models like string theory and brain cosmology suggest that while the strong, weak, and",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Complex alien theoretical backdrop — swirling neon string theory webs filling the background in neon green and purple, vibrating string shapes (tiny wiggly lines) scattered throughout, alien membrane shapes layered one behind another. Viewer positioned as witness to the theoretical landscape. Center frame: a large diagram showing TWO distinct parallel membrane planes — one solid neon blue (our reality), one ghostly purple behind it (another dimension) — with the three force types (blue zigzag, green blob, pink worm) shown firmly stuck to the front membrane with bold anchor symbols. ESTABLISH — wide framing, membranes fill 50% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 29,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "123.40s - 129.96s",
+    "scene_text": "electromagnetic forces are permanently glued to our three -dimensional reality, gravity",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Layered dimensional backdrop — two parallel alien membrane planes visible, one solid neon blue (our 3D reality), one ghostly behind it, with sci-fi circuitry and alien machinery embedded in the foreground membrane. Viewer positioned BETWEEN the membranes. Center frame: the three force types (blue zigzag, green blob, pink worm) are shown with bold neon glue symbols permanently bonded to the front neon blue membrane, unable to move — massive bold STUCK anchors holding them in place. The graviton particle shape is absent here — noticeably missing. DETAIL zoom — membranes and glued forces fill 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 30,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "129.96s - 135.54s",
+    "scene_text": "is not. The graviton might be leaking. It could be bleeding out of our universe and diffusing into higher,",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Dramatic dimensional bleed backdrop — deep black and indigo alien void, two membrane planes visible, the front one (neon blue, our universe) and behind it ghostly purple hidden dimensions stretching infinitely. Viewer positioned as witness to the leaking. Center frame: a tiny neon green graviton particle shape — the ghost circle from before — shown escaping THROUGH the front membrane, leaving a neon green trail as it bleeds rightward out of our universe membrane into the ghostly dimensions behind, leaving a hole-like breach glowing neon pink at the membrane. Motion: graviton drifting right-to-left INTO the hidden dimension. CLIMAX — the leaking graviton and membrane breach fill 65% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 31,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "135.54s - 142.36s",
+    "scene_text": "hidden dimensions that we cannot see or interact with. The fact that the graviton remains undiscovered",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Hidden dimension backdrop — deep alien void beyond our visible universe, multiple ghostly layered purple membrane planes stacked behind each other receding into darkness, graviton ghost trails scattered throughout the hidden space. Viewer positioned IN the hidden dimensions looking back at our membrane. Center frame: the tiny graviton ghost shapes drifting freely through the layered hidden dimensions — multiple ghost-circle trails dispersing in all directions — while behind them our neon blue membrane appears as a thin wall. Large bold red UNDISCOVERED symbol (a circle with a line through it) hovers center frame. REACTION — ghost gravitons and hidden dimensions fill 65% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 32,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "142.36s - 148.94s",
+    "scene_text": "might be the universe's way of telling us that our perception of reality is fundamentally crippled.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Existential alien backdrop — dark purple and black cosmic void, our neon blue 3D membrane shown as a thin flat plane at center, cracks spreading across its surface in neon red, alien machinery at the edges looking damaged and uncertain. Viewer positioned outside the membrane looking at it. Center frame: the neon blue membrane has bold neon red cracks spreading across its surface — representing fundamentally crippled perception — with ghost shapes of hidden dimensions flickering behind the cracks. A large ominous eye shape in neon purple watches from beyond the membrane. CLIMAX — cracked membrane fills 65% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 33,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "148.94s - 153.14s",
+    "scene_text": "We are trapped on a three -dimensional membrane, watching the shadows of higher -dimensional",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Claustrophobic membrane backdrop — our 3D universe shown as a thin glowing neon blue membrane cage, alien geometric shapes pressing in from all sides, ghostly higher-dimensional shadows projected onto the membrane walls from unseen objects outside. Viewer positioned INSIDE the membrane, trapped. Center frame: the interior of the membrane cage is tight and confining, with shadow shapes playing across the inner walls — simple flat silhouette shapes of higher-dimensional objects casting 2D shadows onto our reality. The shadows are the only clue. ESTABLISH — the membrane cage fills 70% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 34,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "153.14s - 160.46s",
+    "scene_text": "physics play out across the cosmos, incapable of grasping the true architecture of the void.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Vast cosmic architecture backdrop — deep black alien void, enormous abstract geometric higher-dimensional structures suggested by intersecting neon lines and impossible alien shapes receding into deep space, our thin blue membrane visible as just a tiny sliver at bottom of frame. Viewer positioned at COSMIC scale witnessing the true architecture. Center frame: the tiny blue membrane sliver at bottom, above it towering impossible geometric alien structures in neon purple and green — the true void architecture — vast, overwhelming, unknowable. Small shadow projections fall from the structures down onto the tiny membrane. COSMIC zoom — structures fill 70% of frame, our membrane barely visible. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 35,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "160.46s - 164.32s",
+    "scene_text": "We can detect the cosmic microwave background from the birth of time, yet",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Triumphant yet ironic sci-fi backdrop — large dish antenna array in neon green pointing at the cosmic microwave background shown as a glowing warm neon yellow haze filling the sky background, alien readout screens showing successful CMB data. Viewer positioned at human scale in the lab. Center frame: ONE stick figure scientist — round head, dot eyes, line body — standing at the antenna controls, expression showing triumph (both arms raised, simple smile) as the CMB haze glows in the background — BUT next to them, a smaller graviton ghost shape with a bold red X through it, noticeably absent and unfound. HUMAN zoom — stick figure, antenna, and contrast fills 50% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 36,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "164.32s - 167.06s",
+    "scene_text": "we cannot find the particle that allows us to stand.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Dark ironic backdrop — alien planet surface, a stick figure standing upright on the ground (held there by gravity) with bold neon green downward arrows pressing feet to ground — but the graviton particle that CAUSES this is shown as a ghost outline with a question mark, completely invisible and missing. Viewer positioned at human scale. Center frame: the simple act of standing — stick figure feet on ground, gravity arrows present, but the graviton ghost floats above with a massive question mark and ghost wisps — the particle enabling standing is fundamentally undiscovered. DETAIL zoom — stick figure and missing graviton fill 55% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 37,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "167.06s - 173.66s",
+    "scene_text": "The graviton is the ultimate reminder of human insignificance, a mystery that suggests the universe is not just stranger",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Humbling cosmic backdrop — the entire observable universe shown as a vast neon purple and blue swirling cosmic panorama, alien galaxies spinning, nebulae blazing, cosmic structures stretching to infinity — and in the bottom corner, our tiny blue membrane with a barely-visible stick figure silhouette on it, infinitely small. Viewer positioned at maximum COSMIC scale. Center frame: the ghost graviton shape drifts through the cosmic expanse in neon green, passing through galaxies and nebulae undetected — vast, free, unknowable — while the tiny stick figure silhouette watches from below. COSMIC zoom — cosmos fills 85% of frame, stick figure occupies 3%. Motion: graviton drifting left-to-right across the cosmos. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  },
+  {
+    "scene": 38,
+    "segment": "#1 Graviton, Hypothesized, Not Observed.",
+    "time": "173.66s - 186.18s",
+    "scene_text": "than we imagine, but stranger than we can imagine.",
+    "prompt_source": "claude-api",
+    "prompt": "2D Western Cartoon animation. Maximum drama final frame — deep black and dark indigo alien cosmic void, no stars, no galaxies, just an overwhelming oppressive darkness punctuated by faint swirling neon purple and green impossible geometric shapes at the extreme edges — the architecture of something beyond our comprehension. Viewer positioned as infinitely tiny, lost inside the void. Center frame: a single tiny stick figure — round head, dot eyes — standing alone in the vast darkness, arms slightly raised, looking upward at the infinite void above, expression showing pure awe and existential smallness: wide circle eyes, mouth open O, sweat drops. Above them: an enormous faint ghost graviton shape — barely visible neon green outline — looming across the upper 70% of the frame, vast and undiscovered. CLIMAX — the void and ghost graviton dominate, stick figure at bottom-center occupying only 8% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere."
+  }
+]
