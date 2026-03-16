@@ -60,7 +60,8 @@
       "Bash(python video_workspace/scripts/merge_scenes.py)",
       "Bash(ffmpeg -y -i \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad.mp4\" -filter_complex \"[0:v]setpts=0.8333*PTS[v];[0:a]atempo=1.2[a]\" -map \"[v]\" -map \"[a]\" -c:v libx264 -preset fast -crf 23 -c:a aac -b:a 192k \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad_fast.mp4\")",
       "Bash(ffprobe -v quiet -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad.mp4\")",
-      "Bash(ffprobe -v quiet -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad_fast.mp4\")"
+      "Bash(ffprobe -v quiet -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad_fast.mp4\")",
+      "Bash(grep -rn \"stack\\\\|0xC0000409\\\\|buffer.*overrun\\\\|memory.*error\" /c/Users/OVERLORD/Videos/VideoAutomation --include=*.py --include=*.md --include=*.txt)"
     ]
   }
 }

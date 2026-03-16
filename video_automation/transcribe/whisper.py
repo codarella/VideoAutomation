@@ -47,6 +47,19 @@ class MultiPassTranscriber:
         self.compute_type = compute_type
         self._model = None
 
+    def unload(self):
+        """Explicitly release the Whisper model and free CUDA memory."""
+        if self._model is not None:
+            del self._model
+            self._model = None
+        import gc
+        gc.collect()
+        try:
+            import torch
+            torch.cuda.empty_cache()
+        except Exception:
+            pass
+
     def _get_model(self):
         if self._model is None:
             from faster_whisper import WhisperModel

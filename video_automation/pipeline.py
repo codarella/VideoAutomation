@@ -56,12 +56,15 @@ class TranscribeStage(Stage):
             device=self.config.whisper_device,
             compute_type=self.config.whisper_compute_type,
         )
-        words, duration = transcriber.transcribe(
-            audio_path,
-            num_passes=self.config.whisper_passes,
-        )
-        project.words = words
-        project.audio_duration = duration
+        try:
+            words, duration = transcriber.transcribe(
+                audio_path,
+                num_passes=self.config.whisper_passes,
+            )
+            project.words = words
+            project.audio_duration = duration
+        finally:
+            transcriber.unload()
 
         # Early checkpoint so transcription survives later crashes
         project_path = workspace / "scripts" / f"{project.name}_project.json"
