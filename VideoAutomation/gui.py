@@ -8,7 +8,6 @@ import re
 import urllib.request
 import json as _json
 
-SCRIPT = os.path.join(os.path.dirname(__file__), "video_automation_v2.py")
 PYTHON = sys.executable
 
 AI_MODELS = [
@@ -149,86 +148,64 @@ class App(tk.Tk):
         ttk.Separator(t1, orient="horizontal").grid(
             row=3, column=0, columnspan=6, sticky="ew", pady=(4, 2))
 
-        self.use_saved_var = tk.BooleanVar(value=False)
-        self.use_saved_cb = tk.Checkbutton(t1, text="Load prompts from JSON",
-                       variable=self.use_saved_var, command=self._toggle_saved)
-        self.use_saved_cb.grid(row=4, column=0, sticky="w", **pad)
-
-        tk.Label(t1, text="File:").grid(row=4, column=1, sticky="e", **pad)
-        self.prompts_var = tk.StringVar()
-        self.prompts_entry = tk.Entry(t1, textvariable=self.prompts_var,
-                                      width=32, state="disabled")
-        self.prompts_entry.grid(row=4, column=2, columnspan=2, **pad)
-        self.prompts_btn = tk.Button(t1, text="Browse",
-                                     command=self._pick_prompts, state="disabled")
-        self.prompts_btn.grid(row=4, column=4, **pad)
-        tk.Label(t1, text="blank = auto", fg="gray",
-                 font=("Arial", 8)).grid(row=4, column=5, sticky="w", padx=4)
-
-        # ── Tab 2: Effects & Options ──────────────────────────────────
+        # ── Tab 2: Pipeline & Effects ─────────────────────────────────
         t2 = ttk.Frame(nb, padding=6)
-        nb.add(t2, text="  Effects & Options  ")
+        nb.add(t2, text="  Pipeline & Effects  ")
 
-        self.compile_only_var = tk.BooleanVar(value=False)
-        self.compile_only_cb = tk.Checkbutton(
-            t2, text="Compile only",
-            variable=self.compile_only_var, command=self._toggle_compile_only)
-        self.compile_only_cb.grid(row=0, column=0, sticky="w", **pad)
+        STAGES = ["transcribe", "segment", "prompt", "generate", "compile"]
 
-        self.prompts_only_var = tk.BooleanVar(value=False)
-        self.prompts_only_cb = tk.Checkbutton(
-            t2, text="Prompts only",
-            variable=self.prompts_only_var, command=self._toggle_prompts_only)
-        self.prompts_only_cb.grid(row=0, column=1, sticky="w", **pad)
+        tk.Label(t2, text="Start from:").grid(row=0, column=0, sticky="e", **pad)
+        self.start_from_var = tk.StringVar(value="transcribe")
+        ttk.Combobox(t2, textvariable=self.start_from_var, values=STAGES,
+                     width=14, state="readonly").grid(row=0, column=1, sticky="w", **pad)
 
-        self.scene_text_only_var = tk.BooleanVar(value=False)
-        self.scene_text_only_cb = tk.Checkbutton(
-            t2, text="Export scene texts for Claude",
-            variable=self.scene_text_only_var, command=self._toggle_scene_text_only)
-        self.scene_text_only_cb.grid(row=0, column=2, columnspan=2, sticky="w", **pad)
+        tk.Label(t2, text="Stop after:").grid(row=0, column=2, sticky="e", **pad)
+        self.stop_after_var = tk.StringVar(value="compile")
+        ttk.Combobox(t2, textvariable=self.stop_after_var, values=STAGES,
+                     width=14, state="readonly").grid(row=0, column=3, sticky="w", **pad)
+
+        self.resume_var = tk.BooleanVar(value=False)
+        tk.Checkbutton(t2, text="Resume from existing project",
+                       variable=self.resume_var).grid(row=0, column=4, columnspan=2, sticky="w", **pad)
 
         ttk.Separator(t2, orient="horizontal").grid(
-            row=1, column=0, columnspan=5, sticky="ew", pady=(4, 2))
+            row=1, column=0, columnspan=8, sticky="ew", pady=(4, 2))
+
+        # Script file (required for segment detection)
+        tk.Label(t2, text="Script File:").grid(row=2, column=0, sticky="e", **pad)
+        self.script_var = tk.StringVar()
+        tk.Entry(t2, textvariable=self.script_var, width=40).grid(
+            row=2, column=1, columnspan=3, sticky="w", **pad)
+        tk.Button(t2, text="Browse", command=self._pick_script).grid(row=2, column=4, **pad)
+        tk.Label(t2, text="original narration script", fg="gray",
+                 font=("Arial", 8)).grid(row=2, column=5, sticky="w", padx=4)
+
+        ttk.Separator(t2, orient="horizontal").grid(
+            row=3, column=0, columnspan=8, sticky="ew", pady=(4, 2))
 
         self.ken_burns_var = tk.BooleanVar(value=False)
         tk.Checkbutton(t2, text="Ken Burns",
-                       variable=self.ken_burns_var).grid(row=2, column=0, sticky="w", **pad)
+                       variable=self.ken_burns_var).grid(row=4, column=0, sticky="w", **pad)
 
         self.crossfade_var = tk.BooleanVar(value=False)
         tk.Checkbutton(t2, text="Crossfade",
-                       variable=self.crossfade_var).grid(row=2, column=1, sticky="w", **pad)
+                       variable=self.crossfade_var).grid(row=4, column=1, sticky="w", **pad)
 
-        tk.Label(t2, text="Fade(s):").grid(row=2, column=2, sticky="e", padx=(4, 2))
-        self.crossfade_dur_var = tk.StringVar(value="0.4")
-        tk.Entry(t2, textvariable=self.crossfade_dur_var, width=5).grid(
-            row=2, column=3, sticky="w")
+        tk.Label(t2, text="Image workers:").grid(row=4, column=2, sticky="e", padx=(12, 2))
+        self.gen_workers_var = tk.StringVar(value="10")
+        tk.Spinbox(t2, textvariable=self.gen_workers_var, from_=1, to=20,
+                   width=4).grid(row=4, column=3, sticky="w", **pad)
 
-        tk.Label(t2, text="Gen workers:").grid(row=2, column=4, sticky="e", padx=(12, 2))
-        self.gen_workers_var = tk.StringVar(value="3")
-        tk.Spinbox(t2, textvariable=self.gen_workers_var, from_=1, to=10,
-                   width=4).grid(row=2, column=5, sticky="w", **pad)
-
-        tk.Label(t2, text="FFmpeg workers:").grid(row=2, column=6, sticky="e", padx=(12, 2))
-        self.compile_workers_var = tk.StringVar(value="3")
-        tk.Spinbox(t2, textvariable=self.compile_workers_var, from_=1, to=16,
-                   width=4).grid(row=2, column=7, sticky="w", **pad)
-
-        tk.Label(t2, text="Re-gen scenes:").grid(row=3, column=0, sticky="e", **pad)
+        tk.Label(t2, text="Re-gen scenes:").grid(row=5, column=0, sticky="e", **pad)
         self.regen_scenes_var = tk.StringVar(value="")
         tk.Entry(t2, textvariable=self.regen_scenes_var, width=40).grid(
-            row=3, column=1, columnspan=4, sticky="w", **pad)
+            row=5, column=1, columnspan=3, sticky="w", **pad)
         tk.Label(t2, text="1-based, e.g. 5,12", fg="gray",
-                 font=("Arial", 8)).grid(row=3, column=5, sticky="w", padx=4)
+                 font=("Arial", 8)).grid(row=5, column=4, sticky="w", padx=4)
 
         self.find_dupes_var = tk.BooleanVar(value=False)
         tk.Checkbutton(t2, text="Find & regen dupes",
-                       variable=self.find_dupes_var).grid(row=4, column=0, columnspan=2, sticky="w", **pad)
-        tk.Label(t2, text="threshold:", fg="gray").grid(row=4, column=2, sticky="e", padx=(4, 2))
-        self.dupe_threshold_var = tk.StringVar(value="10")
-        tk.Spinbox(t2, textvariable=self.dupe_threshold_var, from_=1, to=30,
-                   width=4).grid(row=4, column=3, sticky="w")
-        tk.Label(t2, text="lower = stricter", fg="gray",
-                 font=("Arial", 8)).grid(row=4, column=4, sticky="w", padx=4)
+                       variable=self.find_dupes_var).grid(row=6, column=0, columnspan=2, sticky="w", **pad)
 
         # ── BUTTON ROW ───────────────────────────────────────────────
         btn_row = tk.Frame(self)
@@ -246,19 +223,15 @@ class App(tk.Tk):
                                   state="disabled", width=6)
         self.stop_btn.grid(row=0, column=1, padx=3)
 
-        tk.Button(btn_row, text="Sync Map",
-                  command=self._run_sync_map,
-                  font=("Arial", 10), width=10).grid(row=0, column=2, padx=3)
-
         tk.Button(btn_row, text="Regen Missing",
                   command=self._load_missing_scenes,
                   bg="#7d4a2d", fg="white",
-                  font=("Arial", 10), width=13).grid(row=0, column=3, padx=3)
+                  font=("Arial", 10), width=13).grid(row=0, column=2, padx=3)
 
         tk.Button(btn_row, text="Scan Corrupt",
                   command=self._scan_corrupt,
                   bg="#4a2d7d", fg="white",
-                  font=("Arial", 10), width=12).grid(row=0, column=4, padx=(3, 0))
+                  font=("Arial", 10), width=12).grid(row=0, column=3, padx=(3, 0))
 
         # ── LOG ───────────────────────────────────────────────────────
         log_frame = ttk.LabelFrame(self, text="  Output  ", padding=4)
@@ -275,81 +248,12 @@ class App(tk.Tk):
 
     def _toggle_llm(self):
         on = self.use_llm_var.get()
-        if on and self.use_saved_var.get():
-            self.use_saved_var.set(False)
-            self._update_saved_widgets(False)
         self.llm_provider_cb.config(state="readonly" if on else "disabled")
         if on:
             self._on_provider_change()
         else:
             self.llm_model_cb.config(state="disabled")
             self.llm_status_var.set("")
-
-    def _toggle_saved(self):
-        on = self.use_saved_var.get()
-        if on and self.use_llm_var.get():
-            self.use_llm_var.set(False)
-            self._update_llm_widgets(False)
-        if on and self.prompts_only_var.get():
-            self.prompts_only_var.set(False)
-        self._update_saved_widgets(on)
-
-    def _toggle_compile_only(self):
-        on = self.compile_only_var.get()
-        if on:
-            if self.use_llm_var.get():
-                self.use_llm_var.set(False)
-                self._update_llm_widgets(False)
-            if self.use_saved_var.get():
-                self.use_saved_var.set(False)
-                self._update_saved_widgets(False)
-            if self.prompts_only_var.get():
-                self.prompts_only_var.set(False)
-        state = "disabled" if on else "normal"
-        self.use_llm_cb.config(state=state)
-        self.use_saved_cb.config(state=state)
-        self.prompts_only_cb.config(state=state)
-
-    def _toggle_prompts_only(self):
-        on = self.prompts_only_var.get()
-        if on:
-            if self.compile_only_var.get():
-                self.compile_only_var.set(False)
-                self.use_llm_cb.config(state="normal")
-                self.use_saved_cb.config(state="normal")
-            if self.use_saved_var.get():
-                self.use_saved_var.set(False)
-                self._update_saved_widgets(False)
-        state = "disabled" if on else "normal"
-        self.compile_only_cb.config(state=state)
-        self.use_saved_cb.config(state=state)
-        if on:
-            self.start_btn.config(text="  Generate Prompts Only")
-        else:
-            self.start_btn.config(text="  Generate Video")
-
-    def _toggle_scene_text_only(self):
-        on = self.scene_text_only_var.get()
-        if on:
-            if self.use_llm_var.get():
-                self.use_llm_var.set(False)
-                self._update_llm_widgets(False)
-            if self.use_saved_var.get():
-                self.use_saved_var.set(False)
-                self._update_saved_widgets(False)
-            if self.compile_only_var.get():
-                self.compile_only_var.set(False)
-            if self.prompts_only_var.get():
-                self.prompts_only_var.set(False)
-        state = "disabled" if on else "normal"
-        self.use_llm_cb.config(state=state)
-        self.use_saved_cb.config(state=state)
-        self.compile_only_cb.config(state=state)
-        self.prompts_only_cb.config(state=state)
-        if on:
-            self.start_btn.config(text="  Export Scene Texts for Claude")
-        else:
-            self.start_btn.config(text="  Generate Video")
 
     def _toggle_key_visibility(self):
         if self.anthropic_key_show_var.get():
@@ -372,10 +276,6 @@ class App(tk.Tk):
             self.anthropic_key_show_btn.grid_remove()
             self.claude_model_lbl.grid_remove()
             self.claude_model_cb.grid_remove()
-
-    def _update_saved_widgets(self, on: bool):
-        self.prompts_entry.config(state="normal" if on else "disabled")
-        self.prompts_btn.config(state="normal" if on else "disabled")
 
     def _on_provider_change(self):
         provider = self.llm_provider_var.get()
@@ -464,75 +364,11 @@ class App(tk.Tk):
         if path:
             self.transcript_var.set(path)
 
-    def _pick_prompts(self):
-        path = filedialog.askopenfilename(filetypes=[("JSON", "*.json"), ("All", "*.*")])
+    def _pick_script(self):
+        path = filedialog.askopenfilename(
+            filetypes=[("Text files", "*.txt"), ("All", "*.*")])
         if path:
-            self.prompts_var.set(path)
-
-    # ── sync map ─────────────────────────────────────────────────────
-    def _run_sync_map(self):
-        """Generate and display sync map for current name/workspace."""
-        name      = self.name_var.get().strip()
-        workspace = self.workspace_var.get().strip()
-        if not name:
-            self._log("ERROR: Set Output Name first.\n")
-            return
-
-        prompts_path = os.path.join(workspace, "scripts", f"{name}_prompts.json")
-        images_dir   = os.path.join(workspace, "images", name)
-        out_path     = os.path.join(workspace, "scripts", f"{name}_sync_map.txt")
-
-        if not os.path.exists(prompts_path):
-            self._log(f"ERROR: prompts.json not found:\n  {prompts_path}\n")
-            return
-
-        threading.Thread(
-            target=self._sync_map_worker,
-            args=(prompts_path, images_dir, out_path),
-            daemon=True).start()
-
-    def _sync_map_worker(self, prompts_path, images_dir, out_path):
-        try:
-            with open(prompts_path, encoding="utf-8") as f:
-                data = _json.load(f)
-            scenes = data.get("scenes", [])
-
-            rows    = []
-            missing = 0
-            for sc in scenes:
-                snum     = sc["scene"]
-                img_name = f"scene_{snum - 1:04d}.png"
-                img_path = os.path.join(images_dir, img_name)
-                exists   = os.path.exists(img_path)
-                m = re.match(r"([\d.]+)s\s*-\s*([\d.]+)s", sc.get("time", ""))
-                t0, t1 = (float(m.group(1)), float(m.group(2))) if m else (0.0, 0.0)
-                is_placeholder = exists and os.path.basename(img_path).startswith("placeholder_")
-                status = "PLACEHOLDER" if is_placeholder else ("OK" if exists else "MISSING")
-                if status != "OK":
-                    missing += 1
-                rows.append((snum, t0, t1, t1 - t0, img_name, status))
-
-            lines = [f"\nSync map -- {len(scenes)} scenes, {missing} need regen\n",
-                     f"  {'#':>4}  {'start':>8}  {'end':>8}  {'dur':>6}  status       file\n",
-                     "  " + "-" * 66 + "\n"]
-            for snum, t0, t1, dur, img_name, status in rows:
-                flag = "!" if status != "OK" else " "
-                lines.append(
-                    f"  {snum:>4}  {t0:>8.3f}s  {t1:>8.3f}s  {dur:>5.2f}s"
-                    f"  {flag}{status:<7}  {img_name}\n")
-
-            with open(out_path, "w") as f:
-                f.write("scene\tlock_time\tend_time\tduration\tstatus\timage\n")
-                for snum, t0, t1, dur, img_name, status in rows:
-                    f.write(f"{snum}\t{t0:.6f}\t{t1:.6f}\t{dur:.6f}\t{status}\t{img_name}\n")
-
-            lines.append(f"\nSaved -> {out_path}\n"
-                         f"   {missing} need regen / {len(scenes) - missing} OK\n")
-            for ln in lines:
-                self.after(0, self._log, ln)
-
-        except Exception as e:
-            self.after(0, self._log, f"Sync map error: {e}\n")
+            self.script_var.set(path)
 
     # ── regen missing ─────────────────────────────────────────────────
     def _load_missing_scenes(self):
@@ -579,7 +415,7 @@ class App(tk.Tk):
         self._log(f"Loaded {len(sorted_scenes)} scene(s) needing regen into Re-gen field:\n"
                   f"  {','.join(sorted_scenes)}\n\n"
                   f"Click 'Generate Video' to regenerate them.\n"
-                  f"Tip: enable 'Load prompts from JSON' so timestamps stay locked.\n")
+                  f"Tip: use --resume to preserve existing project state.\n")
 
     # ── scan corrupt ─────────────────────────────────────────────────
     def _scan_corrupt(self):
@@ -660,20 +496,32 @@ class App(tk.Tk):
     def _run(self, audio, name):
         workspace = self.workspace_var.get().strip()
         model     = self.model_var.get()
+        script    = self.script_var.get().strip()
 
         cmd = [
-            PYTHON, "-X", "utf8", "-u", SCRIPT,
-            "--audio",     audio,
-            "--name",      name,
-            "--workspace", workspace,
-            "--ai33-key",  AI33_KEY,
-            "--model",     model,
+            PYTHON, "-X", "utf8", "-u", "-m", "video_automation",
+            "--audio",      audio,
+            "--name",       name,
+            "--workspace",  workspace,
+            "--ai33-key",   AI33_KEY,
+            "--ai33-model", model,
+            "--start-from", self.start_from_var.get(),
+            "--stop-after", self.stop_after_var.get(),
         ]
+
+        if script and os.path.exists(script):
+            cmd += ["--script", script]
+
+        if self.resume_var.get():
+            cmd.append("--resume")
 
         if not self.tx_auto_var.get():
             t = self.transcript_var.get().strip()
             if t and os.path.exists(t):
-                cmd += ["--transcript", t]
+                # Existing transcript available — skip transcription, start from segment
+                idx = cmd.index("--start-from")
+                if cmd[idx + 1] == "transcribe":
+                    cmd[idx + 1] = "segment"
 
         if self.use_llm_var.get():
             if self.llm_provider_var.get() == "claude":
@@ -682,31 +530,15 @@ class App(tk.Tk):
                     cmd += ["--anthropic-key", key]
                 cmd += ["--claude-model", self.claude_model_var.get()]
             else:
-                cmd.append("--use-llm")
                 cmd += ["--llm-provider", self.llm_provider_var.get()]
                 m = self.llm_model_var.get().strip()
                 if m:
                     cmd += ["--llm-model", m]
 
-        if self.use_saved_var.get():
-            cmd.append("--use-saved-prompts")
-
-        if self.compile_only_var.get():
-            cmd.append("--compile-only")
-
-        if self.prompts_only_var.get():
-            cmd.append("--prompts-only")
-
-        if self.scene_text_only_var.get():
-            cmd.append("--scene-text-only")
-
         if self.ken_burns_var.get():
             cmd.append("--ken-burns")
         if self.crossfade_var.get():
             cmd.append("--crossfade")
-            dur = self.crossfade_dur_var.get().strip()
-            if dur:
-                cmd += ["--crossfade-duration", dur]
 
         regen = self.regen_scenes_var.get().strip()
         if regen:
@@ -714,17 +546,10 @@ class App(tk.Tk):
 
         gw = self.gen_workers_var.get().strip()
         if gw:
-            cmd += ["--workers", gw]
-
-        cw = self.compile_workers_var.get().strip()
-        if cw:
-            cmd += ["--compile-workers", cw]
+            cmd += ["--max-workers", gw]
 
         if self.find_dupes_var.get():
             cmd.append("--find-dupes")
-            thr = self.dupe_threshold_var.get().strip()
-            if thr:
-                cmd += ["--dupe-threshold", thr]
 
         env = os.environ.copy()
         env["PYTHONUNBUFFERED"] = "1"
@@ -738,16 +563,13 @@ class App(tk.Tk):
             last_error = ""
             for line in self._proc.stdout:
                 stripped = line.strip()
-                # Detect start of a Python traceback
                 if stripped.startswith("Traceback (most recent call last)"):
                     in_traceback = True
                     last_error = ""
                     continue
                 if in_traceback:
-                    # Capture the final error line (not indented, not 'File ...')
                     if stripped.startswith("File ") or stripped.startswith("raise ") or not stripped or line.startswith("  "):
                         continue
-                    # This is the actual error summary line
                     last_error = stripped
                     in_traceback = False
                     self.after(0, self._log, f"ERROR: {last_error}\n")
@@ -760,13 +582,7 @@ class App(tk.Tk):
         finally:
             self._proc = None
             self.after(0, lambda: self.stop_btn.config(state="disabled"))
-            if self.scene_text_only_var.get():
-                label = "  Export Scene Texts for Claude"
-            elif self.prompts_only_var.get():
-                label = "  Generate Prompts Only"
-            else:
-                label = "  Generate Video"
-            self.after(0, lambda: self.start_btn.config(state="normal", text=label))
+            self.after(0, lambda: self.start_btn.config(state="normal", text="  Generate Video"))
 
 
 if __name__ == "__main__":

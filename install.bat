@@ -64,11 +64,18 @@ if %HAS_GPU%==0 (
 echo.
 
 REM Install Faster-Whisper
-echo [6/8] Installing Faster-Whisper (transcription)...
+echo [6/8] Installing Faster-Whisper (transcription, medium model)...
 if %HAS_GPU%==1 (
     pip install faster-whisper nvidia-cublas-cu12 nvidia-cudnn-cu12
 ) else (
     pip install faster-whisper
+)
+echo Pre-downloading Whisper medium model (this may take a few minutes)...
+python -c "from faster_whisper import WhisperModel; WhisperModel('medium', device='cpu', compute_type='int8')" 2>nul
+if %errorlevel% equ 0 (
+    echo Whisper medium model cached successfully!
+) else (
+    echo WARNING: Could not pre-download Whisper model. It will download on first run.
 )
 echo.
 

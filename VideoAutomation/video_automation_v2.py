@@ -25,6 +25,7 @@ import tempfile
 import subprocess
 import shutil
 import re
+import difflib
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import List, Optional, Dict, Any, Tuple
@@ -321,6 +322,22 @@ class Config:
     # After generation, detect visually similar/duplicate images and auto-regenerate them
     find_dupes: bool = False
     dupe_threshold: int = 10  # Hamming distance threshold (0-64); lower = stricter
+
+    # Fast-cut pacing for viewer engagement in the first N seconds of the video
+    fast_cut_duration: float = 4.0   # target seconds per image in the fast-cut window
+    fast_cut_window: float = 60.0    # how many seconds from video start use fast-cut pacing
+
+    # Retimeline: re-slice existing timeline/prompts to apply fast-cut pacing
+    retimeline: bool = False
+
+    # Transcript fixer: compare Whisper output against the original narrator script
+    # and patch dropped words/sentences back into word_timestamps before prompt generation.
+    fix_transcript: bool = False
+    fix_transcript_preview: bool = False
+    original_script_path: str = None
+    # Path to corrections JSON for entirely missing segments:
+    # {"corrections": [{"segment": 8, "start_time": 350.46}, ...]}
+    transcript_corrections_path: str = None
 
 
 # =============================================================================
@@ -794,15 +811,20 @@ class SegmentParser:
         current_text  = ""
         block_start   = entries_to_process[0]['start'] if entries_to_process else segment.end_time
 
-        # CHANGE 2: Fast cuts for first 60 seconds (initial selection)
-        if block_start < 60.0:
-            target_duration = random.uniform(2.0, 3.0)
-        else:
-            target_duration = random.choice([
+        # CHANGE 2: Fast cuts for first N seconds (configurable via config)
+        fc_window = self.config.fast_cut_window
+        fc_dur    = self.config.fast_cut_duration
+
+        def _pick_target(t: float) -> float:
+            if t < fc_window:
+                return random.uniform(fc_dur - 1.0, fc_dur)  # e.g. 3.0–4.0 for fc_dur=4.0
+            return random.choice([
                 random.uniform(2.0, 3.5),  # Quick cut
                 random.uniform(4.0, 5.5),  # Standard
                 random.uniform(4.0, 5.5),  # Standard (weighted more)
             ])
+
+        target_duration = _pick_target(block_start)
 
         for entry in entries_to_process:
             current_block.append(entry)
@@ -813,7 +835,9 @@ class SegmentParser:
 
             # Trigger block boundary if we hit the target duration (and preferably land on punctuation if close)
             # OR if we drastically exceed the target duration.
-            if (block_duration >= target_duration and ends_with_punctuation) or block_duration >= (target_duration + 2.0):
+            # In the fast-cut window, use a tighter overshoot (+1s) so blocks stay short.
+            overshoot = 1.0 if block_start < fc_window else 2.0
+            if (block_duration >= target_duration and ends_with_punctuation) or block_duration >= (target_duration + overshoot):
                 blocks.append({
                     'text': current_text.strip(),
                     'start_time': block_start,
@@ -823,15 +847,8 @@ class SegmentParser:
                 current_text = ""
                 block_start = entry['end']
 
-                # CHANGE 2: Fast cuts for first 60 seconds (re-selection after block boundary)
-                if block_start < 60.0:
-                    target_duration = random.uniform(2.0, 3.0)
-                else:
-                    target_duration = random.choice([
-                        random.uniform(2.0, 3.5),  # Quick cut
-                        random.uniform(4.0, 5.5),  # Standard
-                        random.uniform(4.0, 5.5),  # Standard (weighted more)
-                    ])
+                # Re-pick target duration for the next block
+                target_duration = _pick_target(block_start)
 
         # Handle trailing text
         if current_block:
@@ -2096,17 +2113,28 @@ class FasterWhisperTranscriber:
             duration = 0.0
             
         print("   Transcribing with Faster-Whisper (word_timestamps=True)...")
-        
+
+        # Convert to 16kHz mono float32 numpy array to avoid OOM in faster-whisper's
+        # FFT. The feature_extractor.stft creates float64 intermediates when given a
+        # file path (decode_audio path), which OOMs on long audio (>10 min).
+        # Passing a pre-loaded float32 ndarray avoids the worst of it.
+        import numpy as np
+        print("   Converting to 16kHz mono float32 array...")
+        mono_16k = audio.set_channels(1).set_frame_rate(16000)
+        samples = np.array(mono_16k.get_array_of_samples(), dtype=np.float32)
+        samples = samples / 32768.0  # normalize int16 -> [-1, 1]
+        print(f"   Audio array: {samples.shape[0]} samples ({samples.nbytes / (1024*1024):.1f} MB)")
+
         # Let errors bubble up to halt execution
         segments, info = self.model.transcribe(
-            audio_path,
+            samples,
             word_timestamps=True,
-            beam_size=1,        # greedy decoding — uses ~5x less decoder memory than default beam_size=5
+            beam_size=5,        # beam search — reduces dropped words/sentences after spoken numbers
         )
-        
+
         entries = []
         full_text_parts = []
-        
+
         for segment in segments:
             for word in segment.words:
                 entries.append({
@@ -2116,12 +2144,458 @@ class FasterWhisperTranscriber:
                 })
                 # Add spaces back for full_text since we strip() above
                 full_text_parts.append(word.word)
-        
+
         full_text = "".join(full_text_parts)
-        
+
+        # Free the samples array
+        del samples, mono_16k
+
         print(f"   ✓ {len(entries)} words transcribed")
-        
+
         return full_text, entries, duration
+
+
+# =============================================================================
+# TRANSCRIPT FIXER
+# =============================================================================
+
+class TranscriptFixer:
+    """Compares original script against Whisper transcription at segment
+    boundaries and patches dropped words/sentences back into word_timestamps."""
+
+    WORD_TO_NUM = {
+        'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
+        'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
+    }
+
+    @staticmethod
+    def _clean(word: str) -> str:
+        return re.sub(r'[^a-zA-Z0-9]', '', str(word)).lower()
+
+    def _parse_script_segments(self, script_text: str) -> Dict[int, str]:
+        """Parse the original script into {segment_number: text_after_number}."""
+        # Match patterns like "Number 10", "Number eight", "number 8.", etc.
+        # Also handle bare patterns like "10." or "8." at start of line
+        pattern = re.compile(
+            r'\b[Nn]umber\s+'
+            r'('
+            + '|'.join(self.WORD_TO_NUM.keys())
+            + r'|\d+)'
+            r'[.\s,]',
+            re.IGNORECASE
+        )
+
+        segments = {}
+        matches = list(pattern.finditer(script_text))
+
+        for idx, match in enumerate(matches):
+            raw = match.group(1).lower()
+            if raw in self.WORD_TO_NUM:
+                num_val = self.WORD_TO_NUM[raw]
+            elif raw.isdigit():
+                num_val = int(raw)
+            else:
+                continue
+
+            content_start = match.end()
+            content_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(script_text)
+            segment_text = script_text[content_start:content_end].strip()
+            segments[num_val] = segment_text
+
+        return segments
+
+    def _parse_transcript_segments(self, entries: List[Dict]) -> Dict[int, dict]:
+        """Walk word entries, detect 'Number X' boundaries.
+        Returns {num: {start_idx, end_idx, start_time, end_time, text, entries}}."""
+        segments = {}
+        current_seg = None
+        i = 0
+
+        while i < len(entries):
+            word = self._clean(entries[i]['text'])
+            if word == 'number' and i + 1 < len(entries):
+                next_word = self._clean(entries[i + 1]['text'])
+                num_val = None
+                if next_word in self.WORD_TO_NUM:
+                    num_val = self.WORD_TO_NUM[next_word]
+                elif next_word.isdigit():
+                    num_val = int(next_word)
+
+                if num_val is not None:
+                    if current_seg is not None:
+                        current_seg['end_idx'] = i - 1
+                        current_seg['end_time'] = entries[i]['start']
+                        current_seg['text'] = ' '.join(
+                            entries[j]['text'] for j in range(current_seg['content_start_idx'], i)
+                        )
+                        segments[current_seg['number']] = current_seg
+
+                    current_seg = {
+                        'number': num_val,
+                        'start_idx': i,
+                        'content_start_idx': i + 2,  # first word after "Number X"
+                        'end_idx': None,
+                        'start_time': entries[i]['start'],
+                        'end_time': None,
+                        'text': '',
+                        'entries': [],
+                    }
+                    i += 2
+                    continue
+            i += 1
+
+        # Close last segment
+        if current_seg is not None:
+            current_seg['end_idx'] = len(entries) - 1
+            current_seg['end_time'] = entries[-1]['end']
+            current_seg['text'] = ' '.join(
+                entries[j]['text'] for j in range(current_seg['content_start_idx'], len(entries))
+            )
+            segments[current_seg['number']] = current_seg
+
+        return segments
+
+    def _normalize_text(self, text: str) -> List[str]:
+        """Normalize text to a list of lowercase words with punctuation stripped.
+        Handles Whisper's split tokens: joins fragments like '61' + ',000' or 'human' + '-made'
+        by merging tokens that start with punctuation into the previous token."""
+        raw_words = text.split()
+        # First pass: merge fragments that start with punctuation (Whisper splits like ",000" or "-made")
+        merged = []
+        for w in raw_words:
+            if merged and w and w[0] in ',-.:;' and not w[0].isalpha():
+                merged[-1] = merged[-1] + w
+            else:
+                merged.append(w)
+        return [re.sub(r'[^a-zA-Z0-9]', '', w).lower() for w in merged if re.sub(r'[^a-zA-Z0-9]', '', w)]
+
+    def _diff_segment(self, script_text: str, transcript_text: str) -> List[Dict]:
+        """Find spans present in script but missing from transcript.
+        Returns list of {missing_words, before_word, after_word, position}."""
+        script_words = self._normalize_text(script_text)
+        trans_words = self._normalize_text(transcript_text)
+
+        if not script_words or not trans_words:
+            return []
+
+        matcher = difflib.SequenceMatcher(None, trans_words, script_words, autojunk=False)
+        missing_spans = []
+
+        for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+            if tag in ('insert', 'replace'):
+                # Words in script[j1:j2] are missing from transcript
+                missing_words_raw = script_text.split()
+                # Re-extract the actual words (with original casing/punctuation) from script
+                # by finding the span in the original script_words
+                actual_missing = []
+                raw_words = script_text.split()
+                # Map normalized positions back to raw words
+                norm_idx = 0
+                raw_to_norm = {}
+                for ri, rw in enumerate(raw_words):
+                    cleaned = re.sub(r'[^a-zA-Z0-9\']', '', rw).lower()
+                    if cleaned:
+                        raw_to_norm[norm_idx] = ri
+                        norm_idx += 1
+
+                for k in range(j1, j2):
+                    if k in raw_to_norm:
+                        actual_missing.append(raw_words[raw_to_norm[k]])
+
+                if not actual_missing:
+                    continue
+
+                # Find context: what transcript word comes before and after this gap
+                before_word = trans_words[i1 - 1] if i1 > 0 else None
+                after_word = trans_words[i1] if tag == 'insert' and i1 < len(trans_words) else (
+                    trans_words[i2] if i2 < len(trans_words) else None
+                )
+
+                missing_spans.append({
+                    'missing_words': actual_missing,
+                    'before_word': before_word,
+                    'after_word': after_word,
+                    'trans_insert_at': i1 if tag == 'insert' else i2,
+                    'position': j1,
+                })
+
+        return missing_spans
+
+    def _find_entry_index(self, entries: List[Dict], seg_content_start: int, seg_end: int,
+                          before_word: str, after_word: str) -> Tuple[int, float, float]:
+        """Find the insertion index in entries between before_word and after_word.
+        Returns (insert_idx, gap_start_time, gap_end_time)."""
+        search_start = seg_content_start
+        search_end = min(seg_end + 1, len(entries))
+
+        before_idx = None
+        after_idx = None
+
+        if before_word:
+            for k in range(search_start, search_end):
+                if self._clean(entries[k]['text']) == before_word:
+                    before_idx = k
+
+        if after_word:
+            start_from = (before_idx + 1) if before_idx is not None else search_start
+            for k in range(start_from, search_end):
+                if self._clean(entries[k]['text']) == after_word:
+                    after_idx = k
+                    break
+
+        if before_idx is not None and after_idx is not None:
+            gap_start = entries[before_idx]['end']
+            gap_end = entries[after_idx]['start']
+            return before_idx + 1, gap_start, gap_end
+        elif before_idx is not None:
+            gap_start = entries[before_idx]['end']
+            gap_end = entries[min(before_idx + 1, len(entries) - 1)]['start'] if before_idx + 1 < len(entries) else gap_start + 2.0
+            return before_idx + 1, gap_start, gap_end
+        elif after_idx is not None:
+            gap_end = entries[after_idx]['start']
+            gap_start = entries[max(after_idx - 1, 0)]['end'] if after_idx > 0 else max(0, gap_end - 2.0)
+            return after_idx, gap_start, gap_end
+        else:
+            return seg_content_start, entries[seg_content_start]['start'] if seg_content_start < len(entries) else 0.0, \
+                   entries[seg_content_start]['start'] + 2.0 if seg_content_start < len(entries) else 2.0
+
+    def _avg_word_duration(self, entries: List[Dict], around_idx: int, window: int = 10) -> float:
+        """Compute average word duration from entries near around_idx."""
+        start = max(0, around_idx - window)
+        end = min(len(entries), around_idx + window)
+        durations = [e['end'] - e['start'] for e in entries[start:end] if e['end'] > e['start']]
+        if durations:
+            return sum(durations) / len(durations)
+        return 0.4  # fallback
+
+    def _inject_missing_segment(self, patched: List[Dict], script_text_seg: str,
+                                start_time: float, end_time: float,
+                                insert_idx: int) -> int:
+        """Inject an entirely missing segment (Number X + all content) into entries.
+        Returns the number of entries inserted."""
+        # Build "Number X" isn't needed here — the script_text_seg is content after "Number X"
+        # The segment parser will later detect "Number X" from the injected words
+        # So we need to include "Number X" prefix
+        words = script_text_seg.split()
+        if not words:
+            return 0
+
+        gap_duration = end_time - start_time
+        if gap_duration < 1.0:
+            print(f"         Gap too small ({gap_duration:.2f}s) for {len(words)} words, skipping")
+            return 0
+
+        avg_dur = min(gap_duration / len(words), 0.5)  # cap at 0.5s per word
+
+        new_entries = []
+        t = start_time
+        for word in words:
+            word_end = min(t + avg_dur, end_time)
+            new_entries.append({
+                'text': word,
+                'start': round(t, 3),
+                'end': round(word_end, 3),
+            })
+            t = word_end
+
+        patched[insert_idx:insert_idx] = new_entries
+        return len(new_entries)
+
+    def _find_insert_point_for_time(self, entries: List[Dict], target_time: float) -> int:
+        """Find the entry index where target_time falls (binary search by start time)."""
+        lo, hi = 0, len(entries)
+        while lo < hi:
+            mid = (lo + hi) // 2
+            if entries[mid]['start'] < target_time:
+                lo = mid + 1
+            else:
+                hi = mid
+        return lo
+
+    def fix(self, entries: List[Dict], script_text: str,
+            corrections: Dict[int, float] = None,
+            preview_only: bool = False) -> Tuple[List[Dict], List[Dict]]:
+        """Main entry point. Compare script against transcript at each segment
+        boundary, inject missing words, return (patched_entries, fixes_applied).
+
+        Args:
+            entries: Word-level transcript entries from Whisper.
+            script_text: The original narrator script as plain text.
+            corrections: Optional dict of {segment_number: start_time} for segments
+                         that are entirely missing from the transcript. The user
+                         provides the timestamp where each missing segment begins
+                         in the audio. Multiple missing segments are supported.
+            preview_only: If True, only report issues without modifying entries.
+        """
+        if corrections is None:
+            corrections = {}
+
+        script_segs = self._parse_script_segments(script_text)
+        trans_segs = self._parse_transcript_segments(entries)
+
+        mode_label = "PREVIEW" if preview_only else "FIX"
+
+        if not script_segs:
+            print("   TranscriptFixer: No 'Number X' segments found in script.")
+            return entries, []
+
+        if not trans_segs:
+            print("   TranscriptFixer: No 'Number X' segments found in transcript.")
+            return entries, []
+
+        print(f"   TranscriptFixer [{mode_label}]: Script has {len(script_segs)} segments, transcript has {len(trans_segs)} segments")
+        if corrections:
+            print(f"   TranscriptFixer: User corrections for {len(corrections)} segment(s): {sorted(corrections.keys())}")
+
+        fixes_applied = []
+        patched = list(entries)  # work on a copy
+        offset = 0  # track index shifts from insertions
+
+        # Process in reverse order (highest segment number first) so index offsets
+        # from earlier insertions don't affect later ones
+        for num in sorted(script_segs.keys(), reverse=True):
+            if num not in trans_segs:
+                # Entire segment missing from transcript
+                if num in corrections:
+                    seg_start = corrections[num]
+                    next_seg_start = None
+                    for e_idx in range(len(patched)):
+                        if patched[e_idx]['start'] > seg_start + 1.0:
+                            next_seg_start = patched[e_idx]['start']
+                            break
+                    if next_seg_start is None:
+                        next_seg_start = seg_start + 120.0
+
+                    num_text = f"Number {num}."
+                    full_seg_text = f"{num_text} {script_segs[num]}"
+                    word_count = len(full_seg_text.split())
+
+                    if preview_only:
+                        print(f"      Segment #{num}: MISSING — would restore {word_count} words @ {seg_start:.2f}s")
+                        print(f"         Script text: \"{script_segs[num][:120]}{'...' if len(script_segs[num]) > 120 else ''}\"")
+                        fixes_applied.append({
+                            'segment': num,
+                            'issue': 'segment_missing_has_correction',
+                            'words_to_add': word_count,
+                            'start_time': seg_start,
+                            'preview': True,
+                        })
+                    else:
+                        insert_idx = self._find_insert_point_for_time(patched, seg_start)
+                        insert_idx += offset
+                        words_added = self._inject_missing_segment(
+                            patched, full_seg_text, seg_start, next_seg_start, insert_idx
+                        )
+                        offset += words_added
+                        if words_added > 0:
+                            print(f"      Segment #{num}: RESTORED from script (+{words_added} words @ {seg_start:.2f}s)")
+                            fixes_applied.append({
+                                'segment': num,
+                                'issue': 'segment_restored_from_correction',
+                                'words_added': words_added,
+                                'start_time': seg_start,
+                            })
+                else:
+                    print(f"      Segment #{num}: MISSING from transcript — provide start_time in corrections to fix")
+                    fixes_applied.append({
+                        'segment': num,
+                        'issue': 'segment_missing_needs_correction',
+                        'words_added': 0,
+                    })
+                continue
+
+            script_text_seg = script_segs[num]
+            trans_text_seg = trans_segs[num]['text']
+
+            missing_spans = self._diff_segment(script_text_seg, trans_text_seg)
+            if not missing_spans:
+                continue
+
+            total_words_added = 0
+            seg_info = trans_segs[num]
+
+            for span in missing_spans:
+                missing_words = span['missing_words']
+                if len(missing_words) < 2:
+                    continue  # skip single-word diffs (likely minor transcription variance)
+
+                if preview_only:
+                    # Report what's missing without modifying
+                    before_ctx = f" (after '{span['before_word']}')" if span['before_word'] else ""
+                    after_ctx = f" (before '{span['after_word']}')" if span['after_word'] else ""
+                    missing_preview = ' '.join(missing_words[:15])
+                    if len(missing_words) > 15:
+                        missing_preview += f"... (+{len(missing_words) - 15} more)"
+                    print(f"      Segment #{num}: {len(missing_words)} words dropped{before_ctx}{after_ctx}")
+                    print(f"         Missing: \"{missing_preview}\"")
+                    total_words_added += len(missing_words)
+                    continue
+
+                insert_idx, gap_start, gap_end = self._find_entry_index(
+                    patched,
+                    seg_info['content_start_idx'] + offset,
+                    (seg_info['end_idx'] or len(entries) - 1) + offset,
+                    span['before_word'],
+                    span['after_word'],
+                )
+
+                gap_duration = gap_end - gap_start
+                if gap_duration < 0.5:
+                    # No meaningful time gap — words weren't dropped, they were mis-transcribed
+                    continue
+
+                avg_dur = self._avg_word_duration(patched, insert_idx)
+                needed_duration = len(missing_words) * avg_dur
+
+                # If needed duration exceeds the gap, compress to fit
+                if needed_duration > gap_duration:
+                    avg_dur = gap_duration / len(missing_words)
+
+                new_entries = []
+                t = gap_start
+                for word in missing_words:
+                    word_end = min(t + avg_dur, gap_end)
+                    new_entries.append({
+                        'text': word,
+                        'start': round(t, 3),
+                        'end': round(word_end, 3),
+                    })
+                    t = word_end
+
+                # Insert into patched list
+                patched[insert_idx:insert_idx] = new_entries
+                offset += len(new_entries)
+                total_words_added += len(new_entries)
+
+            if total_words_added > 0:
+                if preview_only:
+                    fixes_applied.append({
+                        'segment': num,
+                        'issue': 'words_dropped_after_number',
+                        'words_to_add': total_words_added,
+                        'preview': True,
+                    })
+                else:
+                    print(f"      Segment #{num}: +{total_words_added} words patched")
+                    fixes_applied.append({
+                        'segment': num,
+                        'issue': 'words_dropped_after_number',
+                        'words_added': total_words_added,
+                    })
+
+        if fixes_applied:
+            if preview_only:
+                print(f"\n   TranscriptFixer [PREVIEW]: Found {len(fixes_applied)} issue(s) — no changes made")
+                print(f"   To apply fixes, uncheck 'Preview only' and re-run.")
+            else:
+                print(f"   TranscriptFixer: Fixed {len(fixes_applied)} segment(s)")
+        else:
+            print(f"   TranscriptFixer: All segments match script. No fixes needed.")
+
+        if preview_only:
+            return entries, fixes_applied  # return ORIGINAL entries unchanged
+
+        return patched, fixes_applied
 
 
 # =============================================================================
@@ -2400,15 +2874,20 @@ class VideoCompiler:
 
                 def make_scene_clip(img_path: str, duration: float, clip_path: str) -> bool:
                     def _encode(path):
+                        kwargs = dict(capture_output=True, text=True, timeout=600,
+                                      stdin=subprocess.DEVNULL)
+                        if os.name == 'nt':
+                            kwargs['creationflags'] = subprocess.CREATE_NO_WINDOW
                         return subprocess.run([
-                            'ffmpeg', '-y', '-loop', '1', '-framerate', str(self.config.fps),
+                            'ffmpeg', '-y', '-nostdin',
+                            '-loop', '1', '-framerate', str(self.config.fps),
                             '-i', path,
                             '-t', f'{duration:.6f}',
                             '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
                             '-pix_fmt', 'yuv420p', '-r', str(self.config.fps),
                             '-vf', 'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080',
                             clip_path
-                        ], capture_output=True, text=True, timeout=600)
+                        ], **kwargs)
                     r = _encode(img_path)
                     if r.returncode != 0:
                         print(f"      FFmpeg error for {os.path.basename(img_path)}: {r.stderr[-300:].strip()}")
@@ -2448,9 +2927,19 @@ class VideoCompiler:
                                 jobs.append((black_img, t0 - cursor, gap_clip))
                                 clips.append(gap_clip)
 
-                        # Resolve image: real file → existing placeholder → new placeholder
+                        # Resolve image: number card → real file → existing placeholder → new placeholder
                         snum     = entry['scene']
-                        img_file = images_dir / f'scene_{snum - 1:04d}.png'
+                        st = entry.get('scene_text', '').strip()
+                        is_nc = entry.get('type') == 'number_card' or bool(re.match(r'^[Nn]umber\s+\d+\.?$', st))
+                        if is_nc:
+                            nm = re.search(r'\d+', st)
+                            nc_num = int(nm.group()) if nm else snum
+                            nc_path = images_dir / f'number_card_{nc_num:02d}.png'
+                            if not nc_path.exists():
+                                self._generate_number_card(str(nc_num), str(nc_path))
+                            img_file = nc_path
+                        else:
+                            img_file = images_dir / f'scene_{snum - 1:04d}.png'
                         if not img_file.exists():
                             ph = images_dir / f'placeholder_scene_{snum - 1:04d}.png'
                             if not ph.exists():
@@ -2469,16 +2958,14 @@ class VideoCompiler:
                         jobs.append((black_img, tail, tail_clip))
                         clips.append(tail_clip)
 
-                    print(f"   Encoding {len(jobs)} clips in parallel "
-                          f"(workers={self.config.compile_workers})...")
+                    print(f"   Encoding {len(jobs)} clips sequentially...")
                     failed = 0
-                    with ThreadPoolExecutor(max_workers=self.config.compile_workers) as ex:
-                        futures = {ex.submit(make_scene_clip, ip, dur, cp): cp
-                                   for ip, dur, cp in jobs}
-                        for fut in as_completed(futures):
-                            if not fut.result():
-                                failed += 1
-                                print(f"   ⚠ clip encode failed: {futures[fut]}")
+                    for i, (ip, dur, cp) in enumerate(jobs):
+                        if not make_scene_clip(ip, dur, cp):
+                            failed += 1
+                            print(f"   ⚠ clip encode failed: {cp}")
+                        if (i + 1) % 50 == 0:
+                            print(f"      {i + 1}/{len(jobs)} clips done")
                     if failed:
                         print(f"   {failed}/{len(jobs)} clips failed to encode")
 
@@ -2587,6 +3074,27 @@ class VideoCompiler:
                 shutil.copy(combined_video, output_path)
 
             if os.path.exists(output_path):
+                # ── Speed up video 1.2x for pacing ────────────────────────────
+                speed_factor = 1.2
+                sped_up_path = output_path.replace('.mp4', '_fast.mp4')
+                print(f"   Speeding up video {speed_factor}x...")
+                r_speed = subprocess.run([
+                    'ffmpeg', '-y', '-i', output_path,
+                    '-filter_complex',
+                    f'[0:v]setpts={1/speed_factor}*PTS[v];[0:a]atempo={speed_factor}[a]',
+                    '-map', '[v]', '-map', '[a]',
+                    '-c:v', 'libx264', '-preset', 'fast', '-crf', '23',
+                    '-c:a', 'aac', '-b:a', '192k',
+                    sped_up_path
+                ], capture_output=True, text=True, timeout=7200)
+                if r_speed.returncode == 0:
+                    os.replace(sped_up_path, output_path)
+                    print(f"   ✓ Video sped up {speed_factor}x")
+                else:
+                    print(f"   ⚠ Speed-up failed, keeping original: {r_speed.stderr[-200:]}")
+                    if os.path.exists(sped_up_path):
+                        os.remove(sped_up_path)
+
                 size_mb = os.path.getsize(output_path) / (1024 * 1024)
                 probe2  = subprocess.run(
                     ['ffprobe', '-v', 'quiet', '-show_entries', 'format=duration',
@@ -2966,7 +3474,269 @@ class VideoAutomation:
         scene.status = "failed"
         return scene.index, False, 0
     
-    def process(self, audio_path: str, video_name: str, video_title: str = "", 
+    # ------------------------------------------------------------------
+    # RETIMELINE — re-slice existing timeline/prompts for fast-cut pacing
+    # ------------------------------------------------------------------
+    def retimeline(self, video_name: str) -> bool:
+        """
+        Re-slice the first N seconds of an existing project's timeline to use
+        fast-cut pacing (~3 s per image) and auto-generate prompts for any new
+        time slots that were created by the finer slicing.
+
+        Operates on the JSON files on disk:
+          - {video_name}_word_timestamps.json  (read-only)
+          - {video_name}_timeline.json         (overwritten)
+          - {video_name}_prompts.json          (overwritten)
+
+        Returns True on success.
+        """
+        scripts_dir = self.workspace / 'scripts'
+        ts_path      = scripts_dir / f'{video_name}_word_timestamps.json'
+        timeline_path = scripts_dir / f'{video_name}_timeline.json'
+        prompts_path  = scripts_dir / f'{video_name}_prompts.json'
+        manifest_path = scripts_dir / f'{video_name}_segments_manifest.json'
+
+        # --- 1. Load word timestamps ----------------------------------------
+        if not ts_path.exists():
+            print(f"❌ Retimeline: word timestamps not found: {ts_path}")
+            return False
+        with open(ts_path, 'r', encoding='utf-8') as f:
+            ts_data = json.load(f)
+        entries        = ts_data.get('entries', [])
+        total_duration = ts_data.get('duration', 0.0)
+        if not entries:
+            print("❌ Retimeline: no word entries found")
+            return False
+
+        # --- 2. Load existing prompts (if any) for remapping ----------------
+        old_prompts = []
+        if prompts_path.exists():
+            with open(prompts_path, 'r', encoding='utf-8') as f:
+                saved = json.load(f)
+            if isinstance(saved, dict):
+                old_prompts = saved.get('scenes', [])
+            else:
+                old_prompts = saved
+
+        # Parse time ranges from old prompts for overlap matching
+        old_slots = []
+        for entry in old_prompts:
+            m = re.match(r'([\d.]+)s\s*-\s*([\d.]+)s', entry.get('time', ''))
+            if m:
+                old_slots.append({
+                    't0': float(m.group(1)),
+                    't1': float(m.group(2)),
+                    'entry': entry
+                })
+
+        # --- 3. Re-parse segments and rebuild timeline -----------------------
+        print(f"\n🔄 Retimeline: re-slicing first {self.config.fast_cut_window:.0f}s "
+              f"to ~{self.config.fast_cut_duration:.1f}s per image...")
+
+        _mp = str(manifest_path) if manifest_path.exists() else None
+        segments, intro_audio_duration = self.parser.parse_segments(
+            entries, total_duration, manifest_path=_mp
+        )
+
+        all_images: List[SceneImage] = []
+        idx = 0
+        for seg in segments:
+            temp_seg = Segment(
+                number=seg.number, title=seg.title, text=seg.text,
+                start_time=seg.start_time, end_time=seg.end_time,
+                entries=seg.entries
+            )
+            images = self.parser.create_images_for_segment(temp_seg, idx)
+            for img in images:
+                img.is_title_card = False
+            all_images.extend(images)
+            idx += len(images)
+
+        # Mark number-card scenes
+        for img in all_images:
+            if re.match(r'^Number\s+\d+', img.text.strip(), re.IGNORECASE):
+                img.is_title_card = True
+
+        all_images.sort(key=lambda x: x.start_time)
+        for i, img in enumerate(all_images):
+            img.index = i
+
+        # Zero-drift enforcement
+        if all_images:
+            if abs(all_images[0].start_time - intro_audio_duration) > 0.05:
+                all_images[0].start_time = intro_audio_duration
+                all_images[0].duration = all_images[0].end_time - all_images[0].start_time
+            for i in range(len(all_images) - 1):
+                all_images[i].end_time = all_images[i + 1].start_time
+                all_images[i].duration = all_images[i].end_time - all_images[i].start_time
+            all_images[-1].end_time = total_duration
+            all_images[-1].duration = total_duration - all_images[-1].start_time
+            all_images = [img for img in all_images if img.duration > 0.05]
+
+        # Re-index after filtering
+        for i, img in enumerate(all_images):
+            img.index = i
+
+        # --- 4. Save new timeline.json --------------------------------------
+        timeline_json = []
+        for img in all_images:
+            timeline_json.append({
+                "type": "number_card" if img.is_title_card else "content",
+                "start": img.start_time,
+                "end": img.end_time,
+                "duration": img.duration,
+                "prompt": img.text if img.is_title_card else None,
+                "number": img.segment_number if img.is_title_card else None
+            })
+        with open(timeline_path, 'w', encoding='utf-8') as f:
+            json.dump(timeline_json, f, indent=2)
+        print(f"   ✓ Saved re-sliced timeline: {timeline_path}")
+
+        first_window = [img for img in all_images if img.start_time < self.config.fast_cut_window]
+        print(f"   ✓ First {self.config.fast_cut_window:.0f}s: {len(first_window)} scenes")
+
+        # --- 5. Remap old prompts onto new time slots -----------------------
+        new_prompts = []
+        needs_prompt = []  # indices into new_prompts that need LLM generation
+        # Track old→new index mapping for image file renaming
+        # key = new 0-based index, value = old 0-based index (from old prompts scene-1)
+        image_remap = {}
+
+        for img in all_images:
+            # Find the old prompt with greatest time overlap for this new slot
+            best_overlap = 0.0
+            best_entry = None
+            for slot in old_slots:
+                overlap_start = max(img.start_time, slot['t0'])
+                overlap_end   = min(img.end_time, slot['t1'])
+                overlap = max(0.0, overlap_end - overlap_start)
+                if overlap > best_overlap:
+                    best_overlap = overlap
+                    best_entry = slot['entry']
+
+            is_nc = img.is_title_card
+            scene_entry = {
+                "scene": img.index + 1,
+                "segment": f"#{img.segment_number} {img.segment_title}",
+                "time": f"{img.start_time:.2f}s - {img.end_time:.2f}s",
+                "scene_text": img.text,
+                "type": "number_card" if is_nc else "content",
+                "prompt_source": "",
+                "prompt": ""
+            }
+
+            if is_nc:
+                # Number cards use their own template prompt
+                scene_entry["prompt"] = best_entry['prompt'] if best_entry else img.text
+                scene_entry["prompt_source"] = "template"
+            elif best_entry and best_overlap >= img.duration * 0.5:
+                # Good overlap — reuse the old prompt
+                scene_entry["prompt"] = best_entry['prompt']
+                scene_entry["prompt_source"] = best_entry.get('prompt_source', 'remapped')
+                scene_entry["negative"] = best_entry.get('negative', '')
+                # Record the old scene index for image file remapping
+                old_scene_num = best_entry.get('scene', 0)  # 1-based
+                if old_scene_num > 0:
+                    image_remap[img.index] = old_scene_num - 1  # convert to 0-based
+            else:
+                # New slot or poor overlap — needs a fresh prompt
+                needs_prompt.append(len(new_prompts))
+
+            new_prompts.append(scene_entry)
+
+        print(f"   ✓ Remapped {len(new_prompts) - len(needs_prompt)}/{len(new_prompts)} prompts from existing file")
+        print(f"   ⚡ {len(needs_prompt)} new slot(s) need LLM prompts")
+
+        # --- 6. Auto-generate prompts for unmapped slots --------------------
+        if needs_prompt:
+            # Build SceneImage objects for the slots that need prompts
+            scenes_for_llm = []
+            for pi in needs_prompt:
+                entry = new_prompts[pi]
+                img = all_images[pi]
+                scenes_for_llm.append(img)
+
+            seg_text_map = {seg.number: seg.text for seg in segments}
+
+            if self.claude_api_gen and self.claude_api_gen.enabled:
+                print(f"\n🤖 Generating {len(scenes_for_llm)} new prompts via Claude API...")
+                results = self.claude_api_gen.generate_all_prompts(scenes_for_llm, seg_text_map)
+                for img in scenes_for_llm:
+                    if img.index in results:
+                        new_prompts[img.index]["prompt"] = results[img.index]
+                        new_prompts[img.index]["prompt_source"] = "claude-api"
+                generated = sum(1 for img in scenes_for_llm if img.index in results)
+                print(f"   ✓ Claude API generated {generated}/{len(scenes_for_llm)} prompts")
+
+            elif self.local_llm and self.local_llm.enabled:
+                print(f"\n🤖 Generating {len(scenes_for_llm)} new prompts via local LLM...")
+                for i, img in enumerate(scenes_for_llm):
+                    seg_text = seg_text_map.get(img.segment_number, "")
+                    prompt = self.local_llm.generate_prompt(
+                        img.text, img.segment_title, img.include_character,
+                        segment_text=seg_text
+                    )
+                    if prompt:
+                        new_prompts[img.index]["prompt"] = prompt
+                        new_prompts[img.index]["prompt_source"] = "llm"
+                        print(f"   {i+1}/{len(scenes_for_llm)} prompt ready ({len(prompt)} chars)")
+                    else:
+                        print(f"   {i+1}/{len(scenes_for_llm)} LLM failed — slot left empty")
+            else:
+                print(f"   ⚠ No LLM configured — {len(needs_prompt)} slot(s) left without prompts")
+                print(f"     Run with --anthropic-key or --use-local-llm to fill them")
+
+        # --- 7. Remap existing image files to new indices ---------------------
+        images_dir = self.workspace / 'images' / video_name
+        if images_dir.exists() and image_remap:
+            import shutil
+            # Stage 1: rename old files to temp names to avoid collisions
+            # (e.g. old index 5 → new index 10, but old index 10 also exists)
+            temp_map = {}  # temp_path → final_path
+            for new_idx, old_idx in image_remap.items():
+                if new_idx == old_idx:
+                    continue  # no rename needed
+                old_path = images_dir / f"scene_{old_idx:04d}.png"
+                if old_path.exists():
+                    temp_path = images_dir / f"_retimeline_tmp_{old_idx:04d}.png"
+                    new_path  = images_dir / f"scene_{new_idx:04d}.png"
+                    shutil.move(str(old_path), str(temp_path))
+                    temp_map[str(temp_path)] = str(new_path)
+
+            # Stage 2: move temp files to final names
+            renamed = 0
+            for temp_path, new_path in temp_map.items():
+                if os.path.exists(temp_path):
+                    # Remove any file already at the destination (will be regenerated)
+                    if os.path.exists(new_path):
+                        os.remove(new_path)
+                    shutil.move(temp_path, new_path)
+                    renamed += 1
+
+            # Clean up any leftover scene files whose old index is no longer used
+            # (they would display at the wrong time)
+            used_new_indices = set(range(len(all_images)))
+            for f in images_dir.glob("scene_*.png"):
+                m = re.match(r'scene_(\d+)\.png', f.name)
+                if m:
+                    idx = int(m.group(1))
+                    if idx not in used_new_indices:
+                        # This is an orphaned file from old indexing — move to backup
+                        backup = images_dir / f"_retimeline_old_{f.name}"
+                        shutil.move(str(f), str(backup))
+
+            if renamed:
+                print(f"   ✓ Renamed {renamed} image file(s) to match new indices")
+
+        # --- 8. Save updated prompts.json -----------------------------------
+        with open(prompts_path, 'w', encoding='utf-8') as f:
+            json.dump(new_prompts, f, indent=2, ensure_ascii=False)
+        print(f"   ✓ Saved updated prompts: {prompts_path}")
+        print(f"\n✅ Retimeline complete. Re-run pipeline with 'Load prompts from JSON' "
+              f"to generate images for new slots.")
+        return True
+
+    def process(self, audio_path: str, video_name: str, video_title: str = "",
                 transcript_file: str = None) -> Optional[str]:
         """Process audio into video."""
         print("\n" + "="*60)
@@ -2975,7 +3745,21 @@ class VideoAutomation:
         if self.local_llm and self.local_llm.enabled:
             print(f"   Local LLM: ✓ Enabled")
         print("="*60)
-        
+
+        # Retimeline pre-pass: re-slice existing timeline/prompts before the
+        # main pipeline runs, so the updated prompts.json is picked up normally.
+        if self.config.retimeline:
+            prompts_exist = (self.workspace / 'scripts' / f'{video_name}_prompts.json').exists()
+            ts_exist = (self.workspace / 'scripts' / f'{video_name}_word_timestamps.json').exists()
+            if prompts_exist and ts_exist:
+                self.retimeline(video_name)
+                # After retimeline, force use_saved_prompts so the pipeline loads
+                # the updated prompts.json instead of regenerating from scratch.
+                self.use_saved_prompts = True
+                print(f"   ↪ Switched to use_saved_prompts after retimeline")
+            else:
+                print(f"   ⚠ Retimeline skipped: {'prompts.json' if not prompts_exist else 'word_timestamps.json'} not found")
+
         # Find assets
         character_path = self._find_character()
         style_refs = self._find_all_style_references()
@@ -3055,6 +3839,44 @@ class VideoAutomation:
                 total_duration = data.get("duration", 0.0)
                 full_text = data.get("text", "")
         
+        # ── Transcript fixer: patch dropped words using original script ──
+        if self.config.fix_transcript and self.config.original_script_path:
+            script_path = self.config.original_script_path
+            if os.path.exists(script_path):
+                print(f"\n🔧 Running TranscriptFixer against script: {os.path.basename(script_path)}")
+                with open(script_path, 'r', encoding='utf-8') as f:
+                    script_text = f.read()
+                # Load user corrections for entirely missing segments
+                corrections = {}
+                corr_path = self.config.transcript_corrections_path
+                if not corr_path:
+                    # Auto-detect: look for {video_name}_corrections.json
+                    auto_corr = os.path.join(str(self.workspace), "scripts", f"{video_name}_corrections.json")
+                    if os.path.exists(auto_corr):
+                        corr_path = auto_corr
+                if corr_path and os.path.exists(corr_path):
+                    with open(corr_path, 'r', encoding='utf-8') as cf:
+                        corr_data = json.load(cf)
+                    for c in corr_data.get('corrections', []):
+                        corrections[int(c['segment'])] = float(c['start_time'])
+                    if corrections:
+                        print(f"   Loaded {len(corrections)} correction(s) from {os.path.basename(corr_path)}")
+
+                fixer = TranscriptFixer()
+                preview = self.config.fix_transcript_preview
+                entries, fixes = fixer.fix(entries, script_text, corrections=corrections, preview_only=preview)
+                if fixes and not preview:
+                    full_text = ' '.join(e['text'] for e in entries)
+                    with open(transcript_path, 'w', encoding='utf-8') as f:
+                        json.dump({
+                            "text": full_text,
+                            "entries": entries,
+                            "duration": total_duration
+                        }, f, indent=2, ensure_ascii=False)
+                    print(f"   Corrected word_timestamps saved.")
+            else:
+                print(f"   ⚠ Original script not found: {script_path}")
+
         # Parse segments from entries - strictly expects word_data
         print(f"\n📍 Parsing segments...")
         _manifest_path = os.path.join(str(self.workspace), "scripts", f"{video_name}_segments_manifest.json")
@@ -3447,8 +4269,14 @@ class VideoAutomation:
                 saved_ordered = sorted(scenes_list, key=lambda e: e['scene'])
 
                 # ── Inject any number cards from prompts.json that segment parser missed ──
-                saved_cards   = [e for e in saved_ordered if e.get('type') == 'number_card']
-                saved_content = [e for e in saved_ordered if e.get('type') != 'number_card']
+                # Detect number cards by explicit type OR by scene_text pattern
+                def _is_number_card(e):
+                    if e.get('type') == 'number_card':
+                        return True
+                    st = e.get('scene_text', '').strip()
+                    return bool(re.match(r'^[Nn]umber\s+\d+\.?$', st))
+                saved_cards   = [e for e in saved_ordered if _is_number_card(e)]
+                saved_content = [e for e in saved_ordered if not _is_number_card(e)]
                 if saved_cards:
                     injected = 0
                     for entry in saved_cards:
@@ -3574,11 +4402,13 @@ class VideoAutomation:
             prompts_path = self.workspace / 'scripts' / f'{video_name}_prompts.json'
             prompt_log = []
             for img in content_scenes:
+                is_nc = bool(re.match(r'^[Nn]umber\s+\d+', img.text.strip()))
                 prompt_log.append({
                     "scene": img.index + 1,
                     "segment": f"#{img.segment_number} {img.segment_title}",
                     "time": f"{img.start_time:.2f}s - {img.end_time:.2f}s",
                     "scene_text": img.text,
+                    "type": "number_card" if is_nc else "content",
                     "prompt_source": "llm" if img.llm_prompt else "template",
                     "prompt": img.llm_prompt or img.text
                 })
@@ -3604,11 +4434,13 @@ class VideoAutomation:
             prompts_path = self.workspace / 'scripts' / f'{video_name}_prompts.json'
             prompt_log   = []
             for img in content_scenes:
+                is_nc = bool(re.match(r'^[Nn]umber\s+\d+', img.text.strip()))
                 prompt_log.append({
                     "scene":        img.index + 1,
                     "segment":      f"#{img.segment_number} {img.segment_title}",
                     "time":         f"{img.start_time:.2f}s - {img.end_time:.2f}s",
                     "scene_text":   img.text,
+                    "type":         "number_card" if is_nc else "content",
                     "prompt_source": "claude-api" if img.llm_prompt else "template",
                     "prompt":       img.llm_prompt or img.text
                 })
@@ -3641,15 +4473,25 @@ class VideoAutomation:
                                    if (img.index + 1) in regen_set]
             print(f"\n🔄 Regen mode: {len(images_to_generate)} scene(s) → {sorted(regen_set)}")
 
+        # Render number cards locally (Pillow) instead of sending to AI API
+        number_cards = [img for img in images_to_generate if img.is_title_card]
+        for img in number_cards:
+            out_path = str(images_dir / f"number_card_{img.segment_number:02d}.png")
+            self._generate_number_card(str(img.segment_number), out_path)
+            img.image_path = out_path
+            img.status = "done"
+            print(f"   ✓ Rendered Number Card: #{img.segment_number}")
+        images_to_generate = [img for img in images_to_generate if not img.is_title_card]
+
         # Generate images in parallel
         print(f"\n🎨 Generating {len(images_to_generate)} content images ({self.config.max_workers} parallel)...")
         if style_refs:
             print(f"   🔄 Rotating through {len(style_refs)} style references")
-        
+
         completed = 0
         failed = 0
         total_credits = 0
-        
+
         with ThreadPoolExecutor(max_workers=self.config.max_workers) as executor:
             futures = {
                 executor.submit(
@@ -3929,6 +4771,7 @@ def main():
     parser.add_argument('--prompts-only', action='store_true', help='Stop after generating and saving prompts.json; skip image generation and video compile')
     parser.add_argument('--scene-text-only', action='store_true', help='Export scene texts + Claude batch prompt, then stop (no LLM, no images)')
     parser.add_argument('--no-compile', action='store_true', help='Generate images but skip the final video compile step')
+    parser.add_argument('--retimeline', action='store_true', help='Re-slice first 60s of timeline to ~3s per image and auto-generate prompts for new slots')
     parser.add_argument('--timeline-json', help='Strict JSON timeline to render (skip transcribe and Qwen planning)')
 
     # Effects
@@ -3940,6 +4783,12 @@ def main():
     parser.add_argument('--regen-scenes', default='', help='Comma-separated 1-based scene numbers to force re-generate, e.g. "5,12,18"')
     parser.add_argument('--find-dupes', action='store_true', help='After generation, scan for visually similar/duplicate images and auto-regenerate them')
     parser.add_argument('--dupe-threshold', type=int, default=10, help='Hamming distance threshold for duplicate detection (default: 10, lower = stricter)')
+
+    # Transcript fixer
+    parser.add_argument('--fix-transcript', action='store_true', help='Compare Whisper output against original script and patch dropped words/segments')
+    parser.add_argument('--fix-transcript-preview', action='store_true', help='Preview transcript issues without applying fixes')
+    parser.add_argument('--original-script', default='', help='Path to the original narrator script (.txt) for transcript fixing')
+    parser.add_argument('--transcript-corrections', default='', help='Path to corrections JSON for entirely missing segments')
     
     args = parser.parse_args()
     
@@ -3958,11 +4807,18 @@ def main():
     config.prompts_only = args.prompts_only
     config.scene_text_only = args.scene_text_only
     config.no_compile = args.no_compile
+    config.retimeline = args.retimeline
     config.find_dupes = args.find_dupes
     config.dupe_threshold = args.dupe_threshold
     config.ken_burns = args.ken_burns
     config.crossfade = args.crossfade
     config.crossfade_duration = args.crossfade_duration
+    config.fix_transcript = args.fix_transcript or args.fix_transcript_preview
+    config.fix_transcript_preview = args.fix_transcript_preview
+    if args.original_script:
+        config.original_script_path = args.original_script
+    if args.transcript_corrections:
+        config.transcript_corrections_path = args.transcript_corrections
     if args.regen_scenes.strip():
         config.regen_scenes = [int(x.strip()) for x in args.regen_scenes.split(',') if x.strip().isdigit()]
     

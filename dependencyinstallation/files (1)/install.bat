@@ -59,9 +59,21 @@ if %errorlevel% equ 0 (
 )
 echo.
 
-REM Install Whisper
-echo [6/6] Installing OpenAI Whisper...
-pip install openai-whisper
+REM Install Faster-Whisper (replaces openai-whisper — faster, less VRAM)
+echo [6/6] Installing Faster-Whisper (medium model)...
+nvidia-smi >nul 2>&1
+if %errorlevel% equ 0 (
+    pip install faster-whisper nvidia-cublas-cu12 nvidia-cudnn-cu12
+) else (
+    pip install faster-whisper
+)
+echo Pre-downloading Whisper medium model...
+python -c "from faster_whisper import WhisperModel; WhisperModel('medium', device='cpu', compute_type='int8')" 2>nul
+if %errorlevel% equ 0 (
+    echo Whisper medium model cached successfully!
+) else (
+    echo WARNING: Could not pre-download model. It will download on first run.
+)
 echo.
 
 REM Check FFmpeg

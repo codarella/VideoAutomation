@@ -37,7 +37,30 @@
       "Bash(nvidia-smi)",
       "Bash(findstr \"CUDA Version\")",
       "Bash(python -c \"import subprocess,re;o=subprocess.check_output\\(''nvidia-smi'',text=True\\);m=re.search\\(r''CUDA Version:\\\\s*\\([\\\\d.]+\\)'',o\\);print\\(m.group\\(1\\) if m else ''0''\\)\")",
-      "Bash(python -c \"v=float\\(''13.0''\\);print\\(''cu128'' if v>=12.8 else ''cu126'' if v>=12.6 else ''cu124'' if v>=12.4 else ''cu121'' if v>=12.1 else ''cu118''\\)\")"
+      "Bash(python -c \"v=float\\(''13.0''\\);print\\(''cu128'' if v>=12.8 else ''cu126'' if v>=12.6 else ''cu124'' if v>=12.4 else ''cu121'' if v>=12.1 else ''cu118''\\)\")",
+      "Bash(find /c/Users/OVERLORD/Videos/VideoAutomation -maxdepth 1 -type f -name *.py)",
+      "Bash(ls -la c:/Users/OVERLORD/Videos/VideoAutomation/*.py)",
+      "Bash(ls -la *.py)",
+      "Bash(pip show:*)",
+      "Bash(find c:UsersOVERLORDVideosVideoAutomation -name *.json -type f)",
+      "Bash(for dir:*)",
+      "Bash(do touch:*)",
+      "Bash(done)",
+      "Bash(python -c \"import torch; print\\(torch.cuda.get_device_name\\(0\\)\\); print\\(f''{torch.cuda.get_device_properties\\(0\\).total_mem / 1024**3:.1f} GB total''\\); print\\(f''{torch.cuda.mem_get_info\\(\\)[0] / 1024**3:.1f} GB free''\\)\")",
+      "Bash(nvidia-smi --query-gpu=name,memory.total,memory.free --format=csv,noheader)",
+      "Bash(python -c \"import json; d=json.load\\(open\\(''c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/scripts/IronClad_project.json''\\)\\); scenes=d.get\\(''scenes'',[]\\); prompted=[s for s in scenes if s.get\\(''status''\\)==''prompted'']; print\\(f''Prompted scenes: {len\\(prompted\\)}''\\); print\\(f''With prompt text: {sum\\(1 for s in prompted if s.get\\(\"\"prompt\"\"\\)\\)}''\\); nimg=[s for s in scenes if s.get\\(''status''\\)==''prompted'' and s.get\\(''prompt''\\)]; print\\(f''needs_image eligible: {len\\(nimg\\)}''\\)\")",
+      "Bash(python -c \"import json; d=json.load\\(open\\(''c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/scripts/IronClad_project.json''\\)\\); print\\(f''Scenes: {len\\(d.get\\(\"\"scenes\"\",[]\\)\\)}''\\); print\\(f''Words: {len\\(d.get\\(\"\"words\"\",[]\\)\\)}''\\)\")",
+      "Bash(python -X utf8 -u -c \":*)",
+      "Bash(ls c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/scripts/IronClad*)",
+      "Bash(ls c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/scripts/*prompts*)",
+      "Bash(python -X utf8 -u -m video_automation --audio \"test\" --name \"IronClad\" --workspace \"video_workspace\" --ai33-key \"sk_ixdn5l6ymkwlnetx4dzrlaehlncwo3r2sy0v8igpjzpsjlrx\" --ai33-model \"bytedance-seedream-4.5\" --start-from generate --stop-after generate --regen-scenes \"5\")",
+      "Bash(ls \"c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/\"*intro*)",
+      "Bash(ls \"c:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/\"*intro*)",
+      "Bash(python -c \"import py_compile; py_compile.compile\\(''VideoAutomation/gui_nicegui.py'', doraise=True\\); print\\(''OK''\\)\")",
+      "Bash(python video_workspace/scripts/merge_scenes.py)",
+      "Bash(ffmpeg -y -i \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad.mp4\" -filter_complex \"[0:v]setpts=0.8333*PTS[v];[0:a]atempo=1.2[a]\" -map \"[v]\" -map \"[a]\" -c:v libx264 -preset fast -crf 23 -c:a aac -b:a 192k \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad_fast.mp4\")",
+      "Bash(ffprobe -v quiet -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad.mp4\")",
+      "Bash(ffprobe -v quiet -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/videos/IronClad_fast.mp4\")"
     ]
   }
 }

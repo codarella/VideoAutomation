@@ -16,8 +16,57 @@ from typing import Optional
 
 from nicegui import app, ui
 
+
+# ── File Picker (tkinter, runs server-side) ──────────────────────────────────
+async def _pick_file(title: str = "Select file", filetypes: list = None,
+                     initial_dir: str = "") -> str | None:
+    """Open a native OS file dialog via tkinter (runs on the server/local machine).
+    Returns the selected path or None if cancelled."""
+    import concurrent.futures
+    def _tk_dialog():
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.withdraw()
+        root.attributes('-topmost', True)
+        ft = filetypes or [("All files", "*.*")]
+        path = filedialog.askopenfilename(
+            title=title, filetypes=ft,
+            initialdir=initial_dir or None,
+        )
+        root.destroy()
+        return path or None
+
+    loop = asyncio.get_event_loop()
+    with concurrent.futures.ThreadPoolExecutor() as pool:
+        result = await loop.run_in_executor(pool, _tk_dialog)
+    return result
+
+
+async def _pick_folder(title: str = "Select folder",
+                       initial_dir: str = "") -> str | None:
+    """Open a native OS folder dialog via tkinter."""
+    import concurrent.futures
+    def _tk_dialog():
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.withdraw()
+        root.attributes('-topmost', True)
+        path = filedialog.askdirectory(
+            title=title,
+            initialdir=initial_dir or None,
+        )
+        root.destroy()
+        return path or None
+
+    loop = asyncio.get_event_loop()
+    with concurrent.futures.ThreadPoolExecutor() as pool:
+        result = await loop.run_in_executor(pool, _tk_dialog)
+    return result
+
+
 # ── Constants ────────────────────────────────────────────────────────────────
-SCRIPT = os.path.join(os.path.dirname(__file__), "video_automation_v2.py")
 PYTHON = sys.executable
 AI33_KEY = "sk_ixdn5l6ymkwlnetx4dzrlaehlncwo3r2sy0v8igpjzpsjlrx"
 DEFAULT_WORKSPACE = os.path.normpath(
@@ -43,7 +92,7 @@ AI_MODELS = [
 ]
 LLM_PROVIDERS = ["ollama", "lmstudio", "claude"]
 CLAUDE_MODELS = ["claude-sonnet-4-6", "claude-opus-4-6", "claude-haiku-4-5-20251001"]
-PIPELINE_MODES = ["Full Pipeline", "Compile Only", "Prompts Only", "Scene Text Only"]
+PIPELINE_STAGES = ["transcribe", "segment", "prompt", "generate", "compile"]
 
 
 # ── GUIState  (JSON persistence) ─────────────────────────────────────────────
@@ -61,11 +110,12 @@ class GUIState:
         "ken_burns": False,
         "crossfade": False,
         "crossfade_duration": "0.4",
-        "compile_workers": "3",
         "image_workers": "10",
         "find_dupes": False,
         "dupe_threshold": "10",
-        "pipeline_mode": "Full Pipeline",
+        "script_path": "",
+        "start_from": "transcribe",
+        "stop_after": "compile",
     }
 
     def __init__(self):
@@ -73,7 +123,7 @@ class GUIState:
         self._load()
 
     # Fields that should always be plain strings (select components)
-    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "pipeline_mode"}
+    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "start_from", "stop_after"}
 
     def _load(self):
         if os.path.exists(STATE_FILE):
@@ -117,6 +167,7 @@ class AppState:
     workspace: str = DEFAULT_WORKSPACE
     project_name: str = ""
     audio_path: str = ""
+    script_path: str = ""
     ai_model: str = AI_MODELS[0]
     tx_auto: bool = True
     transcript_path: str = ""
@@ -125,32 +176,41 @@ class AppState:
     llm_model: str = "qwen2.5:3b"
     anthropic_key: str = ""
     claude_model: str = CLAUDE_MODELS[0]
-    use_saved_prompts: bool = False
-    prompts_path: str = ""
-    pipeline_mode: str = "Full Pipeline"
+    start_from: str = "transcribe"
+    stop_after: str = "compile"
+    resume: bool = False
     ken_burns: bool = False
     crossfade: bool = False
     crossfade_duration: str = "0.4"
-    compile_workers: str = "3"
     image_workers: str = "10"
     regen_scenes: str = ""
     find_dupes: bool = False
     dupe_threshold: str = "10"
-    no_compile: bool = False
 
 
 # ── CommandBuilder ────────────────────────────────────────────────────────────
 def build_command(s: AppState) -> list[str]:
     cmd = [
-        PYTHON, "-X", "utf8", "-u", SCRIPT,
-        "--audio",     s.audio_path,
-        "--name",      s.project_name,
-        "--workspace", s.workspace,
-        "--ai33-key",  AI33_KEY,
-        "--model",     s.ai_model,
+        PYTHON, "-X", "utf8", "-u", "-m", "video_automation",
+        "--audio",      s.audio_path,
+        "--name",       s.project_name,
+        "--workspace",  s.workspace,
+        "--ai33-key",   AI33_KEY,
+        "--ai33-model", s.ai_model,
+        "--start-from", s.start_from,
+        "--stop-after", s.stop_after,
     ]
+
+    if s.script_path.strip() and os.path.exists(s.script_path.strip()):
+        cmd += ["--script", s.script_path.strip()]
+
+    if s.resume:
+        cmd.append("--resume")
+
+    # If user chose "Use existing JSON" and provided a transcript path,
+    # log it but do NOT silently override start_from — the user controls that directly
     if not s.tx_auto and s.transcript_path and os.path.exists(s.transcript_path):
-        cmd += ["--transcript", s.transcript_path]
+        print(f"[GUI] Existing transcript available: {s.transcript_path}")
 
     if s.use_llm:
         if s.llm_provider == "claude":
@@ -158,46 +218,23 @@ def build_command(s: AppState) -> list[str]:
                 cmd += ["--anthropic-key", s.anthropic_key.strip()]
             cmd += ["--claude-model", s.claude_model]
         else:
-            cmd.append("--use-llm")
             cmd += ["--llm-provider", s.llm_provider]
             if s.llm_model.strip():
                 cmd += ["--llm-model", s.llm_model.strip()]
-
-    if s.use_saved_prompts:
-        cmd.append("--use-saved-prompts")
-        if s.prompts_path and os.path.exists(s.prompts_path):
-            pass  # backend uses default path; path shown in UI is informational
-
-    mode = s.pipeline_mode
-    if mode == "Compile Only":
-        cmd.append("--compile-only")
-    elif mode == "Prompts Only":
-        cmd.append("--prompts-only")
-    elif mode == "Scene Text Only":
-        cmd.append("--scene-text-only")
 
     if s.ken_burns:
         cmd.append("--ken-burns")
     if s.crossfade:
         cmd.append("--crossfade")
-        if s.crossfade_duration.strip():
-            cmd += ["--crossfade-duration", s.crossfade_duration.strip()]
 
     if s.regen_scenes.strip():
         cmd += ["--regen-scenes", s.regen_scenes.strip()]
 
-    if s.compile_workers.strip():
-        cmd += ["--compile-workers", s.compile_workers.strip()]
     if s.image_workers.strip():
-        cmd += ["--workers", s.image_workers.strip()]
+        cmd += ["--max-workers", s.image_workers.strip()]
 
     if s.find_dupes:
         cmd.append("--find-dupes")
-        if s.dupe_threshold.strip():
-            cmd += ["--dupe-threshold", s.dupe_threshold.strip()]
-
-    if s.no_compile:
-        cmd.append("--no-compile")
 
     return cmd
 
@@ -261,10 +298,13 @@ class PromptsManager:
         self._scenes: list[dict] = []
 
     def load(self) -> list[dict]:
-        if not os.path.exists(self.path):
+        # Try prompts JSON first, fall back to project JSON
+        project_path = os.path.join(self.workspace, "scripts", f"{self.name}_project.json")
+        src = self.path if os.path.exists(self.path) else project_path
+        if not os.path.exists(src):
             self._scenes = []
             return []
-        with open(self.path, encoding="utf-8") as f:
+        with open(src, encoding="utf-8") as f:
             data = json.load(f)
         if isinstance(data, list):
             self._scenes = data
@@ -643,31 +683,77 @@ class PromptsManager:
 
 # ── GalleryScanner ────────────────────────────────────────────────────────────
 def scan_gallery(workspace: str, name: str) -> dict[int, dict]:
-    """Returns {scene_number: {status, path, exists}}"""
+    """Returns {scene_number: {status, path, fname}}"""
     images_dir = os.path.join(workspace, "images", name)
     prompts_path = os.path.join(workspace, "scripts", f"{name}_prompts.json")
+    project_path = os.path.join(workspace, "scripts", f"{name}_project.json")
     result: dict[int, dict] = {}
 
     scenes = []
-    if os.path.exists(prompts_path):
-        try:
-            with open(prompts_path, encoding="utf-8") as f:
-                data = json.load(f)
-            scenes = data if isinstance(data, list) else data.get("scenes", [])
-        except Exception:
-            pass
+    for src in (prompts_path, project_path):
+        if os.path.exists(src):
+            try:
+                with open(src, encoding="utf-8") as f:
+                    data = json.load(f)
+                scenes = data if isinstance(data, list) else data.get("scenes", [])
+                if scenes:
+                    break
+            except Exception:
+                pass
 
     from PIL import Image as _PIL
 
-    for sc in scenes:
-        snum = sc.get("scene", 0)
-        idx = snum - 1
-        fname = f"scene_{idx:04d}.png"
-        fpath = os.path.join(images_dir, fname)
+    for idx, sc in enumerate(scenes):
+        # Skip intro scenes — they use video clips, not images
+        if sc.get("type") == "intro":
+            continue
+        snum = sc.get("scene") or (idx + 1)
+        # Resolve image path: prefer explicit image_path from project JSON
+        img_path_raw = sc.get("image_path") or sc.get("image") or ""
+        if img_path_raw:
+            # image_path may be relative to workspace (e.g. "images/Proj/scene_01_00.png")
+            fpath = os.path.join(workspace, img_path_raw.replace("\\", "/"))
+            fname = os.path.basename(fpath)
+        else:
+            fname = f"scene_{idx:04d}.png"
+            fpath = os.path.join(images_dir, fname)
         if not os.path.exists(fpath):
-            status = "MISSING"
-        elif os.path.basename(fpath).startswith("placeholder_"):
-            status = "PLACEHOLDER"
+            # Try to find image by scene ID or derived name
+            # e.g. id "seg04_scene01" -> try "seg04_scene01.png" and "scene_04_01.png"
+            scene_id = sc.get("id", "")
+            found_by_id = False
+            if scene_id and os.path.isdir(images_dir):
+                import re as _re
+                # Build candidate base names: original ID + transformed name
+                bases = [scene_id]
+                m = _re.match(r"seg(\d+)_scene(\d+)", scene_id)
+                if m:
+                    bases.append(f"scene_{m.group(1)}_{m.group(2)}")
+                for base in bases:
+                    for ext in (".png", ".jpg", ".jpeg", ".webp"):
+                        candidate = os.path.join(images_dir, f"{base}{ext}")
+                        if os.path.exists(candidate):
+                            fpath = candidate
+                            fname = f"{base}{ext}"
+                            found_by_id = True
+                            break
+                    if found_by_id:
+                        break
+            if not found_by_id:
+                # Also check for placeholder variant
+                ph_path = os.path.join(images_dir, f"placeholder_{fname}")
+                if os.path.exists(ph_path):
+                    result[snum] = {"status": "PLACEHOLDER", "path": ph_path, "fname": f"placeholder_{fname}"}
+                    continue
+                status = "MISSING"
+            else:
+                # found by ID — verify it
+                try:
+                    with _PIL.open(fpath) as img:
+                        img.verify()
+                    status = "OK"
+                except Exception:
+                    status = "CORRUPT"
         else:
             try:
                 with _PIL.open(fpath) as img:
@@ -682,29 +768,54 @@ def scan_gallery(workspace: str, name: str) -> dict[int, dict]:
 
 # ── Project helpers ───────────────────────────────────────────────────────────
 def list_projects(workspace: str) -> list[dict]:
-    images_root = os.path.join(workspace, "images")
-    if not os.path.isdir(images_root):
-        return []
+    seen_names: set[str] = set()
     projects = []
-    for entry in sorted(os.scandir(images_root), key=lambda e: e.name.lower()):
-        if not entry.is_dir():
-            continue
-        scene_count = sum(
-            1 for f in os.scandir(entry.path)
-            if f.name.startswith("scene_") and f.name.endswith(".png")
-        )
-        has_video = os.path.exists(
-            os.path.join(workspace, "videos", f"{entry.name}.mp4")
-        )
-        has_prompts = os.path.exists(
-            os.path.join(workspace, "scripts", f"{entry.name}_prompts.json")
-        )
-        projects.append({
-            "name": entry.name,
-            "scene_count": scene_count,
-            "has_video": has_video,
-            "has_prompts": has_prompts,
-        })
+
+    # Discover from images/ folders (legacy + post-generate projects)
+    images_root = os.path.join(workspace, "images")
+    if os.path.isdir(images_root):
+        for entry in sorted(os.scandir(images_root), key=lambda e: e.name.lower()):
+            if not entry.is_dir():
+                continue
+            seen_names.add(entry.name)
+            scene_count = sum(
+                1 for f in os.scandir(entry.path)
+                if f.name.startswith("scene_") and f.name.endswith(".png")
+            )
+            has_video = os.path.exists(
+                os.path.join(workspace, "videos", f"{entry.name}.mp4")
+            )
+            has_prompts = os.path.exists(
+                os.path.join(workspace, "scripts", f"{entry.name}_prompts.json")
+            ) or os.path.exists(
+                os.path.join(workspace, "scripts", f"{entry.name}_project.json")
+            )
+            projects.append({
+                "name": entry.name,
+                "scene_count": scene_count,
+                "has_video": has_video,
+                "has_prompts": has_prompts,
+            })
+
+    # Discover from scripts/*_project.json (projects that haven't generated images yet)
+    scripts_root = os.path.join(workspace, "scripts")
+    if os.path.isdir(scripts_root):
+        for fname in sorted(os.listdir(scripts_root)):
+            if fname.endswith("_project.json"):
+                name = fname[:-len("_project.json")]
+                if name and name not in seen_names:
+                    seen_names.add(name)
+                    has_video = os.path.exists(
+                        os.path.join(workspace, "videos", f"{name}.mp4")
+                    )
+                    projects.append({
+                        "name": name,
+                        "scene_count": 0,
+                        "has_video": has_video,
+                        "has_prompts": True,
+                    })
+
+    projects.sort(key=lambda p: p["name"].lower())
     return projects
 
 
@@ -750,11 +861,12 @@ app_state = AppState(
     ken_burns=gui_state["ken_burns"],
     crossfade=gui_state["crossfade"],
     crossfade_duration=gui_state["crossfade_duration"],
-    compile_workers=gui_state["compile_workers"],
     image_workers=gui_state["image_workers"],
     find_dupes=gui_state["find_dupes"],
     dupe_threshold=gui_state["dupe_threshold"],
-    pipeline_mode=gui_state["pipeline_mode"],
+    script_path=gui_state["script_path"],
+    start_from=gui_state["start_from"],
+    stop_after=gui_state["stop_after"],
 )
 proc = ProcessManager()
 
@@ -937,6 +1049,14 @@ def _build_project_selector():
                 gui_state["workspace"] = v
                 _mount_images()
             ws_input.on("blur", lambda e: _set_ws(ws_input.value))
+
+            async def _browse_workspace():
+                path = await _pick_folder("Select Workspace Folder", app_state.workspace)
+                if path:
+                    ws_input.value = path
+                    _set_ws(path)
+            ui.button(icon="folder_open", on_click=_browse_workspace).props("flat round").tooltip("Browse for workspace folder")
+
             def _refresh_selector():
                 _selector_view.clear()
                 with _selector_view:
@@ -997,21 +1117,22 @@ def _build_workspace_view():
     global _log_el, _progress_el, _tab_panels, _log_tab, _gallery_tab
     global _gallery_container, _gallery_summary, _regen_input
 
-    # breadcrumb
-    with ui.row().classes("items-center gap-2 mb-2"):
-        ui.button("Projects", icon="arrow_back", on_click=_back_to_selector).props("flat")
-        ui.label("/").classes("text-grey")
-        ui.label("").classes("text-h6 font-bold").bind_text_from(app_state, "project_name")
+    # breadcrumb + tabs — sticky at top
+    with ui.card().classes("sticky top-0 z-50 shadow-md w-full").props("flat bordered"):
+        with ui.row().classes("items-center gap-2 mb-1 px-2 pt-2"):
+            ui.button("Projects", icon="arrow_back", on_click=_back_to_selector).props("flat")
+            ui.label("/").classes("text-grey")
+            ui.label("").classes("text-h6 font-bold").bind_text_from(app_state, "project_name")
 
-    with ui.tabs().classes("w-full") as tabs:
-        t_gen      = ui.tab("Generate",       icon="play_circle")
-        t_gallery  = ui.tab("Gallery",        icon="grid_view")
-        t_segments = ui.tab("Segments",       icon="segment")
-        t_prompts  = ui.tab("Prompts Editor", icon="edit_note")
-        t_settings = ui.tab("Settings",       icon="tune")
-        t_log      = ui.tab("Log",            icon="terminal")
-        _log_tab = t_log
-        _gallery_tab = t_gallery
+        with ui.tabs().classes("w-full") as tabs:
+            t_gen      = ui.tab("Generate",       icon="play_circle")
+            t_gallery  = ui.tab("Gallery",        icon="grid_view")
+            t_segments = ui.tab("Segments",       icon="segment")
+            t_prompts  = ui.tab("Prompts Editor", icon="edit_note")
+            t_settings = ui.tab("Settings",       icon="tune")
+            t_log      = ui.tab("Log",            icon="terminal")
+            _log_tab = t_log
+            _gallery_tab = t_gallery
 
     def _on_tab_change(e):
         if e.value == "Prompts Editor" and _prompts_reload:
@@ -1045,26 +1166,22 @@ def _build_generate_tab():
                     audio_inp = ui.input("Audio file path").classes("flex-1").bind_value(
                         app_state, "audio_path"
                     )
-                    def _pick_audio():
-                        with ui.dialog() as dlg, ui.card():
-                            ui.label("Paste audio file path:")
-                            p = ui.input().classes("w-96")
-                            def _ok():
-                                v = p.value.strip()
-                                if v:
-                                    app_state.audio_path = v
-                                    audio_inp.value = v
-                                    # auto-detect
-                                    name = os.path.splitext(os.path.basename(v))[0]
-                                    tx = auto_detect_transcript(app_state.workspace, name)
-                                    if tx:
-                                        app_state.tx_auto = False
-                                        app_state.transcript_path = tx
-                                        ui.notify(f"Auto-detected transcript: {os.path.basename(tx)}", type="positive")
-                                dlg.close()
-                            ui.button("OK", on_click=_ok)
-                        dlg.open()
-                    ui.button(icon="folder_open", on_click=_pick_audio).props("flat round")
+                    async def _pick_audio():
+                        path = await _pick_file(
+                            "Select Audio File",
+                            [("Audio files", "*.mp3 *.wav *.m4a *.ogg *.flac"), ("All files", "*.*")],
+                            initial_dir=app_state.workspace,
+                        )
+                        if path:
+                            app_state.audio_path = path
+                            audio_inp.value = path
+                            name = os.path.splitext(os.path.basename(path))[0]
+                            tx = auto_detect_transcript(app_state.workspace, name)
+                            if tx:
+                                app_state.tx_auto = False
+                                app_state.transcript_path = tx
+                                ui.notify(f"Auto-detected transcript: {os.path.basename(tx)}", type="positive")
+                    ui.button(icon="folder_open", on_click=_pick_audio).props("flat round").tooltip("Browse for audio file")
 
             ui.label("Project Name (set by project selector)").classes("text-sm text-grey col-span-2")
 
@@ -1090,6 +1207,16 @@ def _build_generate_tab():
             tx_inp = ui.input("Transcript JSON path").classes("flex-1").bind_value(
                 app_state, "transcript_path"
             )
+            async def _pick_transcript():
+                path = await _pick_file(
+                    "Select Transcript JSON",
+                    [("JSON files", "*.json"), ("All files", "*.*")],
+                    initial_dir=os.path.join(app_state.workspace, "scripts"),
+                )
+                if path:
+                    app_state.transcript_path = path
+                    tx_inp.value = path
+            ui.button(icon="folder_open", on_click=_pick_transcript).props("flat round").tooltip("Browse for transcript JSON")
         # hide row when auto
         def _update_tx_row():
             tx_row.set_visibility(not app_state.tx_auto)
@@ -1101,10 +1228,7 @@ def _build_generate_tab():
         ui.label("LLM & Prompts").classes("text-subtitle1 font-semibold")
         with ui.row().classes("items-center gap-3 flex-wrap"):
             llm_cb = ui.checkbox("Generate with local LLM", value=app_state.use_llm)
-            llm_cb.on("update:model-value", lambda e: (
-                setattr(app_state, "use_llm", e.args),
-                setattr(app_state, "use_saved_prompts", False) if e.args else None,
-            ))
+            llm_cb.on("update:model-value", lambda e: setattr(app_state, "use_llm", e.args))
 
             prov_sel = ui.select(
                 LLM_PROVIDERS, label="Provider", value=app_state.llm_provider
@@ -1144,31 +1268,51 @@ def _build_generate_tab():
         prov_sel.on("update:model-value", lambda _: _update_claude_row())
         _update_claude_row()
 
-        ui.separator()
-        with ui.row().classes("items-center gap-2 mt-2"):
-            saved_cb = ui.checkbox("Load prompts from JSON", value=app_state.use_saved_prompts)
-            saved_cb.on("update:model-value", lambda e: (
-                setattr(app_state, "use_saved_prompts", e.args),
-                setattr(app_state, "use_llm", False) if e.args else None,
-            ))
-            saved_inp = ui.input("Prompts JSON path (blank = auto)").classes("flex-1")
-            saved_inp.bind_visibility_from(saved_cb, "value")
-            saved_inp.bind_value(app_state, "prompts_path")
-
-        # Mutual exclusion: uncheck the other widget when one is turned on
-        llm_cb.on("update:model-value", lambda e: saved_cb.set_value(False) if e.args else None)
-        saved_cb.on("update:model-value", lambda e: llm_cb.set_value(False) if e.args else None)
-
-    # ── Pipeline Mode ────────────────────────────────────────────────────────
+    # ── Script File (required) ───────────────────────────────────────────────
     with ui.card().classes("w-full mb-3"):
-        ui.label("Pipeline Mode").classes("text-subtitle1 font-semibold")
-        mode_toggle = ui.toggle(
-            PIPELINE_MODES, value=app_state.pipeline_mode
-        ).classes("mt-1")
-        mode_toggle.on("update:model-value", lambda e: (
-            setattr(app_state, "pipeline_mode", _sel(e.args)),
-            gui_state.__setitem__("pipeline_mode", _sel(e.args)),
-        ))
+        ui.label("Script File").classes("text-subtitle1 font-semibold")
+        ui.label("Original narration script (required for segment detection)").classes("text-xs text-grey")
+        with ui.row().classes("items-center gap-2 w-full"):
+            script_inp = ui.input("Script file path").classes("flex-1").bind_value(
+                app_state, "script_path"
+            )
+            script_inp.on("update:model-value", lambda e: (
+                gui_state.__setitem__("script_path", e.args or ""),
+            ))
+            async def _pick_script():
+                path = await _pick_file(
+                    "Select Script File",
+                    [("Text files", "*.txt"), ("All files", "*.*")],
+                    initial_dir=app_state.workspace,
+                )
+                if path:
+                    app_state.script_path = path
+                    script_inp.value = path
+                    gui_state["script_path"] = path
+            ui.button(icon="folder_open", on_click=_pick_script).props("flat round").tooltip("Browse for script file")
+
+    # ── Pipeline Control ──────────────────────────────────────────────────────
+    with ui.card().classes("w-full mb-3"):
+        ui.label("Pipeline Control").classes("text-subtitle1 font-semibold")
+        with ui.row().classes("items-center gap-4 flex-wrap"):
+            start_sel = ui.select(
+                PIPELINE_STAGES, label="Start from",
+                value=app_state.start_from
+            ).classes("w-40")
+            start_sel.on("update:model-value", lambda e: (
+                setattr(app_state, "start_from", _sel(e.args)),
+                gui_state.__setitem__("start_from", _sel(e.args)),
+            ))
+            stop_sel = ui.select(
+                PIPELINE_STAGES, label="Stop after",
+                value=app_state.stop_after
+            ).classes("w-40")
+            stop_sel.on("update:model-value", lambda e: (
+                setattr(app_state, "stop_after", _sel(e.args)),
+                gui_state.__setitem__("stop_after", _sel(e.args)),
+            ))
+            resume_cb = ui.checkbox("Resume from existing project", value=app_state.resume)
+            resume_cb.on("update:model-value", lambda e: setattr(app_state, "resume", e.args))
 
     # ── Action buttons ───────────────────────────────────────────────────────
     with ui.row().classes("gap-3 mt-2 flex-wrap"):
@@ -1185,8 +1329,10 @@ def _build_generate_tab():
                 ui.notify("No project selected", type="negative")
                 return
             cmd = build_command(app_state)
+            print(f"[GUI] Command: {' '.join(cmd)}")
             if _log_el:
                 _log_el.clear()
+                _log_el.push(f"[CMD] {' '.join(cmd)}\n")
             if _progress_el:
                 _progress_el.set_value(0)
             if _status_label:
@@ -1244,11 +1390,24 @@ def _build_generate_tab():
 
 
 # ── GALLERY TAB ───────────────────────────────────────────────────────────────
+_gallery_search = ""
+_gallery_filter = "All"
+
+
 def _build_gallery_tab():
     global _gallery_container, _gallery_summary
 
     with ui.row().classes("items-center gap-3 mb-3 flex-wrap"):
         _gallery_summary = ui.label("").classes("text-sm text-grey flex-1")
+        search_input = ui.input(label="Search", placeholder="scene #, segment, prompt...").props(
+            'dense clearable').classes("w-48")
+
+        def _on_search(e):
+            global _gallery_search
+            _gallery_search = (e.value or "").strip()
+            _refresh_gallery(filter_val=_gallery_filter)
+        search_input.on("update:model-value", _on_search)
+
         filter_sel = ui.select(
             ["All", "OK", "Needs Regen"], value="All", label="Filter"
         ).classes("w-32")
@@ -1259,8 +1418,22 @@ def _build_gallery_tab():
     _gallery_container = ui.column().classes("w-full")
     _refresh_gallery()
 
+    # Generation tasks panel (collapsible, shows live logs per regen)
+    global _regen_panel, _regen_tasks_container
+    with ui.expansion("Generation Tasks", icon="construction").classes(
+        "w-full mt-2 text-sm"
+    ) as _regen_panel:
+        _regen_tasks_container = ui.column().classes("w-full gap-1")
+        with _regen_tasks_container:
+            ui.label("No active tasks.").classes("text-grey text-xs")
+
+    # Timer to sync thread-generated logs to UI every second
+    ui.timer(1.0, _sync_regen_ui)
+
     def _filter_change(e):
-        _refresh_gallery(filter_val=_sel(e.args))
+        global _gallery_filter
+        _gallery_filter = _sel(e.args)
+        _refresh_gallery(filter_val=_gallery_filter)
     filter_sel.on("update:model-value", _filter_change)
 
 
@@ -1294,14 +1467,42 @@ def _refresh_gallery(filter_val: str = "All"):
     # load scene metadata for detail dialog
     pm = PromptsManager(app_state.workspace, name)
     scenes_list = pm.load()
-    scenes_map = {sc.get("scene", 0): sc for sc in scenes_list}
+    # Map by snum: use "scene" field if present, otherwise 1-based list index
+    scenes_map = {}
+    for i, sc in enumerate(scenes_list):
+        key = sc.get("scene") or (i + 1)
+        scenes_map[key] = sc
 
+    # Apply status filter
     filtered = {
         snum: info for snum, info in data.items()
         if filter_val == "All"
         or (filter_val == "OK" and info["status"] == "OK")
         or (filter_val == "Needs Regen" and info["status"] != "OK")
     }
+
+    # Apply search filter
+    search = _gallery_search.lower() if _gallery_search else ""
+    if search:
+        search_result = {}
+        for snum, info in filtered.items():
+            # Match against scene number
+            if search.isdigit() and int(search) == snum:
+                search_result[snum] = info
+                continue
+            # Match against scene metadata
+            sc = scenes_map.get(snum, {})
+            searchable = " ".join([
+                str(snum),
+                sc.get("id", ""),
+                sc.get("text", ""),
+                sc.get("prompt", "") or "",
+                sc.get("metadata", {}).get("segment_title", ""),
+                f"seg{sc.get('metadata', {}).get('segment_number', '')}",
+            ]).lower()
+            if search in searchable:
+                search_result[snum] = info
+        filtered = search_result
 
     with _gallery_container:
         if not filtered:
@@ -1322,28 +1523,41 @@ STATUS_COLORS = {
 
 def _build_gallery_card(snum: int, info: dict, scene_data: dict, name: str):
     status = info["status"]
-    color = STATUS_COLORS.get(status, "grey")
+    is_generating = snum in _regen_in_flight
+    color = "blue" if is_generating else STATUS_COLORS.get(status, "grey")
+    display_status = "GENERATING..." if is_generating else status
     img_url = _img_url(name, info["fname"], info["path"]) if info.get("path") and os.path.exists(info["path"]) else None
-    has_detail = bool(img_url and scene_data)
+
+    def _click_detail(_, sd=scene_data, ip=info.get("path", ""), s=snum):
+        _open_detail(sd, ip, name, snum=s)
 
     with ui.card().classes("relative overflow-hidden hover:shadow-xl"):
-        # image area — clickable if we have detail data
-        if img_url:
+        # image area — always clickable to see prompt/details
+        if is_generating:
+            with ui.column().classes("w-full aspect-video items-center justify-center bg-blue-50"):
+                ui.spinner("dots", size="xl", color="primary")
+                ui.label(f"Scene {snum}").classes("text-xs text-grey")
+        elif img_url:
             img_el = ui.image(img_url).classes("w-full aspect-video object-cover cursor-pointer")
-            if has_detail:
-                img_el.on("click", lambda _, sd=scene_data, ip=info.get("path", ""): _open_detail(sd, ip, name))
+            img_el.on("click", _click_detail)
         else:
-            ui.icon("broken_image", size="4rem").classes("w-full text-grey py-8 text-center block")
+            icon_el = ui.icon("broken_image", size="4rem").classes(
+                "w-full text-grey py-8 text-center block cursor-pointer")
+            icon_el.on("click", _click_detail)
 
         # badges row
         with ui.row().classes("justify-between items-center px-1 py-1"):
             with ui.row().classes("gap-1"):
                 ui.badge(str(snum), color="blue-grey").props("rounded")
-                ui.badge(status, color=color).props("rounded")
-            ui.button(
+                ui.badge(display_status, color=color).props("rounded")
+            async def _on_regen(_, s=snum, st=status):
+                await _regen_or_confirm(s, st)
+            btn = ui.button(
                 icon="refresh",
-                on_click=lambda _, s=snum, st=status: _regen_or_confirm(s, st)
+                on_click=_on_regen
             ).props("flat round dense").tooltip("Regenerate now")
+            if is_generating:
+                btn.props("disable")
 
 
 def _regen_scene(snum: int):
@@ -1357,76 +1571,369 @@ def _regen_scene(snum: int):
         _regen_input.value = app_state.regen_scenes
 
 
+_regen_in_flight: set[int] = set()  # scene numbers currently regenerating
+_regen_tasks: dict[int, dict] = {}  # snum -> {status, logs[], log_el, row_el}
+_regen_panel: object = None         # the expansion panel UI element
+_regen_tasks_container: object = None
+_regen_needs_gallery_refresh: bool = False  # flag for timer to trigger gallery refresh
+
+
+def _regen_log(snum: int, msg: str):
+    """Append a log line to a regen task (thread-safe — UI sync via timer)."""
+    import datetime as _dt
+    ts = _dt.datetime.now().strftime("%H:%M:%S")
+    line = f"[{ts}] {msg}"
+    task = _regen_tasks.get(snum)
+    if task:
+        task["logs"].append(line)
+        task["_dirty"] = True
+
+
+def _update_regen_task_status(snum: int, new_status: str):
+    """Update status for a regen task (thread-safe — UI sync via timer)."""
+    task = _regen_tasks.get(snum)
+    if not task:
+        return
+    task["status"] = new_status
+    task["_dirty"] = True
+
+
+def _sync_regen_ui():
+    """Periodic UI sync — pushes buffered logs, status, and gallery refresh."""
+    global _regen_needs_gallery_refresh
+
+    for snum, task in _regen_tasks.items():
+        if not task.get("_dirty"):
+            continue
+        task["_dirty"] = False
+
+        # Sync log lines
+        log_el = task.get("log_el")
+        if log_el:
+            flushed = task.get("_flushed", 0)
+            for line in task["logs"][flushed:]:
+                log_el.push(line)
+            task["_flushed"] = len(task["logs"])
+
+        # Sync status badge
+        badge = task.get("badge_el")
+        if badge:
+            status = task["status"]
+            color = {"running": "blue", "done": "green", "failed": "red"}.get(status, "grey")
+            badge.set_text(status.upper())
+            badge.props(f'color="{color}"')
+
+        # Collapse expansion on completion
+        if task["status"] in ("done", "failed") and task.get("expansion_el"):
+            exp = task["expansion_el"]
+            if hasattr(exp, '_props') and exp._props.get('model-value', True):
+                exp.close()
+
+    # Refresh gallery when a regen finishes (runs in proper UI context)
+    if _regen_needs_gallery_refresh:
+        _regen_needs_gallery_refresh = False
+        _refresh_gallery(filter_val=_gallery_filter)
+
+
+def _build_regen_task_row(snum: int):
+    """Build a UI row for a single regen task inside the panel."""
+    task = _regen_tasks[snum]
+    with ui.expansion(f"Scene {snum}", icon="image").classes("w-full") as exp:
+        exp.open()
+        task["expansion_el"] = exp
+        with ui.row().classes("items-center gap-2"):
+            badge = ui.badge("RUNNING", color="blue").props("rounded")
+            task["badge_el"] = badge
+            ui.spinner("dots", size="sm", color="primary").bind_visibility_from(
+                task, "status", backward=lambda s: s == "running")
+        log = ui.log(max_lines=50).classes("w-full h-32 text-xs")
+        task["log_el"] = log
+        # Replay any logs already captured
+        for line in task["logs"]:
+            log.push(line)
+        task["_flushed"] = len(task["logs"])
+
+
 async def _regen_or_confirm(snum: int, status: str):
     """Regenerate the scene immediately — no confirmation dialog."""
-    await _regen_scene_now(snum)
+    try:
+        await _regen_scene_now(snum)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        ui.notify(f"Regen error: {e}", type="negative", timeout=10000)
 
 
 async def _regen_scene_now(snum: int):
-    """Immediately regenerate a single scene from the gallery."""
-    if proc.running:
-        ui.notify("A process is already running — stop it first", type="warning")
-        return
-    if not app_state.audio_path or not os.path.exists(app_state.audio_path):
-        ui.notify("Set an audio file in Generate tab first", type="negative")
+    """Regenerate a single scene via direct API call (non-blocking, parallel-safe)."""
+    if snum in _regen_in_flight:
+        ui.notify(f"Scene {snum} is already regenerating", type="warning")
         return
     if not app_state.project_name:
         ui.notify("No project selected", type="negative")
         return
 
-    # Build command: regen this one scene, use saved prompts to preserve timing
-    import copy
-    s = copy.copy(app_state)
-    s.regen_scenes = str(snum)
-    s.use_saved_prompts = True
-    s.pipeline_mode = "Full Pipeline"
-    s.no_compile = True  # just regenerate the image; user compiles separately
-    # Skip Whisper — use existing transcript so regen goes straight to image gen
-    tx = auto_detect_transcript(s.workspace, s.project_name)
-    if tx:
-        s.tx_auto = False
-        s.transcript_path = tx
-    cmd = build_command(s)
+    # Load scene data from project JSON
+    workspace = Path(app_state.workspace)
+    project_path = workspace / "scripts" / f"{app_state.project_name}_project.json"
+    if not project_path.exists():
+        ui.notify("No project.json found", type="negative")
+        return
 
-    # --- Loading dialog ---
-    with ui.dialog().props("persistent") as dlg, ui.card().classes("w-96 gap-3"):
-        with ui.row().classes("items-center gap-3"):
-            ui.spinner("dots", size="xl", color="primary")
-            ui.label(f"Regenerating scene {snum}").classes("text-lg font-bold")
-        dlg_progress = ui.linear_progress(value=0).classes("w-full")
-        dlg_log = ui.log(max_lines=30).classes("w-full h-40 text-xs font-mono")
-        with ui.row().classes("justify-end w-full"):
-            ui.button("Cancel", icon="stop",
-                      on_click=lambda: (proc.stop(), dlg.close())
-                      ).props("flat color=negative")
+    with open(project_path, encoding="utf-8") as f:
+        project_data = json.load(f)
+    scenes = project_data.get("scenes", [])
+    idx = snum - 1  # snum is 1-based
+    if idx < 0 or idx >= len(scenes):
+        ui.notify(f"Scene {snum} out of range", type="negative")
+        return
 
-    # Temporarily augment on_line to feed dialog progress + log
-    original_on_line = proc.on_line
-    def _dlg_on_line(line: str):
-        if original_on_line:
-            original_on_line(line)
-        dlg_log.push(line)
-        m = re.search(r"(\d+)\s*/\s*(\d+)", line)
-        if m:
-            a, b = int(m.group(1)), int(m.group(2))
-            if b > 0:
-                dlg_progress.set_value(a / b)
+    scene = scenes[idx]
+    prompt = scene.get("prompt") or ""
+    if not prompt:
+        ui.notify(f"Scene {snum} has no prompt — run prompt stage first", type="warning")
+        return
 
-    proc.on_line = _dlg_on_line
-    dlg.open()
+    # Determine output path from existing image_path or construct one
+    scene_id = scene.get("id", f"scene{idx:04d}")
+    if scene.get("image_path"):
+        out_path = workspace / scene["image_path"].replace("\\", "/")
+    else:
+        images_dir = workspace / "images" / app_state.project_name
+        fname = f"scene_{scene_id.replace('seg', '').replace('_scene', '_')}.png"
+        out_path = images_dir / fname
 
-    await proc.start(cmd)  # blocks until subprocess exits; _on_done fires inside here
+    # Set up task tracking
+    _regen_in_flight.add(snum)
+    _regen_tasks[snum] = {"status": "running", "logs": []}
 
-    proc.on_line = original_on_line
-    dlg.close()
+    # Build the task row in the panel
+    if _regen_tasks_container:
+        with _regen_tasks_container:
+            _build_regen_task_row(snum)
+    if _regen_panel:
+        _regen_panel.open()
 
-    # Switch back to Gallery so user sees the updated image immediately
-    if _tab_panels and _gallery_tab:
-        _tab_panels.set_value(_gallery_tab)
+    _regen_log(snum, f"Starting generation: {scene_id}")
+    _regen_log(snum, f"Model: {app_state.ai_model}")
+    _regen_log(snum, f"Output: {out_path.name}")
+    _regen_log(snum, f"Prompt: {prompt[:120]}...")
+    _refresh_gallery()  # show spinner on the card
+
+    def _do_generate() -> tuple[bool, str]:
+        """Blocking API call — runs in a thread."""
+        import requests as _req
+        import time as _time
+
+        api_key = AI33_KEY
+        model = app_state.ai_model
+        base_url = "https://api.ai33.pro"
+        session = _req.Session()
+        session.headers.update({"xi-api-key": api_key})
+
+        # Delete existing image
+        if out_path.exists():
+            out_path.unlink()
+
+        data = {
+            "prompt": prompt,
+            "model_id": model,
+            "generations_count": "1",
+            "model_parameters": json.dumps({
+                "aspect_ratio": "16:9",
+                "resolution": "2K",
+            }),
+        }
+
+        # Style reference
+        style_dir = workspace / "style_references"
+        style_ref = None
+        if style_dir.exists():
+            for f in style_dir.iterdir():
+                if f.suffix.lower() in (".png", ".jpg", ".jpeg"):
+                    style_ref = str(f)
+                    break
+
+        files = []
+        file_handles = []
+        try:
+            if style_ref and os.path.exists(style_ref):
+                fh = open(style_ref, "rb")
+                file_handles.append(fh)
+                files.append(("assets", (os.path.basename(style_ref), fh, "image/png")))
+                data["prompt"] = f"@img1 {data['prompt']}"
+                _regen_log(snum, f"Using style ref: {os.path.basename(style_ref)}")
+
+            _regen_log(snum, "Submitting to API...")
+            resp = session.post(
+                f"{base_url}/v1i/task/generate-image",
+                data=data,
+                files=files if files else None,
+                timeout=120,
+            )
+        finally:
+            for fh in file_handles:
+                try:
+                    fh.close()
+                except Exception:
+                    pass
+
+        if resp.status_code != 200:
+            try:
+                msg = resp.json().get("message", resp.text[:200])
+            except Exception:
+                msg = resp.text[:200]
+            _regen_log(snum, f"API error {resp.status_code}: {msg}")
+            return False, f"API {resp.status_code}: {msg}"
+
+        result = resp.json()
+        task_id = result.get("task_id")
+        if not task_id:
+            _regen_log(snum, f"No task_id in response")
+            return False, f"No task_id: {result}"
+        _regen_log(snum, f"Task submitted: {task_id}")
+        _regen_log(snum, "Polling for completion...")
+
+        # Poll for completion (max 5 minutes, check every 4s)
+        start = _time.time()
+        consecutive_errors = 0
+        poll_count = 0
+        while (_time.time() - start) < 300:
+            _time.sleep(4)
+            poll_count += 1
+            elapsed = int(_time.time() - start)
+            try:
+                sr = session.get(f"{base_url}/v1/task/{task_id}", timeout=(5, 15))
+                consecutive_errors = 0
+                if sr.status_code != 200:
+                    _regen_log(snum, f"Poll #{poll_count} ({elapsed}s): HTTP {sr.status_code}")
+                    continue
+                sd = sr.json()
+                status = sd.get("status", "")
+
+                if poll_count % 3 == 0:
+                    _regen_log(snum, f"Poll #{poll_count} ({elapsed}s): {status}")
+
+                if status == "done":
+                    _regen_log(snum, f"Generation complete ({elapsed}s)")
+                    images = sd.get("metadata", {}).get("result_images", [])
+                    if images:
+                        image_url = images[0].get("imageUrl")
+                        if image_url:
+                            _regen_log(snum, "Downloading image...")
+                            img_resp = _req.get(image_url, timeout=(5, 30))
+                            if img_resp.status_code == 200:
+                                out_path.parent.mkdir(parents=True, exist_ok=True)
+                                out_path.write_bytes(img_resp.content)
+
+                                # Validate
+                                from PIL import Image as _PIL
+                                try:
+                                    with _PIL.open(out_path) as _img:
+                                        _img.load()
+                                except Exception:
+                                    out_path.unlink(missing_ok=True)
+                                    _regen_log(snum, "Downloaded image is corrupt")
+                                    return False, "Downloaded image is corrupt"
+
+                                # Apply title overlay
+                                seg_title = scene.get("metadata", {}).get("segment_title", "")
+                                if seg_title:
+                                    try:
+                                        from video_automation.generate.title_overlay import TitleBarOverlay
+                                        TitleBarOverlay().apply(str(out_path), seg_title)
+                                        _regen_log(snum, f"Title overlay: {seg_title}")
+                                    except Exception:
+                                        pass
+
+                                _regen_log(snum, "Image saved successfully!")
+                                return True, ""
+                    _regen_log(snum, "No image in API result")
+                    return False, "No image in result"
+
+                elif status in ("error", "failed"):
+                    err = sd.get("error_message", sd.get("message", "Unknown"))
+                    _regen_log(snum, f"API {status}: {err}")
+                    return False, f"Generation {status}: {err}"
+
+            except _req.exceptions.Timeout:
+                consecutive_errors += 1
+                _regen_log(snum, f"Poll #{poll_count}: timeout ({consecutive_errors}/5)")
+                if consecutive_errors >= 5:
+                    return False, "Too many consecutive timeouts polling task status"
+                continue
+            except Exception as exc:
+                consecutive_errors += 1
+                _regen_log(snum, f"Poll #{poll_count}: error: {exc}")
+                if consecutive_errors >= 5:
+                    return False, f"Too many poll errors: {exc}"
+                continue
+
+        _regen_log(snum, "Timeout after 300s")
+        return False, "Timeout after 300s"
+
+    try:
+        success, error = await asyncio.to_thread(_do_generate)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        success, error = False, str(e)
+        _regen_log(snum, f"Exception: {e}")
+
+    _regen_in_flight.discard(snum)
+
+    if success:
+        # Update project JSON status
+        try:
+            with open(project_path, encoding="utf-8") as f:
+                pdata = json.load(f)
+            pdata["scenes"][idx]["status"] = "generated"
+            pdata["scenes"][idx]["image_path"] = str(out_path.relative_to(workspace))
+            with open(project_path, "w", encoding="utf-8") as f:
+                json.dump(pdata, f, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
+        _update_regen_task_status(snum, "done")
+        _regen_log(snum, "DONE")
+        ui.notify(f"Scene {snum} regenerated!", type="positive")
+    else:
+        # Update project JSON status to failed
+        try:
+            with open(project_path, encoding="utf-8") as f:
+                pdata = json.load(f)
+            pdata["scenes"][idx]["status"] = "failed"
+            with open(project_path, "w", encoding="utf-8") as f:
+                json.dump(pdata, f, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
+        _update_regen_task_status(snum, "failed")
+        _regen_log(snum, f"FAILED: {error}")
+        ui.notify(f"Scene {snum} failed: {error}", type="negative", timeout=10000)
+
+    # Flag for timer to refresh gallery and update UI (ensures proper UI context)
+    global _regen_needs_gallery_refresh
+    _regen_needs_gallery_refresh = True
 
 
 # ── IMAGE DETAIL DIALOG ───────────────────────────────────────────────────────
-def _open_detail(scene_data: dict, image_path: str, name: str):
+def _open_detail(scene_data: dict, image_path: str, name: str, snum: int = 0):
+    # Resolve fields from both prompts.json and project.json formats
+    scene_id = scene_data.get("id", "")
+    scene_num = scene_data.get("scene") or snum
+    time_str = scene_data.get("time", "")
+    if not time_str and "start" in scene_data and "end" in scene_data:
+        time_str = f"{scene_data['start']:.2f}s - {scene_data['end']:.2f}s"
+    segment_str = scene_data.get("segment", "")
+    if not segment_str:
+        meta = scene_data.get("metadata", {})
+        seg_num = meta.get("segment_number", "")
+        seg_title = meta.get("segment_title", "")
+        segment_str = f"#{seg_num}: {seg_title}" if seg_num else seg_title
+    scene_text = scene_data.get("scene_text", "") or scene_data.get("text", "")
+    prompt_val = scene_data.get("prompt", "") or ""
+    negative_val = scene_data.get("negative", "") or ""
+    prompt_src = scene_data.get("prompt_source", "unknown") or "unknown"
+
     with ui.dialog() as dlg:
         dlg.props("maximized")
         with ui.card().classes("w-full h-full overflow-auto"):
@@ -1441,42 +1948,68 @@ def _open_detail(scene_data: dict, image_path: str, name: str):
 
                 # right: metadata + editable prompt
                 with ui.column().classes("w-96 gap-2"):
-                    snum = scene_data.get("scene", "?")
-                    ui.label(f"Scene {snum}").classes("text-h6 font-bold")
-                    ui.label(f"Time: {scene_data.get('time', '')}").classes("text-sm text-grey")
-                    ui.label(f"Segment: {scene_data.get('segment', '')}").classes("text-sm")
-                    ui.label("Scene text:").classes("text-sm font-semibold mt-1")
-                    ui.label(scene_data.get("scene_text", "")).classes("text-sm text-grey")
+                    ui.label(f"Scene {scene_num}").classes("text-h6 font-bold")
+                    if scene_id:
+                        ui.label(scene_id).classes("text-xs text-grey-6 font-mono")
+                    ui.label(f"Time: {time_str}").classes("text-sm text-grey")
+                    if segment_str:
+                        ui.label(f"Segment: {segment_str}").classes("text-sm")
+                    if scene_text:
+                        ui.label("Scene text:").classes("text-sm font-semibold mt-1")
+                        ui.label(scene_text).classes("text-sm text-grey")
 
                     with ui.row().classes("gap-2 mt-1"):
-                        src = scene_data.get("prompt_source", "unknown")
-                        ui.badge(src, color="blue")
+                        ui.badge(prompt_src, color="blue")
 
                     ui.label("Prompt:").classes("text-sm font-semibold mt-2")
-                    prompt_ta = ui.textarea(value=scene_data.get("prompt", "")).classes("w-full")
+                    prompt_ta = ui.textarea(value=prompt_val).classes("w-full")
                     prompt_ta.props("rows=6")
 
                     ui.label("Negative prompt:").classes("text-sm font-semibold mt-1")
-                    neg_ta = ui.textarea(value=scene_data.get("negative", "")).classes("w-full")
+                    neg_ta = ui.textarea(value=negative_val).classes("w-full")
                     neg_ta.props("rows=3")
 
                     with ui.row().classes("gap-2 mt-2"):
                         def _save_prompt():
-                            pm = PromptsManager(app_state.workspace, name)
-                            pm.load()
-                            pm.update_scene(int(snum), prompt_ta.value, neg_ta.value)
+                            _save_scene_prompt(name, scene_num, prompt_ta.value, neg_ta.value)
                             ui.notify("Prompt saved", type="positive")
 
-                        def _regen_from_detail():
+                        async def _save_and_regen():
+                            _save_scene_prompt(name, scene_num, prompt_ta.value, neg_ta.value)
                             dlg.close()
-                            asyncio.ensure_future(_regen_scene_now(int(snum)))
+                            await _regen_scene_now(int(scene_num))
 
                         ui.button("Save Prompt", icon="save", color="primary",
                                   on_click=_save_prompt)
-                        ui.button("Regen This Scene", icon="refresh", color="warning",
-                                  on_click=_regen_from_detail)
+                        ui.button("Save & Regen", icon="refresh", color="warning",
+                                  on_click=_save_and_regen)
                         ui.button("Close", on_click=dlg.close).props("flat")
     dlg.open()
+
+
+def _save_scene_prompt(name: str, snum: int, prompt: str, negative: str):
+    """Save prompt to whichever file format the project uses."""
+    workspace = app_state.workspace
+    idx = snum - 1  # snum is 1-based
+
+    # Try project.json first
+    project_path = os.path.join(workspace, "scripts", f"{name}_project.json")
+    if os.path.exists(project_path):
+        with open(project_path, encoding="utf-8") as f:
+            pdata = json.load(f)
+        scenes = pdata.get("scenes", [])
+        if 0 <= idx < len(scenes):
+            scenes[idx]["prompt"] = prompt
+            if negative:
+                scenes[idx]["negative"] = negative
+            with open(project_path, "w", encoding="utf-8") as f:
+                json.dump(pdata, f, indent=2, ensure_ascii=False)
+            return
+
+    # Fall back to prompts.json
+    pm = PromptsManager(workspace, name)
+    pm.load()
+    pm.update_scene(snum, prompt, negative)
 
 
 # ── SEGMENT EDITOR TAB ────────────────────────────────────────────────────────
@@ -2229,24 +2762,18 @@ def _build_settings_tab():
                 gui_state.__setitem__("crossfade_duration", e.args),
             ))
 
-    # Compile Performance
+    # Workers
     with ui.card().classes("w-full mb-3"):
-        ui.label("Compile Performance").classes("text-subtitle1 font-semibold")
-        with ui.row().classes("items-center gap-4 flex-wrap"):
-            with ui.column():
-                ui.label("FFmpeg workers (compile)").classes("text-sm")
-                cw = ui.number(value=int(app_state.compile_workers), min=1, max=16, step=1).classes("w-24")
-                cw.on("update:model-value", lambda e: (
-                    setattr(app_state, "compile_workers", str(int(e.args or 3))),
-                    gui_state.__setitem__("compile_workers", str(int(e.args or 3))),
-                ))
-            with ui.column():
-                ui.label("Image gen workers").classes("text-sm")
-                iw = ui.number(value=int(app_state.image_workers), min=1, max=20, step=1).classes("w-24")
-                iw.on("update:model-value", lambda e: (
-                    setattr(app_state, "image_workers", str(int(e.args or 10))),
-                    gui_state.__setitem__("image_workers", str(int(e.args or 10))),
-                ))
+        ui.label("Workers").classes("text-subtitle1 font-semibold")
+        with ui.row().classes("items-center gap-4"):
+            ui.label("Image gen workers").classes("text-sm")
+            iw = ui.number(value=int(app_state.image_workers), min=1, max=20, step=1).classes("w-24")
+            def _update_workers(e):
+                val = int(e.args) if e.args is not None else 10
+                val = max(1, min(20, val))
+                app_state.image_workers = str(val)
+                gui_state["image_workers"] = str(val)
+            iw.on("update:model-value", _update_workers)
 
     # Duplicate Detection
     with ui.card().classes("w-full mb-3"):
@@ -2278,8 +2805,11 @@ def _build_settings_tab():
     # Recompile button
     with ui.row().classes("mt-2"):
         async def _recompile():
-            s = AppState(**app_state.__dict__)
-            s.pipeline_mode = "Compile Only"
+            import copy
+            s = copy.copy(app_state)
+            s.start_from = "compile"
+            s.stop_after = "compile"
+            s.resume = True
             cmd = build_command(s)
             if _log_el:
                 _log_el.clear()

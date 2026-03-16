@@ -71,14 +71,14 @@ def check_torch():
         return False
 
 def check_whisper():
-    """Check Whisper installation."""
+    """Check Faster-Whisper installation."""
     try:
-        import whisper
-        print_ok("Whisper: Installed")
+        from faster_whisper import WhisperModel
+        print_ok("Faster-Whisper: Installed")
         return True
     except ImportError:
-        print_fail("Whisper: Not installed")
-        print("  Install with: pip install openai-whisper")
+        print_fail("Faster-Whisper: Not installed")
+        print("  Install with: pip install faster-whisper")
         return False
 
 def check_ffmpeg():
