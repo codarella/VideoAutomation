@@ -154,6 +154,11 @@ class MultiPassTranscriber:
             print(f"      → {len(words)} words")
             all_results.append(words)
 
+        # Unload model NOW — all passes done, free CUDA before any more work.
+        # CTranslate2 can corrupt the heap if the model lingers while Python
+        # allocates heavily (e.g. during consensus merge or stage transition).
+        self.unload()
+
         if len(all_results) == 1:
             return all_results[0], duration
 
