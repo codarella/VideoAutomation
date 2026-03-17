@@ -22,10 +22,14 @@ WORD_TO_DIGIT: dict[str, int] = {
 
 DIGIT_TO_WORD: dict[int, str] = {v: k for k, v in WORD_TO_DIGIT.items()}
 
-# Build regex that matches both "Number 9" and "Number Nine" (case-insensitive)
+# Build regex that matches segment headers like "Number 9." or "Number Nine."
+# Two requirements to distinguish real headers from casual mentions:
+#   1. Must be at the start of a line (or start of text)
+#   2. Must be followed by a period or colon after the number
+# This filters out mid-sentence mentions like "responsible for number four."
 _number_words = "|".join(WORD_TO_DIGIT.keys())
 NUMBER_PATTERN = re.compile(
-    r'\b[Nn]umber\s+(' + _number_words + r'|\d+)\b',
+    r'(?:^|\n)\s*[Nn]umber\s+(' + _number_words + r'|\d+)\s*[.:]',
     re.IGNORECASE,
 )
 
@@ -75,28 +79,41 @@ class ScriptParser:
             else:
                 continue
 
+            # The regex may include a leading newline/whitespace — find actual "Number" start
+            full = match.group(0)
+            n_pos = full.lower().index("number")
+            real_start = match.start() + n_pos
+
             # Extract the body text (from this match to the next, or end)
-            body_start = match.start()
-            body_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(script_text)
+            body_start = real_start
+            if idx + 1 < len(matches):
+                next_full = matches[idx + 1].group(0)
+                next_n_pos = next_full.lower().index("number")
+                body_end = matches[idx + 1].start() + next_n_pos
+            else:
+                body_end = len(script_text)
             body = script_text[body_start:body_end].strip()
 
-            # Extract title: text after "Number X" up to first sentence-ending punctuation or newline
+            # Extract title: text after "Number X." up to first sentence-ending punctuation or newline
             after_number = script_text[match.end():body_end].strip()
             title_match = re.match(r'^[.:]?\s*(.+?)(?:[.!?\n]|$)', after_number)
             title = title_match.group(1).strip() if title_match else after_number[:80]
 
             # Context windows for fuzzy alignment
-            context_before = self._get_context(script_text, match.start(), direction="before", num_words=50)
+            context_before = self._get_context(script_text, real_start, direction="before", num_words=50)
             context_after = self._get_context(script_text, match.end(), direction="after", num_words=50)
+
+            # Build the clean number phrase (without leading newline/whitespace)
+            number_phrase = full[n_pos:].rstrip(".:")
 
             segments.append(ScriptSegment(
                 number=num_val,
                 title=title,
                 body=body,
-                char_offset=match.start(),
+                char_offset=real_start,
                 context_before=context_before,
                 context_after=context_after,
-                number_phrase=match.group(0),
+                number_phrase=number_phrase,
             ))
 
         print(f"   Found {len(segments)} segments in script: "

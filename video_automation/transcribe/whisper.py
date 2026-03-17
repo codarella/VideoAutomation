@@ -5,12 +5,17 @@ Runs Faster-Whisper multiple times with different settings, then merges
 results by taking median timestamps for words that appear across passes.
 This filters out hallucinated words and stabilizes timing.
 
-Long audio files are automatically split into chunks to avoid memory issues.
+Each pass runs in a separate subprocess to isolate CTranslate2/CUDA native
+code — this prevents heap corruption from crashing the main pipeline process.
 """
 
 from __future__ import annotations
 
 import difflib
+import json
+import os
+import subprocess
+import sys
 import tempfile
 from pathlib import Path
 from statistics import median
@@ -28,8 +33,8 @@ DEFAULT_PASS_CONFIGS = [
 ]
 
 # Audio longer than this (seconds) will be split into chunks
-CHUNK_THRESHOLD = 600  # 10 minutes
-CHUNK_LENGTH = 600     # 10-minute chunks
+CHUNK_THRESHOLD = 300  # 5 minutes
+CHUNK_LENGTH = 300     # 5-minute chunks
 CHUNK_OVERLAP = 5      # 5-second overlap to avoid cutting mid-word
 
 
@@ -45,57 +50,10 @@ class MultiPassTranscriber:
         self.model_size = model_size
         self.device = device
         self.compute_type = compute_type
-        self._model = None
 
     def unload(self):
-        """Explicitly release the Whisper model and free CUDA memory."""
-        if self._model is not None:
-            del self._model
-            self._model = None
-        import gc
-        gc.collect()
-        try:
-            import torch
-            torch.cuda.empty_cache()
-        except Exception:
-            pass
-
-    def _get_model(self):
-        if self._model is None:
-            from faster_whisper import WhisperModel
-            print(f"   Loading Faster-Whisper model ({self.model_size})...")
-            try:
-                self._model = WhisperModel(
-                    self.model_size,
-                    device=self.device,
-                    compute_type=self.compute_type,
-                )
-            except (RuntimeError, MemoryError) as e:
-                err = str(e).lower()
-                if "out of memory" in err or "cuda" in err or "malloc" in err or isinstance(e, MemoryError):
-                    print(f"   Out of memory — falling back to CPU with int8 quantization...")
-                    self.device = "cpu"
-                    self.compute_type = "int8"
-                    self._model = WhisperModel(
-                        self.model_size,
-                        device="cpu",
-                        compute_type="int8",
-                    )
-                else:
-                    raise
-            except Exception as e:
-                err = str(e).lower()
-                err_type = type(e).__name__
-                if "timed out" in err or "connection" in err or "LocalEntryNotFound" in err_type:
-                    raise RuntimeError(
-                        f"Cannot load Whisper model '{self.model_size}': "
-                        f"HuggingFace Hub is unreachable and the model is not fully cached. "
-                        f"Please check your internet connection and try again, or "
-                        f"download the model manually first."
-                    ) from e
-                raise
-            print(f"   Faster-Whisper loaded ({self.device}, {self.compute_type}).")
-        return self._model
+        """No-op — each pass runs in its own subprocess now."""
+        pass
 
     def transcribe(
         self,
@@ -105,12 +63,15 @@ class MultiPassTranscriber:
         """
         Transcribe audio with multi-pass consensus.
 
+        Each pass is run in a separate subprocess to isolate CTranslate2
+        native code and prevent heap corruption crashes.
+
         Returns: (words, audio_duration)
         """
-        audio_path = str(audio_path)
+        audio_path = str(Path(audio_path).resolve())
         print(f"   Audio file: {Path(audio_path).name}")
 
-        # Get duration to decide if we need chunking
+        # Get duration (lightweight, no model needed)
         duration = self._get_duration(audio_path)
         print(f"   Duration: {duration:.1f}s ({duration / 60:.1f} min)")
 
@@ -121,43 +82,19 @@ class MultiPassTranscriber:
 
         all_results: list[list[Word]] = []
         for i, cfg in enumerate(configs):
-            # Free CUDA cache between passes to avoid OOM buildup
-            if i > 0 and self.device == "cuda":
-                try:
-                    import torch
-                    torch.cuda.empty_cache()
-                except Exception:
-                    pass
-
             print(f"   Whisper pass {i + 1}/{len(configs)} "
                   f"(beam={cfg['beam_size']}, temp={cfg['temperature']})...")
 
-            try:
-                if duration > CHUNK_THRESHOLD:
-                    words = self._run_chunked_pass(audio_path, duration, **cfg)
-                else:
-                    words = self._run_single_pass(audio_path, **cfg)
-            except (RuntimeError, MemoryError) as e:
-                if ("out of memory" in str(e).lower() or isinstance(e, MemoryError)) and all_results:
-                    print(f"   ⚠ OOM on pass {i + 1} — skipping remaining passes, "
-                          f"using {len(all_results)} completed pass(es)")
-                    try:
-                        import gc
-                        gc.collect()
-                        import torch
-                        torch.cuda.empty_cache()
-                    except Exception:
-                        pass
+            words = self._run_pass_subprocess(audio_path, cfg)
+
+            if words is None:
+                if all_results:
+                    print(f"   ⚠ Pass {i + 1} failed — using {len(all_results)} completed pass(es)")
                     break
-                raise
+                raise RuntimeError(f"Whisper pass {i + 1} failed — see subprocess output above")
 
             print(f"      → {len(words)} words")
             all_results.append(words)
-
-        # Unload model NOW — all passes done, free CUDA before any more work.
-        # CTranslate2 can corrupt the heap if the model lingers while Python
-        # allocates heavily (e.g. during consensus merge or stage transition).
-        self.unload()
 
         if len(all_results) == 1:
             return all_results[0], duration
@@ -167,9 +104,67 @@ class MultiPassTranscriber:
         print(f"   → {len(merged)} consensus words")
         return merged, duration
 
+    def _run_pass_subprocess(self, audio_path: str, cfg: dict) -> list[Word] | None:
+        """Run a single Whisper pass in an isolated subprocess."""
+        # Write args to temp file
+        with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as f:
+            args_path = f.name
+            output_path = f.name + ".out.json"
+            json.dump({
+                "audio_path": audio_path,
+                "output_path": output_path,
+                "model_size": self.model_size,
+                "device": self.device,
+                "compute_type": self.compute_type,
+                "beam_size": cfg["beam_size"],
+                "temperature": cfg["temperature"],
+                "chunk_threshold": CHUNK_THRESHOLD,
+                "chunk_length": CHUNK_LENGTH,
+                "chunk_overlap": CHUNK_OVERLAP,
+            }, f)
+
+        try:
+            run_kwargs = dict(
+                stdin=subprocess.DEVNULL,
+                timeout=1800,  # 30 min max per pass
+            )
+            if os.name == "nt":
+                run_kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
+
+            result = subprocess.run(
+                [sys.executable, "-X", "utf8", "-u",
+                 "-m", "video_automation.transcribe._whisper_worker", args_path],
+                **run_kwargs,
+            )
+
+            if result.returncode != 0:
+                print(f"      ⚠ Subprocess exited with code {result.returncode}")
+                return None
+
+            # Read results
+            out_path = Path(output_path)
+            if not out_path.exists():
+                print("      ⚠ Subprocess produced no output file")
+                return None
+
+            data = json.loads(out_path.read_text(encoding="utf-8"))
+
+            # Update device/compute_type if worker fell back to CPU
+            if data.get("device") != self.device:
+                self.device = data["device"]
+                self.compute_type = data["compute_type"]
+
+            return [
+                Word(text=w["text"], start=w["start"], end=w["end"], confidence=w["confidence"])
+                for w in data["words"]
+            ]
+
+        finally:
+            Path(args_path).unlink(missing_ok=True)
+            Path(output_path).unlink(missing_ok=True)
+
     def _get_duration(self, audio_path: str) -> float:
         """Get audio duration using ffprobe (no RAM usage)."""
-        import subprocess, json
         try:
             result = subprocess.run(
                 ["ffprobe", "-v", "quiet", "-print_format", "json",
@@ -186,123 +181,6 @@ class MultiPassTranscriber:
                 f"Could not determine audio duration for '{audio_path}'. "
                 f"Is ffprobe installed and is the file a valid audio file?"
             ) from e
-
-    def _run_chunked_pass(
-        self,
-        audio_path: str,
-        total_duration: float,
-        beam_size: int = 5,
-        temperature: float = 0.0,
-    ) -> list[Word]:
-        """Split audio into chunks via ffmpeg, transcribe each, merge with offset timestamps."""
-        import os, subprocess
-
-        num_chunks = int(total_duration // CHUNK_LENGTH) + 1
-        print(f"      Splitting into {num_chunks} chunks of ~{CHUNK_LENGTH}s via ffmpeg...")
-
-        all_words: list[Word] = []
-        chunk_start = 0.0
-        chunk_idx = 0
-
-        while chunk_start < total_duration:
-            chunk_end = min(chunk_start + CHUNK_LENGTH, total_duration)
-            chunk_dur = chunk_end - chunk_start
-
-            print(f"      Chunk {chunk_idx + 1}/{num_chunks}: "
-                  f"{chunk_start:.0f}s – {chunk_end:.0f}s ({chunk_dur:.0f}s)")
-
-            # Extract chunk with ffmpeg (streams audio, no full-file RAM load)
-            with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
-                tmp_path = tmp.name
-
-            ffmpeg_kwargs = dict(capture_output=True, stdin=subprocess.DEVNULL, timeout=300)
-            if os.name == "nt":
-                ffmpeg_kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
-
-            subprocess.run(
-                ["ffmpeg", "-y", "-nostdin", "-ss", str(chunk_start), "-t", str(chunk_dur),
-                 "-i", audio_path, "-ar", "16000", "-ac", "1", tmp_path],
-                **ffmpeg_kwargs,
-            )
-
-            try:
-                chunk_words = self._run_single_pass(tmp_path, beam_size=beam_size, temperature=temperature)
-            except (RuntimeError, MemoryError) as e:
-                if "out of memory" in str(e).lower() or isinstance(e, MemoryError):
-                    # Clear cache and retry once with smaller beam
-                    try:
-                        import gc
-                        gc.collect()
-                        import torch
-                        torch.cuda.empty_cache()
-                    except Exception:
-                        pass
-                    print(f"      ⚠ OOM on chunk {chunk_idx + 1}, retrying with beam_size=1...")
-                    chunk_words = self._run_single_pass(tmp_path, beam_size=1, temperature=temperature)
-                else:
-                    raise
-            finally:
-                Path(tmp_path).unlink(missing_ok=True)
-
-            # Free CUDA cache between chunks
-            if self.device == "cuda":
-                try:
-                    import torch
-                    torch.cuda.empty_cache()
-                except Exception:
-                    pass
-
-            # Offset timestamps and add to results
-            for w in chunk_words:
-                absolute_start = w.start + chunk_start
-                # Skip words from the overlap region of previous chunk
-                if all_words and absolute_start < all_words[-1].end:
-                    continue
-                all_words.append(Word(
-                    text=w.text,
-                    start=round(absolute_start, 3),
-                    end=round(w.end + chunk_start, 3),
-                    confidence=w.confidence,
-                ))
-
-            # Advance, minus overlap to catch words at boundaries
-            # But if we already reached the end, stop
-            if chunk_end >= total_duration:
-                break
-            chunk_start = chunk_end - CHUNK_OVERLAP
-            chunk_idx += 1
-
-        return all_words
-
-    def _run_single_pass(
-        self,
-        audio_path: str,
-        beam_size: int = 5,
-        temperature: float = 0.0,
-    ) -> list[Word]:
-        """Run one Whisper pass on a single audio file, return words."""
-        model = self._get_model()
-        segments, info = model.transcribe(
-            audio_path,
-            word_timestamps=True,
-            beam_size=beam_size,
-            temperature=temperature,
-        )
-
-        words = []
-        for segment in segments:
-            if not segment.words:
-                continue
-            for w in segment.words:
-                text = w.word.strip()
-                if text:
-                    words.append(Word(
-                        text=text,
-                        start=round(w.start, 3),
-                        end=round(w.end, 3),
-                        confidence=round(w.probability, 3) if hasattr(w, 'probability') else 1.0,
-                    ))
-        return words
 
     def _consensus_merge(self, all_results: list[list[Word]]) -> list[Word]:
         """

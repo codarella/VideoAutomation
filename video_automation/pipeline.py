@@ -56,15 +56,12 @@ class TranscribeStage(Stage):
             device=self.config.whisper_device,
             compute_type=self.config.whisper_compute_type,
         )
-        try:
-            words, duration = transcriber.transcribe(
-                audio_path,
-                num_passes=self.config.whisper_passes,
-            )
-            project.words = words
-            project.audio_duration = duration
-        finally:
-            transcriber.unload()
+        words, duration = transcriber.transcribe(
+            audio_path,
+            num_passes=self.config.whisper_passes,
+        )
+        project.words = words
+        project.audio_duration = duration
 
         # Early checkpoint so transcription survives later crashes
         project_path = workspace / "scripts" / f"{project.name}_project.json"
@@ -104,6 +101,11 @@ class SegmentStage(Stage):
         parser = ScriptParser()
         script_text = script_path.read_text(encoding="utf-8")
         script_segments = parser.parse(script_text)
+
+        # Auto-detect segment count from script if not explicitly set
+        if project.expected_count == 0 and script_segments:
+            project.expected_count = len(script_segments)
+            print(f"   Auto-detected {project.expected_count} segments from script")
 
         parse_errors = parser.validate_against_expected(
             script_segments,

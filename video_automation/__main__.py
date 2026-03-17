@@ -29,7 +29,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--workspace", default="video_workspace", help="Workspace directory")
 
     # Segment detection
-    p.add_argument("--count", type=int, default=10, help="Expected segment count (default: 10)")
+    p.add_argument("--count", type=int, default=0, help="Expected segment count (0 = auto-detect from script)")
     p.add_argument("--direction", choices=["descending", "ascending"], default="descending",
                    help="Counting direction (default: descending)")
 

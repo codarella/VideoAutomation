@@ -91,6 +91,11 @@ class ScriptAligner:
                         method="unaligned",
                     ))
 
+        # Enforce monotonic ordering — if two segments are out of order,
+        # keep the higher-confidence one and re-search the other with a
+        # constrained time window.
+        self._fix_monotonic(aligned, whisper_words, whisper_texts)
+
         # Interpolate any unaligned segments from neighbors
         self._interpolate_unaligned(aligned, audio_duration)
 
@@ -119,22 +124,64 @@ class ScriptAligner:
         """
         Find a segment's timestamp using fuzzy context matching.
 
-        Uses the context AFTER "Number X" (the segment body) since that's
-        more unique than the "Number X" phrase itself.
+        Tries two needles:
+        1. Full body (includes "Number X" + title + content)
+        2. Content only (skips "Number X. Title." header) — catches cases
+           where Whisper drops the header phrase entirely.
         """
-        # Build the needle: "Number X" + first ~20 words of body
+        candidates: list[tuple[int, float, str]] = []  # (idx, score, method)
+
+        # Attempt 1: full body
         body_words = seg.body.split()[:self.context_size]
         needle = [w.lower().strip(".,!?;:'\"") for w in body_words]
+        if len(needle) >= 3:
+            idx, score = self._sliding_window_match(needle, whisper_texts)
+            candidates.append((idx, score, "context"))
 
-        if len(needle) < 3:
+        # Attempt 2: title sentence only (e.g. "The cosmic web is wrong")
+        # Short but distinctive — good when Whisper drops the "Number X" but
+        # keeps the title.
+        body_sentences = re.split(r'(?<=[.!?])\s+', seg.body, maxsplit=2)
+        if len(body_sentences) > 1:
+            title_words = body_sentences[1].split()[:self.context_size]
+            title_needle = [w.lower().strip(".,!?;:'\"") for w in title_words]
+            if len(title_needle) >= 3:
+                idx, score = self._sliding_window_match(title_needle, whisper_texts)
+                candidates.append((idx, score, "title_body"))
+
+        # Attempt 3: body after the title (skip "Number X. Title." prefix)
+        # Catches cases where Whisper drops both the header and title.
+        if len(body_sentences) > 2:
+            content_text = body_sentences[2]
+        elif len(body_sentences) > 1:
+            content_text = body_sentences[1]
+        else:
+            content_text = ""
+
+        if content_text:
+            content_words = content_text.split()[:self.context_size]
+            content_needle = [w.lower().strip(".,!?;:'\"") for w in content_words]
+            if len(content_needle) >= 3:
+                idx, score = self._sliding_window_match(content_needle, whisper_texts)
+                candidates.append((idx, score, "content_body"))
+
+        # Pick the best match
+        if not candidates:
             return None
 
-        best_idx, best_score = self._sliding_window_match(needle, whisper_texts)
+        best_idx, best_score, best_method = max(candidates, key=lambda x: x[1])
 
         if best_score >= self.similarity_threshold:
             timestamp = whisper_words[best_idx].start
+
+            # When content_body or title_body matched, the match point is
+            # AFTER the "Number X" header that Whisper dropped.  Walk backward
+            # to find the gap where it was spoken — use the start of that gap.
+            if best_method in ("content_body", "title_body") and best_idx > 0:
+                timestamp = self._backtrack_to_gap(whisper_words, best_idx)
+
             print(f"   Segment {seg.number}: aligned at {timestamp:.2f}s "
-                  f"(confidence={best_score:.2f}, method=context)")
+                  f"(confidence={best_score:.2f}, method={best_method})")
             return AlignedSegment(
                 number=seg.number,
                 title=seg.title,
@@ -143,10 +190,40 @@ class ScriptAligner:
                 end=0.0,  # Set later
                 words=[],  # Set later
                 confidence=round(best_score, 3),
-                method="context",
+                method=best_method,
             )
 
         return None
+
+    def _backtrack_to_gap(
+        self,
+        whisper_words: list[Word],
+        match_idx: int,
+        max_lookback: int = 30,
+        min_gap: float = 1.5,
+    ) -> float:
+        """
+        Walk backward from a content_body match to find the silence gap
+        where Whisper dropped the "Number X. Title." header.
+
+        Returns the timestamp at the start of the gap (= end of previous
+        segment's last word), which is where the segment truly begins.
+        """
+        start = max(0, match_idx - max_lookback)
+        best_gap_time = whisper_words[match_idx].start  # fallback
+        best_gap_size = 0.0
+
+        for i in range(match_idx, start, -1):
+            prev_end = whisper_words[i - 1].end
+            curr_start = whisper_words[i].start
+            gap = curr_start - prev_end
+
+            if gap >= min_gap and gap > best_gap_size:
+                best_gap_size = gap
+                best_gap_time = prev_end  # segment starts at end of previous word
+                break  # take the nearest large gap
+
+        return best_gap_time
 
     def _fallback_direct_match(
         self,
@@ -235,6 +312,55 @@ class ScriptAligner:
                 best_idx = i
 
         return best_idx, best_score
+
+    def _fix_monotonic(
+        self,
+        aligned: list[AlignedSegment],
+        whisper_words: list[Word],
+        whisper_texts: list[str],
+    ) -> None:
+        """
+        Enforce monotonically increasing timestamps.
+
+        When two adjacent segments are out of order, keep the one with higher
+        confidence and re-search the other in the constrained time window
+        after the previous segment.
+        """
+        changed = True
+        max_iters = len(aligned)  # prevent infinite loop
+        iteration = 0
+
+        while changed and iteration < max_iters:
+            changed = False
+            iteration += 1
+
+            for i in range(len(aligned) - 1):
+                curr = aligned[i]
+                nxt = aligned[i + 1]
+
+                if curr.start < 0 or nxt.start < 0:
+                    continue  # unaligned, will be interpolated later
+
+                if curr.start < nxt.start:
+                    continue  # already in order
+
+                # Out of order — keep the higher-confidence one, invalidate the other
+                if curr.confidence >= nxt.confidence:
+                    # Keep curr, re-search nxt after curr.start
+                    loser = nxt
+                    min_time = curr.start + 0.5
+                else:
+                    # Keep nxt, re-search curr before nxt.start
+                    loser = curr
+                    min_time = aligned[i - 1].start + 0.5 if i > 0 and aligned[i - 1].start >= 0 else 0.0
+
+                print(f"   ⚠ Fixing order: segment {loser.number} was out of sequence, re-searching...")
+
+                # Mark as unaligned so interpolation can fix it if re-search fails
+                loser.start = -1.0
+                loser.confidence = 0.0
+                loser.method = "unaligned"
+                changed = True
 
     def _interpolate_unaligned(
         self,

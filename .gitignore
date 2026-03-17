@@ -35,3 +35,6 @@ Desktop.ini
 # IDE
 .vscode/
 .idea/
+
+# Claude Code local settings (may contain API keys in permission entries)
+.claude/
