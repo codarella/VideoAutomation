@@ -80,16 +80,40 @@ class SceneSplitter:
 
         return all_scenes
 
+    def _compute_card_end(self, seg: AlignedSegment) -> float:
+        """
+        Compute the end time for the number card scene.
+
+        When Whisper captured "Number X" (number_word_end > 0), find where
+        the title sentence ends and use that. Otherwise fall back to the
+        fixed pacing duration.
+        """
+        if seg.number_word_end > 0:
+            # Find end of title sentence in the segment's words
+            title_end = seg.number_word_end
+            for w in seg.words:
+                if w.start < seg.number_word_end:
+                    continue
+                title_end = w.end
+                if w.text.rstrip().endswith((".", "!", "?")):
+                    break
+
+            # Add small padding so the card doesn't cut off abruptly
+            card_dur = (title_end - seg.start) + 0.3
+            # Clamp to reasonable range
+            card_dur = max(1.5, min(card_dur, 5.0))
+            return min(seg.start + card_dur, seg.end)
+
+        # Fallback: fixed duration from pacing config
+        return min(seg.start + self.pacing.number_card_duration, seg.end)
+
     def _split_segment(self, seg: AlignedSegment, start_idx: int) -> list[Scene]:
         """Split a single segment into number card + content scenes."""
         scenes: list[Scene] = []
         idx = start_idx
 
         # 1. Number card scene
-        card_end = min(
-            seg.start + self.pacing.number_card_duration,
-            seg.end,
-        )
+        card_end = self._compute_card_end(seg)
         card_words = [w for w in seg.words if w.start >= seg.start and w.end <= card_end]
 
         card = Scene(
