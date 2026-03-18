@@ -47,7 +47,7 @@ class Config:
 
     # ── Image settings ────────────────────────────────────────────
     aspect_ratio: str = "16:9"
-    resolution: str = "2K"
+    resolution: str = "1K"
     image_width: int = 1920
     image_height: int = 1080
 
