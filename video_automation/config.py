@@ -33,7 +33,7 @@ class Config:
 
     # ── API ───────────────────────────────────────────────────────
     ai33_base_url: str = "https://api.ai33.pro"
-    ai33_model: str = "bytedance-seedream-4.5"
+    ai33_model: str = "flux-2-pro"
     ai33_api_key: str = ""
 
     # ── Anthropic / Claude ────────────────────────────────────────
@@ -47,7 +47,7 @@ class Config:
 
     # ── Image settings ────────────────────────────────────────────
     aspect_ratio: str = "16:9"
-    resolution: str = "1K"
+    resolution: str = "1080p"
     image_width: int = 1920
     image_height: int = 1080
 
