@@ -1,7 +1,7 @@
 {
   "name": "Test 2",
-  "audio_path": "C:/Users/OVERLORD/Downloads/Telegram Desktop/Forget the intro. He_2.mp3",
-  "script_path": "C:/Users/OVERLORD/Downloads/Telegram Desktop/Forget the intro. Here it is. (3).txt",
+  "audio_path": "C:/Users/timik/Downloads/Music/Forget the intro. He_2.mp3",
+  "script_path": "C:/Users/timik/Downloads/Forget the intro. Here it is..txt",
   "expected_count": 8,
   "counting_direction": "descending",
   "style": "2d_western_cartoon",
@@ -14936,10 +14936,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 8 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_08.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15026,10 +15026,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Vast alien deep space backdrop — swirling electric blue and purple nebula clouds, neon pink star clusters, chaotic alien machinery floating at edges, toxic green energy tendrils. Viewer is a tiny witness drifting inside the expanding cosmos. A single ancient galaxy in center-left of frame, its light stretched into long horizontal red-orange streaks radiating outward, light waves visibly elongated and warped by cosmic expansion, the galaxy itself tiny against the immensity of dark space. Cosmic zoom level — galaxy at 8% of frame. Motion left-to-right as light stretches forward through time. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_00.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15122,10 +15122,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Deep space environment — dark indigo background packed with alien machinery silhouettes, glowing neon cyan portals swirling at edges, sickly yellow distant star fields, electric purple energy arcs. Viewer is floating between the past and present, witnessing time stretched. The expanding universe shown as a massive ballooning bubble of space filling 60% of frame, galaxies as tiny dots on its surface being stretched apart, arrows pointing outward in all directions. The bubble pulses with neon orange outlines against dark space. Wide cosmic framing, subject centered. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_01.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15188,10 +15188,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Cluttered alien observatory interior — glowing monitors, swirling telescope dish mechanisms, neon green readout screens, purple alien circuit panels covering walls, beakers of glowing liquid on shelves. Viewer stands beside the scientist. One stick figure in simple rectangle lab coat stands at a massive telescope control panel, head tilted upward in awe, dot eyes wide circles, mouth agape O shape, one arm pointing dramatically upward toward a glowing portal window showing deep ancient space with a tiny distant galaxy 13 billion years away. Human zoom level, figure 40% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_02.png",
+      "status": "generated",
       "include_character": true,
       "metadata": {
         "segment_number": 8,
@@ -15254,11 +15254,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. Alien space backdrop — deep black with toxic green and electric blue star-burst explosions scattered densely, neon pink supernovae blooms, alien machinery floating in background. Viewer witnesses a galaxy in frenzy. One stick figure scientist stands off-center left, eyes bulging large circles, sweat drops flying, arms raised in shock. The James Webb Space Telescope rendered as a chunky angular hexagonal mirror shape floats in upper right, its golden panels flat cel-shaded, aimed at a furiously bright distant galaxy exploding with hundreds of tiny star-birth flashes in neon yellow and white. Cosmic-human hybrid zoom. Motion left-to-right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_03.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -15326,10 +15326,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Maximalist alien space environment — dense neon pink and acid green star clusters, swirling electric blue gas clouds, alien gadget silhouettes at frame edges, chaotic energy lines radiating from center. Viewer is dazzled witness. One stick figure at bottom-left, dot eyes replaced by huge bulging circles, both arms raised in disbelief, mouth wide open. A galaxy at center blazes with 180 tiny explosion bursts — star formation events rendered as flat neon yellow starbursts — compared to a small calm Milky Way spiral in corner with only a few stars. CLIMAX framing, galaxy fills 65% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_04.png",
+      "status": "generated",
       "include_character": true,
       "metadata": {
         "segment_number": 8,
@@ -15398,10 +15398,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Deep space backdrop — dark purple-black filled with alien chemical analysis equipment floating, glowing spectral rainbow light beams splitting across frame, neon cyan prisms, toxic green chemical symbol shapes drifting. Viewer witnesses light being decoded. A beam of ancient light from a tiny distant galaxy at left streams right-to-left into a large prism shape center-frame, splitting into a rainbow fingerprint spectrum of flat colored bands. The chemical fingerprint bands glow with unusual intensity — carbon signature band flashing neon orange, oxygen band electric blue. Wide framing, beam dominates. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_05.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15458,11 +15458,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "prompt": "2D Western Cartoon animation. Tight close-up environment — alien chemical laboratory floating in space, glowing molecular models orbiting, neon green carbon atom clusters, electric blue oxygen rings, sickly yellow bond lines connecting them, purple space background peeking through. Viewer is zoomed in to molecular scale. A glowing carbon molecular structure — hexagonal rings in neon orange flat color — dominates 70% of frame center, surrounded by orbiting oxygen atoms as simple circles in electric blue. The molecules glow with impossible intensity against dark space. CLIMAX zoom, close framing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_06.png",
+      "status": "generated",
+      "include_character": false,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -15500,11 +15500,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "prompt": "2D Western Cartoon animation. Alien molecular cloud environment — dark space packed with floating complex molecule shapes, neon green carbon chains, electric blue oxygen atoms, pink nitrogen bubbles, acid yellow organic compound rings all drifting chaotically. Viewer floats among impossible chemistry. Organic compound molecules rendered as flat 2D geometric shapes — hexagons, rings, chains — in toxic green and neon pink, frozen in glowing blue-white ice crystal formations, scattered densely across the frame. No characters. Close zoom on the molecular ice field filling 75% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_07.png",
+      "status": "generated",
+      "include_character": false,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -15584,11 +15584,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Young alien star environment — blazing neon yellow-white young star at center surrounded by a spinning protoplanetary disk of flat green gas and orange dust, alien lab equipment floating at frame edges, electric blue shock lines radiating from star, purple deep space behind. Viewer orbits close to the young star. One stick figure at bottom-right, lab coat rectangle, leaning forward intently examining the star's disk, one arm pointing at the glowing icy molecular cloud wrapped around the disk in electric blue crystals. Human-cosmic zoom, star fills 50% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "failed",
+      "include_character": true,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -15638,10 +15638,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Neighboring galaxy backdrop — a flat 2D spiral galaxy rendered in neon purple and electric blue at center-right, alien in shape, surrounded by deep black space with toxic green energy bursts at corners, swirling pink star clusters. Viewer witnesses the impossible discovery. Floating between the Milky Way and the neighboring galaxy are glowing molecular shapes — never-before-seen molecule structures rendered as bizarre alien geometric forms in neon pink and acid green — drifting left to right across frame. CLIMAX framing. Molecules fill 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_09.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15710,10 +15710,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien science classroom environment — dark purple walls covered with floating cosmic model diagrams, neon green theoretical charts, electric blue timeline arrows, sickly yellow prediction graphs all rendered as abstract shapes. Viewer stands as witness to model confrontation. A large flat cosmic model diagram — showing a simple timeline of the early universe as a horizontal bar in muted gray — dominates upper 60% of frame. The timeline shows only hydrogen and helium marked with simple atom symbols in neon blue. Below it, a chaotic mess of complex molecule shapes in toxic green contradiction. Wide framing, diagram centered. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_10.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15752,10 +15752,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Early universe environment — vast dark space, nothing but sparse glowing hydrogen atom dots in electric blue scattered thinly across the frame, a vast emptiness dominating, neon pink Big Bang remnant glow at the far left edge fading right. Viewer witnesses the primordial void. The early universe shown as nearly empty space — just a handful of simple circle hydrogen atoms and slightly larger helium atoms drifting in black void, the universe feeling sparse and raw. Cosmic zoom, subject fills 90% of frame as emptiness. Motion from left (Big Bang glow) rightward into void. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_11.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -15830,11 +15830,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. Alien physics lecture hall environment — floating neon green chalkboard-like panels, electric blue atomic model diagrams orbiting, sickly yellow periodic table shapes, purple cosmic background behind. Viewer stands with the scientist. One stick figure at left, arms spread in explanatory gesture, mouth open talking, eyes normal dot size, pointing at a large floating diagram showing only two element types — simple circle hydrogen atoms in electric blue and slightly larger helium atoms in neon yellow — with everything else crossed out in red. Wide framing, diagram and figure share space. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_12.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -15890,10 +15890,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Early universe timeline environment — deep black space, sparse hydrogen and helium atoms drifting, but in background a faint trail of generations of stars shown as tiny sequential star shapes in neon yellow going left to right across upper frame. Viewer witnesses the generational requirement. One stick figure at bottom, looking upward at the star generation trail, expression pensive — leaning forward, simple furrowed brow lines, one hand raised to chin. The trail shows three generations: first tiny dim stars, second slightly brighter, third full neon. DETAIL framing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_13.png",
+      "status": "generated",
       "include_character": true,
       "metadata": {
         "segment_number": 8,
@@ -15968,10 +15968,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien chemistry-of-space environment — dark purple space packed with floating carbon atoms in toxic green, oxygen atoms in electric blue, nitrogen atoms in neon pink, all swirling and connecting via flat yellow bond lines into complex molecules. The elements fill the air like a storm. Viewer floats inside the chemical storm. Carbon, oxygen, and nitrogen atoms rendered as bright flat colored circles with simple atomic labels replaced by color-coding only, swarming across the frame in dense chaotic clusters. Close zoom, elements fill 80% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_14.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16022,10 +16022,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Cosmic stellar lifecycle environment — deep space background in dark navy, a long horizontal procession of stars going left to right: tiny infant star at far left in pale yellow, mid-life star in bright neon yellow center-left, aging giant star in orange-red center-right, all rendered as flat circles with wavy corona lines. Viewer watches the march of time. The three-stage star sequence fills 70% of frame top-center, below it a simple timeline arrow pointing right in electric blue, indicating hundreds of millions of years must pass. Wide-horizontal framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_15.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16094,10 +16094,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Pre-supernova star environment — a massive bloated red-orange star at center-right filling 55% of frame, its surface bubbling with flat-shaded plasma blobs in neon orange and sickly yellow, cracks appearing on its surface in electric blue, energy building visibly. Deep black space surrounds it with alien machinery silhouettes at edges. Viewer is dangerously close witness. The massive star is clearly at the edge of death — surface bulging, flat shockwave rings in neon yellow beginning to form outward. CLIMAX buildup framing, star off-center right. Motion energy radiating outward. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_16.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16202,10 +16202,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Supernova explosion environment — maximum visual drama, a massive star exploding at dead center of frame, filling 65% of the image with a flat-shaded blast of neon yellow, toxic green, electric blue, and neon pink explosion rings expanding outward in concentric flat-color circles. Guts of the star — heavy element debris clouds in orange, carbon blobs in green, oxygen rings in blue — scattering in all directions outward. Deep black alien space surrounds the explosion. CLIMAX framing, explosion centered and overwhelming. Motion radiating outward in all directions. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_17.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16244,10 +16244,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Post-supernova debris cloud environment — dark space filled with slowly drifting heavy element debris clouds from the explosion, neon orange carbon chunks, electric blue oxygen wisps, toxic green nitrogen puffs all floating gently outward in all directions from a fading explosion center. The violence is over, the scattering begins. Viewer watches the aftermath from a distance. The debris clouds fill 60% of frame, expanding left and right from a dim explosion remnant at center. Soft neon glow on debris edges. Wide cosmic framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_18.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16376,11 +16376,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. New star formation environment — swirling gas and element debris condensing into new protostellar clouds, neon green and orange gas spiraling inward into new star shapes forming at right side of frame, alien machinery and equipment floating at edges, electric blue timeline arrow spanning the bottom of the frame. Viewer witnesses inheritance. One stick figure at lower left, arms raised triumphantly, simple smile line, watching the new generation of stars form from scattered supernova debris at right. The process looks laborious — multiple formation stages visible. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_19.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -16400,11 +16400,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. Cosmic timeline environment — a long horizontal timeline bar in electric blue stretches across the full width of the frame against deep black alien space, marked with star-generation milestones as simple flat shapes. Neon pink and purple nebulae fill background chaotically. Viewer stands at the scale of cosmic time. The timeline bar dominates center frame, showing the enormous span of hundreds of millions of years required for one stellar generation cycle. Cosmic wide framing, timeline fills full width. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_20.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -16532,10 +16532,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Post-supernova cooling gas environment — vast dark space filled with swirling hot gas clouds in flat neon orange slowly fading to cooler electric blue at the edges, representing 50 million years of gas cooling after the initial supernovae. Alien thermometer-like gadgets float at frame edges. Viewer witnesses the slow cooling. The hot gas cloud at left is bright neon orange-red, transitioning rightward to cooler muted blue as time passes, the cloud shape large and billowing. A simple flat clock-like circular indicator in alien design at top shows time passing. Wide framing, gas cloud fills 70% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_21.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16658,10 +16658,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Ancient early universe environment — deep black space, the distant James Webb target galaxy at center surrounded by swirling neon aura. Inside the galaxy zone, complex molecule formations and heavy element clouds already present in glowing toxic green and electric blue, frozen into molecular ice crystals in bright white-blue. The galaxy blazes impossibly with chemical richness. Viewer is stunned cosmic witness. The heavy element molecular ices dominate 65% of center frame, glowing anachronistically bright against the ancient dark universe. CLIMAX framing. No characters. Motion suggesting these elements arrived too early, left-to-right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_22.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16688,11 +16688,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "prompt": "2D Western Cartoon animation. Ancient cosmos environment — dark deep space, sparse and primitive, only the faint glow of first-generation stars visible as tiny simple star shapes in pale yellow at upper frame. Below them, the expected state: raw hydrogen gas clouds in muted blue-gray. Viewer witnesses the contrast between what should be and what is. The expected young universe is muted and sparse, taking up 80% of the frame in dark emptiness. This is the 'should have been' — chaotic alien machinery at edges but the center is desolate and cold. Cosmic zoom, emptiness is the subject. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_23.png",
+      "status": "generated",
+      "include_character": false,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -16808,10 +16808,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Split-time cosmic environment — a flat analog clock-like alien device at top-center shows time running, but below it the chemistry is already complete and running ahead. Deep black space background with neon green chemical molecular structures already assembled in impossible abundance at center, while a fading first-generation star barely dying out appears at right edge. The chemistry is winning the race against the clock. CLIMAX framing — molecular structures fill 60% center frame, glowing neon green and electric blue. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_24.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -16964,10 +16964,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Cosmic paradox environment — vast dark space, on the left a simple flat timeline arrow labeled with nothing but visual milestones in muted gray representing hundreds of millions of years, on the right a universe already packed with complex glowing molecular structures in toxic green, neon pink, and electric blue — the complexity arrived impossibly early. Viewer witnesses the universe building what it shouldn't be able to build yet. The gap between expectation and reality shown as a dramatic visible chasm in the middle of the frame, electricity arcing across it in neon yellow. Wide cosmic framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_25.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -17024,10 +17024,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Broken model environment — deep alien space, a large flat diagram of the standard cosmological model shown as a muted gray architectural blueprint shape at center, cracks spreading across it in neon red, question marks floating around it in electric yellow. The tools of science — simple flat wrench and gear shapes — float uselessly around the cracked model. Viewer confronts the failure. The broken model blueprint fills 55% of center frame. Alien machinery at background edges. REACTION framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_26.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -17180,10 +17180,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. CHANGE scene — split frame vertically. LEFT side: muted dark gray-blue palette showing normal model first stars as small dim pale yellow stars burning at expected pace, regular size, dying slowly. RIGHT side: full neon palette — blazing electric white-yellow mega-stars burning at extreme intensity, exploding faster, their cores hotter shown by neon orange cores, dying in rapid brilliant supernovae blasts in neon green. Deep alien space behind both sides with a jagged split line between them. Wide framing, each half fills 50% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_27.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -17276,10 +17276,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien science archive environment — dark purple space filled with floating classification tags, specimen jars of glowing alien molecules in neon green and pink, filing cabinet shapes drifting, a sense of organized knowledge. But at center, the impossible molecules are classified, tagged, catalogued with alien filing symbols. Viewer witnesses the classification as complete but unsatisfying. The classified impossible molecules — complex geometric molecular shapes — sit neatly in glowing specimen containers at center frame, organized but still radiating wrongness with neon halos. A satisfied but uneasy tone. Wide framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_28.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 8,
@@ -17300,11 +17300,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "prompt": "2D Western Cartoon animation. Dark alien space environment — deep black background, minimal elements, just swirling electric blue and purple cosmic fog at edges. A lone alien question mark shape in neon yellow floats at center, large and ominous, representing the unnamed next discovery approaching. The frame feels like the pause before the storm. Viewer senses impending chaos. Single giant question mark shape fills 40% of center frame, surrounded by an eerie glow. Extreme tension in the stillness. Cosmic zoom. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_29.png",
+      "status": "generated",
+      "include_character": false,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -17324,11 +17324,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "prompt": "2D Western Cartoon animation. Dark alien void environment — almost completely black background with only faint neon pink edge-glow at frame borders, a sense of approaching unknown. A second alien question mark in electric blue appears beside the first neon yellow one, both floating at center, the frame feeling like anticipation of something unclassifiable. Viewer is at the threshold of the unknown. Two question marks at center, slightly off-balance composition. Minimal background. Tight framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_30.png",
+      "status": "generated",
+      "include_character": false,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -17372,11 +17372,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "prompt": "2D Western Cartoon animation. Complete void environment — total alien darkness with just a thin neon pink halo ring at absolute center of frame, representing the unnamed unclassifiable thing about to be revealed. The halo pulses with flat-shaded electric energy rings expanding outward. Maximally ominous. Viewer stands at the edge of the unknowable. The neon halo ring is the only subject, filling 50% of center frame. Deep alien darkness everywhere else. CLIMAX of segment — peak tension before reveal. Cosmic framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_08_31.png",
+      "status": "generated",
+      "include_character": false,
       "metadata": {
         "segment_number": 8,
         "segment_title": "Complex molecules where none belong"
@@ -17389,10 +17389,10 @@
       "end": 121.36,
       "text": "Number 7.",
       "words": [],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 7 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_07.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -17515,10 +17515,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien university observatory environment — a chunky cartoon James Webb Space Telescope shape rendered as flat gold hexagonal mirror panels at center-left, alien control panels and neon green readout screens surrounding it, Missouri state silhouette shape at top in muted purple, deep black space visible through large portal window at right. Viewer witnesses the telescope pointing. The JWST model is aimed directly at a small patch of deep space visible through the portal, that patch glowing with unusual brightness. Wide establishing framing. No characters. Motion left-to-right, telescope aimed right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_00.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -17635,10 +17635,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Deep ancient space environment — dark black background, and scattered across the frame are 300 tiny but brilliantly glowing dots of white-neon yellow light, too bright for their apparent distance, surrounded by distance-marker rings in muted blue showing how far they are. The brightness is visibly wrong — they blaze like nearby objects despite being impossibly distant. Viewer witnesses the violation. The 300 glowing objects fill the frame in a dense scatter pattern. CLIMAX framing, chaotic alien energy lines at edges. Cosmic zoom. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_01.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -17755,10 +17755,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien taxonomy environment — dark space filled with floating specimen cases. Left case shows normal galaxy shape in flat muted blue-gray with 'normal' visual indicator. Center case shows a quasar — bright flat disk with jets in electric blue and neon yellow. Right area: empty case with a glowing neon question mark inside it. The 300 objects don't fit any case. Viewer watches the classification fail. Three specimen cases arranged left to right in flat 2D, alien laboratory aesthetic, the empty question-mark case at right drawing the eye. Wide framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_02.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -17875,10 +17875,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Black hole devouring environment — a massive flat black circle with swirling accretion disk of electric blue and neon orange superheated gas spiraling into it at center frame, filling 60% of frame. Around it, the word 'quasar' replaced by visual markers — extreme brightness jets shooting upward and downward in neon white-yellow. But this is NOT the 300 objects — this is what they are NOT. Muted visual compared to the 300 bright objects. Wide framing showing the quasar as a known, categorized thing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_03.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18019,10 +18019,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien physics ceiling environment — a large flat horizontal ceiling bar in electric blue spans the upper third of the frame, labeled visually with a brightness limit indicator. Below the ceiling, normal galaxies and quasars in muted colors. But 300 glowing neon yellow objects violate the ceiling — they burst upward through it, breaking through in a chaotic explosion of brightness. The ceiling has cracks and holes where the objects punched through. CLIMAX energy. No characters. Cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_04.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18115,10 +18115,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien physics classroom environment — deep purple space with three floating equation-like visual diagrams arranged vertically: top shows brightness-to-mass connection as simple shape size correlation in neon yellow, middle shows mass-to-age as simple heavy vs light balance in electric blue, bottom shows age-to-gravity time as hourglass shape in neon green. Three interconnected arrows link them in a chain. Viewer witnesses the logic chain. Wide framing, chain fills 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_05.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18247,11 +18247,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. Alien budget-breaking environment — a large flat cosmic budget meter at left: a simple vertical gauge showing the maximum allowed brightness in muted gray, topped by a red warning line. On the right, the 300 objects are shown as bright neon yellow blobs stacked absurdly above the budget line, overflowing it massively, chaos energy lines around them. One stick figure at bottom-right, both arms raised in exasperation, dot eyes wide, sweat drops flying. Human-wide framing. CLIMAX tone. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_06.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 7,
         "segment_title": "Three hundred objects that defy classification"
@@ -18355,10 +18355,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Early universe galaxy interior environment — a large flat alien galaxy shape at center with an extremely active neon core, and at its center a supermassive black hole shown as a flat black circle surrounded by swirling flat electric blue and neon orange accretion disk. The disk glows intensely, inflating the galaxy's apparent brightness as neon halos radiate outward. Deep ancient space background in dark purple. Close zoom on the black hole and accretion disk filling 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_07.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18463,11 +18463,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. Accretion disk close-up environment — extreme close-up on a swirling flat 2D accretion disk: a fat doughnut shape of superheated gas in neon orange and electric blue swirling concentrically around a black void center. Gas particles as flat colored dots spiral inward from the outer ring. The heat is shown as neon yellow shimmer blobs radiating outward. One stick figure at bottom-left, leaning toward the disk intently, eyes wide circles, one hand raised to shield from the brightness, lab coat rectangle. DETAIL framing, disk fills 70% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_08.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 7,
         "segment_title": "Three hundred objects that defy classification"
@@ -18583,10 +18583,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. New object classification environment — dark alien space with a large flat display case at center showing a brand new, empty category slot glowing in neon pink. Beside it, two known slots: one with a muted gray galaxy shape, one with a quasar shape in electric blue. The new slot is labeled with an alien question mark symbol and contains a red glowing compact dot — a 'little red dot' object. The new category radiates impossible energy. Wide framing, three display cases arranged horizontally. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_09.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18685,10 +18685,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Ancient universe 'little red dots' environment — deep dark ancient space background in near-black with neon red compact glowing dots scattered across the frame. Each dot is intensely luminous neon red-crimson, small and round, surrounded by tight neon halos. They don't match any shape in the alien taxonomy charts shown as muted gray outlines at frame edges. Viewer witnesses the anomalous objects filling ancient space. The red dots fill 70% of frame scattered across dark cosmos. Close-cosmic zoom. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_10.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18799,10 +18799,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien template library environment — dark space, shelves of flat 2D galaxy templates in muted gray and blue on the left wall: spirals, ellipticals, irregulars, quasars — all labeled with alien symbols. On the right, a little red dot object zoomed close: compact, blazing neon red, radiating impossible energy, matching none of the templates. A red X mark floats above each template as the red dot fails to match. CHANGE scene feel — left muted templates, right neon reality. Wide framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_11.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18853,10 +18853,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Single survey field environment — a flat 2D representation of a patch of deep space like a window into ancient cosmos, and inside that window exactly 300 glowing red dots arranged in a dense scatter filling the window frame. The window itself is outlined in electric blue. Outside the window is alien observatory machinery and neon green equipment. Viewer is stunned by the number in one survey. The window with 300 dots fills 60% of center frame. Cosmic-human hybrid zoom. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_12.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -18949,11 +18949,11 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "prompt": "2D Western Cartoon animation. Brightness ceiling violation environment — a flat horizontal ceiling bar in electric blue at upper frame with a bold maximum limit indicator, and below it 300 neon yellow glowing objects all crashing upward through the ceiling in chaotic bursts, shattering the limit line. One stick figure at lower-left, hands on head, bulging eyes, mouth open O shape, expression of maximum shock. Alien debris from the shattered ceiling rule floats downward. CLIMAX framing. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_13.png",
+      "status": "generated",
+      "include_character": true,
       "metadata": {
         "segment_number": 7,
         "segment_title": "Three hundred objects that defy classification"
@@ -19093,10 +19093,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Early ancient universe panorama — vast dark deep space, and scattered across the entire cosmic panorama in every direction, 300 glowing neon yellow-white violations shine like forbidden stars, distributed across billions of light years of space. The scale of the violation is overwhelming. A sense of evidence that a rule never existed — the 300 objects arranged like stars in a constellation that spells chaos. COSMIC zoom, the violation fills the whole frame. No characters. Wide expansive framing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_14.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -19189,10 +19189,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien classification system collapse environment — a large flat 2D taxonomy tree — branching organizational chart of astronomical objects in muted gray and blue — cracks spreading across all branches in neon red, pieces falling off, the whole classification structure crumbling. Deep alien space behind it, with the 300 glowing red dots floating chaotically outside the broken taxonomy tree. REACTION framing — aftermath of classification failure. Wide framing, taxonomy tree fills 65% of frame as it collapses. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_15.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -19261,10 +19261,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Cosmic contradiction environment — dark alien space at left shows 300 unclassifiable glowing objects in chaos — a problem but containable. But at right, a lone ancient star HD 140283 glows in impossible neon gold-white, and beside it an alien age-gauge reads beyond the edge of the universe's timeline bar. The contradiction of a star older than everything visualized as the star sitting OUTSIDE a timeline bubble representing the universe's age. CHANGE scene, split feel, left=problem, right=contradiction. Wide cosmic framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_07_16.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 7,
@@ -19327,10 +19327,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 6 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_06.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -19417,10 +19417,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Alien star field environment with constellation Libra — deep dark space background, a constellation Libra shape drawn in dotted electric blue connecting stars at upper frame, and in the center of the constellation a single slightly larger, brighter star glows in neon gold-white: HD 140283. A distance indicator shows 200 light years in simple visual form — a dotted line from Earth dot at far left to the star at center. One stick figure at bottom-left with binoculars shape over eye dots, looking up at the star in wonder. ESTABLISH framing, star centered. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_00.png",
+      "status": "generated",
       "include_character": true,
       "metadata": {
         "segment_number": 6,
@@ -19537,10 +19537,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. High-speed star environment — HD 140283 as a neon gold-white star at center-left of frame, with dramatic flat speed lines and motion blur streaks in electric blue trailing behind it as it moves across the sky at 800,000 miles per hour. The speed is visually overwhelming — the star streaks across deep black space leaving a blazing trail. Alien speed indicator gauges at frame edges are pegged to maximum. DETAIL framing, star and speed trail fill 65% of frame. No characters. Motion left-to-right at extreme speed. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "failed",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -19681,10 +19681,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Milky Way halo environment — a large flat 2D Milky Way galaxy shape in muted neon blue-white at center, and surrounding it a spherical halo cloud of ancient stars in dimmer neon gold, including HD 140283 as a slightly highlighted star in the halo. The star is a visitor from this ancient halo, shown by a simple trajectory arc dotted line from the halo down toward Earth area. Deep alien space beyond. Wide cosmic framing, Milky Way and halo fill 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_02.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -19801,10 +19801,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Alien seismology laboratory environment — deep space setting with floating alien instruments shaped like seismic wave monitors, glowing readout screens with wave patterns in neon green, vibration sensors arrayed around a central star shape. A flat 2D representation of HD 140283 at center with internal vibration wave rings shown as concentric neon orange rings pulsing outward from its core — the asteroseismic analysis visualized. Wide framing, lab and star share space. No characters. DETAIL scene. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -19927,10 +19927,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Age measurement environment — a large alien age-gauge instrument at center: a circular dial with a massive neon red needle pointing to 14.2 billion years on the scale. The star HD 140283 sits above the gauge in neon gold-white. The gauge face is bold and simple — flat cel-shaded instrument with a wobbly hand-drawn feel. Deep alien space background with glowing machinery at edges. The needle is unmistakably deep in the red zone. CLIMAX framing, gauge fills 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_04.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20041,10 +20041,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. CHANGE scene — split frame vertically. LEFT side: HD 140283 age marker at 14.2 billion years in neon gold, the number represented as a long visual timeline bar in neon yellow extending far right. RIGHT side: Universe age timeline bar in electric blue, ending at 13.8 billion years — shorter than the star's bar. The star's bar clearly extends BEYOND the universe's bar, the overhang highlighted in neon red with alarm lines. Muted palette left, alarming neon right. No characters. Wide framing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_05.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20155,10 +20155,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Cosmic microwave background environment — the entire frame filled with a flat 2D representation of the CMB: a mottled pattern of flat color patches in muted neon blue, neon pink, and pale yellow, the ancient afterglow of the Big Bang rendered in 2D cel-shaded blobs. At center, a faint oval shape representing the Planck satellite data map. The CMB is the universe's birth certificate. Viewer IS the CMB, surrounded by it. EXTREME CLOSE cosmic framing, CMB fills entire frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_06.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20275,10 +20275,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Multi-instrument cosmology environment — deep space backdrop with four floating alien instrument shapes arranged in corners: Planck satellite shape at top-left in muted silver, expansion rate arrows in electric blue at top-right, supernova blast shape at bottom-left in neon orange, Cepheid variable star at bottom-right pulsing in neon yellow. All four connected by dotted lines to a central glowing number shape at center representing 13.8 billion years. All arrows point inward to confirm the same answer. Wide framing, instruments at corners, convergence at center. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20317,10 +20317,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Precision measurement environment — a massive flat alien precision gauge at center, its needle in electric blue pointing to an extremely precise mark on the dial. The gauge is ornate with alien measurement marks but the needle's position is unmistakable. Behind it, deep purple alien space with glowing data readout screens at edges all showing the same confirmed value. The most precisely known value in physics, visualized as perfect precision. Close zoom on gauge face filling 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_08.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20443,10 +20443,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Ancient star Methuselah environment — HD 140283 rendered as a wise, ancient-looking star at center frame: neon gold-white, large and imposing, surrounded by faint age rings in muted amber. Its glow is unmistakably old. Deep black ancient space surrounds it with sparse dim companion stars far away. The star feels like it has witnessed everything. A subtle ethereal aura in neon gold pulses around it. ESTABLISH feel for this star's identity. Cosmic zoom, star fills 40% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_09.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20581,10 +20581,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "2D Western Cartoon animation. Impossible timeline environment — a horizontal timeline bar in electric blue representing the universe's full age. At the far LEFT of the timeline, before the starting point, the Methuselah Star glows in neon gold — it exists BEFORE the beginning. The Big Bang explosion shape at the start of the timeline is at right of the star, meaning the star predates its own container. CLIMAX framing — the star sitting before the Big Bang is the central impossible image. Wide framing, timeline spanning full width, star outside it at left. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\scene_06_10.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20707,10 +20707,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Error bar environment — a large flat statistical chart at center showing the star's age estimate: a bold central neon gold marker at 14.2 billion years with thin error bar lines extending 400 million years in each direction. Below it, the universe's age marker in electric blue at 13.8 billion years. The two ranges barely touch at their closest edges — the overlap is minimal, a hair's width in neon red. The central estimates clearly do not overlap. DETAIL framing, chart fills 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20809,10 +20809,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Narrowing measurement environment — three sequential age estimate bars arranged vertically, each shorter than the last, going from top to bottom: top bar is wide ranging (12-16 billion in muted gray), middle bar narrower (13-15 billion in electric blue), bottom bar tightest (13.8-14.6 billion in neon gold). Each successive bar centers on an uncomfortable high number. The progression is clear: as measurements narrow, the number doesn't become comfortable, it becomes worse. DETAIL framing, three bars at center. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -20941,10 +20941,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Converging measurement environment — a funnel shape in electric blue narrowing from wide at left (representing 12-16 billion range) to a tight point at right, and that tight point doesn't land on a safe comfortable number — it lands squarely outside the universe age bubble shown as a glowing neon blue circle. The funnel's tip pierces beyond the universe bubble edge. Dark alien space background, alien measurement equipment floating at edges. REACTION framing, funnel spanning full width. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -21001,10 +21001,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Uncomfortable number environment — a large alien dial at center, needle pointing to an extreme position beyond a comfortable safe zone. The safe zone is marked in muted green to the left. The uncomfortable zone is in neon red to the right. The needle is firmly in the red zone. Simple, stark, alarming. Deep dark alien space behind the dial, with a few floating warning indicators in neon orange at corners. Close zoom on dial filling 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -21157,10 +21157,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Night sky environment — a simplified Earth ground silhouette at bottom in muted dark green, a human figure (silhouette/stick figure ground-level) looking up, and above in the dark alien night sky, the Methuselah Star HD 140283 blazes in neon gold among a field of smaller stars. The star is visually emphasized with a neon gold halo, unmistakably ancient. A simple dotted line from the viewer's eyes to the star. The star feels impossible and ancient. Wide atmospheric framing, star and sky fill 70% of frame. No characters above ground except sky. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 6,
@@ -21217,10 +21217,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Ancient measurement lab environment — glowing alien instruments at all edges, pulsing neon screens, floating data readouts. One stick figure at center, both hands pressed to sides of its round head, dot eyes replaced by massive bulging circle eyes, sweat drops flying, mouth open in horrified O shape. Above the figure, the Methuselah Star glows in neon gold against deep black space. Below the figure, the universe timeline bar with the star sitting visibly before its start point. The scientist has just processed the full impossibility. CLIMAX-REACTION, human zoom, figure 45% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": true,
       "metadata": {
         "segment_number": 6,
@@ -21247,10 +21247,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 5 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_05.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -21337,10 +21337,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Ancient early universe environment — deep dark space, only 280 million years after the Big Bang shown as a barely formed cosmos: sparse dim proto-galaxies as tiny smudges at edges, but at center MOM-Z14 blazes impossibly. The galaxy is shown as a flat spiral shape in neon pink and electric blue, luminous and structured, against the primordial darkness. A timeline bar at bottom shows only 280 million years from a Big Bang burst at left. ESTABLISH framing, MOM-Z14 centered. Wide cosmic zoom. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -21469,10 +21469,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Model prediction vs reality environment — CHANGE scene split frame. LEFT side: muted dark space showing what models predicted at 280 million years: tiny faint smears of light, primitive gas clumps in muted blue-gray, almost nothing. RIGHT side: full neon palette showing MOM-Z14 actually found — luminous structured galaxy in neon pink and electric blue blazing with star formation. The contrast is stark and visually dramatic. Wide split framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -21583,11 +21583,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Primordial gas environment — deep dark ancient space filled with the expected contents: small faint clumps of raw hydrogen gas in muted blue-gray, dim smears of pale light, chemically primitive wisps in pale yellow. These are the small clumps and faint smears the models predicted. The universe looks embryonic and formless. Viewer witnesses what should have been there. Wide cosmic framing, primitive gas structures fill 70% of frame in muted tones. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 5,
         "segment_title": "A galaxy that should not exist at 280 million years"
@@ -21643,10 +21643,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. MOM-Z14 reveal environment — maximum visual drama. MOM-Z14 galaxy blazes at center, filling 65% of frame. It is luminous — neon pink and electric blue spiral arms, bright star-formation bursts in neon yellow scattered across it, structured and organized. It radiates impossible maturity. Deep alien space surrounds it with awe-inspiring scale. CLIMAX framing, galaxy centered and overwhelming. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -21745,10 +21745,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Nitrogen element environment — close zoom on a glowing nitrogen atom cluster in neon pink, surrounded by the complexity of stellar generation cycles shown as small sequential star shapes in a circle around the atom. One stick figure at left, leaning toward the nitrogen cluster, one arm pointing at it, eyes wide, expression of alarmed concentration. Lab coat rectangle on figure. Nitrogen requires multiple star generations — the circle of star shapes around the atom makes this visual. DETAIL framing, nitrogen cluster and stars fill 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": true,
       "metadata": {
         "segment_number": 5,
@@ -21853,10 +21853,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Stellar generation cycle environment — three sequential star shapes arranged left to right in deep space: generation 1 star at left (small, neon yellow, forming), generation 2 star at center (massive, blazing orange, exploding), generation 3 star at right (new formation from debris, neon yellow). Between each star, neon green debris clouds scatter and arrows point rightward showing enrichment flow. The cycle is the visual story. Wide framing, three-star sequence spans full width. No characters. Motion left-to-right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -21979,10 +21979,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Post-supernova gas cooling environment — deep space, a hot gas cloud in neon orange at left slowly cooling rightward into blue-gray, the gas collapsing gravitationally shown by arrows pointing inward toward a new star forming at right edge. The whole frame communicates TIME — this process takes enormous spans. An alien hourglass shape at top-center with all the sand at bottom, time nearly spent waiting. Wide framing, gas cooling process fills 70% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22099,11 +22099,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Billions of years timeline environment — a massive horizontal timeline bar in electric blue spanning the full width of frame, showing the billions of years required for nitrogen to build up through stellar generations. The timeline is so long it feels crushing. Multiple supernova bursts marked along it in neon orange, each requiring hundreds of millions of years between them. The 280 million year mark of MOM-Z14 shown as a tiny sliver at the very start — nowhere near enough. Cosmic wide framing, timeline dominates. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 5,
         "segment_title": "A galaxy that should not exist at 280 million years"
@@ -22195,10 +22195,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Insufficient time environment — a large flat alien time-budget chart: a full budget bar in electric blue representing 'needed time', and beside it a tiny neon yellow sliver bar representing '280 million years provided'. The disparity is enormous — the provided bar is less than a tenth of the needed bar. The shortfall radiates neon red alarm halos. Deep alien space background. REACTION framing, chart centered. No characters. Close zoom on the chart revealing the absurd gap. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22297,11 +22297,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Chemically mature galaxy environment — MOM-Z14 shown as a flat spiral galaxy at center-right in neon pink, surrounded by chemical richness indicators: nitrogen atom clouds in neon pink, complex molecule structures in toxic green all already present inside the galaxy. One stick figure at lower-left, arms spread wide in disbelief, bulging eyes, sweat drops, mouth open. A scientist confronting impossible chemical maturity. CLIMAX-REACTION framing. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 5,
         "segment_title": "A galaxy that should not exist at 280 million years"
@@ -22387,10 +22387,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Protocluster discovery environment — deep ancient space showing JADES-ID1: multiple small galaxy shapes in neon blue and green already clustering together, connected by gravitational filaments in electric blue, assembling into a larger structure. This is not one galaxy but many already clustering. The protocluster fills 60% of frame at center. Deep dark alien space surrounds it with cosmic web filaments visible at edges. CLIMAX framing for the most distant protocluster ever found. No characters. Wide-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22501,10 +22501,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Protocluster assembly environment — a cluster of already-formed galaxy shapes in neon blue, green, and pink at center, gravitational tendrils connecting them as they pull together into a larger cosmic structure. The galaxies are already assembled, already clustering. The sense is of a city being built before foundations were laid. Cosmic filaments in electric blue web outward. Close-cosmic zoom, cluster fills 65% of frame. No characters. Motion: galaxies moving inward toward each other. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22609,10 +22609,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Cosmic city construction environment — the universe shown as a massive construction project: galaxy clusters as city blocks in neon yellow and pink already built and populated at top frame, but at bottom the foundations — basic gas clouds in muted blue-gray — still being laid. The cities are above the foundations, impossibly reversed order. A chaotic alien construction site aesthetic. Wide framing, 'cities above foundations' visual paradox fills frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22723,11 +22723,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Ordered chaos environment — deep alien space with mature galaxy structures in neon pink and electric blue showing ORDER on the left, but surrounding chaos in dark swirling primordial gas on the right, the order and chaos coexisting impossibly. One stick figure at center, head turning between the mature structures (left) and the chaos (right), expression confused — wavy question mark floating above, arms spread wide. The telescope keeps finding this impossible juxtaposition. REACTION framing. Human zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 5,
         "segment_title": "A galaxy that should not exist at 280 million years"
@@ -22831,10 +22831,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Universe-in-a-hurry environment — deep alien space, and across the frame a frantic energy: galaxies forming at extreme speed shown by blazing neon yellow motion streaks trailing each forming galaxy shape, supernova bursts at triple-speed, star formation events packed densely in neon orange bursts everywhere. The universe is rushing madly to grow up. Alien speed gauges at edges all maxed out. Wide cosmic framing, frantic energy fills entire frame. No characters. Motion: everything accelerating left-to-right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22921,10 +22921,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Supermassive black hole looming environment — a transition shot: galaxies forming impossibly fast in neon pink and yellow at the left and center of frame, but at the right edge, a massive flat black void circle begins to appear — the looming problem of supermassive black holes inside these galaxies. Electric blue accretion disk begins to form around it. The focus shifts from galaxies to the hole within. REACTION-ESTABLISH transition framing. Wide, the black hole void fills 30% of right frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 5,
@@ -22938,10 +22938,10 @@
       "end": 455.32,
       "text": "Number 4.",
       "words": [],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 4 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_04.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -23022,10 +23022,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Quasar J1120+0641 environment — deep ancient space 13 billion light years away. A flat 2D quasar at center-left: a bright galaxy with a violently active core — neon orange and electric blue accretion disk blazing, massive relativistic jets shooting upward and downward in neon white-yellow. The quasar is violently active and overwhelming. The word 'J1120' replaced by alien identification symbol floating near it. Wide establishing cosmic framing, quasar fills 45% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -23130,10 +23130,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. James Webb telescope observation environment — the JWST shown as chunky golden hexagonal mirror array at right of frame, aimed leftward at the distant quasar J1120+0641 which glows in neon orange-blue at far left. A beam of mid-infrared light shown as flat wavy lines in neon red connecting the quasar to the telescope across deep dark alien space. 13 billion light years of distance represented by the vast dark space between them. DETAIL framing, telescope and quasar at opposite ends. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -23172,10 +23172,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Mid-infrared spectrum environment — the telescope's infrared detection shown as a glowing spectral band of neon red-orange wavelengths fanning out from a prism shape at center. The infrared waves are invisible but shown as flat wavy lines in deep red against dark alien space. Alien detector instruments at edges capture the signal. The universe only 770 million years old when this light left shown as a tiny timeline marker at frame bottom. Close-detail zoom on the spectral analysis. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -23292,11 +23292,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Early universe supermassive black hole environment — deep ancient space, and at center a flat black circle — a supermassive black hole — with a blazing electric blue and neon orange accretion disk, the whole structure radiating incredible power. A timeline bar at bottom shows 770 million years from the Big Bang — barely any time at all. The black hole is impossibly massive for its age. CLIMAX framing, black hole system fills 65% of center frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -23412,11 +23412,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Black hole mass comparison environment — two flat circles side by side: left is a neon yellow circle representing the sun, right is a massive flat black circle 1 billion times larger, consuming most of the right half of the frame. The scale difference is visually absurd — the sun circle is tiny compared to the black hole. The black hole has an electric blue accretion disk glow. Scale indicators show the mass ratio. Wide framing, size comparison fills 70% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -23526,10 +23526,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Accretion disk formation environment — a large flat 2D black circle at center with matter spiraling inward from all sides: flat colored gas blobs in neon orange and electric blue spiraling in concentric path toward the black hole forming the accretion disk. The disk glows with superheated flat-shaded bands of color. Millions of degrees of heat shown as neon yellow shimmer blobs radiating from the disk. DETAIL framing, accretion disk and infall fill 70% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -23634,11 +23634,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Radiation pressure environment — the accretion disk at center radiates outward: neon yellow radiation arrows push incoming matter blobs backward, away from the black hole. It's a tug of war — gravity pulling matter in (blue arrows inward) vs radiation pushing matter out (yellow arrows outward). The speed limit is visual. A flat 'maximum speed' barrier indicator in neon red. Deep alien space background. DETAIL framing, tug-of-war fills 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -23784,10 +23784,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Eddington limit environment — a large flat alien speed limit sign shape at center in neon red — the Eddington limit. A black hole shape behind it with arrows showing the maximum feed rate. The universe's physics speed limit is visualized as an unmissable barrier. Below the sign, the feeding process shown as a controlled trickle of matter blobs falling in at the maximum allowed rate. Deep alien machinery at edges. Close zoom on the limit sign filling 55% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -23910,10 +23910,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Billion-year feeding timeline environment — a long horizontal timeline bar in electric blue spanning full width of frame, representing one billion years. Along the bar, a black hole slowly grows: small black circle at left, medium circle at mid-timeline, finally reaching 1 billion solar mass size (large flat black circle) only at the far right end of the billion-year timeline. The growth is slow and requires the full billion years. Wide framing, timeline spans full width. No characters. Motion left-to-right through time. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24012,10 +24012,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Insufficient feeding time environment — a 770 million year timeline bar in neon yellow (short) next to a 1 billion year 'needed' bar in electric blue (longer). The shorter bar is visibly inadequate. But at the end of the short bar, a massive black hole circle already exists — 1 billion solar masses achieved impossibly early. The black hole is there where it should not be yet. CLIMAX framing, the impossible achievement centered. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24132,10 +24132,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. JWST telescope examination of accretion disk — the telescope's golden hexagonal mirror at left-center aimed at a large accretion disk at right: flat rings of superheated gas in electric blue and neon orange swirling around the central black void. The telescope beam in neon red-infrared connects them. The examination reveals the disk in detail. Close-detail zoom on the accretion disk filling 65% of right frame, telescope visible at left. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24282,11 +24282,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Normal feeding mechanism surprise environment — alien laboratory with floating comparison charts: left chart shows expected exotic ultra-efficient feeding mechanism (fancy alien contraption shape in neon pink — strange and unusual). Right chart shows actual observation: completely NORMAL, ordinary accretion disk mechanism (same simple design as modern black holes). One stick figure between the charts, head snapping to the right chart in shock, bulging eyes, sweat drops flying, arms thrown up. The normal reading makes the problem worse. CLIMAX-REACTION. Human zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -24408,11 +24408,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Exotic mode search environment — deep alien space, and a large flat inspection panel showing the accretion disk of the ancient black hole being analyzed by alien instruments. Scanning beams in neon cyan sweep across it. But all the exotic-mode indicators remain at zero — no unusual signals detected. The feeding mechanism registers as completely ordinary. All alien detection dials show 'normal'. REACTION framing, inspection panel centered, all normal readings visible. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -24522,10 +24522,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Pattern recognition environment — cosmic wide view showing multiple early universe black hole systems arranged in a grid pattern across deep space, each one with an accretion disk in electric blue and neon orange, each one massive and already there. They're all repeating the same impossible pattern. The grid fills 70% of frame. Each black hole system matches — massive, ancient, ordinary-feeding. Cosmic zoom, grid pattern dominant. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24654,11 +24654,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Galaxy mass ratio environment — a large flat alien pie chart at center: a tiny 0.1% sliver in electric blue representing normal black-hole-to-galaxy mass ratio, and a massive 1-10% wedge in neon red representing what these early galaxy black holes show. The wedge is enormous and alarming. One stick figure at left pointing at the chart, leaning forward with concentrated expression, furrowed brow marks above eyes. Deep alien space background. DETAIL framing, chart fills 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -24780,10 +24780,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Mass ratio comparison environment — two galaxy shapes side by side: left is a modern galaxy (large, in muted electric blue) with a tiny black center dot (0.1% mass ratio). Right is an early galaxy (same size, in neon orange) with a massive black center circle consuming 10% of the galaxy shape. The size difference of the black holes relative to each galaxy is visually jarring. Wide framing, both galaxies fill 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24876,10 +24876,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. 10-100x mass excess environment — a large flat alien scale at center: on the left pan, a galaxy shape in neon blue. On the right pan, a black hole circle that is 10 to 100 times heavier than it should be relative to the galaxy — the right pan is crushed down, the scale completely broken and tilted. The scale malfunction is dramatic and absurd. Alien physics equations as glowing abstract symbols float around the broken scale. Close-detail zoom, scale fills 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24954,10 +24954,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Child and adult size comparison analogy environment — a simple 2D stick figure child shape at left (tiny, with round head slightly bigger relative to body than a normal adult), and the astrophysicist analogy is made visual: the stick figure child is impossibly tall — its height line reaching six-and-a-half feet shown by a measuring bar. The absurdity is purely visual. Deep alien space background with alien machinery at edges. REACTION framing, absurd comparison fills 60% of frame. No characters beyond the visual analogy figures. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -24996,10 +24996,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Tiny child versus impossible height environment — extreme close-up on the absurd scale: the five-year-old stick figure with a round head at the very bottom of frame, and the top of its head reaching far off-screen above, a measuring ruler showing impossible adult height for a child. The universe's equivalent absurdity: a baby universe with a grown-up supermassive black hole. Dark alien space behind. Close zoom, measuring bar fills right side. No characters shown as scientists. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -25026,10 +25026,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Scale violation environment — a dramatic height comparison: a simple stick child figure on the left at normal child height, a six-foot-six measuring bar in electric blue beside it towering far above. The child's head barely reaches the knees of the measurement. Absurdity and wrongness are the visual mood. Dark alien space with neon alarm indicators at edges. Tight framing on the height mismatch. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -25140,10 +25140,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. CHANGE scene — direct collapse theory environment — split frame. LEFT side: muted dark space showing the expected path — small stellar black holes forming from stars first in pale yellow stars dying → small black holes growing slowly. RIGHT side: full neon palette showing direct collapse — enormous gas clouds in neon green collapsing directly into massive black circles without ever forming stars first, going straight from gas cloud to supermassive black hole. The shortcut is dramatic. Wide split framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -25182,10 +25182,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Gas cloud direct collapse environment — a massive flat dark cloud of alien gas in neon green and electric blue at center, collapsing inward toward a central black void that grows larger as arrows point inward from all sides. No star formation phase — straight from gas cloud to black hole. The simplicity of the direct collapse path is visually stark. Deep alien space background. Close-cosmic zoom, collapse fills 70% of frame. No characters. Motion inward from all directions. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 4,
@@ -25284,11 +25284,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Incomplete understanding environment — one stick figure at center, surrounded by floating alien physics diagrams representing gravity, accretion, and time — all shown as geometric alien shapes in neon colors. The diagrams all have question marks through them in neon red. The scientist holds its head, bulging eyes, sweat drops, expression of deep discomfort. Both stick arms slightly raised. The alien instruments around the lab show question marks on all readouts. CLIMAX-REACTION, human zoom, figure centered. Deep alien space background with cracked model diagrams. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 4,
         "segment_title": "Supermassive black holes at cosmic dawn"
@@ -25362,10 +25362,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 3 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_03.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -25482,10 +25482,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Ancient dead galaxy environment — deep ancient space, and across the frame multiple flat 2D galaxy shapes rendered in muted gray-black — dead, no star formation, no neon bursts. They stopped forming stars 13 billion years ago. The galaxies are cold, dark, inert. Only faint dim amber glow shows they exist. A timeline bar at bottom shows how long ago they went dark. Viewer witnesses the cosmic graveyard. Wide cosmic framing, dead galaxy shapes fill 65% of frame in muted palette. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -25644,11 +25644,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Galaxy burnout environment — one stick figure at left of frame in lab coat rectangle, arms spread wide, expression of incredulity — wavy question mark above head, eyes wide circles. The scientist points at two contrasting galaxy images at right: one small young galaxy in neon yellow burning furiously with star-birth events, and below it the same galaxy now completely dark and gray — burnt out — in muted dark gray. The burnout happened impossibly fast. Human-cosmic zoom. REACTION framing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 3,
         "segment_title": "Galaxies that died before most galaxies were born"
@@ -25668,10 +25668,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Entire gas supply consumption environment — a galaxy shape at center with its gas supply shown as a cloud of neon blue gas around it rapidly depleting — arrows pointing inward as gas converts to stars at insane speed, the gas cloud shrinking to nothing in a visual sequence from left to right within the frame. The galaxy burns through everything. Close zoom on the depletion process, galaxy with gas cloud filling 70% of frame. No characters. Motion: gas flowing inward and disappearing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -25800,10 +25800,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Went-dark galaxy environment — a galaxy shape at center transitioning from blazing neon yellow star formation at left half to complete darkness at right half — the exact moment it went dark. The left side crackles with star-birth explosions, the right side is dead black. The boundary between alive and dead cuts through the galaxy shape. The going-dark is the central image. CLIMAX framing, galaxy fills 65% of frame. No characters. Motion arrested at the boundary. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -25920,11 +25920,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Standard galaxy evolution model environment — one stick figure at left in lab coat, one arm raised presenting a large flat diagram at center: a smooth gradual timeline showing gas converting slowly to stars over billions of years — a long gentle ramp in electric blue. The timeline is calm, orderly, taking enormous amounts of time. The figure looks calm and explanatory, simple smile line. ESTABLISH the standard model expectation. Human zoom, diagram and figure share frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 3,
         "segment_title": "Galaxies that died before most galaxies were born"
@@ -26052,10 +26052,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Slow star formation process environment — a galaxy shape at center with a steady, calm stream of gas blobs slowly converting to star shapes over a very long timeline. The process is gradual — a trickle of gas-to-star conversion shown as a slow flow of neon yellow star shapes forming one by one from muted blue gas. The timeline arrow at bottom stretches many billions of years. Wide framing, galaxy at center with slow formation stream. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -26142,10 +26142,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Gas strip and fuel exhaustion environment — two galaxy shapes shown: one galaxy at left having its gas cloud (blue wisps) stripped away by an interaction with another galaxy at right, neon blue gas tendrils flowing from left galaxy to right. Time indicator below shows this takes billions of years normally. Wide framing, galaxy interaction fills 60% of frame. A sense of slow process. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -26250,10 +26250,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Impossible age analogy environment — CHANGE scene, split frame. LEFT (muted): normal human lifespan shown as a simple horizontal life bar in muted blue, with old age marker at the far right end where expected. RIGHT (neon): the impossible case — old age marker (shown as a small bent figure with simple aging visual) appearing at the extreme LEFT beginning of the life bar, before the first birthday marker. The absurdity is stark and disturbing. Wide split framing. No characters as scientist figures. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -26346,10 +26346,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Dead but rich galaxy environment — a galaxy shape at center in deep muted gray-black (no star formation) but surrounded by glowing neon chemical richness halos in neon green and electric blue. Chemically mature (complex molecules orbiting in rings), structurally organized (clear spiral arms visible even in death), and completely inert (no new star formation bursts). The paradox of rich death. Close zoom on the dead galaxy filling 65% of frame with its chemical richness contrasting with its darkness. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -26502,10 +26502,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Fast life cosmic nursery contrast environment — at center a dead burned-out galaxy in muted dark gray. Surrounding it is the cosmic nursery it existed in: swirling neon pink and blue primordial gas clouds, baby galaxy formations in neon yellow just beginning to form. The dead galaxy is ancient and done, surrounded by things that haven't started yet. Deeply ironic and visually striking. Wide cosmic framing, dead galaxy at center with nursery chaos around it. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -26610,11 +26610,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Catastrophic star formation environment — one stick figure at left, pointing with one arm at the right side of the frame where star formation in the early universe is shown as an absolute explosion — not a gentle process but a detonation: massive neon orange and yellow explosions of star birth packed densely, energy shockwaves radiating outward, alien machinery barely withstanding the force. The figure's eyes are wide with alarm, sweat drops flying. CLIMAX energy. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 3,
         "segment_title": "Galaxies that died before most galaxies were born"
@@ -26718,10 +26718,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Detonating galaxies environment — three galaxy shapes across the frame, each one exploding into existence from the inside: massive neon yellow-orange star formation bursts radiating from their cores like detonations, shockwaves expanding outward in neon rings. They are not assembling gently — they are detonating. The violence of early universe star formation fills the frame with energy. Wide cosmic framing, three exploding galaxies span the width. No characters. Motion radiating outward from each galaxy center. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 3,
@@ -26790,11 +26790,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Burnt out aftermath environment — the detonation is over. Across the frame, the same galaxy shapes from the previous scene are now completely dark and cold — muted gray-black, star formation gone, nothing left. They burned bright and died young. The background still shows the nursery of the early universe around them in neon blue primordial gas, the contrast between dead galaxies and the living cosmos around them. A sense of tragic fast-burn. REACTION framing, aftermath fills frame. The word 'Number' is implied by transition energy building at right edge. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 3,
         "segment_title": "Galaxies that died before most galaxies were born"
@@ -26862,10 +26862,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 2 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_02.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -26964,11 +26964,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Dual measurement environment — a large alien observatory interior with two distinct scientific instruments on opposite sides of frame: left instrument (representing CMB/Planck method) shows 67.4 speed value as a flat gauge needle in electric blue. Right instrument (representing supernovae/Cepheid method) shows 73 speed value in neon orange. One stick figure at center looking between them, expression of puzzled concentration — leaning forward, furrowed brow marks. ESTABLISH the Hubble tension. Human zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 2,
         "segment_title": "The universe expands at two different speeds"
@@ -27012,10 +27012,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Two incompatible answers environment — CHANGE scene, split frame. LEFT side (muted blue): one expansion rate measurement shown as a horizontal speed arrow of one length (67.4 units visualized). RIGHT side (neon orange): the other measurement, same type of arrow but clearly longer (73 units). Both arrows are in the same units but end at different points. The gap between them highlighted in alarming neon red. Wide split framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27120,10 +27120,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. James Webb tension resolution attempt environment — JWST golden hexagonal telescope at center-right, aimed left at the Hubble tension discrepancy shown as a visual gap between two speed measurements at left. The telescope is positioned as if trying to close the gap. But the gap remains — neon red alarm lines still present. Background: deep alien space with chaotic cosmic machinery. Wide framing, JWST and tension gap at opposite sides. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27252,10 +27252,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. James Webb opposite result environment — CHANGE scene. LEFT side (expectation): JWST aimed at the Hubble tension gap in muted colors, expected outcome showing gap closing — arrows converging in muted blue. RIGHT side (reality): full neon palette, the gap is WIDER — JWST confirming the discrepancy and making it more alarming, neon red gap between measurements even more obvious. JWST at center between the two sides. Wide framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27366,10 +27366,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Cosmic microwave background environment — the full frame filled with the CMB pattern: a flat 2D oval map of the early universe covered in mottled flat-color temperature patches in electric blue, pale yellow, and muted pink — the Planck satellite data. A simple flat Planck satellite shape floats at upper right corner. The CMB map dominates 80% of the frame. From it, a speed value arrow points outward in muted electric blue indicating the 67.4 prediction. Cosmic framing, CMB centered. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27456,10 +27456,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Megaparsec distance scale environment — a long flat horizontal distance ruler at center of frame representing 3.26 million light years (one megaparsec). At the left end, Earth as a tiny blue circle. At right end, a distant galaxy cluster. The ruler is massive and daunting. Above the ruler, a speed arrow in electric blue shows how expansion velocity increases with distance. Deep dark alien space behind. Wide framing, ruler spans full width. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27588,10 +27588,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Expansion rate visualization environment — a cosmic perspective from Earth outward: concentric circles representing distance from Earth in muted blue, and between each ring, galaxies (tiny flat shapes) flying away faster and faster as you look further out. The expansion rate increase with distance is visible in the growing arrow sizes. Speed arrows in neon orange grow longer toward outer rings. Cosmic wide framing, full frame used. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27696,11 +27696,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Cepheid variable star and supernova measurement environment — two measurement types shown side by side in deep space: on left, a Cepheid variable star pulsating — shown as a flat circle alternately bright neon yellow and dim pale yellow, rhythmically. On right, a supernova blast in neon orange. Both are distance measurement tools in the cosmic distance ladder. Simple alien distance indicator arrows below each. Wide framing, both measurement tools shown clearly. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 2,
         "segment_title": "The universe expands at two different speeds"
@@ -27798,11 +27798,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. 73 km/s measurement result environment — a large alien speed gauge at center with needle firmly in neon orange at the high value. One stick figure at bottom-left, holding a clipboard shape and pointing at the gauge with one arm, expression concentrated — leaning forward, simple furrowed brow. The gauge reads higher than the 67.4 CMB prediction, the discrepancy visible as a gap between the two marks. Human zoom, gauge fills 55% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 2,
         "segment_title": "The universe expands at two different speeds"
@@ -27882,10 +27882,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. 9% gap environment — two speed measurement bars side by side, both vertical: left bar in electric blue reaching 67.4 height, right bar in neon orange reaching 73 height. Between them a conspicuous GAP in neon red with alarm marks. The 9% discrepancy is visually unmistakable. Alien measurement equipment at frame edges. DETAIL framing, bars centered and filling 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -27996,10 +27996,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Old Hubble measurement error hypothesis environment — the old Hubble Space Telescope (rectangular boxy shape in muted silver) at left, pointed at crowded distant star fields. Problems shown as visual annotations: overlapping stars as squished blobs, dust cloud darkening the light path shown as muted brown fog over the beam. The measurement error hypothesis visualized. Wide framing, telescope and its problems fill 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28098,10 +28098,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. James Webb vs Hubble capability comparison environment — two telescope shapes side by side: Hubble (boxy silver, small mirror, narrow beam) at left in muted palette. JWST (golden hexagonal honeycomb mirror, 4x wider beam, brighter detector) at right in neon gold palette. Resolution comparison shown as image quality visually: blurry blob from Hubble vs crisp flat shape from JWST. Wide comparison framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28218,10 +28218,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Webb observing same targets environment — JWST golden hexagonal mirror at center aimed at three targets visible in the deep space portal behind it: a Cepheid variable star pulsating in neon yellow at top-left, a galaxy shape in electric blue at center, a supernova in neon orange at bottom-right. All three are the same targets Hubble observed. The telescope re-examines them all. Wide framing, telescope and three targets fill frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28320,10 +28320,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Measurement match environment — two gauge readings side by side: left gauge labeled with Hubble symbol shows 72.8 reading in neon orange. Right gauge labeled with JWST symbol shows 72.6 reading in matching neon orange. The readings are nearly identical — the needles point to almost the same place. The expected error correction did not happen. Alien readout screens at edges confirm the match with glowing indicators. Wide framing, two gauges centered. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28422,10 +28422,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Webb precision result environment — a single large alien precision gauge at center, needle in neon orange pointing to 72.6, and a clear marker at 67.4 still far to the left where the CMB prediction sits in electric blue. The gap between the two markers is prominently displayed in neon red. No measurement error — just confirmed tension. Close zoom on the gauge face, filling 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28512,10 +28512,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Error eliminated, tension remains environment — a before-after comparison: at left, the error hypothesis shown with a big neon red X through it (error = gone). At right center, the Hubble tension gap between 67.4 and 73 measurements persists, glowing in alarming neon red with no explanation. The error is eliminated but the gap remains. Wide framing, both elements clear. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28578,10 +28578,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Two-speed universe environment — the universe shown as a flat space with two different speed zones: left half shows galaxies moving at speed 1 (shorter arrows in electric blue — 67.4 calculated from Big Bang), right half shows galaxies moving at speed 2 (longer arrows in neon orange — 73 measured directly). The same universe operates at two incompatible speeds simultaneously. Deep alien space. Wide framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28710,10 +28710,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Forward calculation vs direct measurement environment — CHANGE scene, split frame. LEFT (muted): CMB map at left, a forward calculation arrow moving through time to reach the universe today at right — predicted speed shown as shorter muted blue arrow. RIGHT (neon): direct measurement of the actual universe today with a longer neon orange arrow showing higher speed. The two arrows for the same universe disagree. Split framing, calculation path at left, measurement at right. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28818,10 +28818,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Both verified, both precise, both disagree environment — two large alien verification stamps in flat 2D: both checked 'verified' with neon green checkmarks, both showing 'precision confirmed' indicators. But between them, a jagged lightning bolt of disagreement in neon red separates their results. Two perfect measurements. Two incompatible answers. Alien laboratory environment. Wide framing, two verified methods at left and right, disagreement bolt at center. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -28932,10 +28932,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Missing cosmological component environment — the standard model of cosmology shown as a large flat diagram at center with a conspicuous missing piece — a puzzle-piece-shaped gap in neon red outline. The missing component is labeled visually as 'early dark energy' — a mysterious force shown as swirling neon purple energy clouds around the gap. What's missing is pushing space apart. The diagram is incomplete and alarming. Wide framing, model diagram fills 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -29064,10 +29064,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Early dark energy kick environment — cosmic timeline at center: the Big Bang explosion at left, and just after it a mysterious neon purple energy force shown as a dark energy cloud kicking the universe's expansion — a powerful push shown by neon arrows radiating outward. The kick causes the expansion to go faster than the CMB predicts. The dark energy cloud fills the early universe portion of the timeline. Wide framing, timeline and dark energy kick dominant. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -29166,10 +29166,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Einstein general relativity breakdown environment — one stick figure at lower-left, arms raised in frustrated exasperation, bulging eyes, sweat drops. At center, a large flat Albert Einstein caricature portrait reduced to stick-figure style (round head, simple line body, wild electric hair drawn as spiky lines) next to a GR equation shown as glowing abstract neon symbols. The GR equation has question marks appearing around it. The spacetime fabric at right shows unexpected behavior — warped flat grid lines behaving irregularly in neon colors. Human-wide framing. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": true,
       "metadata": {
         "segment_number": 2,
@@ -29322,10 +29322,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Universe disagreeing with itself environment — the universe shown as a massive flat circular shape at center filled with contradictory arrows: some pointing at one expansion speed in electric blue, others at a different speed in neon orange, all within the same cosmic sphere. The sphere is visually tearing at the edges from internal contradiction. Deep alien space around it with chaos energy. A lone viewer stick figure at bottom-right, arms out, shrugging in bewilderment, simple confused expression. REACTION framing. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -29346,10 +29346,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Still growing but uncertain environment — the universe bubble at center continues to expand outward, arrows pushing its edges outward in both electric blue (67.4 speed) and neon orange (73 speed) simultaneously — it is growing, but nobody agrees how fast. The bubble's edge is fuzzy and contradictory — two overlapping expansion fronts in different colors. The growth continues regardless. Cosmic framing, expanding universe bubble centered. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 2,
@@ -29400,10 +29400,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
-      "image_path": null,
-      "status": "planned",
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 1 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\Test 2\\number_card_01.png",
+      "status": "generated",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -29514,10 +29514,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Dark matter map publication environment — a dramatic alien research reveal: a massive flat 2D map shape unfurling at center of frame, glowing with intricate dark matter filament patterns in dim electric blue and purple against near-black background. The map is the most detailed ever produced — twice as detailed as before, shown by its fine-grained filament structure. James Webb data streams in from upper-right as neon cyan data beams feeding into the map. Wide establishing cosmic framing, map fills 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -29562,10 +29562,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Peering back in time environment — a cosmic time tunnel: the JWST at right peering leftward through a glowing tunnel of time, with the ancient universe 8-11 billion years in the past visible at the tunnel's far end in deep dark alien space. The tunnel is formed by concentric time-rings in muted neon blue. The telescope's golden mirror panels catch light from the ancient past. Wide framing, time tunnel spans full width. No characters. Motion right-to-left, peering backward. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -29682,10 +29682,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Invisible dark matter environment — deep alien space completely dark and empty-seeming at first glance. But as the viewer's eye adjusts, vast invisible structure is hinted at by the positions of tiny galaxy dots arranged in filament patterns in muted electric blue — the dark matter is invisible but its shape is betrayed by what it holds. Faint ghost-like outline of the dark matter web in barely-visible neon blue. No light emission from dark matter — it is truly invisible. Cosmic wide framing, hinted structure fills frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -29796,11 +29796,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Dark matter gravity shaping everything environment — one stick figure at center looking outward at the dark matter web, arms spread wide in awe. The dark matter filaments shown as thick invisible gray cables that physically HOLD glowing galaxy shapes in place — galaxies hanging from the dark matter structure like lights on an invisible framework. The figure can't see the cables but sees the galaxies they hold. Deep alien space background. Human-cosmic zoom, figure at 35% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -29904,11 +29904,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. 800,000 galaxy survey environment — one stick figure at left at a massive alien telescope control console, eyes wide with awe, pointing at a huge star map display to the right showing nearly 800,000 tiny galaxy dots arranged across the constellation Sextans region in a dense scatter pattern. The cosmic web filament pattern is just barely visible in the arrangement of the dots. The scale is overwhelming. Human-wide framing, console and map share frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -30006,10 +30006,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Cosmic web filament environment — the cosmic web in its full glory: vast interconnected filaments of dark matter in dim electric blue and purple, thick glowing threads spanning the frame in all directions like a 3D spider web rendered in 2D. At every intersection node, galaxy clusters glow in neon yellow and pink. Between filaments, vast voids of pure empty blackness. The gravitational scaffolding is stunning. Wide cosmic framing, filament network fills entire frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -30108,11 +30108,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Universe skeleton environment — one stick figure at center with arms spread wide, presenting the cosmic web to the viewer. The web fills the background: dark matter filaments in electric blue acting as scaffolding with galaxy shapes pinned to them like ornaments. The filament-as-skeleton metaphor is visual — the filaments are clearly structural, holding everything. Figure's expression is awestruck — mouth open O, eyes wide circles, one arm pointing upward into the web. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -30240,10 +30240,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Cities along rivers analogy — cosmic scale environment — the cosmic web filaments at top half of frame are the 'rivers': thick electric blue dark matter threads. Along them, galaxy clusters in neon yellow and pink cluster like cities at river bends and intersections. The comparison to cities on rivers is visually direct — filaments as rivers, galaxy clusters as cities at optimal points. The new map is twice as detailed as Hubble's — shown at right edge with a magnification indicator. Wide cosmic framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -30372,10 +30372,10 @@
           "confidence": 0.5
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Map vs model mismatch environment — CHANGE scene, split frame. LEFT (muted): what the Lambda-CDM standard model predicts — smooth, evenly distributed dark matter filaments in muted regular grid pattern, clean and orderly. RIGHT (neon): what the new Webb map actually shows at finest scales — smaller structures, irregular clumping, unexpected density variations in electric blue and neon purple. The difference is subtle but real and present. Wide split framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -30486,10 +30486,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Lambda-CDM master equation environment — a large alien chalkboard-like surface at center displaying the Lambda-CDM model as abstract glowing neon symbol equations — mathematical architecture shown as an intricate web of glowing lines and shapes in electric blue, neon green, and yellow. The model is presented as the master equation — grand, complete, authoritative. Alien machinery pays reverence to it at edges. Wide framing, equation fills 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -30624,10 +30624,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Model prediction suite environment — the Lambda-CDM model shown as an alien prediction machine: a large flat machine shape at center with multiple output displays showing: dark matter distribution pattern, filament density gauges, void size indicators, clumpiness measurement dials — all in neat electric blue and muted neon. The machine confidently outputs its predictions across billions of years of cosmic history. Wide framing, prediction machine fills 60% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -30762,11 +30762,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Model survival track record environment — a flat 2D timeline at center showing over two decades of cosmological tests: alien test events marked along the timeline in electric blue checkmarks, each one confirmed. The Lambda-CDM flag waves at the end of the timeline in neon blue, undefeated. The model has survived everything thrown at it — shown as multiple obstacles it passed through. Wide framing, track record timeline spans full width. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -30894,10 +30894,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Constitution/law of cosmology environment — the Lambda-CDM model presented as a cosmic constitution document shape — a flat parchment-like rectangle in neon electric blue at center, ornate alien symbols on it, glowing with authority. But behind it, the new Webb map is beginning to emerge — fine-scale structures in neon purple and green that the constitution didn't account for, appearing around the edges of the document. CLIMAX buildup. Wide framing, constitution document at center. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -31062,10 +31062,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Dark matter distribution mismatch environment — CHANGE scene, ultimate tension. LEFT: the predicted smooth dark matter distribution from Lambda-CDM in muted even gray-blue pattern. RIGHT: the actual distribution from the new Webb map — clumpier, more irregular, smaller-scale structures in full neon blue and purple. The model's prediction is overlaid as a ghost outline on the real data, and they don't match. Split-overlay framing. Wide. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -31176,10 +31176,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Subtle but real deviations environment — extreme close-up on the dark matter filament structure: the predicted filament in muted gray outline overlaid on the actual Webb-observed filament in neon electric blue. At fine resolution, the actual structure is clumpier, denser in unexpected spots, thinner in others. The deviations are subtle but unmistakable. Small alien deviation-indicators in neon red point to the mismatch zones. DETAIL framing, filament fills 80% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -31308,10 +31308,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Billions of light years of deviations environment — vast cosmic panorama showing the dark matter web across enormous distances: the Webb map's full extent shown as a curved cosmic panorama, and along billions of light years of filaments, tiny neon red deviation markers appear repeatedly, consistently, everywhere. The deviations are not local — they span cosmic history. CLIMAX framing, vast cosmic panorama fills entire frame with red deviation markers. No characters. Wide cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -31434,11 +31434,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Dark matter-neutrino interaction environment — dark matter filaments in electric blue at center, and passing through them: ghostly neutrino particles shown as translucent arrow shapes in pale neon yellow, passing through everything without interacting normally. But some of the arrows show subtle gravitational deflection near dark matter nodes — tiny bends in their paths. The neutrinos pass through but something happens. DETAIL framing, filament with neutrino paths fills 70% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -31566,11 +31566,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Model approximation breakdown environment — a large flat Lambda-CDM model shown as a smooth surface at coarse scale (working fine, matching at left) but as a magnifying glass zooms in at right (shown as circular zoom lens shape), the fine scales reveal bumps, inconsistencies, irregular structures that the model smoothed over. The model is an approximation that breaks down at finer scales — like a smooth-looking map that shows jagged edges when zoomed. CHANGE framing, zoom lens at center. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -31710,10 +31710,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Not just one anomaly environment — one stick figure at center pointing back at all the previous anomalies shown as small floating vignette images at left: early galaxy shapes, old star, bright objects, black holes — each a neon mini-thumbnail. The figure's expression is awestruck and overwhelmed, mouth open O, eyes wide, other arm spread wide. This is not one thing. It's everything. Human zoom, figure 40% of frame, vignettes arranged at left. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": true,
       "metadata": {
         "segment_number": 1,
@@ -31842,11 +31842,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Universe's scaffolding misbehaving environment — one stick figure at center, arms thrown wide, head looking up at the cosmic web which fills the upper frame: the dark matter filaments visibly behaving incorrectly — clumping where they shouldn't, thin where they should be thick, creating a foundational model violation at cosmic scale. The figure's eyes are bulging circles, sweat drops flying. This is the scaffolding of everything. CLIMAX framing. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -31944,10 +31944,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Skeleton wrong environment — the cosmic web as a skeleton metaphor: dark matter filaments rendered like a massive 2D skeleton structure — rib-like filaments, spine-like main structure — and it is clearly misshapen, warped, incorrect. Galaxies built on this skeleton (shown as small dots clinging to the bones) inherit the skeleton's error. The whole structure radiates wrongness in neon red highlight around the deviation zones. Wide cosmic framing, skeleton-web fills entire frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -32070,11 +32070,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Inherited error environment — one stick figure at lower-left, one arm raised pointing upward at the vast cosmic web structure filling the frame. The web's errors flow downward as neon red error streams into every galaxy, every void, every prediction. The figure's expression shows dawning horror — eyes growing to bulging circles, mouth opening wider. You are not looking at an anomaly. You are looking at inheritance of a fundamental error. Human-cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -32196,10 +32196,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Floor shifting environment — a massive flat 2D building structure at center represents cosmological knowledge, and beneath it the floor — the Lambda-CDM foundation — is visibly shifting, cracking, tilting in neon red fracture lines. The building tilts but doesn't fall. Deep alien space behind. The universe is not hostile or malicious — it just IS. The shifting floor is geological, inevitable, non-personal. REACTION framing, building and shifting floor fill 65% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -32352,11 +32352,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Universe indifferent to models environment — one stick figure at center, arms reaching out toward floating alien equation panels in neon colors that represent human cosmological models. The equations drift away from the figure — not violently, just indifferently — as the universe expands around them. The universe cares nothing for the equations. The figure's expression is resigned, confused — wavy question mark above, shoulders slightly drooped. Human-cosmic zoom, figure centered. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -32466,10 +32466,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Law violated without permission environment — a large flat cosmic law scroll in neon electric blue at center — representing a century of cosmological physics — with a crack splitting through it in neon red as the universe's actual behavior ignores it. The crack doesn't destroy the scroll, the universe just moves through it indifferently. Around the scroll, the universe continues doing its impossible things: early galaxies forming, old stars shining, dark matter misbehaving — shown as small vignette bursts. Wide framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -32502,10 +32502,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Eight discoveries summary environment — eight small glowing neon panels arranged in a 4x2 grid filling the center of the frame, each panel containing a miniature vignette of one of the eight discoveries: galaxy with star formation bursts, 300 bright objects, Methuselah star, MOM-Z14, dead galaxies, supermassive black hole, Hubble tension arrows, cosmic web mismatch. All in full neon palette against deep alien space. The scope of the violations is clear. Wide framing, grid fills 70% of frame. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -32640,11 +32640,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Universe before math environment — cosmic time vista: at the far left, pre-Big Bang cosmic void — absolute darkness. Then the Big Bang explosion in neon orange. Then the cosmos developing — galaxies, stars, all the impossible things — filling the frame rightward in neon colors. At the far right, tiny floating alien math equation symbols appear, recently arrived. The universe fills 90% of the timeline; the math appears only at the very end. Cosmic wide framing, timeline spans full width. No characters. Motion left-to-right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": true,
+      "status": "prompted",
+      "include_character": false,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -32766,10 +32766,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Edges of knowledge environment — the James Webb Space Telescope at center, golden hexagonal mirror facing right, aimed at a glowing portal of discovery in deep alien space. But at the edge of the portal, the known gives way to an ominous darkness — the edge of what we are allowed to know. The darkness is not empty — it pulses with unknowable neon energy suggesting vast undiscovered territory beyond. CLIMAX framing. The telescope faces the edge. Wide cosmic framing. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
@@ -32886,11 +32886,11 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Edges closer than expected environment — one stick figure at center, facing rightward toward the edge of knowledge (a glowing boundary in neon red at the right edge of frame). The figure reaches one arm toward the boundary, expression of awe and slight fear — wide circle eyes, mouth open O, arm extended. But the boundary is CLOSE — much closer than the figure expected. The vast unknown looms on the other side as a pulsing dark void with unknowable energy shapes. CLIMAX-REACTION, human zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
-      "include_character": false,
+      "status": "prompted",
+      "include_character": true,
       "metadata": {
         "segment_number": 1,
         "segment_title": "The cosmic web is wrong"
@@ -32940,10 +32940,10 @@
           "confidence": 1.0
         }
       ],
-      "prompt": null,
-      "prompt_source": null,
+      "prompt": "2D Western Cartoon animation. Video end invitation environment — the James Webb Space Telescope at center, golden hexagonal mirror glowing warmly, surrounded by all the wonders of the cosmos: a small constellation of the eight discovery vignettes orbiting it in neon colors — galaxies, stars, black holes, dark matter web — a celebration of cosmic mystery. The telescope points toward a bright portal at right (the 'next video'). The scene is energetic, triumphant, and chaotic. Wide framing, telescope centered with discovery vignettes orbiting. No characters. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
       "image_path": null,
-      "status": "planned",
+      "status": "prompted",
       "include_character": false,
       "metadata": {
         "segment_number": 1,
