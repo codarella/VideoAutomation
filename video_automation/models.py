@@ -27,6 +27,18 @@ class Word:
 
 
 @dataclass
+class AlignedSegmentData:
+    """Serializable snapshot of an aligned segment for use in the PROMPT stage."""
+    number: int
+    title: str
+    body: str
+    start: float
+    end: float
+    word_indices: tuple[int, int]          # (start_idx, end_idx) into project.words
+    number_word_end: float = 0.0
+
+
+@dataclass
 class Scene:
     """
     A single visual scene in the video timeline.
@@ -77,6 +89,7 @@ class Project:
     counting_direction: Literal["descending", "ascending"] = "descending"
     words: list[Word] = field(default_factory=list)                  # Full word-level transcript
     scenes: list[Scene] = field(default_factory=list)                # THE timeline
+    aligned_segments: list[AlignedSegmentData] = field(default_factory=list)  # For Claude splitting
     style: str = "2d_western_cartoon"
     audio_duration: float = 0.0                                      # Total audio length in seconds
     config: dict = field(default_factory=dict)                       # Pipeline settings
@@ -176,6 +189,7 @@ class Project:
             "config": self.config,
             "words": [_word_to_dict(w) for w in self.words],
             "scenes": [_scene_to_dict(s) for s in self.scenes],
+            "aligned_segments": [_aligned_segment_to_dict(a) for a in self.aligned_segments],
         }
 
         with open(path, "w", encoding="utf-8") as f:
@@ -190,6 +204,9 @@ class Project:
 
         words = [_dict_to_word(w) for w in data.get("words", [])]
         scenes = [_dict_to_scene(s) for s in data.get("scenes", [])]
+        aligned_segments = [
+            _dict_to_aligned_segment(a) for a in data.get("aligned_segments", [])
+        ]
 
         return cls(
             name=data["name"],
@@ -199,6 +216,7 @@ class Project:
             counting_direction=data.get("counting_direction", "descending"),
             words=words,
             scenes=scenes,
+            aligned_segments=aligned_segments,
             style=data.get("style", "2d_western_cartoon"),
             audio_duration=data.get("audio_duration", 0.0),
             config=data.get("config", {}),
@@ -261,4 +279,28 @@ def _dict_to_scene(d: dict) -> Scene:
         status=d.get("status", "planned"),
         include_character=d.get("include_character", False),
         metadata=d.get("metadata", {}),
+    )
+
+
+def _aligned_segment_to_dict(a: AlignedSegmentData) -> dict:
+    return {
+        "number": a.number,
+        "title": a.title,
+        "body": a.body,
+        "start": a.start,
+        "end": a.end,
+        "word_indices": list(a.word_indices),
+        "number_word_end": a.number_word_end,
+    }
+
+
+def _dict_to_aligned_segment(d: dict) -> AlignedSegmentData:
+    return AlignedSegmentData(
+        number=d["number"],
+        title=d["title"],
+        body=d["body"],
+        start=d["start"],
+        end=d["end"],
+        word_indices=tuple(d["word_indices"]),
+        number_word_end=d.get("number_word_end", 0.0),
     )

@@ -35,6 +35,12 @@ class AlignedSegment:
     number_word_end: float = 0.0                 # End time of "Number X" phrase (for card duration)
 
 
+def _fmt_time(seconds: float) -> str:
+    """Format seconds as 'Xs (M:SS)'."""
+    m, s = divmod(seconds, 60)
+    return f"{seconds:.2f}s ({int(m)}:{s:05.2f})"
+
+
 class ScriptAligner:
     """
     Align script segments to Whisper word timestamps.
@@ -230,7 +236,7 @@ class ScriptAligner:
 
             idx, start, phrase_end = best
 
-        print(f"   Segment {seg.number}: aligned at {start:.2f}s "
+        print(f"   Segment {seg.number}: aligned at {_fmt_time(start)} "
               f"(confidence=0.95, method=direct_match)")
         return AlignedSegment(
             number=seg.number,
@@ -261,9 +267,14 @@ class ScriptAligner:
         """
         candidates: list[tuple[int, float, str]] = []  # (idx, score, method)
 
-        # Attempt 1: full body
-        body_words = seg.body.split()[:self.context_size]
-        needle = [w.lower().strip(".,!?;:'\"") for w in body_words]
+        # Attempt 1: full body, but strip "Number X." prefix since Whisper dropped it
+        body_words = seg.body.split()[:self.context_size + 3]
+        clean_body = [w.lower().strip(".,!?;:'\"") for w in body_words]
+        # Skip leading "number X" if present (we're here because Whisper missed it)
+        skip = 0
+        if len(clean_body) >= 2 and clean_body[0] == "number":
+            skip = 2  # skip "number" and the digit/word
+        needle = clean_body[skip:skip + self.context_size]
         if len(needle) >= 3:
             idx, score = self._sliding_window_match(needle, whisper_texts)
             candidates.append((idx, score, "context"))
@@ -309,7 +320,7 @@ class ScriptAligner:
                 whisper_words, whisper_texts, best_idx, seg.number,
             )
 
-        print(f"   Segment {seg.number}: aligned at {timestamp:.2f}s "
+        print(f"   Segment {seg.number}: aligned at {_fmt_time(timestamp)} "
               f"(confidence={best_score:.2f}, method={best_method})")
         return AlignedSegment(
             number=seg.number,
@@ -329,25 +340,31 @@ class ScriptAligner:
         whisper_texts: list[str],
         match_idx: int,
         expected_number: int,
-        max_lookback: int = 30,
+        max_lookback: int = 15,
+        max_lookahead: int = 10,
     ) -> tuple[float, float]:
         """
-        Walk backward from a fuzzy match to find the true segment boundary.
+        Search around a fuzzy match to find the true segment boundary.
+
+        Searches both backward and forward from the match point, because
+        the sliding window can land before the actual boundary when the
+        needle includes words Whisper dropped.
 
         Uses two signals (checked in priority order):
         1. "Number X" words — if found, use their timestamp directly
-        2. Sentence boundary + silence gap — the largest gap preceded by
-           sentence-ending punctuation
+        2. Sentence boundary + silence gap — scored by gap size, sentence
+           ending bonus, and proximity to the match point
 
         Returns: (segment_start, number_phrase_end)
-        number_phrase_end is 0.0 if "Number X" was not found during backtrack.
+        number_phrase_end is 0.0 if "Number X" was not found during search.
         """
-        start = max(0, match_idx - max_lookback)
+        search_start = max(0, match_idx - max_lookback)
+        search_end = min(len(whisper_words), match_idx + max_lookahead)
         target_text = str(expected_number)
         target_word = DIGIT_TO_WORD.get(expected_number, "").lower()
 
-        # Signal 1: Look for "Number X" words while walking backward
-        for i in range(match_idx, start, -1):
+        # Signal 1: Look for "Number X" words in search range
+        for i in range(match_idx, search_start, -1):
             text = whisper_texts[i]
             is_number = (text == "number") or (
                 len(text) >= 4 and
@@ -362,13 +379,12 @@ class ScriptAligner:
                     # Found "Number X" — use its start time
                     return whisper_words[i].start, whisper_words[i + 1].end
 
-        # Signal 2: Find the best gap combined with sentence-ending punctuation
+        # Signal 2: Find the best gap in both directions from match point.
+        # Score = gap_size + sentence_bonus - distance_penalty
         best_boundary = whisper_words[match_idx].start  # fallback
         best_score = 0.0
 
-        for i in range(match_idx, start, -1):
-            if i == 0:
-                continue
+        for i in range(search_start + 1, search_end):
             prev_word = whisper_words[i - 1]
             curr_word = whisper_words[i]
             gap = curr_word.start - prev_word.end
@@ -376,10 +392,15 @@ class ScriptAligner:
             if gap < 0.15:
                 continue  # Too small to be a boundary
 
-            # Score this gap: larger gaps + sentence-enders score higher
+            # Score: larger gaps + sentence-enders score higher
             score = gap
             if prev_word.text.rstrip().endswith((".", "!", "?")):
                 score += 0.5  # Sentence boundary bonus
+
+            # Penalize boundaries far from the match point so we prefer
+            # the nearest strong boundary over a distant one
+            distance = abs(i - match_idx)
+            score -= distance * 0.03
 
             if score > best_score:
                 best_score = score
@@ -501,5 +522,5 @@ class ScriptAligner:
 
             seg.confidence = 0.1
             seg.method = "interpolated"
-            print(f"   Segment {seg.number}: interpolated at {seg.start:.2f}s "
+            print(f"   Segment {seg.number}: interpolated at {_fmt_time(seg.start)} "
                   f"(WARNING: manual review recommended)")

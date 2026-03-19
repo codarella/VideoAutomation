@@ -18,8 +18,10 @@ from video_automation.prompt.base import PromptGenerator, SYSTEM_PROMPT
 class ClaudeBatchPromptGenerator(PromptGenerator):
     """Generate all prompts in a single Claude API call."""
 
-    def __init__(self, api_key: str, model: str = "claude-sonnet-4-6"):
+    def __init__(self, api_key: str, model: str = "claude-sonnet-4-6",
+                 character_rate: float = 0.20):
         self.model = model
+        self.character_rate = character_rate
         try:
             import anthropic
             self.client = anthropic.Anthropic(api_key=api_key)

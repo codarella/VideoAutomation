@@ -11,7 +11,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 
 from video_automation.config import Config
-from video_automation.models import Project
+from video_automation.models import Project, AlignedSegmentData
 
 
 # ── Stage interface ───────────────────────────────────────────────────────
@@ -143,6 +143,29 @@ class SegmentStage(Stage):
         if align_errors:
             print("   CRITICAL: Alignment errors detected. Proceeding with best effort.")
 
+        # Store aligned segments on project for Claude splitting in PROMPT stage
+        project.aligned_segments = []
+        for seg in aligned:
+            # Find word indices into project.words for this segment's time range
+            start_idx = None
+            end_idx = None
+            for wi, w in enumerate(project.words):
+                if start_idx is None and w.start >= seg.start and w.end <= seg.end:
+                    start_idx = wi
+                if w.start >= seg.start and w.end <= seg.end:
+                    end_idx = wi
+            if start_idx is not None and end_idx is not None:
+                project.aligned_segments.append(AlignedSegmentData(
+                    number=seg.number,
+                    title=seg.title,
+                    body=seg.body,
+                    start=seg.start,
+                    end=seg.end,
+                    word_indices=(start_idx, end_idx),
+                    number_word_end=seg.number_word_end,
+                ))
+        print(f"   Stored {len(project.aligned_segments)} aligned segments for Claude splitting")
+
         # Split into scenes
         print("\n   ── Scene Splitting ──")
         splitter = SceneSplitter(
@@ -228,6 +251,7 @@ class PromptStage(Stage):
             generator = ClaudeBatchPromptGenerator(
                 api_key=self.config.anthropic_api_key,
                 model=self.config.claude_model,
+                character_rate=self.config.character_rate,
             )
             generator.generate(project, workspace)
         elif self.config.llm_provider:

@@ -2,28 +2,15 @@
 Split aligned segments into timed scenes for image generation.
 
 This is the micro-segmenter: given a segment with start/end times and words,
-produce 3-8 second scenes that cover the segment gaplessly.
+produce 4-8 second scenes that cover the segment gaplessly.
 """
 
 from __future__ import annotations
 
-import re
 import random
 from video_automation.config import PacingProfile
 from video_automation.models import Scene, Word
 from video_automation.segment.aligner import AlignedSegment
-
-# Patterns that signal the start of a new list item
-_LIST_ITEM_PATTERNS = re.compile(
-    r"^("
-    r"first(ly)?|second(ly)?|third(ly)?|fourth(ly)?|fifth(ly)?|"
-    r"sixth(ly)?|seventh(ly)?|eighth(ly)?|ninth(ly)?|tenth(ly)?|"
-    r"next|finally|lastly|additionally|furthermore|moreover|"
-    r"also|another|one|two|three|four|five|six|seven|eight|nine|ten|"
-    r"\d+[\.\):]"
-    r")[,\.\s:;]?$",
-    re.IGNORECASE,
-)
 
 
 class SceneSplitter:
@@ -99,9 +86,9 @@ class SceneSplitter:
                     break
 
             # Add small padding so the card doesn't cut off abruptly
-            card_dur = (title_end - seg.start) + 0.3
-            # Clamp to reasonable range
-            card_dur = max(1.5, min(card_dur, 5.0))
+            card_dur = (title_end - seg.start) + 0.1
+            # Clamp to ~1 second range
+            card_dur = max(0.8, min(card_dur, 1.2))
             return min(seg.start + card_dur, seg.end)
 
         # Fallback: fixed duration from pacing config
@@ -142,44 +129,31 @@ class SceneSplitter:
         scene_num = 0
 
         for wi, word in enumerate(remaining_words):
-            # Check if this word starts a new list item — force a scene break
-            # before it (but only if we have accumulated some words already)
-            if current_words and self._is_list_item_start(word):
-                prev_word = current_words[-1]
-                scene_text = " ".join(w.text for w in current_words)
-                include_char = random.random() < self.character_rate
-                scene = Scene(
-                    id=f"seg{seg.number:02d}_scene{scene_num:02d}",
-                    type="content",
-                    start=current_words[0].start,
-                    end=prev_word.end,
-                    text=scene_text,
-                    words=list(current_words),
-                    status="planned",
-                    include_character=include_char,
-                    metadata={
-                        "segment_number": seg.number,
-                        "segment_title": seg.title,
-                    },
-                )
-                scenes.append(scene)
-                idx += 1
-                scene_num += 1
-                current_words = []
-
             current_words.append(word)
             elapsed = word.end - current_words[0].start
 
             # Get target duration range for this position in the video
             min_dur, max_dur = self.pacing.target_duration(word.start)
             target = (min_dur + max_dur) / 2.0
+            min_content = self.pacing.content_min_duration
 
             is_last_word = (wi == len(remaining_words) - 1)
-            at_boundary = self._is_sentence_boundary(word)
+            strength = self._boundary_strength(word)
             past_target = elapsed >= target
             past_hard_max = elapsed >= max_dur
+            past_minimum = elapsed >= min_content
 
-            if is_last_word or (past_target and at_boundary) or past_hard_max:
+            # Break conditions:
+            # 1. Last word — always close the scene
+            # 2. Past target + strong/medium boundary (strength >= 2) + past minimum
+            # 3. Past hard max — force break regardless
+            should_break = (
+                is_last_word
+                or (past_target and strength >= 2 and past_minimum)
+                or (past_hard_max and past_minimum)
+            )
+
+            if should_break:
                 scene_text = " ".join(w.text for w in current_words)
                 scene_end = word.end if is_last_word else word.end
 
@@ -221,11 +195,13 @@ class SceneSplitter:
 
         return scenes
 
-    def _is_sentence_boundary(self, word: Word) -> bool:
-        """Check if a word ends at a sentence/clause boundary."""
+    def _boundary_strength(self, word: Word) -> int:
+        """Return boundary strength: 0=none, 1=weak (comma), 2=medium (;:—), 3=strong (.?!)."""
         text = word.text.rstrip()
-        return text.endswith((".", ",", ";", "?", "!", ":", "—"))
-
-    def _is_list_item_start(self, word: Word) -> bool:
-        """Check if a word signals the start of a new list item."""
-        return bool(_LIST_ITEM_PATTERNS.match(word.text.strip()))
+        if text.endswith((".", "?", "!")):
+            return 3
+        if text.endswith((";", ":", "—")):
+            return 2
+        if text.endswith(","):
+            return 1  # weak — never triggers a break on its own
+        return 0

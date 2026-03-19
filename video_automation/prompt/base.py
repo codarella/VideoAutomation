@@ -94,6 +94,13 @@ OFF-CENTER RIGHT: aftermath, consequence
 BOTTOM: stable, foundational
 TOP: vast, overwhelming
 
+══ VISUAL CONTINUITY ══
+Scenes within a segment are a CONTINUOUS CAMERA JOURNEY through one environment.
+- Same backdrop palette and setting across all scenes in a segment.
+- Each scene is a new camera angle or zoom level, NOT a new location.
+- Progressive revelation: wide → medium → close → extreme close as the segment builds.
+- Only change the environment entirely when a new segment begins.
+
 ══ ABSOLUTE NO-TEXT RULE ══
 ZERO text, letters, numbers, labels, captions, or speech bubbles anywhere in the image.
 ONLY exception: if the scene is specifically about a math/physics equation — render ONLY that equation as glowing abstract symbols in neon colors.

@@ -14,11 +14,12 @@ from dataclasses import dataclass, field
 class PacingProfile:
     """Controls how scene durations vary across the video."""
     fast_cut_window: float = 60.0         # Seconds from start to use fast cuts
-    fast_cut_min: float = 2.0             # Min scene duration in fast-cut window
-    fast_cut_max: float = 3.0             # Max scene duration in fast-cut window
-    standard_min: float = 4.0             # Min scene duration after fast-cut window
-    standard_max: float = 7.0             # Max scene duration after fast-cut window
-    number_card_duration: float = 2.0     # Duration for "Number X" title cards
+    fast_cut_min: float = 6.0             # Min scene duration in fast-cut window
+    fast_cut_max: float = 8.0             # Max scene duration in fast-cut window
+    standard_min: float = 7.0             # Min scene duration after fast-cut window
+    standard_max: float = 8.0             # Max scene duration after fast-cut window
+    number_card_duration: float = 1.0     # Duration for "Number X" title cards
+    content_min_duration: float = 4.0     # Absolute minimum for any content scene
 
     def target_duration(self, time_in_video: float) -> tuple[float, float]:
         """Return (min, max) target duration based on position in video."""
