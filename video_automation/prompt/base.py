@@ -94,12 +94,20 @@ OFF-CENTER RIGHT: aftermath, consequence
 BOTTOM: stable, foundational
 TOP: vast, overwhelming
 
-══ VISUAL CONTINUITY ══
-Scenes within a segment are a CONTINUOUS CAMERA JOURNEY through one environment.
-- Same backdrop palette and setting across all scenes in a segment.
-- Each scene is a new camera angle or zoom level, NOT a new location.
-- Progressive revelation: wide → medium → close → extreme close as the segment builds.
-- Only change the environment entirely when a new segment begins.
+══ VISUAL BEATS ══
+A "visual beat" is a group of consecutive scenes that share ONE visual subject or concept.
+Within a beat the camera explores the SAME subject from different angles and zoom levels.
+Between beats the environment or subject changes.
+
+Beat rules:
+- Every scene belongs to exactly one beat. Beats are consecutive (no gaps or reordering).
+- A beat typically spans 2-6 scenes. Single-scene beats are allowed for dramatic emphasis.
+- WITHIN a beat: same backdrop palette, same environment, same central subject. Vary only camera angle and zoom.
+- BETWEEN beats: shift the environment, shift the palette emphasis, shift the central subject.
+- First scene of a beat → ESTABLISH wide shot introducing the new subject.
+- Last scene of a beat → can be CLIMAX or CHANGE if the narrative calls for it.
+- Progressive zoom within a beat: wide → medium → close → extreme close.
+- Only change the environment entirely when a new beat begins.
 
 ══ ABSOLUTE NO-TEXT RULE ══
 ZERO text, letters, numbers, labels, captions, or speech bubbles anywhere in the image.
