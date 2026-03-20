@@ -11,16 +11,16 @@ import json as _json
 PYTHON = sys.executable
 
 AI_MODELS = [
+    "flux-2-pro",
     "bytedance-seedream-4.5",
     "bytedance-seedream-5-lite",
     "bytedance-seedream-4",
-    "flux-2-pro",
     "flux-1-kontext",
     "gpt-image-1",
     "gpt-image-1.5",
-    "gemini-2.5-flash-image",
-    "gemini-3-pro-image-preview",
-    "gemini-3.1-flash-image-preview",
+    "nano-banana-pro",
+    "nano-banana-2",
+    "nano-banana",
     "kling-omni-image",
     "runway-gen4-image",
     "runway-gen4-image-turbo",

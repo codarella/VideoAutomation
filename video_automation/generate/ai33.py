@@ -19,19 +19,40 @@ import requests
 from video_automation.config import Config
 from video_automation.models import Scene
 
+# ── Model alias map ─────────────────────────────────────────────────────
+# ai33.pro rebrands some models in their web UI.  This map lets users
+# pass the friendly UI name (or a short slug) via --ai33-model and have
+# it resolved to the real API model_id automatically.
+MODEL_ALIASES: dict[str, str] = {
+    # Nano Banana family  →  Gemini image models (ai33.pro UI rebranding)
+    "nano-banana-pro":              "gemini-3-pro-image-preview",
+    "nano-banana-2":                "gemini-2.5-flash-image",
+    "nano-banana":                  "gemini-3.1-flash-image-preview",
+}
+
+
+def resolve_model(name: str) -> str:
+    """Resolve a friendly model name to the real API model_id."""
+    key = name.strip().lower()
+    return MODEL_ALIASES.get(key, name)
+
 
 class AI33Generator:
     """Generate images via AI33 API with parallel workers."""
 
     def __init__(self, api_key: str, base_url: str = "https://api.ai33.pro",
-                 model: str = "bytedance-seedream-4.5"):
+                 model: str = "flux-2-pro"):
         self.api_key = api_key
         self.base_url = base_url
-        self.model = model
+        self.model = resolve_model(model)
         self.session = requests.Session()
         self.session.headers.update({"xi-api-key": api_key})
         self.lock = threading.Lock()
         self.total_credits = 0
+
+        # Show resolved name if alias was used
+        if self.model != model:
+            print(f"   Model alias: {model} → {self.model}")
 
     def generate_batch(
         self,
@@ -98,8 +119,9 @@ class AI33Generator:
 
                 scene.image_path = str(out_path.relative_to(workspace))
                 scene.status = "generated"
+                print(f"      ✓ {idx}  ({credits} credits)")
             else:
-                print(f"      FAILED {idx}: {error}")
+                print(f"      ✗ {idx}: {error}")
                 scene.status = "failed"
 
             return success
@@ -122,8 +144,10 @@ class AI33Generator:
 
                 total = done + failed
                 if total % 10 == 0:
+                    with self.lock:
+                        running = self.total_credits
                     print(f"      Progress: {total}/{len(actually_need)} "
-                          f"({done} ok, {failed} failed)")
+                          f"({done} ok, {failed} failed) — {running} credits so far")
                     # Checkpoint every 10 images so we don't lose progress
                     if project and checkpoint_path:
                         project.save(checkpoint_path)
@@ -132,8 +156,9 @@ class AI33Generator:
         if project and checkpoint_path:
             project.save(checkpoint_path)
 
-        print(f"   AI33 complete: {done} generated, {failed} failed, "
-              f"{self.total_credits} total credits")
+        avg = self.total_credits / done if done else 0
+        print(f"   AI33 complete: {done} generated, {failed} failed")
+        print(f"   Credits: {self.total_credits} total, {avg:.0f} avg/image")
 
     def _generate_single(
         self,
@@ -227,6 +252,8 @@ class AI33Generator:
                 status = status_data.get("status", "")
 
                 if status == "done":
+                    # Use actual cost from completed task (falls back to estimate)
+                    actual_credits = status_data.get("credit_cost", credits)
                     images = status_data.get("metadata", {}).get("result_images", [])
                     if images:
                         image_url = images[0].get("imageUrl")
@@ -247,8 +274,8 @@ class AI33Generator:
                                     return False, "Downloaded image is corrupt", 0
 
                                 with self.lock:
-                                    self.total_credits += credits
-                                return True, "", credits
+                                    self.total_credits += actual_credits
+                                return True, "", actual_credits
 
                     return False, "No image in result", 0
 
