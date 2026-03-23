@@ -2,13 +2,16 @@
 PIL/Pillow number card renderer.
 
 Generates "Number X" title cards locally — NO AI image generators.
-White background, large bold black number centered.
+White background, large bold rounded black number centered (Fredoka Bold).
 """
 
 from __future__ import annotations
 
 import os
 from pathlib import Path
+
+# Bundled Fredoka font (variable, supports Bold weight)
+_FREDOKA_PATH = str(Path(__file__).resolve().parent.parent / "assets" / "fonts" / "FredokaOne-Regular.ttf")
 
 
 class NumberCardGenerator:
@@ -33,7 +36,7 @@ class NumberCardGenerator:
             draw = ImageDraw.Draw(img)
 
             number_text = str(number)
-            font_size = int(self.height * 0.5)
+            font_size = int(self.height * 0.6)
             font = self._load_font(font_size)
 
             bbox = draw.textbbox((0, 0), number_text, font=font)
@@ -41,7 +44,7 @@ class NumberCardGenerator:
             text_height = bbox[3] - bbox[1]
 
             x = (self.width - text_width) // 2
-            y = (self.height - text_height) // 2
+            y = (self.height - text_height) // 2 - bbox[1]
 
             draw.text((x, y), number_text, fill=(0, 0, 0), font=font)
 
@@ -54,27 +57,34 @@ class NumberCardGenerator:
             return False
 
     def _load_font(self, font_size: int):
-        """Load a bold font, with fallbacks."""
+        """Load Fredoka Bold (rounded), with fallbacks."""
         from PIL import ImageFont
 
-        font_paths = [
+        # Primary: bundled Fredoka variable font set to Bold
+        if os.path.exists(_FREDOKA_PATH):
+            try:
+                font = ImageFont.truetype(_FREDOKA_PATH, font_size)
+                font.set_variation_by_name("Bold")
+                return font
+            except Exception:
+                try:
+                    return ImageFont.truetype(_FREDOKA_PATH, font_size)
+                except Exception:
+                    pass
+
+        # Fallback: system bold fonts
+        fallback_paths = [
             "C:\\Windows\\Fonts\\arialbd.ttf",
-            "C:\\Windows\\Fonts\\Arial Bold.ttf",
             "C:\\Windows\\Fonts\\impact.ttf",
             "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
             "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
         ]
 
-        for fp in font_paths:
+        for fp in fallback_paths:
             if os.path.exists(fp):
                 try:
                     return ImageFont.truetype(fp, font_size)
                 except Exception:
                     pass
 
-        try:
-            return ImageFont.truetype(
-                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", font_size
-            )
-        except Exception:
-            return ImageFont.load_default()
+        return ImageFont.load_default()
