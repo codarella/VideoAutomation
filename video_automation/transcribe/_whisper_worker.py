@@ -136,7 +136,19 @@ def _run_chunked(model, audio_path: str, total_duration: float,
             except Exception:
                 pass
             print(f"      ⚠ OOM on chunk {chunk_idx + 1}, retrying with beam_size=1...")
-            chunk_words = _transcribe_file(model, tmp_path, 1, temperature)
+            try:
+                chunk_words = _transcribe_file(model, tmp_path, 1, temperature)
+            except (RuntimeError, MemoryError):
+                # Still OOM — skip this chunk rather than crashing the pass
+                import gc
+                gc.collect()
+                try:
+                    import torch
+                    torch.cuda.empty_cache()
+                except Exception:
+                    pass
+                print(f"      ⚠ Chunk {chunk_idx + 1} failed even with beam_size=1, skipping")
+                chunk_words = []
         finally:
             Path(tmp_path).unlink(missing_ok=True)
 

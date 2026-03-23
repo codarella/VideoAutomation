@@ -107,6 +107,9 @@ class ScriptAligner:
         # Enforce monotonic ordering
         self._fix_monotonic(aligned, whisper_words, whisper_texts)
 
+        # Fix impossibly short segments (e.g. context match landing near next segment)
+        self._fix_short_segments(aligned)
+
         # Interpolate any unaligned segments from neighbors
         self._interpolate_unaligned(aligned, audio_duration)
 
@@ -187,10 +190,11 @@ class ScriptAligner:
             return int(clean)
         if clean in WORD_TO_DIGIT:
             return WORD_TO_DIGIT[clean]
-        # Fuzzy match against number words
-        for word, digit in WORD_TO_DIGIT.items():
-            if len(clean) >= 3 and difflib.SequenceMatcher(None, clean, word).ratio() > 0.7:
-                return digit
+        # Fuzzy match against number words (min length 4 to avoid "the" → "three")
+        if len(clean) >= 4:
+            for word, digit in WORD_TO_DIGIT.items():
+                if difflib.SequenceMatcher(None, clean, word).ratio() > 0.7:
+                    return digit
         return None
 
     def _direct_number_match(
@@ -480,6 +484,39 @@ class ScriptAligner:
                 loser.confidence = 0.0
                 loser.method = "unaligned"
                 changed = True
+
+    def _fix_short_segments(
+        self,
+        aligned: list[AlignedSegment],
+        min_duration: float = 10.0,
+    ) -> None:
+        """
+        Detect segments that would be impossibly short and mark them for
+        interpolation.  A context-matched segment landing right next to
+        a direct-matched neighbor is almost certainly wrong.
+        """
+        for i in range(len(aligned) - 1):
+            curr = aligned[i]
+            nxt = aligned[i + 1]
+
+            if curr.start < 0 or nxt.start < 0:
+                continue  # already marked for interpolation
+
+            duration = nxt.start - curr.start
+            if duration >= min_duration:
+                continue
+
+            # Pick the lower-confidence segment to invalidate
+            if curr.confidence <= nxt.confidence:
+                loser = curr
+            else:
+                loser = nxt
+
+            print(f"   ⚠ Segment {loser.number}: duration too short "
+                  f"({duration:.1f}s), will interpolate")
+            loser.start = -1.0
+            loser.confidence = 0.0
+            loser.method = "unaligned"
 
     def _interpolate_unaligned(
         self,
