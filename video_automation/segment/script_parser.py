@@ -22,14 +22,14 @@ WORD_TO_DIGIT: dict[str, int] = {
 
 DIGIT_TO_WORD: dict[int, str] = {v: k for k, v in WORD_TO_DIGIT.items()}
 
-# Build regex that matches segment headers like "Number 9." or "Number Nine."
+# Build regex that matches segment headers like "Number 9." or "Number Nine,"
 # Two requirements to distinguish real headers from casual mentions:
 #   1. Must be at the start of a line (or start of text)
-#   2. Must be followed by a period or colon after the number
+#   2. Must be followed by a period, colon, or comma after the number
 # This filters out mid-sentence mentions like "responsible for number four."
 _number_words = "|".join(WORD_TO_DIGIT.keys())
 NUMBER_PATTERN = re.compile(
-    r'(?:^|\n)\s*[Nn]umber\s+(' + _number_words + r'|\d+)\s*[.:]',
+    r'(?:^|\n)\s*[Nn]umber\s+(' + _number_words + r'|\d+)\s*[.:,]',
     re.IGNORECASE,
 )
 
