@@ -29,7 +29,7 @@ DIGIT_TO_WORD: dict[int, str] = {v: k for k, v in WORD_TO_DIGIT.items()}
 # This filters out mid-sentence mentions like "responsible for number four."
 _number_words = "|".join(WORD_TO_DIGIT.keys())
 NUMBER_PATTERN = re.compile(
-    r'(?:^|\n)\s*[Nn]umber\s+(' + _number_words + r'|\d+)\s*[.:,]',
+    r'(?:^|\n|(?<=[.!?]\s))\s*[Nn]umber\s+(' + _number_words + r'|\d+)\s*[.:,]',
     re.IGNORECASE,
 )
 
