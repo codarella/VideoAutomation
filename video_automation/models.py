@@ -8,7 +8,9 @@ One unified JSON file replaces the old word_timestamps + timeline + prompts trio
 from __future__ import annotations
 
 import json
+import shutil
 from dataclasses import dataclass, field, asdict
+from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
 
@@ -173,10 +175,18 @@ class Project:
 
     # ── Serialization ─────────────────────────────────────────────
 
-    def save(self, path: Path) -> None:
-        """Save project to a single JSON file."""
+    def save(self, path: Path, *, snapshot: bool = True) -> None:
+        """Save project to a single JSON file.
+
+        If *snapshot* is True and the file already exists, a timestamped copy
+        is placed in a sibling ``.history/`` directory before overwriting.
+        """
         path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Snapshot the current file before overwriting
+        if snapshot and path.exists():
+            self._create_snapshot(path)
 
         data = {
             "name": self.name,
@@ -194,6 +204,70 @@ class Project:
 
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+
+    # ── Snapshot / Undo ────────────────────────────────────────────
+
+    @staticmethod
+    def _create_snapshot(path: Path, keep: int = 20) -> Path | None:
+        """Copy the current project JSON into .history/ with a timestamp."""
+        history_dir = path.parent / ".history"
+        history_dir.mkdir(exist_ok=True)
+
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        snapshot_path = history_dir / f"{path.stem}_{ts}.json"
+
+        # Avoid duplicate snapshots within the same second
+        if snapshot_path.exists():
+            return snapshot_path
+
+        shutil.copy2(path, snapshot_path)
+
+        # Prune old snapshots beyond *keep*
+        snaps = sorted(history_dir.glob(f"{path.stem}_*.json"))
+        for old in snaps[:-keep]:
+            old.unlink(missing_ok=True)
+
+        return snapshot_path
+
+    @staticmethod
+    def list_snapshots(path: Path) -> list[Path]:
+        """List available snapshots for a project file, newest first."""
+        history_dir = Path(path).parent / ".history"
+        if not history_dir.exists():
+            return []
+        stem = Path(path).stem
+        return sorted(history_dir.glob(f"{stem}_*.json"), reverse=True)
+
+    @classmethod
+    def restore_snapshot(cls, snapshot_path: Path, project_path: Path) -> "Project":
+        """Restore a previous snapshot as the current project.
+
+        The current state is snapshot-ted first so it is not lost.
+        """
+        project_path = Path(project_path)
+        # Snapshot current state before we overwrite with the old version
+        if project_path.exists():
+            cls._create_snapshot(project_path)
+
+        # Load the old snapshot and write it as current (without re-snapshotting)
+        project = cls.load(snapshot_path)
+        project.save(project_path, snapshot=False)
+        return project
+
+    @staticmethod
+    def snapshot_label(snapshot_path: Path) -> str:
+        """Extract a human-readable label from a snapshot filename.
+
+        Example: 'MyVideo_project_20260325_143022.json' -> '2026-03-25 14:30:22'
+        """
+        stem = snapshot_path.stem
+        # Last 15 chars are the timestamp: YYYYMMDD_HHMMSS
+        ts_part = stem[-15:]  # '20260325_143022'
+        try:
+            dt = datetime.strptime(ts_part, "%Y%m%d_%H%M%S")
+            return dt.strftime("%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            return stem
 
     @classmethod
     def load(cls, path: Path) -> Project:

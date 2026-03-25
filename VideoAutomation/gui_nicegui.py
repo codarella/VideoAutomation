@@ -14,6 +14,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
 
+# Ensure the project root is on sys.path so `video_automation` is importable
+_project_root = os.path.normpath(os.path.join(os.path.dirname(__file__), ".."))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
+
 from nicegui import app, ui
 
 
@@ -1320,6 +1325,7 @@ def _build_generate_tab():
         stop_btn  = ui.button("Stop", icon="stop", color="negative").props("disabled")
         regen_btn = ui.button("Regen Missing", icon="refresh", color="warning")
         corrupt_btn = ui.button("Scan Corrupt", icon="bug_report", color="purple")
+        chapters_btn = ui.button("Export Chapters", icon="list_alt", color="info")
 
         async def _start():
             if not app_state.audio_path or not os.path.exists(app_state.audio_path):
@@ -1383,15 +1389,93 @@ def _build_generate_tab():
             else:
                 ui.notify("No corrupt images found", type="positive")
 
+        def _export_chapters():
+            ws = Path(app_state.workspace)
+            project_path = ws / "scripts" / f"{app_state.project_name}_project.json"
+            if not project_path.exists():
+                ui.notify("No project JSON found — run the pipeline first", type="negative")
+                return
+            from video_automation.models import Project as _Proj
+            proj = _Proj.load(project_path)
+            if not proj.aligned_segments:
+                ui.notify("No segments found — run at least through the segment stage", type="warning")
+                return
+            from video_automation.export.youtube import export_chapters as _export
+            text = _export(proj, ws)
+            out_path = ws / "videos" / f"{proj.name}_chapters.txt"
+            ui.notify(f"Chapters exported to {out_path.name}", type="positive")
+            # Show chapters in a copy-friendly dialog
+            with ui.dialog() as dlg, ui.card().classes("w-96"):
+                ui.label("YouTube Chapters").classes("text-h6")
+                ui.label("Paste this into your YouTube description:").classes("text-sm text-grey")
+                ui.textarea(value=text).props("readonly outlined autogrow").classes("w-full font-mono text-sm")
+                ui.button("Close", on_click=dlg.close).props("flat")
+            dlg.open()
+
         start_btn.on("click", _start)
         stop_btn.on("click", _stop)
         regen_btn.on("click", _regen_missing)
         corrupt_btn.on("click", _scan_corrupt)
+        chapters_btn.on("click", _export_chapters)
+
+    # ── Project History (Snapshots) ──────────────────────────────────────────
+    with ui.card().classes("w-full mb-3"):
+        ui.label("Project History").classes("text-subtitle1 font-semibold")
+        ui.label("Automatic snapshots are created before every save. Restore any previous state."
+                 ).classes("text-xs text-grey mb-2")
+
+        history_container = ui.column().classes("w-full gap-1")
+
+        def _refresh_history():
+            history_container.clear()
+            ws = Path(app_state.workspace)
+            project_path = ws / "scripts" / f"{app_state.project_name}_project.json"
+            if not project_path.exists():
+                with history_container:
+                    ui.label("No project file yet.").classes("text-sm text-grey")
+                return
+
+            from video_automation.models import Project as _Proj
+            snaps = _Proj.list_snapshots(project_path)
+            if not snaps:
+                with history_container:
+                    ui.label("No snapshots yet — they are created automatically when the pipeline runs."
+                             ).classes("text-sm text-grey")
+                return
+
+            with history_container:
+                for snap in snaps[:10]:  # show last 10
+                    label = _Proj.snapshot_label(snap)
+                    size_kb = snap.stat().st_size / 1024
+
+                    with ui.row().classes("items-center gap-2 w-full"):
+                        ui.icon("history").classes("text-grey")
+                        ui.label(label).classes("text-sm font-mono flex-1")
+                        ui.label(f"{size_kb:.0f} KB").classes("text-xs text-grey")
+
+                        def _make_restore(s=snap):
+                            async def _do_restore():
+                                from video_automation.models import Project as _P
+                                _P.restore_snapshot(s, project_path)
+                                ui.notify(f"Restored snapshot from {_P.snapshot_label(s)}", type="positive")
+                                _refresh_history()
+                            return _do_restore
+
+                        ui.button("Restore", icon="restore", on_click=_make_restore(snap)).props(
+                            "flat dense color=warning size=sm"
+                        )
+
+                if len(snaps) > 10:
+                    ui.label(f"... and {len(snaps) - 10} older snapshots").classes("text-xs text-grey")
+
+        ui.button("Refresh History", icon="refresh", on_click=_refresh_history).props("flat dense")
+        _refresh_history()
 
 
 # ── GALLERY TAB ───────────────────────────────────────────────────────────────
 _gallery_search = ""
 _gallery_filter = "All"
+_gallery_nav_data: dict = {}  # {snum: {"info": ..., "scene_data": ...}} for detail dialog navigation
 
 
 def _build_gallery_tab():
@@ -1437,12 +1521,26 @@ def _build_gallery_tab():
     filter_sel.on("update:model-value", _filter_change)
 
 
-def _regen_all_missing():
-    val = load_missing_scenes(app_state.workspace, app_state.project_name)
-    app_state.regen_scenes = val
-    if _regen_input:
-        _regen_input.value = val
-    ui.notify(f"Loaded {len(val.split(',')) if val else 0} scenes", type="info")
+async def _regen_all_missing():
+    """Regenerate all missing/placeholder scenes by actually triggering generation."""
+    gallery = scan_gallery(app_state.workspace, app_state.project_name)
+    missing = sorted(
+        snum for snum, info in gallery.items()
+        if info["status"] in ("MISSING", "PLACEHOLDER", "CORRUPT")
+    )
+    if not missing:
+        ui.notify("No missing scenes found!", type="positive")
+        return
+    # Open the Generation Tasks panel and scroll to it so the user sees the logs
+    if _regen_panel:
+        _regen_panel.open()
+        await ui.run_javascript(
+            'document.querySelector(".q-expansion-item--expanded")?.scrollIntoView({behavior:"smooth"})'
+        )
+    ui.notify(f"Regenerating {len(missing)} missing scenes — see Generation Tasks panel below",
+              type="info", timeout=8000)
+    for snum in missing:
+        await _regen_scene_now(snum)
 
 
 def _refresh_gallery(filter_val: str = "All"):
@@ -1504,6 +1602,13 @@ def _refresh_gallery(filter_val: str = "All"):
                 search_result[snum] = info
         filtered = search_result
 
+    # Store nav data for detail dialog navigation
+    global _gallery_nav_data
+    _gallery_nav_data = {
+        snum: {"info": info, "scene_data": scenes_map.get(snum, {})}
+        for snum, info in sorted(filtered.items())
+    }
+
     with _gallery_container:
         if not filtered:
             ui.label("No scenes to display.").classes("text-grey")
@@ -1519,6 +1624,98 @@ STATUS_COLORS = {
     "MISSING": "red",
     "CORRUPT": "red",
 }
+
+
+async def _upload_custom_image(snum: int, scene_data: dict, name: str):
+    """Pick a local image, burn segment banner on it, save with correct naming."""
+    workspace = Path(app_state.workspace)
+    project_path = workspace / "scripts" / f"{name}_project.json"
+
+    # Pick image file
+    path = await _pick_file(
+        "Select Image to Import",
+        [("Image files", "*.png *.jpg *.jpeg *.webp *.bmp"), ("All files", "*.*")],
+        initial_dir=str(workspace),
+    )
+    if not path:
+        return
+
+    # Determine correct output path from scene data
+    scene_id = scene_data.get("id", "")
+    img_path_raw = scene_data.get("image_path", "")
+    if img_path_raw:
+        out_path = workspace / img_path_raw.replace("\\", "/")
+    elif scene_id:
+        import re as _re
+        m = _re.match(r"seg(\d+)_scene(\d+)", scene_id)
+        if m:
+            fname = f"scene_{m.group(1)}_{m.group(2)}.png"
+        else:
+            fname = f"{scene_id}.png"
+        out_path = workspace / "images" / name / fname
+    else:
+        out_path = workspace / "images" / name / f"scene_{snum:04d}.png"
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Copy and convert to PNG
+    try:
+        from PIL import Image as _PIL
+        img = _PIL.open(path).convert("RGB")
+        # Resize to 1920x1080 if needed
+        if img.size != (1920, 1080):
+            img = img.resize((1920, 1080), _PIL.LANCZOS)
+        img.save(str(out_path), "PNG")
+    except Exception as e:
+        ui.notify(f"Failed to process image: {e}", type="negative")
+        return
+
+    # Burn segment banner — try multiple sources for the title
+    seg_title = scene_data.get("metadata", {}).get("segment_title", "")
+    if not seg_title:
+        seg_title = scene_data.get("segment", "")
+    # If scene_data didn't have the title, read it fresh from project JSON
+    if not seg_title and project_path.exists():
+        try:
+            with open(project_path, encoding="utf-8") as f:
+                pdata = json.load(f)
+            idx = snum - 1
+            if 0 <= idx < len(pdata.get("scenes", [])):
+                sc = pdata["scenes"][idx]
+                seg_title = sc.get("metadata", {}).get("segment_title", "")
+                if not seg_title:
+                    seg_title = sc.get("segment", "")
+        except Exception:
+            pass
+    if seg_title:
+        try:
+            from video_automation.generate.title_overlay import TitleBarOverlay
+            ok = TitleBarOverlay().apply(str(out_path), seg_title)
+            if ok:
+                ui.notify(f"Banner burned: {seg_title}", type="info")
+            else:
+                ui.notify("Banner overlay returned False — check image/title", type="warning")
+        except Exception as e:
+            ui.notify(f"Banner overlay error: {e}", type="warning")
+    else:
+        ui.notify("No segment title found — image saved without banner", type="warning")
+
+    # Update project JSON
+    if project_path.exists():
+        try:
+            with open(project_path, encoding="utf-8") as f:
+                pdata = json.load(f)
+            idx = snum - 1
+            if 0 <= idx < len(pdata.get("scenes", [])):
+                pdata["scenes"][idx]["status"] = "generated"
+                pdata["scenes"][idx]["image_path"] = str(out_path.relative_to(workspace))
+                with open(project_path, "w", encoding="utf-8") as f:
+                    json.dump(pdata, f, indent=2, ensure_ascii=False)
+        except Exception:
+            pass
+
+    ui.notify(f"Scene {snum}: custom image imported!", type="positive")
+    _refresh_gallery(filter_val=_gallery_filter)
 
 
 def _build_gallery_card(snum: int, info: dict, scene_data: dict, name: str):
@@ -1550,14 +1747,21 @@ def _build_gallery_card(snum: int, info: dict, scene_data: dict, name: str):
             with ui.row().classes("gap-1"):
                 ui.badge(str(snum), color="blue-grey").props("rounded")
                 ui.badge(display_status, color=color).props("rounded")
-            async def _on_regen(_, s=snum, st=status):
-                await _regen_or_confirm(s, st)
-            btn = ui.button(
-                icon="refresh",
-                on_click=_on_regen
-            ).props("flat round dense").tooltip("Regenerate now")
-            if is_generating:
-                btn.props("disable")
+            with ui.row().classes("gap-0"):
+                async def _on_upload(_, s=snum, sd=scene_data, n=name):
+                    await _upload_custom_image(s, sd, n)
+                ui.button(
+                    icon="upload",
+                    on_click=_on_upload
+                ).props("flat round dense").tooltip("Upload custom image")
+                async def _on_regen(_, s=snum, st=status):
+                    await _regen_or_confirm(s, st)
+                btn = ui.button(
+                    icon="refresh",
+                    on_click=_on_regen
+                ).props("flat round dense").tooltip("Regenerate now")
+                if is_generating:
+                    btn.props("disable")
 
 
 def _regen_scene(snum: int):
@@ -1741,7 +1945,7 @@ async def _regen_scene_now(snum: int):
             "generations_count": "1",
             "model_parameters": json.dumps({
                 "aspect_ratio": "16:9",
-                "resolution": "2K",
+                "resolution": "1K",
             }),
         }
 
@@ -1917,73 +2121,142 @@ async def _regen_scene_now(snum: int):
 
 # ── IMAGE DETAIL DIALOG ───────────────────────────────────────────────────────
 def _open_detail(scene_data: dict, image_path: str, name: str, snum: int = 0):
-    # Resolve fields from both prompts.json and project.json formats
-    scene_id = scene_data.get("id", "")
-    scene_num = scene_data.get("scene") or snum
-    time_str = scene_data.get("time", "")
-    if not time_str and "start" in scene_data and "end" in scene_data:
-        time_str = f"{scene_data['start']:.2f}s - {scene_data['end']:.2f}s"
-    segment_str = scene_data.get("segment", "")
-    if not segment_str:
-        meta = scene_data.get("metadata", {})
-        seg_num = meta.get("segment_number", "")
-        seg_title = meta.get("segment_title", "")
-        segment_str = f"#{seg_num}: {seg_title}" if seg_num else seg_title
-    scene_text = scene_data.get("scene_text", "") or scene_data.get("text", "")
-    prompt_val = scene_data.get("prompt", "") or ""
-    negative_val = scene_data.get("negative", "") or ""
-    prompt_src = scene_data.get("prompt_source", "unknown") or "unknown"
+    # Build ordered list of navigable scenes from gallery nav data
+    nav_keys = sorted(_gallery_nav_data.keys()) if _gallery_nav_data else [snum]
+    current_idx = [nav_keys.index(snum) if snum in nav_keys else 0]
+
+    def _resolve_scene(s):
+        """Resolve display fields for a given scene number."""
+        nav = _gallery_nav_data.get(s, {})
+        sd = nav.get("scene_data", scene_data if s == snum else {})
+        info = nav.get("info", {})
+        ip = info.get("path", "") if info else (image_path if s == snum else "")
+
+        sid = sd.get("id", "")
+        sn = sd.get("scene") or s
+        ts = sd.get("time", "")
+        if not ts and "start" in sd and "end" in sd:
+            ts = f"{sd['start']:.2f}s - {sd['end']:.2f}s"
+        seg = sd.get("segment", "")
+        if not seg:
+            meta = sd.get("metadata", {})
+            seg_num = meta.get("segment_number", "")
+            seg_title = meta.get("segment_title", "")
+            seg = f"#{seg_num}: {seg_title}" if seg_num else seg_title
+        text = sd.get("scene_text", "") or sd.get("text", "")
+        prompt = sd.get("prompt", "") or ""
+        neg = sd.get("negative", "") or ""
+        psrc = sd.get("prompt_source", "unknown") or "unknown"
+        return sid, sn, ts, seg, text, prompt, neg, psrc, ip
 
     with ui.dialog() as dlg:
         dlg.props("maximized")
         with ui.card().classes("w-full h-full overflow-auto"):
-            with ui.row().classes("w-full gap-4"):
-                # left: image
-                with ui.column().classes("flex-1"):
-                    if image_path and os.path.exists(image_path):
-                        fname = os.path.basename(image_path)
-                        ui.image(_img_url(name, fname, image_path)).classes("w-full rounded")
+            # Content container that gets rebuilt on navigation
+            content = ui.column().classes("w-full")
+
+    def _render_detail():
+        """Render the detail view for the current scene."""
+        content.clear()
+        s = nav_keys[current_idx[0]]
+        sid, sn, ts, seg, text, prompt, neg, psrc, ip = _resolve_scene(s)
+
+        has_prev = current_idx[0] > 0
+        has_next = current_idx[0] < len(nav_keys) - 1
+
+        with content:
+            # Top bar: nav arrows + scene label + close
+            with ui.row().classes("w-full items-center justify-between mb-2"):
+                with ui.row().classes("items-center gap-2"):
+                    ui.button(icon="arrow_back", on_click=_go_prev).props(
+                        "flat round" + (" disable" if not has_prev else "")
+                    ).tooltip("Previous scene (← key)")
+                    ui.label(f"Scene {sn} of {len(nav_keys)}").classes("text-h6 font-bold")
+                    ui.button(icon="arrow_forward", on_click=_go_next).props(
+                        "flat round" + (" disable" if not has_next else "")
+                    ).tooltip("Next scene (→ key)")
+                ui.button(icon="close", on_click=dlg.close).props("flat round")
+
+            # Main content: image with side arrows + metadata
+            with ui.row().classes("w-full gap-4 items-start"):
+                # Left arrow
+                with ui.column().classes("justify-center self-center"):
+                    ui.button(icon="chevron_left", on_click=_go_prev).props(
+                        "flat round size=lg" + (" disable" if not has_prev else "")
+                    ).classes("text-4xl")
+
+                # Center: image
+                with ui.column().classes("flex-1 min-w-0"):
+                    if ip and os.path.exists(ip):
+                        fname = os.path.basename(ip)
+                        ui.image(_img_url(name, fname, ip)).classes("w-full rounded")
                     else:
                         ui.icon("broken_image", size="8rem").classes("text-grey")
 
-                # right: metadata + editable prompt
+                # Right arrow
+                with ui.column().classes("justify-center self-center"):
+                    ui.button(icon="chevron_right", on_click=_go_next).props(
+                        "flat round size=lg" + (" disable" if not has_next else "")
+                    ).classes("text-4xl")
+
+                # Right panel: metadata + editable prompt
                 with ui.column().classes("w-96 gap-2"):
-                    ui.label(f"Scene {scene_num}").classes("text-h6 font-bold")
-                    if scene_id:
-                        ui.label(scene_id).classes("text-xs text-grey-6 font-mono")
-                    ui.label(f"Time: {time_str}").classes("text-sm text-grey")
-                    if segment_str:
-                        ui.label(f"Segment: {segment_str}").classes("text-sm")
-                    if scene_text:
+                    if sid:
+                        ui.label(sid).classes("text-xs text-grey-6 font-mono")
+                    ui.label(f"Time: {ts}").classes("text-sm text-grey")
+                    if seg:
+                        ui.label(f"Segment: {seg}").classes("text-sm")
+                    if text:
                         ui.label("Scene text:").classes("text-sm font-semibold mt-1")
-                        ui.label(scene_text).classes("text-sm text-grey")
+                        ui.label(text).classes("text-sm text-grey")
 
                     with ui.row().classes("gap-2 mt-1"):
-                        ui.badge(prompt_src, color="blue")
+                        ui.badge(psrc, color="blue")
 
                     ui.label("Prompt:").classes("text-sm font-semibold mt-2")
-                    prompt_ta = ui.textarea(value=prompt_val).classes("w-full")
+                    prompt_ta = ui.textarea(value=prompt).classes("w-full")
                     prompt_ta.props("rows=6")
 
                     ui.label("Negative prompt:").classes("text-sm font-semibold mt-1")
-                    neg_ta = ui.textarea(value=negative_val).classes("w-full")
+                    neg_ta = ui.textarea(value=neg).classes("w-full")
                     neg_ta.props("rows=3")
 
                     with ui.row().classes("gap-2 mt-2"):
-                        def _save_prompt():
-                            _save_scene_prompt(name, scene_num, prompt_ta.value, neg_ta.value)
+                        _sn = sn  # capture for closures
+
+                        def _save_prompt(sn_=_sn):
+                            _save_scene_prompt(name, sn_, prompt_ta.value, neg_ta.value)
                             ui.notify("Prompt saved", type="positive")
 
-                        async def _save_and_regen():
-                            _save_scene_prompt(name, scene_num, prompt_ta.value, neg_ta.value)
+                        async def _save_and_regen(sn_=_sn):
+                            _save_scene_prompt(name, sn_, prompt_ta.value, neg_ta.value)
                             dlg.close()
-                            await _regen_scene_now(int(scene_num))
+                            await _regen_scene_now(int(sn_))
 
                         ui.button("Save Prompt", icon="save", color="primary",
                                   on_click=_save_prompt)
                         ui.button("Save & Regen", icon="refresh", color="warning",
                                   on_click=_save_and_regen)
-                        ui.button("Close", on_click=dlg.close).props("flat")
+
+    def _go_prev():
+        if current_idx[0] > 0:
+            current_idx[0] -= 1
+            _render_detail()
+
+    def _go_next():
+        if current_idx[0] < len(nav_keys) - 1:
+            current_idx[0] += 1
+            _render_detail()
+
+    # Keyboard navigation (left/right arrow keys)
+    ui.keyboard(on_key=lambda e: (
+        _go_prev() if e.key == 'ArrowLeft' and e.action.keydown else
+        _go_next() if e.key == 'ArrowRight' and e.action.keydown else
+        dlg.close() if e.key == 'Escape' and e.action.keydown else
+        None
+    ))
+
+    _render_detail()
     dlg.open()
 
 
