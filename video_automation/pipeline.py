@@ -252,6 +252,7 @@ class PromptStage(Stage):
                 api_key=self.config.anthropic_api_key,
                 model=self.config.claude_model,
                 character_rate=self.config.character_rate,
+                style=self.config.style,
             )
             generator.generate(project, workspace)
         elif self.config.llm_provider:
@@ -260,11 +261,12 @@ class PromptStage(Stage):
                 provider=self.config.llm_provider,
                 model=self.config.llm_model,
                 url=self.config.llm_url,
+                style=self.config.style,
             )
             generator.generate(project, workspace)
         else:
             from video_automation.prompt.template import TemplatePromptGenerator
-            generator = TemplatePromptGenerator()
+            generator = TemplatePromptGenerator(style=self.config.style)
             generator.generate(project, workspace)
 
     def should_skip(self, project: Project) -> bool:
@@ -324,6 +326,81 @@ class GenerateStage(Stage):
                 model=self.config.ai33_model,
             )
             ai33.generate_batch(content_needs, images_dir, workspace, self.config, project=project)
+
+        # ── Tier-1 retry: re-attempt image generation for any that failed ────
+        tier1_failed = [s for s in project.scenes if s.status == "failed" and s.type == "content"]
+        if tier1_failed and self.config.ai33_api_key:
+            print(f"   Tier-1 retry: {len(tier1_failed)} failed scene(s) — retrying image generation...")
+            for scene in tier1_failed:
+                scene.status = "prompted"
+            ai33 = AI33Generator(
+                api_key=self.config.ai33_api_key,
+                base_url=self.config.ai33_base_url,
+                model=self.config.ai33_model,
+            )
+            ai33.generate_batch(tier1_failed, images_dir, workspace, self.config, project=project)
+
+        # ── Tier-2 retry: re-prompt via Claude then re-generate (up to 3 rounds) ──
+        # Only re-prompt for content/generation errors, NOT server errors.
+        _SERVER_ERROR_PREFIXES = ("API 5", "API 429", "Connection error", "Request error", "Timeout after")
+
+        MAX_REPROMPT_ROUNDS = 3
+        for round_num in range(1, MAX_REPROMPT_ROUNDS + 1):
+            still_failed = [s for s in project.scenes if s.status == "failed" and s.type == "content"]
+            if not still_failed:
+                break
+
+            # Split failures into server errors vs content/prompt errors
+            prompt_failures = []
+            server_failures = []
+            for s in still_failed:
+                err = s.metadata.get("last_error", "")
+                if any(err.startswith(prefix) for prefix in _SERVER_ERROR_PREFIXES):
+                    server_failures.append(s)
+                else:
+                    prompt_failures.append(s)
+
+            if not prompt_failures:
+                print(f"   Tier-2 skip: all {len(server_failures)} failure(s) are server errors "
+                      f"— re-prompting won't help")
+                break
+
+            if server_failures:
+                print(f"   Tier-2: skipping {len(server_failures)} server-error scene(s) "
+                      f"(re-prompting won't help)")
+
+            print(f"   Tier-2 retry (round {round_num}/{MAX_REPROMPT_ROUNDS}): "
+                  f"{len(prompt_failures)} scene(s) with content errors — re-generating prompts...")
+
+            # Reset to "planned" so PromptStage will generate fresh prompts
+            for scene in prompt_failures:
+                scene.status = "planned"
+                scene.prompt = None
+                scene.prompt_source = None
+
+            PromptStage(self.config).execute(project, workspace)
+
+            # Re-attempt image generation for scenes that got a new prompt
+            reprompt_needs = [s for s in prompt_failures if s.needs_image()]
+            if reprompt_needs and self.config.ai33_api_key:
+                ai33 = AI33Generator(
+                    api_key=self.config.ai33_api_key,
+                    base_url=self.config.ai33_base_url,
+                    model=self.config.ai33_model,
+                )
+                ai33.generate_batch(reprompt_needs, images_dir, workspace, self.config, project=project)
+
+        # ── Final report ─────────────────────────────────────────────────────
+        final_failed = [s for s in project.scenes if s.status == "failed" and s.type == "content"]
+        if final_failed:
+            server_count = sum(1 for s in final_failed
+                               if any(s.metadata.get("last_error", "").startswith(p)
+                                      for p in _SERVER_ERROR_PREFIXES))
+            prompt_count = len(final_failed) - server_count
+            print(f"   WARNING: {len(final_failed)} content scene(s) could not be generated after all retries"
+                  f" ({server_count} server errors, {prompt_count} content errors):")
+            for s in final_failed:
+                print(f"      - {s.id}: {s.metadata.get('last_error', 'unknown')}")
 
     def should_skip(self, project: Project) -> bool:
         # Never skip — execute() does its own file-existence check

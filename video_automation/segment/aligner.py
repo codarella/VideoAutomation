@@ -506,8 +506,16 @@ class ScriptAligner:
             if duration >= min_duration:
                 continue
 
-            # Pick the lower-confidence segment to invalidate
-            if curr.confidence <= nxt.confidence:
+            # Pick the lower-confidence segment to invalidate.
+            # direct_match (found the literal "Number X" phrase) always wins
+            # over a fuzzy context match, regardless of confidence score.
+            curr_is_direct = curr.method == "direct_match"
+            nxt_is_direct = nxt.method == "direct_match"
+            if curr_is_direct and not nxt_is_direct:
+                loser = nxt
+            elif nxt_is_direct and not curr_is_direct:
+                loser = curr
+            elif curr.confidence <= nxt.confidence:
                 loser = curr
             else:
                 loser = nxt

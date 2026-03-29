@@ -92,5 +92,8 @@ class Config:
     # ── Scenes to regenerate (1-based indices) ────────────────────
     regen_scenes: list = field(default_factory=list)
 
+    # ── Niche / Visual style ──────────────────────────────────────────────────
+    style: str = "2d_western_cartoon"       # See prompt/base.py SYSTEM_PROMPTS for valid keys
+
     # ── Intro ─────────────────────────────────────────────────────
     intro_duration: float = 0.0             # Seconds of intro clip to use (0 = no intro)

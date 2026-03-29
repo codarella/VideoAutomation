@@ -7,20 +7,23 @@ Generates prompts one scene at a time via local LLM API.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import requests
 
 from video_automation.models import Project, Scene
-from video_automation.prompt.base import PromptGenerator, SYSTEM_PROMPT
+from video_automation.prompt.base import PromptGenerator, get_system_prompt
 
 
 class LocalLLMPromptGenerator(PromptGenerator):
     """Generate prompts via local LLM (Ollama or LM Studio)."""
 
-    def __init__(self, provider: str = "ollama", model: str = "qwen2.5:7b", url: str = ""):
+    def __init__(self, provider: str = "ollama", model: str = "qwen2.5:7b", url: str = "",
+                 style: str = "2d_western_cartoon"):
         self.provider = provider.lower()
         self.model = model
+        self.style = style
 
         if url:
             self.base_url = url
@@ -75,7 +78,14 @@ class LocalLLMPromptGenerator(PromptGenerator):
 
             # Build per-scene user message
             seg_title = scene.metadata.get("segment_title", "")
-            char_note = "Include ONE stick figure scientist." if scene.include_character else ""
+            if scene.include_character:
+                if self.style == "2d_western_cartoon":
+                    char_note = "Include ONE stick figure scientist."
+                else:
+                    anchor = re.sub(r"(?i)^number\s+\d+\s*[:\-\u2013\u2014]\s*", "", seg_title).strip() or "the subject"
+                    char_note = f"Include the anchor character ({anchor}) consistently."
+            else:
+                char_note = ""
             user_msg = (
                 f"Segment: #{scene.metadata.get('segment_number', '?')}: {seg_title}\n"
                 f"Scene text: \"{scene.text}\"\n"
@@ -103,7 +113,7 @@ class LocalLLMPromptGenerator(PromptGenerator):
                     f"{self.base_url}/api/generate",
                     json={
                         "model": self.model,
-                        "system": SYSTEM_PROMPT,
+                        "system": get_system_prompt(self.style),
                         "prompt": user_message,
                         "stream": False,
                     },
@@ -118,7 +128,7 @@ class LocalLLMPromptGenerator(PromptGenerator):
                     json={
                         "model": self.model,
                         "messages": [
-                            {"role": "system", "content": SYSTEM_PROMPT},
+                            {"role": "system", "content": get_system_prompt(self.style)},
                             {"role": "user", "content": user_message},
                         ],
                         "max_tokens": 500,

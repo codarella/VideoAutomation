@@ -99,6 +99,17 @@ LLM_PROVIDERS = ["ollama", "lmstudio", "claude"]
 CLAUDE_MODELS = ["claude-sonnet-4-6", "claude-opus-4-6", "claude-haiku-4-5-20251001"]
 PIPELINE_STAGES = ["transcribe", "segment", "prompt", "generate", "compile"]
 
+NICHES = [
+    ("2d_western_cartoon", "2D Cartoon — Science/Space"),
+    ("animals_nature",     "Animals / Nature"),
+    ("true_crime",         "True Crime / Mystery"),
+    ("history",            "History"),
+    ("tech_gadgets",       "Tech / Gadgets"),
+]
+NICHE_KEYS   = [n[0] for n in NICHES]
+NICHE_LABELS = [n[1] for n in NICHES]
+NICHE_MAP    = {label: key for key, label in NICHES}  # label → key for build_command
+
 
 # ── GUIState  (JSON persistence) ─────────────────────────────────────────────
 class GUIState:
@@ -121,6 +132,7 @@ class GUIState:
         "script_path": "",
         "start_from": "transcribe",
         "stop_after": "compile",
+        "style": NICHE_LABELS[0],
     }
 
     def __init__(self):
@@ -128,7 +140,7 @@ class GUIState:
         self._load()
 
     # Fields that should always be plain strings (select components)
-    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "start_from", "stop_after"}
+    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "start_from", "stop_after", "style"}
 
     def _load(self):
         if os.path.exists(STATE_FILE):
@@ -191,6 +203,7 @@ class AppState:
     regen_scenes: str = ""
     find_dupes: bool = False
     dupe_threshold: str = "10"
+    style: str = NICHE_LABELS[0]
 
 
 # ── CommandBuilder ────────────────────────────────────────────────────────────
@@ -240,6 +253,8 @@ def build_command(s: AppState) -> list[str]:
 
     if s.find_dupes:
         cmd.append("--find-dupes")
+
+    cmd += ["--style", NICHE_MAP.get(s.style, "2d_western_cartoon")]
 
     return cmd
 
@@ -872,6 +887,7 @@ app_state = AppState(
     script_path=gui_state["script_path"],
     start_from=gui_state["start_from"],
     stop_after=gui_state["stop_after"],
+    style=gui_state["style"],
 )
 proc = ProcessManager()
 
@@ -1198,6 +1214,16 @@ def _build_generate_tab():
                 ai_sel.on("update:model-value", lambda e: (
                     setattr(app_state, "ai_model", _sel(e.args)),
                     gui_state.__setitem__("ai_model", _sel(e.args)),
+                ))
+
+            with ui.column().classes("col-span-2"):
+                niche_sel = ui.select(
+                    NICHE_LABELS, label="Niche / Style",
+                    value=app_state.style
+                ).classes("w-full")
+                niche_sel.on("update:model-value", lambda e: (
+                    setattr(app_state, "style", _sel(e.args)),
+                    gui_state.__setitem__("style", _sel(e.args)),
                 ))
 
     # ── Transcript ──────────────────────────────────────────────────────────

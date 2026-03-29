@@ -131,8 +131,11 @@ def print_alignment_report(aligned: list[AlignedSegment]) -> None:
     for seg in aligned:
         dur = seg.end - seg.start
         conf_bar = "#" * int(seg.confidence * 10) + "." * (10 - int(seg.confidence * 10))
+        s_min, s_sec = int(seg.start // 60), seg.start % 60
+        e_min, e_sec = int(seg.end // 60), seg.end % 60
+        d_min, d_sec = int(dur // 60), dur % 60
         print(
-            f"   #{seg.number:2d}  {seg.start:7.2f}s - {seg.end:7.2f}s  "
-            f"({dur:5.1f}s)  [{conf_bar}]  {seg.method:12s}  {seg.title[:40]}"
+            f"   #{seg.number:2d}  {s_min}:{s_sec:05.2f} - {e_min}:{e_sec:05.2f}  "
+            f"({d_min}:{d_sec:04.1f})  [{conf_bar}]  {seg.method:12s}  {seg.title[:40]}"
         )
     print()

@@ -75,6 +75,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--standard-min", type=float, default=4.0, help="Min standard duration")
     p.add_argument("--standard-max", type=float, default=7.0, help="Max standard duration")
 
+    # Niche / visual style
+    p.add_argument("--style", default="2d_western_cartoon",
+                   choices=["2d_western_cartoon", "animals_nature",
+                            "true_crime", "history", "tech_gadgets"],
+                   help="Visual niche / style (default: 2d_western_cartoon)")
+
     # Misc
     p.add_argument("--find-dupes", action="store_true", help="Detect and regenerate duplicate images")
     p.add_argument("--regen-scenes", default="", help="Comma-separated 1-based scene indices to regenerate")
@@ -102,6 +108,7 @@ def main():
         max_workers=args.max_workers,
         find_dupes=args.find_dupes,
         intro_duration=args.intro_duration,
+        style=args.style,
         pacing=PacingProfile(
             fast_cut_window=args.fast_cut_window,
             fast_cut_min=args.fast_cut_min,
@@ -149,6 +156,7 @@ def main():
             script_path=args.script,
             expected_count=args.count,
             counting_direction=args.direction,
+            style=args.style,
         )
 
     # Run pipeline

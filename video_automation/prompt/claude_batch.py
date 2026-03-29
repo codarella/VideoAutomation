@@ -13,8 +13,10 @@ import time
 from pathlib import Path
 from typing import Optional
 
+import re
+
 from video_automation.models import Project, Scene, AlignedSegmentData
-from video_automation.prompt.base import PromptGenerator, SYSTEM_PROMPT
+from video_automation.prompt.base import PromptGenerator, get_system_prompt
 
 
 # ── Pricing table for cost estimation ─────────────────────────────────────
@@ -36,9 +38,10 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
     """Generate prompts per segment with visual-beat analysis."""
 
     def __init__(self, api_key: str, model: str = "claude-sonnet-4-6",
-                 character_rate: float = 0.20):
+                 character_rate: float = 0.20, style: str = "2d_western_cartoon"):
         self.model = model
         self.character_rate = character_rate
+        self.style = style
         try:
             import anthropic
             self.client = anthropic.Anthropic(api_key=api_key)
@@ -115,6 +118,12 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
         n = len(seg_scenes)
         title = seg_scenes[0].metadata.get("segment_title", "")
 
+        # Extract anchor subject from segment title (strip "Number N:" prefix)
+        raw_title = seg_data.title if seg_data else title
+        anchor = re.sub(r"(?i)^number\s+\d+\s*[:\-\u2013\u2014]\s*", "", raw_title).strip()
+        if not anchor:
+            anchor = "the subject"
+
         # Build the full narration from AlignedSegmentData (original script),
         # falling back to concatenated scene text if not available
         if seg_data and seg_data.body:
@@ -123,6 +132,7 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
             full_narration = " ".join(s.text for s in seg_scenes if s.text)[:5000]
 
         # Build time slot list
+        is_cartoon = self.style == "2d_western_cartoon"
         slot_lines = []
         for i, scene in enumerate(seg_scenes):
             slot_num = i + 1
@@ -132,13 +142,40 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
                     f"({scene.duration:.1f}s) [NUMBER CARD: {seg_num}]"
                 )
             else:
-                char_note = " [include scientist figure]" if scene.include_character else ""
+                if scene.include_character:
+                    char_note = (
+                        " [include scientist figure]" if is_cartoon
+                        else f" [include character: {anchor}]"
+                    )
+                else:
+                    char_note = ""
                 slot_lines.append(
                     f"Slot {slot_num} | {scene.start:.2f}s-{scene.end:.2f}s "
                     f"({scene.duration:.1f}s){char_note} | \"{scene.text[:250]}\""
                 )
 
         slots_text = "\n".join(slot_lines)
+
+        # Build character-specific instructions based on style
+        if is_cartoon:
+            char_instruction = (
+                f"For slots marked [include scientist figure]: include ONE rounded expressive "
+                f"stick figure in the scene.\n"
+            )
+        else:
+            char_instruction = (
+                f"For slots marked [include character: {anchor}]: depict \"{anchor}\" as a "
+                f"CARTOON ANIMAL — bold wobbly outline, flat cel-shaded colors matching the real "
+                f"animal's coloring, expressive cartoon face (wide eyes, exaggerated mouth). "
+                f"NOT a stick figure. Humans in the same scene are still stick figures. "
+                f"On the FIRST such slot: embed a 1-line character description directly in the prompt — "
+                f"e.g. \"cartoon {anchor} with bold black outline, flat [colour] body, [trait 1], [trait 2], wide expressive eyes\". "
+                f"On ALL subsequent such slots: copy that exact description phrase verbatim "
+                f"so the image generator renders the same cartoon animal every time.\n"
+            )
+
+        # Example prompt prefix varies by style
+        prompt_prefix = "2D Western Cartoon animation." if is_cartoon else "Wildlife documentary." if self.style == "animals_nature" else "Cinematic."
 
         user_message = (
             f"SEGMENT {seg_num}: \"{title}\"\n"
@@ -175,8 +212,7 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
             f"16:9 widescreen. No text or labels anywhere in the image.\" "
             f"(replace N with the actual digit)\n"
             f"\n"
-            f"For slots marked [include scientist figure]: include ONE rounded expressive "
-            f"stick figure in the scene.\n"
+            f"{char_instruction}"
             f"\n"
             f"Follow ALL style rules from your instructions exactly.\n"
             f"\n"
@@ -187,8 +223,8 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
             f"    {{\"beat\": 2, \"concept\": \"...\", \"slots\": [4, 5, 6]}}\n"
             f"  ],\n"
             f"  \"prompts\": [\n"
-            f"    {{\"slot\": 1, \"prompt\": \"2D Western Cartoon animation. ...\"}},\n"
-            f"    {{\"slot\": 2, \"prompt\": \"2D Western Cartoon animation. ...\"}}\n"
+            f"    {{\"slot\": 1, \"prompt\": \"{prompt_prefix} ...\"}},\n"
+            f"    {{\"slot\": 2, \"prompt\": \"{prompt_prefix} ...\"}}\n"
             f"  ]\n"
             f"}}\n"
             f"\n"
@@ -198,13 +234,25 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
 
         print(f"   Segment {seg_num} ({n} slots, \"{title[:40]}\"): sending to Claude...")
 
-        with self.client.messages.stream(
-            model=self.model,
-            max_tokens=16384,
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": user_message}],
-        ) as stream:
-            final = stream.get_final_message()
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                with self.client.messages.stream(
+                    model=self.model,
+                    max_tokens=16384,
+                    system=get_system_prompt(self.style),
+                    messages=[{"role": "user", "content": user_message}],
+                ) as stream:
+                    final = stream.get_final_message()
+                break
+            except Exception as e:
+                if attempt < max_retries - 1:
+                    wait = 2 ** (attempt + 1)
+                    print(f"   Segment {seg_num} attempt {attempt + 1} failed: {e}")
+                    print(f"   Retrying in {wait}s...")
+                    time.sleep(wait)
+                else:
+                    raise
 
         text = next(
             (b.text for b in final.content if b.type == "text"), ""

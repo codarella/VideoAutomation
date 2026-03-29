@@ -123,6 +123,7 @@ class AI33Generator:
             else:
                 print(f"      ✗ {idx}: {error}")
                 scene.status = "failed"
+                scene.metadata["last_error"] = error or "unknown"
 
             return success
 

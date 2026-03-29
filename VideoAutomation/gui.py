@@ -29,6 +29,16 @@ AI_MODELS = [
 
 LLM_PROVIDERS = ["ollama", "lmstudio", "claude"]
 
+NICHES = [
+    ("2d_western_cartoon", "2D Cartoon — Science/Space"),
+    ("animals_nature",     "Animals / Nature"),
+    ("true_crime",         "True Crime / Mystery"),
+    ("history",            "History"),
+    ("tech_gadgets",       "Tech / Gadgets"),
+]
+NICHE_KEYS   = [n[0] for n in NICHES]
+NICHE_LABELS = [n[1] for n in NICHES]
+
 AI33_KEY = "sk_ixdn5l6ymkwlnetx4dzrlaehlncwo3r2sy0v8igpjzpsjlrx"
 DEFAULT_WORKSPACE = os.path.join(os.path.dirname(__file__), "..", "video_workspace")
 
@@ -66,6 +76,11 @@ class App(tk.Tk):
         self.model_var = tk.StringVar(value=AI_MODELS[0])
         ttk.Combobox(core, textvariable=self.model_var, values=AI_MODELS,
                      width=49, state="readonly").grid(row=3, column=1, **pad)
+
+        tk.Label(core, text="Niche / Style:").grid(row=4, column=0, sticky="e", **pad)
+        self.niche_var = tk.StringVar(value=NICHE_LABELS[0])
+        ttk.Combobox(core, textvariable=self.niche_var, values=NICHE_LABELS,
+                     width=49, state="readonly").grid(row=4, column=1, **pad)
 
         # ── TRANSCRIPT ───────────────────────────────────────────────
         tx = ttk.LabelFrame(self, text="  Transcript  ", padding=6)
@@ -534,6 +549,11 @@ class App(tk.Tk):
                 m = self.llm_model_var.get().strip()
                 if m:
                     cmd += ["--llm-model", m]
+
+        # Niche / style
+        niche_label = self.niche_var.get()
+        style_key = NICHE_KEYS[NICHE_LABELS.index(niche_label)]
+        cmd += ["--style", style_key]
 
         if self.ken_burns_var.get():
             cmd.append("--ken-burns")
