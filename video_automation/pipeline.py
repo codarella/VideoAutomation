@@ -166,28 +166,6 @@ class SegmentStage(Stage):
                 ))
         print(f"   Stored {len(project.aligned_segments)} aligned segments for Claude splitting")
 
-        # Split into scenes
-        print("\n   ── Scene Splitting ──")
-        splitter = SceneSplitter(
-            pacing=self.config.pacing,
-            character_rate=self.config.character_rate,
-        )
-
-        # Determine intro end (before first segment)
-        intro_end = aligned[0].start if aligned else 0.0
-
-        scenes = splitter.split_all(
-            aligned,
-            intro_end=intro_end,
-            audio_duration=project.audio_duration,
-        )
-
-        scene_errors = validator.validate_scenes(scenes, project.audio_duration)
-        project.scenes = scenes
-
-        print(f"   Created {len(scenes)} scenes "
-              f"({len([s for s in scenes if s.type == 'number_card'])} cards, "
-              f"{len([s for s in scenes if s.type == 'content'])} content)")
 
     def _try_load_transcript(self, project: Project, workspace: Path) -> None:
         """Auto-detect and load an existing transcript file for this project."""
@@ -233,6 +211,59 @@ class SegmentStage(Stage):
         print("   No existing transcript files found.")
 
 
+class SceneStage(Stage):
+    name = "scene"
+
+    def execute(self, project: Project, workspace: Path) -> None:
+        if not project.aligned_segments:
+            raise ValueError("No aligned segments — run segment stage first")
+
+        from video_automation.segment.scene_splitter import SceneSplitter
+        from video_automation.segment.aligner import ScriptAligner, AlignedSegment
+        from video_automation.segment.validator import SegmentValidator
+        from video_automation.models import Word
+
+        # Reconstruct AlignedSegment objects from stored data
+        aligned = []
+        for sd in project.aligned_segments:
+            # Filter words by time range (more reliable than word_indices after manual edits)
+            words = [w for w in project.words if w.start >= sd.start and w.end <= sd.end]
+            aligned.append(AlignedSegment(
+                number=sd.number,
+                title=sd.title,
+                body=sd.body,
+                start=sd.start,
+                end=sd.end,
+                words=words,
+                number_word_end=sd.number_word_end,
+            ))
+
+        print("\n   ── Scene Splitting ──")
+        splitter = SceneSplitter(
+            pacing=self.config.pacing,
+            character_rate=self.config.character_rate,
+            gemini_api_key=self.config.gemini_api_key,
+        )
+
+        intro_end = aligned[0].start if aligned else 0.0
+        scenes = splitter.split_all(
+            aligned,
+            intro_end=intro_end,
+            audio_duration=project.audio_duration,
+        )
+
+        validator = SegmentValidator()
+        validator.validate_scenes(scenes, project.audio_duration)
+        project.scenes = scenes
+
+        print(f"   Created {len(scenes)} scenes "
+              f"({len([s for s in scenes if s.type == 'number_card'])} cards, "
+              f"{len([s for s in scenes if s.type == 'content'])} content)")
+
+    def should_skip(self, project: Project) -> bool:
+        return False
+
+
 class PromptStage(Stage):
     name = "prompt"
 
@@ -245,8 +276,17 @@ class PromptStage(Stage):
 
         print(f"   Generating prompts for {len(needs_prompt)} scenes...")
 
-        # Try Claude API first, then local LLM, then template
-        if self.config.anthropic_api_key:
+        # Try OpenAI first, then Claude, then local LLM, then template
+        if self.config.openai_api_key:
+            from video_automation.prompt.openai_batch import OpenAIBatchPromptGenerator
+            generator = OpenAIBatchPromptGenerator(
+                api_key=self.config.openai_api_key,
+                model=self.config.openai_model,
+                character_rate=self.config.character_rate,
+                style=self.config.style,
+            )
+            generator.generate(project, workspace)
+        elif self.config.anthropic_api_key:
             from video_automation.prompt.claude_batch import ClaudeBatchPromptGenerator
             generator = ClaudeBatchPromptGenerator(
                 api_key=self.config.anthropic_api_key,
@@ -419,11 +459,12 @@ class CompileStage(Stage):
 
 # ── Pipeline orchestrator ─────────────────────────────────────────────────
 
-STAGE_ORDER = ["transcribe", "segment", "prompt", "generate", "compile"]
+STAGE_ORDER = ["transcribe", "segment", "scene", "prompt", "generate", "compile"]
 
 ALL_STAGES = {
     "transcribe": TranscribeStage,
     "segment": SegmentStage,
+    "scene": SceneStage,
     "prompt": PromptStage,
     "generate": GenerateStage,
     "compile": CompileStage,

@@ -95,9 +95,10 @@ AI_MODELS = [
     "runway-gen4-image-turbo",
     "wan-2.5-preview-image",
 ]
-LLM_PROVIDERS = ["ollama", "lmstudio", "claude"]
+LLM_PROVIDERS = ["ollama", "lmstudio", "claude", "openai"]
 CLAUDE_MODELS = ["claude-sonnet-4-6", "claude-opus-4-6", "claude-haiku-4-5-20251001"]
-PIPELINE_STAGES = ["transcribe", "segment", "prompt", "generate", "compile"]
+OPENAI_MODELS = ["gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-4o", "gpt-4o-mini", "o3", "o3-mini", "o4-mini"]
+PIPELINE_STAGES = ["transcribe", "segment", "scene", "prompt", "generate", "compile"]
 
 NICHES = [
     ("2d_western_cartoon", "2D Cartoon — Science/Space"),
@@ -122,6 +123,9 @@ class GUIState:
         "llm_provider": "ollama",
         "llm_model": "qwen2.5:3b",
         "anthropic_key": "",
+        "openai_key": "",
+        "openai_model": OPENAI_MODELS[0],
+        "gemini_key": "",
         "claude_model": CLAUDE_MODELS[0],
         "ken_burns": False,
         "crossfade": False,
@@ -140,7 +144,7 @@ class GUIState:
         self._load()
 
     # Fields that should always be plain strings (select components)
-    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "start_from", "stop_after", "style"}
+    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "openai_model", "start_from", "stop_after", "style"}
 
     def _load(self):
         if os.path.exists(STATE_FILE):
@@ -177,6 +181,19 @@ class GUIState:
         self._data["recent_projects"] = lst[:5]
         self.save()
 
+    # ── Per-project path persistence ────────────────────────────────────────
+    def get_project_paths(self, project_name: str) -> dict:
+        """Return saved {audio_path, script_path} for a project."""
+        store = self._data.get("project_paths", {})
+        return store.get(project_name, {})
+
+    def set_project_path(self, project_name: str, key: str, value: str):
+        """Persist a per-project path (audio_path / script_path)."""
+        store = self._data.setdefault("project_paths", {})
+        proj = store.setdefault(project_name, {})
+        proj[key] = value
+        self.save()
+
 
 # ── AppState  (runtime reactive state) ───────────────────────────────────────
 @dataclass
@@ -192,6 +209,9 @@ class AppState:
     llm_provider: str = "ollama"
     llm_model: str = "qwen2.5:3b"
     anthropic_key: str = ""
+    openai_key: str = ""
+    openai_model: str = OPENAI_MODELS[0]
+    gemini_key: str = ""
     claude_model: str = CLAUDE_MODELS[0]
     start_from: str = "transcribe"
     stop_after: str = "compile"
@@ -230,8 +250,15 @@ def build_command(s: AppState) -> list[str]:
     if not s.tx_auto and s.transcript_path and os.path.exists(s.transcript_path):
         print(f"[GUI] Existing transcript available: {s.transcript_path}")
 
+    if s.gemini_key.strip():
+        cmd += ["--gemini-key", s.gemini_key.strip()]
+
     if s.use_llm:
-        if s.llm_provider == "claude":
+        if s.llm_provider == "openai":
+            if s.openai_key.strip():
+                cmd += ["--openai-key", s.openai_key.strip()]
+            cmd += ["--openai-model", s.openai_model]
+        elif s.llm_provider == "claude":
             if s.anthropic_key.strip():
                 cmd += ["--anthropic-key", s.anthropic_key.strip()]
             cmd += ["--claude-model", s.claude_model]
@@ -877,6 +904,9 @@ app_state = AppState(
     llm_provider=gui_state["llm_provider"],
     llm_model=gui_state["llm_model"],
     anthropic_key=gui_state["anthropic_key"],
+    openai_key=gui_state["openai_key"],
+    openai_model=gui_state["openai_model"],
+    gemini_key=gui_state["gemini_key"],
     claude_model=gui_state["claude_model"],
     ken_burns=gui_state["ken_burns"],
     crossfade=gui_state["crossfade"],
@@ -1027,6 +1057,12 @@ def index():
     if last:
         try:
             app_state.project_name = last
+            # Restore per-project paths
+            saved = gui_state.get_project_paths(last)
+            if saved.get("audio_path"):
+                app_state.audio_path = saved["audio_path"]
+            if saved.get("script_path"):
+                app_state.script_path = saved["script_path"]
             _selector_view.set_visibility(False)
             _project_view.set_visibility(True)
             _refresh_gallery()
@@ -1040,6 +1076,14 @@ def _open_project(name: str):
     app_state.project_name = name
     gui_state.add_recent(name)
     gui_state["last_project"] = name
+
+    # Restore per-project audio/script paths
+    saved = gui_state.get_project_paths(name)
+    if saved.get("audio_path") and not app_state.audio_path:
+        app_state.audio_path = saved["audio_path"]
+    if saved.get("script_path") and not app_state.script_path:
+        app_state.script_path = saved["script_path"]
+
     _selector_view.set_visibility(False)
     _project_view.set_visibility(True)
     _refresh_gallery()
@@ -1047,6 +1091,8 @@ def _open_project(name: str):
 
 def _back_to_selector():
     gui_state["last_project"] = ""   # don't restore this session on reconnect
+    app_state.audio_path = ""
+    app_state.script_path = ""
     _project_view.set_visibility(False)
     _selector_view.clear()
     _selector_view.set_visibility(True)
@@ -1187,6 +1233,10 @@ def _build_generate_tab():
                     audio_inp = ui.input("Audio file path").classes("flex-1").bind_value(
                         app_state, "audio_path"
                     )
+                    audio_inp.on("blur", lambda _: (
+                        gui_state.set_project_path(app_state.project_name, "audio_path", app_state.audio_path)
+                        if app_state.project_name else None
+                    ))
                     async def _pick_audio():
                         path = await _pick_file(
                             "Select Audio File",
@@ -1196,6 +1246,8 @@ def _build_generate_tab():
                         if path:
                             app_state.audio_path = path
                             audio_inp.value = path
+                            if app_state.project_name:
+                                gui_state.set_project_path(app_state.project_name, "audio_path", path)
                             name = os.path.splitext(os.path.basename(path))[0]
                             tx = auto_detect_transcript(app_state.workspace, name)
                             if tx:
@@ -1293,11 +1345,43 @@ def _build_generate_tab():
                 gui_state.__setitem__("claude_model", _sel(e.args)),
             ))
 
-        def _update_claude_row():
+        # OpenAI key (only when provider=openai)
+        with ui.column().classes("w-full mt-2") as openai_row:
+            with ui.row().classes("items-center gap-2 w-full"):
+                oai_inp = ui.input("OpenAI API Key", password=True).classes("flex-1")
+                oai_inp.bind_value(app_state, "openai_key")
+                _show_oai_key = [False]
+                def _toggle_oai_key_vis():
+                    _show_oai_key[0] = not _show_oai_key[0]
+                    oai_inp.props(f'type={"text" if _show_oai_key[0] else "password"}')
+                ui.button("Show/Hide", on_click=_toggle_oai_key_vis).props("flat dense")
+            openai_model_sel = ui.select(
+                OPENAI_MODELS, label="OpenAI Model", value=app_state.openai_model
+            ).classes("w-64")
+            openai_model_sel.on("update:model-value", lambda e: (
+                setattr(app_state, "openai_model", _sel(e.args)),
+                gui_state.__setitem__("openai_model", _sel(e.args)),
+            ))
+
+        def _update_llm_rows():
             claude_row.set_visibility(app_state.use_llm and app_state.llm_provider == "claude")
-        llm_cb.on("update:model-value", lambda _: _update_claude_row())
-        prov_sel.on("update:model-value", lambda _: _update_claude_row())
-        _update_claude_row()
+            openai_row.set_visibility(app_state.use_llm and app_state.llm_provider == "openai")
+        llm_cb.on("update:model-value", lambda _: _update_llm_rows())
+        prov_sel.on("update:model-value", lambda _: _update_llm_rows())
+        _update_llm_rows()
+
+    # ── Gemini API Key (for LLM scene splitting) ──────────────────────────────
+    with ui.card().classes("w-full mb-3"):
+        ui.label("Gemini API Key").classes("text-subtitle1 font-semibold")
+        ui.label("For LLM-based scene splitting (free tier available)").classes("text-xs text-grey")
+        with ui.row().classes("items-center gap-2 w-full"):
+            gk_inp = ui.input("Gemini API Key", password=True).classes("flex-1")
+            gk_inp.bind_value(app_state, "gemini_key")
+            _show_gk = [False]
+            def _toggle_gk_vis():
+                _show_gk[0] = not _show_gk[0]
+                gk_inp.props(f'type={"text" if _show_gk[0] else "password"}')
+            ui.button("Show/Hide", on_click=_toggle_gk_vis).props("flat dense")
 
     # ── Script File (required) ───────────────────────────────────────────────
     with ui.card().classes("w-full mb-3"):
@@ -1309,6 +1393,8 @@ def _build_generate_tab():
             )
             script_inp.on("update:model-value", lambda e: (
                 gui_state.__setitem__("script_path", e.args or ""),
+                gui_state.set_project_path(app_state.project_name, "script_path", e.args or "")
+                if app_state.project_name else None,
             ))
             async def _pick_script():
                 path = await _pick_file(
@@ -1320,6 +1406,8 @@ def _build_generate_tab():
                     app_state.script_path = path
                     script_inp.value = path
                     gui_state["script_path"] = path
+                    if app_state.project_name:
+                        gui_state.set_project_path(app_state.project_name, "script_path", path)
             ui.button(icon="folder_open", on_click=_pick_script).props("flat round").tooltip("Browse for script file")
 
     # ── Pipeline Control ──────────────────────────────────────────────────────
@@ -1971,7 +2059,7 @@ async def _regen_scene_now(snum: int):
             "generations_count": "1",
             "model_parameters": json.dumps({
                 "aspect_ratio": "16:9",
-                "resolution": "1K",
+                "resolution": "1080p",
             }),
         }
 

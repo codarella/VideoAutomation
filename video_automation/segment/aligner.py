@@ -110,7 +110,15 @@ class ScriptAligner:
         # Fix impossibly short segments (e.g. context match landing near next segment)
         self._fix_short_segments(aligned)
 
-        # Interpolate any unaligned segments from neighbors
+        # Detect fuzzy matches that created abnormal duration distributions
+        # (long segment + tiny neighbors = fuzzy match landed in wrong region)
+        self._fix_duration_imbalance(aligned)
+
+        # Re-attempt fuzzy matching for unaligned segments in constrained windows
+        # (between their aligned neighbors, not the whole transcript)
+        self._rescue_unaligned(aligned, whisper_words, whisper_texts, audio_duration)
+
+        # Interpolate any remaining unaligned segments from neighbors
         self._interpolate_unaligned(aligned, audio_duration)
 
         # Set end times (each segment ends where the next begins)
@@ -416,18 +424,25 @@ class ScriptAligner:
         self,
         needle: list[str],
         haystack: list[str],
+        start_idx: int = 0,
+        end_idx: Optional[int] = None,
     ) -> tuple[int, float]:
         """
         Slide a window over the haystack and find the best match for the needle.
 
+        Args:
+            start_idx: Start searching from this index (inclusive).
+            end_idx: Stop searching at this index (exclusive). None = end of haystack.
+
         Returns: (best_start_index, best_similarity_score)
         """
+        if end_idx is None:
+            end_idx = len(haystack)
         window_size = len(needle)
-        best_idx = 0
+        best_idx = start_idx
         best_score = 0.0
 
-        # Optimization: skip positions that are too far from any plausible match
-        for i in range(len(haystack) - window_size + 1):
+        for i in range(start_idx, min(end_idx, len(haystack)) - window_size + 1):
             window = haystack[i:i + window_size]
             score = difflib.SequenceMatcher(None, needle, window, autojunk=False).ratio()
             if score > best_score:
@@ -525,6 +540,213 @@ class ScriptAligner:
             loser.start = -1.0
             loser.confidence = 0.0
             loser.method = "unaligned"
+
+    def _fix_duration_imbalance(
+        self,
+        aligned: list[AlignedSegment],
+    ) -> None:
+        """
+        Detect abnormally long segments adjacent to short fuzzy-matched neighbors.
+
+        When a fuzzy match lands in the wrong region, it creates a pattern:
+        one segment balloons (because the real boundary is inside it) while
+        the misplaced fuzzy match and its neighbors get squeezed into a tiny
+        gap. This method detects that pattern and invalidates the suspicious
+        fuzzy match so _rescue_unaligned can re-search in the correct window.
+        """
+        # Build list of consecutive aligned-segment pairs
+        aligned_indices = [i for i, s in enumerate(aligned) if s.start >= 0]
+        if len(aligned_indices) < 3:
+            return
+
+        durations = []
+        for k in range(len(aligned_indices) - 1):
+            i, j = aligned_indices[k], aligned_indices[k + 1]
+            dur = aligned[j].start - aligned[i].start
+            if dur > 0:
+                durations.append(dur)
+
+        if len(durations) < 3:
+            return
+
+        median_dur = sorted(durations)[len(durations) // 2]
+        if median_dur <= 0:
+            return
+
+        # Re-scan with the median to find imbalances
+        for k in range(len(aligned_indices) - 1):
+            i, j = aligned_indices[k], aligned_indices[k + 1]
+            dur = aligned[j].start - aligned[i].start
+
+            if dur <= median_dur * 2.0:
+                continue
+
+            # Long gap between aligned[i] and aligned[j].
+            # If aligned[j] is fuzzy-matched, check the gap AFTER it.
+            seg_j = aligned[j]
+            if seg_j.method == "direct_match":
+                continue
+
+            # Find the next aligned segment after j
+            if k + 2 > len(aligned_indices) - 1:
+                continue
+            next_j = aligned_indices[k + 2]
+            gap_after = aligned[next_j].start - seg_j.start
+            # How many segments (including unaligned) share the gap after seg_j
+            segs_in_gap = next_j - j
+            avg_per_seg = gap_after / segs_in_gap if segs_in_gap > 0 else gap_after
+
+            if avg_per_seg < median_dur * 0.35:
+                print(f"   ⚠ Segment {seg_j.number}: likely misaligned "
+                      f"({dur:.0f}s gap before, {gap_after:.0f}s for {segs_in_gap} "
+                      f"segment(s) after, median={median_dur:.0f}s), will re-search")
+                seg_j.start = -1.0
+                seg_j.confidence = 0.0
+                seg_j.method = "unaligned"
+
+    def _rescue_unaligned(
+        self,
+        aligned: list[AlignedSegment],
+        whisper_words: list[Word],
+        whisper_texts: list[str],
+        audio_duration: float,
+    ) -> None:
+        """
+        Re-attempt fuzzy matching for unaligned segments, constrained to the
+        time window between their aligned neighbors.
+
+        This catches segments that initially fuzzy-matched to the wrong region
+        but have a valid match in their expected position. Processes in order
+        so that rescued segments narrow the window for subsequent ones.
+        """
+        end_time = audio_duration if audio_duration > 0 else whisper_words[-1].end
+
+        for i, seg in enumerate(aligned):
+            if seg.start >= 0:
+                continue
+
+            # Find time bounds from nearest aligned neighbors
+            min_time = 0.0
+            max_time = end_time
+
+            for j in range(i - 1, -1, -1):
+                if aligned[j].start >= 0:
+                    min_time = aligned[j].start
+                    break
+
+            for j in range(i + 1, len(aligned)):
+                if aligned[j].start >= 0:
+                    max_time = aligned[j].start
+                    break
+
+            # Convert time bounds to word indices
+            min_idx = 0
+            max_idx = len(whisper_words)
+            for wi, w in enumerate(whisper_words):
+                if w.start >= min_time:
+                    min_idx = wi
+                    break
+            for wi in range(len(whisper_words) - 1, -1, -1):
+                if whisper_words[wi].start <= max_time:
+                    max_idx = wi + 1
+                    break
+
+            if max_idx - min_idx < 10:
+                continue
+
+            # Try constrained fuzzy match
+            result = self._bounded_fuzzy_match(
+                seg, whisper_words, whisper_texts, min_idx, max_idx,
+            )
+            if result:
+                print(f"   Segment {seg.number}: rescued at {_fmt_time(result.start)} "
+                      f"(confidence={result.confidence:.2f}, method=rescued_{result.method})")
+                seg.start = result.start
+                seg.confidence = result.confidence
+                seg.method = f"rescued_{result.method}"
+                seg.number_word_end = result.number_word_end
+
+    def _bounded_fuzzy_match(
+        self,
+        seg: AlignedSegment,
+        whisper_words: list[Word],
+        whisper_texts: list[str],
+        min_idx: int,
+        max_idx: int,
+    ) -> Optional[AlignedSegment]:
+        """
+        Like _fuzzy_context_match but constrained to [min_idx, max_idx].
+        """
+        candidates: list[tuple[int, float, str]] = []
+
+        # Needle 1: body after "Number X" prefix
+        body_words = seg.body.split()[:self.context_size + 3]
+        clean_body = [w.lower().strip(".,!?;:'\"") for w in body_words]
+        skip = 0
+        if len(clean_body) >= 2 and clean_body[0] == "number":
+            skip = 2
+        needle = clean_body[skip:skip + self.context_size]
+        if len(needle) >= 3:
+            idx, score = self._sliding_window_match(
+                needle, whisper_texts, min_idx, max_idx,
+            )
+            candidates.append((idx, score, "context"))
+
+        # Needle 2: title sentence
+        body_sentences = re.split(r'(?<=[.!?])\s+', seg.body, maxsplit=2)
+        if len(body_sentences) > 1:
+            title_words = body_sentences[1].split()[:self.context_size]
+            title_needle = [w.lower().strip(".,!?;:'\"") for w in title_words]
+            if len(title_needle) >= 3:
+                idx, score = self._sliding_window_match(
+                    title_needle, whisper_texts, min_idx, max_idx,
+                )
+                candidates.append((idx, score, "title_body"))
+
+        # Needle 3: content after title
+        if len(body_sentences) > 2:
+            content_text = body_sentences[2]
+        elif len(body_sentences) > 1:
+            content_text = body_sentences[1]
+        else:
+            content_text = ""
+
+        if content_text:
+            content_words = content_text.split()[:self.context_size]
+            content_needle = [w.lower().strip(".,!?;:'\"") for w in content_words]
+            if len(content_needle) >= 3:
+                idx, score = self._sliding_window_match(
+                    content_needle, whisper_texts, min_idx, max_idx,
+                )
+                candidates.append((idx, score, "content_body"))
+
+        if not candidates:
+            return None
+
+        best_idx, best_score, best_method = max(candidates, key=lambda x: x[1])
+
+        if best_score < self.similarity_threshold:
+            return None
+
+        timestamp = whisper_words[best_idx].start
+        number_word_end = 0.0
+
+        if best_idx > 0:
+            timestamp, number_word_end = self._backtrack_to_boundary(
+                whisper_words, whisper_texts, best_idx, seg.number,
+            )
+
+        return AlignedSegment(
+            number=seg.number,
+            title=seg.title,
+            body=seg.body,
+            start=timestamp,
+            end=0.0,
+            words=[],
+            confidence=round(best_score, 3),
+            method=best_method,
+            number_word_end=number_word_end,
+        )
 
     def _interpolate_unaligned(
         self,

@@ -41,6 +41,13 @@ class Config:
     anthropic_api_key: str = ""
     claude_model: str = "claude-sonnet-4-6"
 
+    # ── OpenAI ─────────────────────────────────────────────────────
+    openai_api_key: str = ""
+    openai_model: str = "gpt-4.1"
+
+    # ── Gemini (scene splitting) ─────────────────────────────────
+    gemini_api_key: str = ""
+
     # ── Local LLM ────────────────────────────────────────────────
     llm_provider: str = ""                  # "ollama", "lmstudio", or ""
     llm_model: str = ""

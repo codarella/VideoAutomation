@@ -1,9 +1,8 @@
 """
-Claude API prompt generator with visual-beat awareness.
+OpenAI API prompt generator with visual-beat awareness.
 
-Sends one API call per segment so Claude can deeply analyze the narration,
-identify visual beats (groups of scenes sharing one subject), and write
-prompts where every scene shows exactly what the narrator is saying.
+Drop-in replacement for ClaudeBatchPromptGenerator — same segment-by-segment
+approach, same JSON output format, just uses OpenAI's chat completions API.
 """
 
 from __future__ import annotations
@@ -19,11 +18,16 @@ from video_automation.models import Project, Scene, AlignedSegmentData
 from video_automation.prompt.base import PromptGenerator, get_system_prompt
 
 
-# ── Pricing table for cost estimation ─────────────────────────────────────
+# ── Pricing table for cost estimation (per 1M tokens) ────────────────────
 PRICES = {
-    "claude-opus-4-6": (5.00, 25.00),
-    "claude-sonnet-4-6": (3.00, 15.00),
-    "claude-haiku-4-5": (1.00, 5.00),
+    "gpt-4o":        (2.50, 10.00),
+    "gpt-4o-mini":   (0.15, 0.60),
+    "gpt-4.1":       (2.00, 8.00),
+    "gpt-4.1-mini":  (0.40, 1.60),
+    "gpt-4.1-nano":  (0.10, 0.40),
+    "o3":            (2.00, 8.00),
+    "o3-mini":       (1.10, 4.40),
+    "o4-mini":       (1.10, 4.40),
 }
 
 NUMBER_CARD_PROMPT = (
@@ -34,21 +38,21 @@ NUMBER_CARD_PROMPT = (
 )
 
 
-class ClaudeBatchPromptGenerator(PromptGenerator):
-    """Generate prompts per segment with visual-beat analysis."""
+class OpenAIBatchPromptGenerator(PromptGenerator):
+    """Generate prompts per segment with visual-beat analysis via OpenAI."""
 
-    def __init__(self, api_key: str, model: str = "claude-sonnet-4-6",
+    def __init__(self, api_key: str, model: str = "gpt-4.1",
                  character_rate: float = 0.20, style: str = "2d_western_cartoon"):
         self.model = model
         self.character_rate = character_rate
         self.style = style
         try:
-            import anthropic
-            self.client = anthropic.Anthropic(api_key=api_key)
+            from openai import OpenAI
+            self.client = OpenAI(api_key=api_key)
             self.enabled = True
-            print(f"   Claude API ready ({model})")
+            print(f"   OpenAI API ready ({model})")
         except ImportError:
-            print("   WARNING: anthropic package not installed — pip install anthropic")
+            print("   WARNING: openai package not installed — pip install openai")
             self.enabled = False
             self.client = None
 
@@ -99,12 +103,12 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
                 traceback.print_exc()
 
         # Print totals
-        in_p, out_p = PRICES.get(self.model, (5.00, 25.00))
+        in_p, out_p = PRICES.get(self.model, (2.50, 10.00))
         total_cost = (
             (total_in_tok / 1_000_000 * in_p)
             + (total_out_tok / 1_000_000 * out_p)
         )
-        print(f"\n   Claude returned {total_assigned}/{total_scenes} prompts total")
+        print(f"\n   OpenAI returned {total_assigned}/{total_scenes} prompts total")
         print(f"   Tokens: {total_in_tok:,} in / {total_out_tok:,} out  "
               f"|  Est. cost: ${total_cost:.4f}")
 
@@ -115,7 +119,7 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
         seg_data: Optional[AlignedSegmentData],
     ) -> tuple[int, int, int]:
         """
-        Generate prompts for one segment via Claude API.
+        Generate prompts for one segment via OpenAI API.
 
         Returns: (assigned_count, input_tokens, output_tokens)
         """
@@ -236,18 +240,19 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
             f"Output ONLY the JSON object. No preamble, no commentary, no code fences."
         )
 
-        print(f"   Segment {seg_num} ({n} slots, \"{title[:40]}\"): sending to Claude...")
+        print(f"   Segment {seg_num} ({n} slots, \"{title[:40]}\"): sending to OpenAI...")
 
         max_retries = 3
         for attempt in range(max_retries):
             try:
-                with self.client.messages.stream(
+                response = self.client.chat.completions.create(
                     model=self.model,
                     max_tokens=16384,
-                    system=get_system_prompt(self.style),
-                    messages=[{"role": "user", "content": user_message}],
-                ) as stream:
-                    final = stream.get_final_message()
+                    messages=[
+                        {"role": "system", "content": get_system_prompt(self.style)},
+                        {"role": "user", "content": user_message},
+                    ],
+                )
                 break
             except Exception as e:
                 if attempt < max_retries - 1:
@@ -258,9 +263,7 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
                 else:
                     raise
 
-        text = next(
-            (b.text for b in final.content if b.type == "text"), ""
-        ).strip()
+        text = (response.choices[0].message.content or "").strip()
 
         # Strip markdown fences if present
         if text.startswith("```"):
@@ -291,15 +294,15 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
             if isinstance(slot_num, int) and 1 <= slot_num <= n and prompt:
                 scene = seg_scenes[slot_num - 1]
                 scene.prompt = prompt
-                scene.prompt_source = "claude-api"
+                scene.prompt_source = "openai-api"
                 scene.status = "prompted"
                 assigned += 1
 
         # Token usage
-        usage = final.usage
-        in_tok = usage.input_tokens
-        out_tok = usage.output_tokens
-        in_p, out_p = PRICES.get(self.model, (5.00, 25.00))
+        usage = response.usage
+        in_tok = usage.prompt_tokens
+        out_tok = usage.completion_tokens
+        in_p, out_p = PRICES.get(self.model, (2.50, 10.00))
         cost = (in_tok / 1_000_000 * in_p) + (out_tok / 1_000_000 * out_p)
         print(f"      → {assigned}/{n} prompts  |  "
               f"{in_tok:,} in / {out_tok:,} out  |  ${cost:.4f}")

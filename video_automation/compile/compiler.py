@@ -103,10 +103,15 @@ class VideoCompiler:
                 # Resolve image path
                 img_path = self._resolve_image(scene, workspace, temp_dir, i)
 
-                # Encode scene clip
+                # Encode scene clip (no Ken Burns zoom on number cards)
                 clip_path = os.path.join(temp_dir, f"clip_{i:04d}.mp4")
                 pattern_idx = i  # for Ken Burns pattern cycling
-                self._encode_image_clip(img_path, t1 - t0, clip_path, pattern_idx)
+                use_zoom = scene.type != "number_card"
+                has_title_bar = bool(scene.metadata.get("segment_title"))
+                self._encode_image_clip(
+                    img_path, t1 - t0, clip_path, pattern_idx,
+                    apply_ken_burns=use_zoom, has_title_bar=has_title_bar,
+                )
                 clips.append(clip_path)
                 cursor = t1
 
@@ -152,14 +157,22 @@ class VideoCompiler:
         finally:
             shutil.rmtree(temp_dir, ignore_errors=True)
 
+    # Title bar takes up 8% of image height (must match TitleBarOverlay.bar_fraction)
+    TITLE_BAR_FRACTION = 0.08
+
     def _encode_image_clip(
         self, img_path: str, duration: float, clip_path: str,
-        pattern_idx: int = 0,
+        pattern_idx: int = 0, apply_ken_burns: bool = True,
+        has_title_bar: bool = False,
     ) -> bool:
         """Encode a single image as a video clip with exact duration."""
         fps = self.config.fps
+        use_kb = self.config.ken_burns and apply_ken_burns
 
-        if self.config.ken_burns:
+        if use_kb and has_title_bar:
+            # Split image: static title bar on top, Ken Burns on content below
+            vf = self._build_split_zoom_filter(duration, pattern_idx)
+        elif use_kb:
             frames = max(int(math.ceil(duration * fps)) + 1, 1)
             z, x, y = KB_PATTERNS[pattern_idx % len(KB_PATTERNS)]
             vf = (f"scale=3840:2160:force_original_aspect_ratio=increase,"
@@ -170,26 +183,68 @@ class VideoCompiler:
             vf = ("scale=1920:1080:force_original_aspect_ratio=increase,"
                   "crop=1920:1080")
 
+        # Split-zoom uses complex filtergraph (-filter_complex), others use -vf
+        use_complex = use_kb and has_title_bar
+
         kwargs = dict(capture_output=True, text=True, timeout=600, stdin=subprocess.DEVNULL)
         if os.name == "nt":
             kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
 
-        r = subprocess.run([
+        cmd = [
             "ffmpeg", "-y", "-nostdin",
             "-loop", "1", "-framerate", str(fps),
             "-i", img_path,
             "-t", f"{duration:.6f}",
             "-c:v", "libx264", "-preset", "fast", "-crf", "23",
             "-pix_fmt", "yuv420p", "-r", str(fps),
-            "-vf", vf,
-            clip_path,
-        ], **kwargs)
+        ]
+        if use_complex:
+            cmd += ["-filter_complex", vf, "-map", "[out]"]
+        else:
+            cmd += ["-vf", vf]
+        cmd.append(clip_path)
+
+        r = subprocess.run(cmd, **kwargs)
 
         if r.returncode != 0:
-            stderr = r.stderr[-300:].strip() if r.stderr else ""
+            stderr = r.stderr[-800:].strip() if r.stderr else ""
             print(f"      FFmpeg clip error: {stderr}")
             return False
         return True
+
+    def _build_split_zoom_filter(self, duration: float, pattern_idx: int) -> str:
+        """Build a complex filtergraph that keeps the title bar static
+        while applying Ken Burns zoom to the content area below it."""
+        fps = self.config.fps
+        frames = max(int(math.ceil(duration * fps)) + 1, 1)
+        z, x, y = KB_PATTERNS[pattern_idx % len(KB_PATTERNS)]
+
+        # Upscaled dimensions (2x for zoompan quality)
+        up_w, up_h = 3840, 2160
+        bar_h_up = int(up_h * self.TITLE_BAR_FRACTION)
+        content_h_up = up_h - bar_h_up
+
+        # Output dimensions
+        out_w, out_h = 1920, 1080
+        bar_h_out = int(out_h * self.TITLE_BAR_FRACTION)
+        content_h_out = out_h - bar_h_out
+
+        return (
+            f"scale={up_w}:{up_h}:force_original_aspect_ratio=increase,"
+            f"crop={up_w}:{up_h},"
+            f"split[bar][content];"
+            # Title bar: crop top portion, zoompan with z=1 (no zoom, just scale down)
+            # Using zoompan ensures same frame count as content stream
+            f"[bar]crop={up_w}:{bar_h_up}:0:0,"
+            f"zoompan=z='1':x='0':y='0':d={frames}"
+            f":s={out_w}x{bar_h_out}:fps={fps}[title];"
+            # Content: crop below title bar, apply Ken Burns zoom
+            f"[content]crop={up_w}:{content_h_up}:0:{bar_h_up},"
+            f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}"
+            f":s={out_w}x{content_h_out}:fps={fps}[body];"
+            # Stack title bar on top of zoomed content
+            f"[title][body]vstack,setsar=1[out]"
+        )
 
     def _concat_clips(self, clips: list[str], output: str) -> bool:
         """Concatenate clips with -c copy."""

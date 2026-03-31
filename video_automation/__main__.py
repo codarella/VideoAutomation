@@ -35,10 +35,10 @@ def parse_args() -> argparse.Namespace:
 
     # Pipeline control
     p.add_argument("--start-from", default="transcribe",
-                   choices=["transcribe", "segment", "prompt", "generate", "compile"],
+                   choices=["transcribe", "segment", "scene", "prompt", "generate", "compile"],
                    help="Pipeline stage to start from")
     p.add_argument("--stop-after", default="compile",
-                   choices=["transcribe", "segment", "prompt", "generate", "compile"],
+                   choices=["transcribe", "segment", "scene", "prompt", "generate", "compile"],
                    help="Pipeline stage to stop after")
 
     # Resume from existing project
@@ -48,6 +48,9 @@ def parse_args() -> argparse.Namespace:
     # API keys
     p.add_argument("--ai33-key", default="", help="AI33 API key")
     p.add_argument("--anthropic-key", default="", help="Anthropic API key for Claude")
+    p.add_argument("--openai-key", default="", help="OpenAI API key")
+    p.add_argument("--openai-model", default="gpt-4.1", help="OpenAI model (default: gpt-4.1)")
+    p.add_argument("--gemini-key", default="", help="Gemini API key for LLM scene splitting")
     p.add_argument("--claude-model", default="claude-sonnet-4-6", help="Claude model")
 
     # Local LLM
@@ -98,6 +101,9 @@ def main():
         ai33_api_key=args.ai33_key,
         ai33_model=args.ai33_model,
         anthropic_api_key=args.anthropic_key,
+        openai_api_key=args.openai_key,
+        openai_model=args.openai_model,
+        gemini_api_key=args.gemini_key,
         claude_model=args.claude_model,
         llm_provider=args.llm_provider,
         llm_model=args.llm_model,
@@ -128,6 +134,8 @@ def main():
     if project_path.exists():
         print(f"   Loading existing project: {project_path}")
         project = Project.load(project_path)
+        # Ensure project.name matches CLI --name so save path == load path
+        project.name = args.name
         # Update paths in case they changed
         if args.audio:
             project.audio_path = args.audio
