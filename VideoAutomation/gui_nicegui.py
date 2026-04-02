@@ -2044,7 +2044,8 @@ async def _regen_scene_now(snum: int):
         import time as _time
 
         api_key = AI33_KEY
-        model = app_state.ai_model
+        from video_automation.generate.ai33 import resolve_model
+        model = resolve_model(app_state.ai_model)
         base_url = "https://api.ai33.pro"
         session = _req.Session()
         session.headers.update({"xi-api-key": api_key})

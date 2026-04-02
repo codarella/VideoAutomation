@@ -139,10 +139,13 @@ class SceneSplitter:
             return scenes
 
         # Try LLM splitting, fall back to time-based
+        used_gemini = False
         if self.gemini_api_key:
             content_scenes = self._split_content_llm(seg, remaining_words)
             if content_scenes is None:
                 content_scenes = self._split_content_time(seg, remaining_words)
+            else:
+                used_gemini = True
         else:
             content_scenes = self._split_content_time(seg, remaining_words)
 
@@ -167,6 +170,7 @@ class SceneSplitter:
                 metadata={
                     "segment_number": seg.number,
                     "segment_title": seg.title,
+                    "split_method": "gemini" if used_gemini else "time_based",
                 },
             )
             scenes.append(scene)

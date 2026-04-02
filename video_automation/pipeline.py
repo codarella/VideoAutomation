@@ -245,20 +245,47 @@ class SceneStage(Stage):
             gemini_api_key=self.config.gemini_api_key,
         )
 
+        # Detect which segment numbers were already split by Gemini
+        already_split = set()
+        for s in project.scenes:
+            if s.type == "content":
+                meta_num = s.metadata.get("segment_number")
+                if meta_num is not None and s.metadata.get("split_method") == "gemini":
+                    already_split.add(meta_num)
+
+        if already_split:
+            print(f"   Skipping segments already split by Gemini: {sorted(already_split, reverse=True)}")
+
+        segments_to_split = [seg for seg in aligned if seg.number not in already_split]
+        resplit_nums = {seg.number for seg in segments_to_split}
+
+        # Drop old scenes for segments being re-split (avoids duplicates on resume)
+        existing_scenes = [
+            s for s in project.scenes
+            if s.metadata.get("segment_number") not in resplit_nums
+        ]
+
         intro_end = aligned[0].start if aligned else 0.0
-        scenes = splitter.split_all(
-            aligned,
-            intro_end=intro_end,
+        new_scenes = splitter.split_all(
+            segments_to_split,
+            intro_end=intro_end if not existing_scenes else 0.0,
             audio_duration=project.audio_duration,
         )
 
-        validator = SegmentValidator()
-        validator.validate_scenes(scenes, project.audio_duration)
-        project.scenes = scenes
+        # Remove intro from new_scenes if existing_scenes already has one
+        if existing_scenes and new_scenes and new_scenes[0].type == "intro":
+            new_scenes = new_scenes[1:]
 
-        print(f"   Created {len(scenes)} scenes "
-              f"({len([s for s in scenes if s.type == 'number_card'])} cards, "
-              f"{len([s for s in scenes if s.type == 'content'])} content)")
+        # Merge and sort chronologically so segments in any order are handled correctly
+        combined = sorted(existing_scenes + new_scenes, key=lambda s: s.start)
+
+        validator = SegmentValidator()
+        validator.validate_scenes(combined, project.audio_duration)
+        project.scenes = combined
+
+        print(f"   Created {len(combined)} scenes "
+              f"({len([s for s in combined if s.type == 'number_card'])} cards, "
+              f"{len([s for s in combined if s.type == 'content'])} content)")
 
     def should_skip(self, project: Project) -> bool:
         return False

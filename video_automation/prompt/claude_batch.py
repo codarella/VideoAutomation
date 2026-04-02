@@ -136,7 +136,8 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
             full_narration = " ".join(s.text for s in seg_scenes if s.text)[:5000]
 
         # Build time slot list
-        is_cartoon = self.style == "2d_western_cartoon"
+        is_cartoon = self.style in ("2d_western_cartoon", "history")
+        is_history = self.style == "history"
         slot_lines = []
         for i, scene in enumerate(seg_scenes):
             slot_num = i + 1
@@ -147,10 +148,12 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
                 )
             else:
                 if scene.include_character:
-                    char_note = (
-                        " [include scientist figure]" if is_cartoon
-                        else f" [include character: {anchor}]"
-                    )
+                    if is_history:
+                        char_note = " [include historical figure]"
+                    elif is_cartoon:
+                        char_note = " [include scientist figure]"
+                    else:
+                        char_note = f" [include character: {anchor}]"
                 else:
                     char_note = ""
                 slot_lines.append(
@@ -161,7 +164,14 @@ class ClaudeBatchPromptGenerator(PromptGenerator):
         slots_text = "\n".join(slot_lines)
 
         # Build character-specific instructions based on style
-        if is_cartoon:
+        if is_history:
+            char_instruction = (
+                f"For slots marked [include historical figure]: include ONE stick figure "
+                f"person relevant to the historical context (ruler, soldier, merchant, etc.). "
+                f"Round head, dot eyes, line body. Period costume as simple geometric shapes. "
+                f"Expression must match the emotional context.\n"
+            )
+        elif is_cartoon:
             char_instruction = (
                 f"For slots marked [include scientist figure]: include ONE rounded expressive "
                 f"stick figure in the scene.\n"

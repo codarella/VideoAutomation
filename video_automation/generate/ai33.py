@@ -25,9 +25,9 @@ from video_automation.models import Scene
 # it resolved to the real API model_id automatically.
 MODEL_ALIASES: dict[str, str] = {
     # Nano Banana family  →  Gemini image models (ai33.pro UI rebranding)
-    "nano-banana-pro":              "gemini-3-pro-image-preview",
-    "nano-banana-2":                "gemini-2.5-flash-image",
-    "nano-banana":                  "gemini-3.1-flash-image-preview",
+    "nano-banana":                  "gemini-2.5-flash-image",           # Gemini 2.5 Flash Preview Image
+    "nano-banana-pro":              "gemini-3-pro-image-preview",       # Gemini 3 Pro Image
+    "nano-banana-2":                "gemini-3.1-flash-image-preview",   # Gemini 3.1 Flash Image
 }
 
 
@@ -181,13 +181,19 @@ class AI33Generator:
 
         final_prompt = f"{' '.join(refs)} {prompt}" if refs else prompt
 
+        # Gemini models only accept 512/1K/2K/4K — map 1080p → 2K
+        _GEMINI_RESOLUTION_MAP = {"1080p": "1K", "720p": "1K"}
+        resolution = cfg.resolution
+        if self.model.startswith("gemini-"):
+            resolution = _GEMINI_RESOLUTION_MAP.get(resolution, resolution)
+
         data = {
             "prompt": final_prompt,
             "model_id": self.model,
             "generations_count": "1",
             "model_parameters": json.dumps({
                 "aspect_ratio": cfg.aspect_ratio,
-                "resolution": cfg.resolution,
+                "resolution": resolution,
             }),
         }
 
