@@ -1,0 +1,6660 @@
+{
+  "name": "TimiNiggerness_test",
+  "audio_path": "C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/audio/TimiNiggerness_test.mp3",
+  "script_path": "C:/Users/timik/Documents/Scripts/All right, let's get into it..txt",
+  "expected_count": 2,
+  "counting_direction": "descending",
+  "style": "2d_western_cartoon",
+  "audio_duration": 219.96,
+  "config": {},
+  "words": [
+    {
+      "text": "Alright,",
+      "start": 0.0,
+      "end": 0.46,
+      "confidence": 1.0
+    },
+    {
+      "text": "let's",
+      "start": 0.5,
+      "end": 0.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "get",
+      "start": 0.7,
+      "end": 0.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "into",
+      "start": 0.94,
+      "end": 1.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "it.",
+      "start": 1.18,
+      "end": 1.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "Number",
+      "start": 1.72,
+      "end": 1.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "10.",
+      "start": 1.88,
+      "end": 2.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 3.04,
+      "end": 3.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbital",
+      "start": 3.14,
+      "end": 3.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "destabilization.",
+      "start": 3.66,
+      "end": 4.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 5.44,
+      "end": 5.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "should",
+      "start": 5.86,
+      "end": 6.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbit",
+      "start": 6.34,
+      "end": 6.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 6.62,
+      "end": 6.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "sun",
+      "start": 6.9,
+      "end": 7.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "on",
+      "start": 7.18,
+      "end": 7.68,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 7.68,
+      "end": 7.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "near",
+      "start": 7.88,
+      "end": 8.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "-circular",
+      "start": 8.14,
+      "end": 8.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "path,",
+      "start": 8.6,
+      "end": 9.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 9.58,
+      "end": 9.72,
+      "confidence": 1.0
+    },
+    {
+      "text": "way",
+      "start": 9.72,
+      "end": 9.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "Earth",
+      "start": 9.92,
+      "end": 10.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "does.",
+      "start": 10.18,
+      "end": 10.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "A",
+      "start": 11.08,
+      "end": 11.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "stable,",
+      "start": 11.4,
+      "end": 11.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "predictable",
+      "start": 12.28,
+      "end": 12.68,
+      "confidence": 1.0
+    },
+    {
+      "text": "ellipse",
+      "start": 12.68,
+      "end": 13.38,
+      "confidence": 1.0
+    },
+    {
+      "text": "with",
+      "start": 13.38,
+      "end": 13.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "minimal",
+      "start": 13.78,
+      "end": 14.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "seasonal",
+      "start": 14.2,
+      "end": 14.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "variation.",
+      "start": 14.64,
+      "end": 15.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "That",
+      "start": 16.02,
+      "end": 16.24,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 16.24,
+      "end": 16.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "what",
+      "start": 16.48,
+      "end": 16.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 16.66,
+      "end": 16.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "standard",
+      "start": 16.98,
+      "end": 17.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "accretion",
+      "start": 17.3,
+      "end": 17.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "model",
+      "start": 17.78,
+      "end": 18.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "predicts",
+      "start": 18.1,
+      "end": 18.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "for",
+      "start": 18.6,
+      "end": 18.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 18.78,
+      "end": 18.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "rocky",
+      "start": 18.98,
+      "end": 19.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 19.22,
+      "end": 19.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "at",
+      "start": 19.6,
+      "end": 19.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "1",
+      "start": 19.9,
+      "end": 20.2,
+      "confidence": 1.0
+    },
+    {
+      "text": ".5",
+      "start": 20.2,
+      "end": 20.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "AU",
+      "start": 20.88,
+      "end": 21.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "from",
+      "start": 21.78,
+      "end": 22.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 22.28,
+      "end": 22.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "G",
+      "start": 22.52,
+      "end": 22.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "-type",
+      "start": 22.76,
+      "end": 22.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "star.",
+      "start": 22.94,
+      "end": 23.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 23.76,
+      "end": 24.04,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbit",
+      "start": 24.04,
+      "end": 24.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "should",
+      "start": 24.3,
+      "end": 24.56,
+      "confidence": 1.0
+    },
+    {
+      "text": "be",
+      "start": 24.56,
+      "end": 24.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "calm.",
+      "start": 24.88,
+      "end": 25.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 25.56,
+      "end": 25.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "climate",
+      "start": 25.8,
+      "end": 26.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "should",
+      "start": 26.18,
+      "end": 26.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "be",
+      "start": 26.42,
+      "end": 26.72,
+      "confidence": 1.0
+    },
+    {
+      "text": "moderated",
+      "start": 26.72,
+      "end": 27.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "by",
+      "start": 27.2,
+      "end": 27.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "geometry",
+      "start": 27.48,
+      "end": 28.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "alone.",
+      "start": 28.1,
+      "end": 28.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "Every",
+      "start": 28.6,
+      "end": 29.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "simulation",
+      "start": 29.36,
+      "end": 29.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 29.98,
+      "end": 30.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "planetary",
+      "start": 30.28,
+      "end": 30.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "formation",
+      "start": 30.7,
+      "end": 31.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "in",
+      "start": 31.34,
+      "end": 31.58,
+      "confidence": 1.0
+    },
+    {
+      "text": "this",
+      "start": 31.58,
+      "end": 31.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "region",
+      "start": 31.84,
+      "end": 32.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 32.14,
+      "end": 32.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 32.32,
+      "end": 32.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "solar",
+      "start": 32.5,
+      "end": 32.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "system",
+      "start": 32.78,
+      "end": 33.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "produces",
+      "start": 33.12,
+      "end": 33.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 33.6,
+      "end": 33.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "world",
+      "start": 33.9,
+      "end": 34.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "with",
+      "start": 34.1,
+      "end": 34.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "low",
+      "start": 34.4,
+      "end": 34.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "eccentricity",
+      "start": 34.76,
+      "end": 35.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 35.66,
+      "end": 36.0,
+      "confidence": 1.0
+    },
+    {
+      "text": "steady",
+      "start": 36.0,
+      "end": 36.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "insulation",
+      "start": 36.34,
+      "end": 36.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "across",
+      "start": 36.96,
+      "end": 37.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 37.42,
+      "end": 37.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "year.",
+      "start": 37.76,
+      "end": 38.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 38.58,
+      "end": 38.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "does",
+      "start": 38.78,
+      "end": 39.08,
+      "confidence": 1.0
+    },
+    {
+      "text": "not",
+      "start": 39.08,
+      "end": 39.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "follow",
+      "start": 39.26,
+      "end": 39.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 39.54,
+      "end": 39.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "prediction.",
+      "start": 39.78,
+      "end": 40.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 40.78,
+      "end": 40.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet's",
+      "start": 40.94,
+      "end": 41.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbital",
+      "start": 41.54,
+      "end": 41.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "eccentricity",
+      "start": 41.94,
+      "end": 42.72,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 42.72,
+      "end": 42.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "0",
+      "start": 42.96,
+      "end": 43.36,
+      "confidence": 1.0
+    },
+    {
+      "text": ".0934,",
+      "start": 43.36,
+      "end": 44.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "nearly",
+      "start": 45.42,
+      "end": 45.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "six",
+      "start": 45.74,
+      "end": 46.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "times",
+      "start": 46.14,
+      "end": 46.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "greater",
+      "start": 46.5,
+      "end": 46.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "than",
+      "start": 46.92,
+      "end": 47.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "Earth's",
+      "start": 47.18,
+      "end": 48.0,
+      "confidence": 1.0
+    },
+    {
+      "text": "0",
+      "start": 48.0,
+      "end": 48.28,
+      "confidence": 1.0
+    },
+    {
+      "text": ".0167.",
+      "start": 48.28,
+      "end": 49.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "That",
+      "start": 50.06,
+      "end": 50.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "means",
+      "start": 50.28,
+      "end": 50.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 50.6,
+      "end": 51.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "swings",
+      "start": 51.1,
+      "end": 51.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "42",
+      "start": 51.74,
+      "end": 52.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "million",
+      "start": 52.4,
+      "end": 52.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "kilometers",
+      "start": 52.9,
+      "end": 53.44,
+      "confidence": 1.0
+    },
+    {
+      "text": "closer",
+      "start": 53.44,
+      "end": 53.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 53.94,
+      "end": 54.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 54.18,
+      "end": 54.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "sun",
+      "start": 54.4,
+      "end": 54.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "at",
+      "start": 54.66,
+      "end": 54.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "perihelion",
+      "start": 54.98,
+      "end": 55.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "than",
+      "start": 55.88,
+      "end": 56.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "at",
+      "start": 56.28,
+      "end": 56.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "aphelion.",
+      "start": 56.54,
+      "end": 57.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "For",
+      "start": 57.02,
+      "end": 57.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "comparison,",
+      "start": 57.5,
+      "end": 58.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 59.12,
+      "end": 59.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "distance",
+      "start": 59.22,
+      "end": 59.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 59.78,
+      "end": 60.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "roughly",
+      "start": 60.18,
+      "end": 60.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 60.66,
+      "end": 61.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "entire",
+      "start": 61.14,
+      "end": 61.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbital",
+      "start": 61.7,
+      "end": 62.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "radius",
+      "start": 62.26,
+      "end": 62.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 62.8,
+      "end": 63.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mercury.",
+      "start": 63.1,
+      "end": 63.58,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 64.04,
+      "end": 64.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "result",
+      "start": 64.18,
+      "end": 64.68,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 64.68,
+      "end": 65.04,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 65.04,
+      "end": 65.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 65.2,
+      "end": 65.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 65.62,
+      "end": 66.04,
+      "confidence": 1.0
+    },
+    {
+      "text": "receives",
+      "start": 66.04,
+      "end": 66.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "44",
+      "start": 66.6,
+      "end": 67.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "%",
+      "start": 67.26,
+      "end": 67.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "more",
+      "start": 67.86,
+      "end": 68.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "solar",
+      "start": 68.28,
+      "end": 68.68,
+      "confidence": 1.0
+    },
+    {
+      "text": "energy",
+      "start": 68.68,
+      "end": 69.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "at",
+      "start": 69.26,
+      "end": 69.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 69.52,
+      "end": 69.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "closest",
+      "start": 69.82,
+      "end": 70.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "approach",
+      "start": 70.22,
+      "end": 70.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "than",
+      "start": 70.8,
+      "end": 71.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "at",
+      "start": 71.5,
+      "end": 71.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 71.82,
+      "end": 72.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "farthest,",
+      "start": 72.1,
+      "end": 72.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "producing",
+      "start": 73.12,
+      "end": 73.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "seasonal",
+      "start": 73.54,
+      "end": 74.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "extremes",
+      "start": 74.2,
+      "end": 74.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 74.74,
+      "end": 75.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "no",
+      "start": 75.26,
+      "end": 75.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "atmosphere",
+      "start": 75.64,
+      "end": 76.24,
+      "confidence": 1.0
+    },
+    {
+      "text": "can",
+      "start": 76.24,
+      "end": 76.58,
+      "confidence": 1.0
+    },
+    {
+      "text": "fully",
+      "start": 76.58,
+      "end": 76.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "buffer.",
+      "start": 76.88,
+      "end": 77.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "Jupiter's",
+      "start": 77.84,
+      "end": 78.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "gravitational",
+      "start": 78.5,
+      "end": 79.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "influence,",
+      "start": 79.12,
+      "end": 79.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "tugging",
+      "start": 80.22,
+      "end": 80.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "on",
+      "start": 80.54,
+      "end": 80.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 80.78,
+      "end": 81.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "across",
+      "start": 81.1,
+      "end": 81.56,
+      "confidence": 1.0
+    },
+    {
+      "text": "billions",
+      "start": 81.56,
+      "end": 82.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 82.02,
+      "end": 82.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbital",
+      "start": 82.4,
+      "end": 82.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "cycles,",
+      "start": 82.74,
+      "end": 83.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "stretched",
+      "start": 83.3,
+      "end": 84.04,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 84.04,
+      "end": 84.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbit",
+      "start": 84.34,
+      "end": 84.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "into",
+      "start": 84.64,
+      "end": 84.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "this",
+      "start": 84.98,
+      "end": 85.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "elongated",
+      "start": 85.3,
+      "end": 86.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "shape",
+      "start": 86.12,
+      "end": 86.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 86.5,
+      "end": 87.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "kept",
+      "start": 87.06,
+      "end": 87.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "it",
+      "start": 87.32,
+      "end": 87.56,
+      "confidence": 1.0
+    },
+    {
+      "text": "there.",
+      "start": 87.56,
+      "end": 88.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 88.5,
+      "end": 88.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "did",
+      "start": 88.52,
+      "end": 88.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "not",
+      "start": 88.82,
+      "end": 89.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "choose",
+      "start": 89.06,
+      "end": 89.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "instability.",
+      "start": 89.48,
+      "end": 90.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 90.76,
+      "end": 90.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "largest",
+      "start": 90.88,
+      "end": 91.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 91.26,
+      "end": 91.68,
+      "confidence": 1.0
+    },
+    {
+      "text": "in",
+      "start": 91.68,
+      "end": 91.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 91.9,
+      "end": 92.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "solar",
+      "start": 92.06,
+      "end": 92.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "system",
+      "start": 92.36,
+      "end": 92.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "imposed",
+      "start": 92.76,
+      "end": 93.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "it,",
+      "start": 93.26,
+      "end": 93.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 93.98,
+      "end": 93.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "an",
+      "start": 93.98,
+      "end": 94.24,
+      "confidence": 1.0
+    },
+    {
+      "text": "unstable",
+      "start": 94.24,
+      "end": 94.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "orbit",
+      "start": 94.78,
+      "end": 95.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "means",
+      "start": 95.26,
+      "end": 95.58,
+      "confidence": 1.0
+    },
+    {
+      "text": "an",
+      "start": 95.58,
+      "end": 95.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "unstable",
+      "start": 95.92,
+      "end": 96.46,
+      "confidence": 1.0
+    },
+    {
+      "text": "climate,",
+      "start": 96.46,
+      "end": 97.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "compounding",
+      "start": 97.72,
+      "end": 98.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "every",
+      "start": 98.32,
+      "end": 98.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "other",
+      "start": 98.6,
+      "end": 98.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "process",
+      "start": 98.96,
+      "end": 99.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 99.42,
+      "end": 99.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "was",
+      "start": 99.66,
+      "end": 99.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "already",
+      "start": 99.94,
+      "end": 100.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "pulling",
+      "start": 100.34,
+      "end": 100.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 100.66,
+      "end": 101.0,
+      "confidence": 1.0
+    },
+    {
+      "text": "apart.",
+      "start": 101.0,
+      "end": 101.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "That",
+      "start": 101.84,
+      "end": 102.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "was",
+      "start": 102.06,
+      "end": 102.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "one",
+      "start": 102.4,
+      "end": 102.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "piece",
+      "start": 102.64,
+      "end": 102.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 102.92,
+      "end": 103.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "geometry.",
+      "start": 103.2,
+      "end": 103.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 104.18,
+      "end": 104.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "next",
+      "start": 104.36,
+      "end": 104.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "theory",
+      "start": 104.64,
+      "end": 104.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 104.94,
+      "end": 105.24,
+      "confidence": 1.0
+    },
+    {
+      "text": "about",
+      "start": 105.24,
+      "end": 105.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "something",
+      "start": 105.48,
+      "end": 105.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "far",
+      "start": 105.94,
+      "end": 106.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "more",
+      "start": 106.3,
+      "end": 106.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "fundamental,",
+      "start": 106.6,
+      "end": 107.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 107.58,
+      "end": 107.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "size",
+      "start": 107.86,
+      "end": 108.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 108.26,
+      "end": 108.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 108.52,
+      "end": 108.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 108.76,
+      "end": 109.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "itself.",
+      "start": 109.02,
+      "end": 109.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "Number",
+      "start": 109.62,
+      "end": 110.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "nine,",
+      "start": 110.34,
+      "end": 110.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 111.28,
+      "end": 111.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "thermal",
+      "start": 111.48,
+      "end": 111.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "death.",
+      "start": 111.92,
+      "end": 112.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "A",
+      "start": 113.02,
+      "end": 113.08,
+      "confidence": 1.0
+    },
+    {
+      "text": "rocky",
+      "start": 113.08,
+      "end": 113.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet's",
+      "start": 113.42,
+      "end": 114.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "long",
+      "start": 114.1,
+      "end": 114.38,
+      "confidence": 1.0
+    },
+    {
+      "text": "-term",
+      "start": 114.38,
+      "end": 114.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "habitability",
+      "start": 114.66,
+      "end": 115.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "depends",
+      "start": 115.42,
+      "end": 116.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "on",
+      "start": 116.22,
+      "end": 116.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 116.5,
+      "end": 116.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "internal",
+      "start": 116.86,
+      "end": 117.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "heat",
+      "start": 117.36,
+      "end": 117.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "engine.",
+      "start": 117.7,
+      "end": 118.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "Radioactive",
+      "start": 118.78,
+      "end": 119.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "decay",
+      "start": 119.52,
+      "end": 120.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "in",
+      "start": 120.14,
+      "end": 120.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 120.4,
+      "end": 120.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "mantle",
+      "start": 120.64,
+      "end": 121.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "drives",
+      "start": 121.06,
+      "end": 121.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "convection,",
+      "start": 121.66,
+      "end": 122.38,
+      "confidence": 1.0
+    },
+    {
+      "text": "which",
+      "start": 122.74,
+      "end": 122.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "drives",
+      "start": 122.98,
+      "end": 123.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "volcanism,",
+      "start": 123.32,
+      "end": 124.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "which",
+      "start": 124.46,
+      "end": 124.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "recycles",
+      "start": 124.74,
+      "end": 125.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "gases",
+      "start": 125.32,
+      "end": 125.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "into",
+      "start": 125.82,
+      "end": 126.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 126.32,
+      "end": 126.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "atmosphere,",
+      "start": 126.66,
+      "end": 127.16,
+      "confidence": 1.0
+    },
+    {
+      "text": "which",
+      "start": 127.54,
+      "end": 127.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "maintains",
+      "start": 127.8,
+      "end": 128.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "surface",
+      "start": 128.26,
+      "end": 128.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "pressure",
+      "start": 128.84,
+      "end": 129.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 129.32,
+      "end": 129.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "temperature.",
+      "start": 129.66,
+      "end": 130.16,
+      "confidence": 1.0
+    },
+    {
+      "text": "Earth's",
+      "start": 130.64,
+      "end": 131.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "mantle",
+      "start": 131.18,
+      "end": 131.46,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 131.46,
+      "end": 131.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "still",
+      "start": 131.84,
+      "end": 132.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "hot",
+      "start": 132.14,
+      "end": 132.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "enough",
+      "start": 132.36,
+      "end": 132.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 132.7,
+      "end": 133.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "sustain",
+      "start": 133.02,
+      "end": 133.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "this",
+      "start": 133.42,
+      "end": 133.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "cycle",
+      "start": 133.74,
+      "end": 134.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "4",
+      "start": 134.12,
+      "end": 134.82,
+      "confidence": 1.0
+    },
+    {
+      "text": ".5",
+      "start": 134.82,
+      "end": 135.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "billion",
+      "start": 135.52,
+      "end": 135.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "years",
+      "start": 135.9,
+      "end": 136.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "after",
+      "start": 136.4,
+      "end": 137.08,
+      "confidence": 1.0
+    },
+    {
+      "text": "formation.",
+      "start": 137.08,
+      "end": 137.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 137.8,
+      "end": 138.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "thermal",
+      "start": 138.4,
+      "end": 138.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "engine",
+      "start": 138.8,
+      "end": 139.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "runs",
+      "start": 139.1,
+      "end": 139.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "because",
+      "start": 139.54,
+      "end": 140.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 140.02,
+      "end": 140.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 140.34,
+      "end": 140.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 140.62,
+      "end": 140.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "massive",
+      "start": 140.98,
+      "end": 141.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "enough",
+      "start": 141.36,
+      "end": 141.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 141.76,
+      "end": 142.08,
+      "confidence": 1.0
+    },
+    {
+      "text": "retain",
+      "start": 142.08,
+      "end": 142.46,
+      "confidence": 1.0
+    },
+    {
+      "text": "heat",
+      "start": 142.46,
+      "end": 142.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "over",
+      "start": 142.92,
+      "end": 143.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "geological",
+      "start": 143.52,
+      "end": 144.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "time.",
+      "start": 144.26,
+      "end": 144.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 145.44,
+      "end": 145.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "has",
+      "start": 145.48,
+      "end": 145.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "11",
+      "start": 145.94,
+      "end": 146.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "%",
+      "start": 146.42,
+      "end": 146.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 146.9,
+      "end": 147.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "Earth's",
+      "start": 147.14,
+      "end": 147.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "mass.",
+      "start": 147.64,
+      "end": 148.0,
+      "confidence": 1.0
+    },
+    {
+      "text": "That",
+      "start": 148.36,
+      "end": 148.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 148.62,
+      "end": 148.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "not",
+      "start": 148.9,
+      "end": 149.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 149.12,
+      "end": 149.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "minor",
+      "start": 149.32,
+      "end": 149.56,
+      "confidence": 1.0
+    },
+    {
+      "text": "difference.",
+      "start": 149.56,
+      "end": 150.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "It",
+      "start": 150.34,
+      "end": 150.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 150.6,
+      "end": 150.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 150.82,
+      "end": 151.04,
+      "confidence": 1.0
+    },
+    {
+      "text": "difference",
+      "start": 151.04,
+      "end": 151.38,
+      "confidence": 1.0
+    },
+    {
+      "text": "between",
+      "start": 151.38,
+      "end": 151.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 151.8,
+      "end": 152.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 152.2,
+      "end": 152.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 152.5,
+      "end": 152.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "holds",
+      "start": 152.84,
+      "end": 153.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 153.06,
+      "end": 153.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "heat",
+      "start": 153.36,
+      "end": 153.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "for",
+      "start": 153.6,
+      "end": 153.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "10",
+      "start": 153.88,
+      "end": 154.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "billion",
+      "start": 154.18,
+      "end": 154.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "years",
+      "start": 154.54,
+      "end": 155.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 155.06,
+      "end": 155.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "one",
+      "start": 155.64,
+      "end": 155.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "that",
+      "start": 155.9,
+      "end": 156.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "begins",
+      "start": 156.2,
+      "end": 156.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "cooling",
+      "start": 156.64,
+      "end": 157.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "within",
+      "start": 157.18,
+      "end": 157.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 157.54,
+      "end": 157.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "first",
+      "start": 157.84,
+      "end": 158.16,
+      "confidence": 1.0
+    },
+    {
+      "text": "billion.",
+      "start": 158.16,
+      "end": 158.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars's",
+      "start": 159.22,
+      "end": 159.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "smaller",
+      "start": 159.94,
+      "end": 160.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "volume",
+      "start": 160.18,
+      "end": 160.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "gave",
+      "start": 160.64,
+      "end": 160.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "it",
+      "start": 160.86,
+      "end": 161.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 161.1,
+      "end": 161.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "higher",
+      "start": 161.26,
+      "end": 161.58,
+      "confidence": 1.0
+    },
+    {
+      "text": "surface",
+      "start": 161.58,
+      "end": 162.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "area",
+      "start": 162.18,
+      "end": 162.64,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 162.64,
+      "end": 162.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "volume",
+      "start": 162.9,
+      "end": 163.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "ratio,",
+      "start": 163.3,
+      "end": 163.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "meaning",
+      "start": 164.4,
+      "end": 164.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "heat",
+      "start": 164.76,
+      "end": 165.2,
+      "confidence": 1.0
+    },
+    {
+      "text": "radiated",
+      "start": 165.2,
+      "end": 165.74,
+      "confidence": 1.0
+    },
+    {
+      "text": "into",
+      "start": 165.74,
+      "end": 165.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "space",
+      "start": 165.94,
+      "end": 166.4,
+      "confidence": 1.0
+    },
+    {
+      "text": "faster",
+      "start": 166.4,
+      "end": 166.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "than",
+      "start": 166.92,
+      "end": 167.18,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 167.18,
+      "end": 167.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "interior",
+      "start": 167.42,
+      "end": 167.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "could",
+      "start": 167.78,
+      "end": 168.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "replace",
+      "start": 168.02,
+      "end": 168.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "it.",
+      "start": 168.42,
+      "end": 168.88,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 169.1,
+      "end": 169.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "mantle",
+      "start": 169.22,
+      "end": 169.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "cooled,",
+      "start": 169.52,
+      "end": 170.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "convection",
+      "start": 170.48,
+      "end": 170.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "slowed.",
+      "start": 170.9,
+      "end": 171.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "Volcanism",
+      "start": 172.48,
+      "end": 172.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "concentrated",
+      "start": 172.86,
+      "end": 173.58,
+      "confidence": 1.0
+    },
+    {
+      "text": "into",
+      "start": 173.58,
+      "end": 174.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "fewer",
+      "start": 174.52,
+      "end": 174.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 174.96,
+      "end": 175.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "fewer",
+      "start": 175.34,
+      "end": 175.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "eruption",
+      "start": 175.8,
+      "end": 176.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "sites",
+      "start": 176.36,
+      "end": 176.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "instead",
+      "start": 176.9,
+      "end": 177.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 177.34,
+      "end": 177.68,
+      "confidence": 1.0
+    },
+    {
+      "text": "spreading",
+      "start": 177.68,
+      "end": 177.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "across",
+      "start": 177.92,
+      "end": 178.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "tectonic",
+      "start": 178.52,
+      "end": 179.16,
+      "confidence": 1.0
+    },
+    {
+      "text": "boundaries",
+      "start": 179.16,
+      "end": 179.72,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 179.72,
+      "end": 180.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "way",
+      "start": 180.28,
+      "end": 180.46,
+      "confidence": 1.0
+    },
+    {
+      "text": "it",
+      "start": 180.46,
+      "end": 180.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "does",
+      "start": 180.6,
+      "end": 180.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "on",
+      "start": 180.9,
+      "end": 181.22,
+      "confidence": 1.0
+    },
+    {
+      "text": "Earth.",
+      "start": 181.22,
+      "end": 181.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "Olympus",
+      "start": 181.92,
+      "end": 182.42,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mons,",
+      "start": 182.42,
+      "end": 182.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 183.22,
+      "end": 183.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "largest",
+      "start": 183.34,
+      "end": 183.72,
+      "confidence": 1.0
+    },
+    {
+      "text": "volcano",
+      "start": 183.72,
+      "end": 184.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "in",
+      "start": 184.28,
+      "end": 184.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 184.62,
+      "end": 184.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "solar",
+      "start": 184.76,
+      "end": 185.04,
+      "confidence": 1.0
+    },
+    {
+      "text": "system",
+      "start": 185.04,
+      "end": 185.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "at",
+      "start": 185.48,
+      "end": 185.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "21",
+      "start": 185.8,
+      "end": 186.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "kilometers",
+      "start": 186.3,
+      "end": 186.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "tall,",
+      "start": 186.86,
+      "end": 187.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "three",
+      "start": 187.68,
+      "end": 187.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "times",
+      "start": 187.96,
+      "end": 188.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 188.3,
+      "end": 188.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "height",
+      "start": 188.5,
+      "end": 188.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 188.66,
+      "end": 188.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "Everest,",
+      "start": 188.94,
+      "end": 189.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 189.74,
+      "end": 190.02,
+      "confidence": 1.0
+    },
+    {
+      "text": "not",
+      "start": 190.02,
+      "end": 190.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "evidence",
+      "start": 190.36,
+      "end": 190.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 190.8,
+      "end": 191.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 191.1,
+      "end": 191.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "geologically",
+      "start": 191.34,
+      "end": 191.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "active",
+      "start": 191.98,
+      "end": 192.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "world.",
+      "start": 192.6,
+      "end": 193.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "It",
+      "start": 193.1,
+      "end": 193.48,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 193.48,
+      "end": 193.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "evidence",
+      "start": 193.8,
+      "end": 194.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "of",
+      "start": 194.3,
+      "end": 194.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 194.6,
+      "end": 194.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "dying",
+      "start": 194.84,
+      "end": 195.1,
+      "confidence": 1.0
+    },
+    {
+      "text": "one,",
+      "start": 195.1,
+      "end": 195.44,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 195.62,
+      "end": 195.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "single",
+      "start": 195.84,
+      "end": 196.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "hot",
+      "start": 196.26,
+      "end": 196.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "spot",
+      "start": 196.66,
+      "end": 196.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "punching",
+      "start": 196.92,
+      "end": 197.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "through",
+      "start": 197.34,
+      "end": 197.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 197.86,
+      "end": 198.16,
+      "confidence": 1.0
+    },
+    {
+      "text": "thickening,",
+      "start": 198.16,
+      "end": 198.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "stiffening",
+      "start": 199.14,
+      "end": 199.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "lithosphere",
+      "start": 199.5,
+      "end": 200.16,
+      "confidence": 1.0
+    },
+    {
+      "text": "because",
+      "start": 200.16,
+      "end": 200.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 200.84,
+      "end": 201.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 201.14,
+      "end": 201.44,
+      "confidence": 1.0
+    },
+    {
+      "text": "no",
+      "start": 201.44,
+      "end": 201.76,
+      "confidence": 1.0
+    },
+    {
+      "text": "longer",
+      "start": 201.76,
+      "end": 202.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "had",
+      "start": 202.12,
+      "end": 202.52,
+      "confidence": 1.0
+    },
+    {
+      "text": "enough",
+      "start": 202.52,
+      "end": 202.94,
+      "confidence": 1.0
+    },
+    {
+      "text": "thermal",
+      "start": 202.94,
+      "end": 203.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "energy",
+      "start": 203.36,
+      "end": 203.9,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 203.9,
+      "end": 204.5,
+      "confidence": 1.0
+    },
+    {
+      "text": "crack",
+      "start": 204.5,
+      "end": 204.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 204.7,
+      "end": 205.0,
+      "confidence": 1.0
+    },
+    {
+      "text": "crust",
+      "start": 205.0,
+      "end": 205.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "open",
+      "start": 205.32,
+      "end": 205.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "anywhere",
+      "start": 205.78,
+      "end": 206.28,
+      "confidence": 1.0
+    },
+    {
+      "text": "else.",
+      "start": 206.28,
+      "end": 206.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 207.3,
+      "end": 207.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "was",
+      "start": 207.54,
+      "end": 207.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "too",
+      "start": 207.8,
+      "end": 208.06,
+      "confidence": 1.0
+    },
+    {
+      "text": "small",
+      "start": 208.06,
+      "end": 208.36,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 208.36,
+      "end": 208.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "stay",
+      "start": 208.62,
+      "end": 208.82,
+      "confidence": 1.0
+    },
+    {
+      "text": "warm,",
+      "start": 208.82,
+      "end": 209.24,
+      "confidence": 1.0
+    },
+    {
+      "text": "and",
+      "start": 209.58,
+      "end": 209.8,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 209.8,
+      "end": 209.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "cold",
+      "start": 209.98,
+      "end": 210.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet",
+      "start": 210.3,
+      "end": 210.7,
+      "confidence": 1.0
+    },
+    {
+      "text": "is",
+      "start": 210.7,
+      "end": 210.98,
+      "confidence": 1.0
+    },
+    {
+      "text": "a",
+      "start": 210.98,
+      "end": 211.12,
+      "confidence": 1.0
+    },
+    {
+      "text": "dead",
+      "start": 211.12,
+      "end": 211.34,
+      "confidence": 1.0
+    },
+    {
+      "text": "planet.",
+      "start": 211.34,
+      "end": 211.84,
+      "confidence": 1.0
+    },
+    {
+      "text": "The",
+      "start": 212.34,
+      "end": 212.56,
+      "confidence": 1.0
+    },
+    {
+      "text": "thermal",
+      "start": 212.56,
+      "end": 212.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "problem",
+      "start": 212.92,
+      "end": 213.32,
+      "confidence": 1.0
+    },
+    {
+      "text": "explains",
+      "start": 213.32,
+      "end": 213.96,
+      "confidence": 1.0
+    },
+    {
+      "text": "why",
+      "start": 213.96,
+      "end": 214.3,
+      "confidence": 1.0
+    },
+    {
+      "text": "Mars",
+      "start": 214.3,
+      "end": 214.66,
+      "confidence": 1.0
+    },
+    {
+      "text": "lost",
+      "start": 214.66,
+      "end": 215.08,
+      "confidence": 1.0
+    },
+    {
+      "text": "its",
+      "start": 215.08,
+      "end": 215.38,
+      "confidence": 1.0
+    },
+    {
+      "text": "engine.",
+      "start": 215.38,
+      "end": 215.78,
+      "confidence": 1.0
+    },
+    {
+      "text": "This",
+      "start": 216.3,
+      "end": 216.6,
+      "confidence": 1.0
+    },
+    {
+      "text": "next",
+      "start": 216.6,
+      "end": 216.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "theory",
+      "start": 216.92,
+      "end": 217.24,
+      "confidence": 1.0
+    },
+    {
+      "text": "explains",
+      "start": 217.24,
+      "end": 217.92,
+      "confidence": 1.0
+    },
+    {
+      "text": "what",
+      "start": 217.92,
+      "end": 218.14,
+      "confidence": 1.0
+    },
+    {
+      "text": "it",
+      "start": 218.14,
+      "end": 218.38,
+      "confidence": 1.0
+    },
+    {
+      "text": "lost",
+      "start": 218.38,
+      "end": 218.62,
+      "confidence": 1.0
+    },
+    {
+      "text": "the",
+      "start": 218.62,
+      "end": 218.86,
+      "confidence": 1.0
+    },
+    {
+      "text": "ability",
+      "start": 218.86,
+      "end": 219.26,
+      "confidence": 1.0
+    },
+    {
+      "text": "to",
+      "start": 219.26,
+      "end": 219.54,
+      "confidence": 1.0
+    },
+    {
+      "text": "do.",
+      "start": 219.54,
+      "end": 219.96,
+      "confidence": 1.0
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "type": "intro",
+      "start": 0.0,
+      "end": 1.72,
+      "text": "",
+      "words": [],
+      "prompt": null,
+      "prompt_source": null,
+      "image_path": null,
+      "status": "planned",
+      "include_character": false,
+      "metadata": {}
+    },
+    {
+      "id": "seg10_card",
+      "type": "number_card",
+      "start": 1.72,
+      "end": 2.92,
+      "text": "Number 10.",
+      "words": [
+        {
+          "text": "Number",
+          "start": 1.72,
+          "end": 1.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "10.",
+          "start": 1.88,
+          "end": 2.52,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 10 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\number_card_10.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene00",
+      "type": "content",
+      "start": 2.92,
+      "end": 7.18,
+      "text": "The orbital destabilization. Mars should orbit the sun",
+      "words": [
+        {
+          "text": "The",
+          "start": 3.04,
+          "end": 3.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbital",
+          "start": 3.14,
+          "end": 3.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "destabilization.",
+          "start": 3.66,
+          "end": 4.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 5.44,
+          "end": 5.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "should",
+          "start": 5.86,
+          "end": 6.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbit",
+          "start": 6.34,
+          "end": 6.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 6.62,
+          "end": 6.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "sun",
+          "start": 6.9,
+          "end": 7.18,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: vast deep-space backdrop — deep navy and charcoal black with scattered neon-pink and electric-blue star clusters, swirling alien nebulae in toxic green and purple, oversized cartoon sun blazing at far right with spiked neon-yellow corona lines]. Viewer is witness to the entire solar system from far outside, cosmic scale. A tiny rust-orange Mars dot orbits the cartoon sun along a wide, smoothly rounded near-circular glowing path rendered as a bright teal dotted ellipse — nearly a perfect circle, calm and symmetrical, left-to-right motion. The orbital path is centered in frame, Mars small at upper-left of the arc. Wide establishing cosmic zoom — Mars and sun together occupy 30% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_00.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene01",
+      "type": "content",
+      "start": 7.18,
+      "end": 11.4,
+      "text": "on a near -circular path, the way Earth does. A",
+      "words": [
+        {
+          "text": "on",
+          "start": 7.18,
+          "end": 7.68,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 7.68,
+          "end": 7.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "near",
+          "start": 7.88,
+          "end": 8.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "-circular",
+          "start": 8.14,
+          "end": 8.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "path,",
+          "start": 8.6,
+          "end": 9.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 9.58,
+          "end": 9.72,
+          "confidence": 1.0
+        },
+        {
+          "text": "way",
+          "start": 9.72,
+          "end": 9.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "Earth",
+          "start": 9.92,
+          "end": 10.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "does.",
+          "start": 10.18,
+          "end": 10.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "A",
+          "start": 11.08,
+          "end": 11.4,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy cosmic backdrop with toxic-green nebula wisps and neon-pink star bursts, large cartoon sun anchored at lower-right with chunky yellow corona spikes]. Viewer witnesses the solar system from cosmic distance. Mars as a small rust-orange circle and Earth as a small blue circle both travel their respective near-circular teal dotted orbital rings around the sun — Earth's ring slightly tighter and smaller, Mars's ring slightly larger, both nearly perfect circles side by side for comparison. Both planets moving left-to-right along their calm round paths. Cosmic zoom — both orbits fit within the frame with generous space around them. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_01.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene02",
+      "type": "content",
+      "start": 11.4,
+      "end": 16.24,
+      "text": "stable, predictable ellipse with minimal seasonal variation. That",
+      "words": [
+        {
+          "text": "stable,",
+          "start": 11.4,
+          "end": 11.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "predictable",
+          "start": 12.28,
+          "end": 12.68,
+          "confidence": 1.0
+        },
+        {
+          "text": "ellipse",
+          "start": 12.68,
+          "end": 13.38,
+          "confidence": 1.0
+        },
+        {
+          "text": "with",
+          "start": 13.38,
+          "end": 13.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "minimal",
+          "start": 13.78,
+          "end": 14.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "seasonal",
+          "start": 14.2,
+          "end": 14.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "variation.",
+          "start": 14.64,
+          "end": 15.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "That",
+          "start": 16.02,
+          "end": 16.24,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy space backdrop, alien purple and teal nebula clouds billowing at edges, dense field of tiny neon-pink stars scattered behind]. Viewer witnesses the predicted stable Mars orbit from slightly closer cosmic distance. Mars's predicted orbital path shown as a smooth rounded teal dotted ellipse — nearly circular, very low stretch, geometrically calm. Mars as a small rust-orange disk positioned at the top of the ellipse. Small cartoon sun blazing at center of the ellipse. The predicted near-circular orbit glows gently — highlighting how STABLE and PREDICTABLE it should be. No deviation, no drama. Medium cosmic zoom — orbit fills 55% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_02.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene03",
+      "type": "content",
+      "start": 16.24,
+      "end": 20.88,
+      "text": "is what the standard accretion model predicts for a rocky planet at 1 .5",
+      "words": [
+        {
+          "text": "is",
+          "start": 16.24,
+          "end": 16.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "what",
+          "start": 16.48,
+          "end": 16.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 16.66,
+          "end": 16.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "standard",
+          "start": 16.98,
+          "end": 17.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "accretion",
+          "start": 17.3,
+          "end": 17.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "model",
+          "start": 17.78,
+          "end": 18.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "predicts",
+          "start": 18.1,
+          "end": 18.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "for",
+          "start": 18.6,
+          "end": 18.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 18.78,
+          "end": 18.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "rocky",
+          "start": 18.98,
+          "end": 19.22,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 19.22,
+          "end": 19.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "at",
+          "start": 19.6,
+          "end": 19.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "1",
+          "start": 19.9,
+          "end": 20.2,
+          "confidence": 1.0
+        },
+        {
+          "text": ".5",
+          "start": 20.2,
+          "end": 20.88,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep charcoal and navy cosmic backdrop, scattered neon-blue and acid-green star clusters, swirling purple alien nebula on the left side, cartoon sci-fi machinery icons — gears, beakers, satellite dishes — floating as background clutter]. Viewer witnesses the solar system region at 1.5 AU from cosmic distance. A cartoon yellow sun blazes at center-right with exaggerated corona spikes. A dotted arc marks the rocky planet zone at the correct distance from the sun, labeled with faint teal glow. Mars represented as a tiny rust-orange dot sits on that arc. The scene emphasizes DISTANCE and REGION — the correct orbital zone where a calm orbit is expected. Wide cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_03.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene04",
+      "type": "content",
+      "start": 20.88,
+      "end": 24.88,
+      "text": "AU from a G -type star. The orbit should be",
+      "words": [
+        {
+          "text": "AU",
+          "start": 20.88,
+          "end": 21.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "from",
+          "start": 21.78,
+          "end": 22.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 22.28,
+          "end": 22.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "G",
+          "start": 22.52,
+          "end": 22.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "-type",
+          "start": 22.76,
+          "end": 22.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "star.",
+          "start": 22.94,
+          "end": 23.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 23.76,
+          "end": 24.04,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbit",
+          "start": 24.04,
+          "end": 24.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "should",
+          "start": 24.3,
+          "end": 24.56,
+          "confidence": 1.0
+        },
+        {
+          "text": "be",
+          "start": 24.56,
+          "end": 24.88,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy and purple cosmic backdrop with small neon-pink stars and acid-green nebula wisps, large cartoon sun centered and blazing yellow-orange at the middle of the frame]. Viewer is outside the solar system looking in. The predicted calm circular orbital path for Mars shown as a clean teal dotted ring around the sun — perfectly round, serene. The ring glows softly. A small rust-orange Mars dot sits peacefully on the ring. Visual mood is CALM and ORDERLY — minimal chaos in this scene, contrasting with the usual chaotic backgrounds. Wide cosmic zoom, orbit ring fills 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_04.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene05",
+      "type": "content",
+      "start": 24.88,
+      "end": 29.36,
+      "text": "calm. The climate should be moderated by geometry alone. Every",
+      "words": [
+        {
+          "text": "calm.",
+          "start": 24.88,
+          "end": 25.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 25.56,
+          "end": 25.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "climate",
+          "start": 25.8,
+          "end": 26.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "should",
+          "start": 26.18,
+          "end": 26.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "be",
+          "start": 26.42,
+          "end": 26.72,
+          "confidence": 1.0
+        },
+        {
+          "text": "moderated",
+          "start": 26.72,
+          "end": 27.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "by",
+          "start": 27.2,
+          "end": 27.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "geometry",
+          "start": 27.48,
+          "end": 28.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "alone.",
+          "start": 28.1,
+          "end": 28.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "Every",
+          "start": 28.6,
+          "end": 29.36,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy cosmic backdrop with muted alien purple nebulae and sparse neon-blue stars — deliberately calm and orderly compared to usual maximalist chaos]. Viewer watches from cosmic distance. The scene shows Mars on its predicted perfectly round teal dotted orbit — an ideal geometry. Below, a simple cartoon planet icon sits on a calm flat horizontal baseline to represent stable, geometry-moderated climate. The orbital ring is smooth and symmetric around the small cartoon sun at center. Everything in the scene radiates PREDICTABLE CALM — symmetrical arrangement, centered sun, Mars at gentle left-to-right motion. Medium cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_05.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene06",
+      "type": "content",
+      "start": 29.36,
+      "end": 33.6,
+      "text": "simulation of planetary formation in this region of the solar system produces",
+      "words": [
+        {
+          "text": "simulation",
+          "start": 29.36,
+          "end": 29.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 29.98,
+          "end": 30.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "planetary",
+          "start": 30.28,
+          "end": 30.7,
+          "confidence": 1.0
+        },
+        {
+          "text": "formation",
+          "start": 30.7,
+          "end": 31.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "in",
+          "start": 31.34,
+          "end": 31.58,
+          "confidence": 1.0
+        },
+        {
+          "text": "this",
+          "start": 31.58,
+          "end": 31.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "region",
+          "start": 31.84,
+          "end": 32.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 32.14,
+          "end": 32.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 32.32,
+          "end": 32.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "solar",
+          "start": 32.5,
+          "end": 32.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "system",
+          "start": 32.78,
+          "end": 33.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "produces",
+          "start": 33.12,
+          "end": 33.6,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: chaotic alien laboratory backdrop — acid-green and neon-blue walls packed with bubbling beakers, swirling holographic planet simulations as glowing orbs, sci-fi monitors with wavy blipping lines, mechanical arms, stacked alien gadgets, deep purple and charcoal background]. Viewer is inside the lab at human scale. ONE stick figure scientist stands center-left in front of a large glowing holographic screen showing a round near-circular orbital ring in teal, arms spread wide gesturing proudly at the simulation. Stick figure wears a simple rectangle-shape lab coat, dot eyes, simple confident smile. The simulation on screen shows a perfectly round planet orbit — the predicted low-eccentricity world result. Human-scale zoom, stick figure 40% of frame height. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_06.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene07",
+      "type": "content",
+      "start": 33.6,
+      "end": 37.76,
+      "text": "a world with low eccentricity and steady insulation across its",
+      "words": [
+        {
+          "text": "a",
+          "start": 33.6,
+          "end": 33.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "world",
+          "start": 33.9,
+          "end": 34.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "with",
+          "start": 34.1,
+          "end": 34.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "low",
+          "start": 34.4,
+          "end": 34.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "eccentricity",
+          "start": 34.76,
+          "end": 35.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 35.66,
+          "end": 36.0,
+          "confidence": 1.0
+        },
+        {
+          "text": "steady",
+          "start": 36.0,
+          "end": 36.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "insulation",
+          "start": 36.34,
+          "end": 36.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "across",
+          "start": 36.96,
+          "end": 37.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 37.42,
+          "end": 37.76,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: same chaotic alien laboratory — acid-green walls, bubbling beakers, holographic planet spheres floating, sci-fi gizmos and neon monitors blipping in the background, deep charcoal and purple tones]. Viewer inside the lab at human scale. The holographic simulation on the large glowing screen now shows a small planet model circling steadily on a nearly circular teal dotted path — the simulated low-eccentricity world. Small cartoon sun at center of the hologram glows calmly. Steady solar energy arrows shown as equal-length yellow bolts hitting the planet evenly around its orbit — representing constant insolation. Tight zoom on the hologram screen — screen fills 60% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_07.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene08",
+      "type": "content",
+      "start": 37.76,
+      "end": 41.94,
+      "text": "year. Mars does not follow that prediction. The planet's orbital",
+      "words": [
+        {
+          "text": "year.",
+          "start": 37.76,
+          "end": 38.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 38.58,
+          "end": 38.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "does",
+          "start": 38.78,
+          "end": 39.08,
+          "confidence": 1.0
+        },
+        {
+          "text": "not",
+          "start": 39.08,
+          "end": 39.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "follow",
+          "start": 39.26,
+          "end": 39.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 39.54,
+          "end": 39.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "prediction.",
+          "start": 39.78,
+          "end": 40.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 40.78,
+          "end": 40.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet's",
+          "start": 40.94,
+          "end": 41.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbital",
+          "start": 41.54,
+          "end": 41.94,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy and toxic-green cosmic backdrop — alien nebulae churning, neon-pink star clusters exploding at edges, swirling purple vortex energy in corners]. Viewer witnesses Mars from cosmic distance — CLIMAX framing. A SPLIT composition begins: on the LEFT half, a neat teal near-circular orbit ring (muted, desaturated) with a tiny Mars dot — the PREDICTION. On the RIGHT half, the ACTUAL Mars orbit shown as a dramatically stretched, elongated neon-orange ellipse — exaggerated, clearly not a circle. Mars as a rust-orange dot is shown at the extreme far end of the elongated ellipse. The contrast is visually shocking. Mars fills 65% of the right half. Cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_08.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene09",
+      "type": "content",
+      "start": 41.94,
+      "end": 46.14,
+      "text": "eccentricity is 0 .0934, nearly six",
+      "words": [
+        {
+          "text": "eccentricity",
+          "start": 41.94,
+          "end": 42.72,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 42.72,
+          "end": 42.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "0",
+          "start": 42.96,
+          "end": 43.36,
+          "confidence": 1.0
+        },
+        {
+          "text": ".0934,",
+          "start": 43.36,
+          "end": 44.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "nearly",
+          "start": 45.42,
+          "end": 45.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "six",
+          "start": 45.74,
+          "end": 46.14,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy space with churning toxic-green and electric-blue nebulae, dense neon-pink star field behind, swirling alien energy vortex at top-right corner]. Viewer is positioned outside looking at Mars's actual orbit — tight cosmic framing on the elongated orbit shape. The actual Mars orbit shown as a dramatically stretched neon-orange dotted ellipse dominating the frame — clearly far more elongated than a circle. Mars as a small rust-orange disk with bold black outline sits at the far stretched end of the ellipse (aphelion). The ellipse shape itself is the SUBJECT — its exaggerated stretch is the visual point. Cartoon sun as a small glowing yellow ball near one focus point. The stretched ellipse fills 70% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_09.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene10",
+      "type": "content",
+      "start": 46.14,
+      "end": 50.28,
+      "text": "times greater than Earth's 0 .0167. That",
+      "words": [
+        {
+          "text": "times",
+          "start": 46.14,
+          "end": 46.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "greater",
+          "start": 46.5,
+          "end": 46.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "than",
+          "start": 46.92,
+          "end": 47.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "Earth's",
+          "start": 47.18,
+          "end": 48.0,
+          "confidence": 1.0
+        },
+        {
+          "text": "0",
+          "start": 48.0,
+          "end": 48.28,
+          "confidence": 1.0
+        },
+        {
+          "text": ".0167.",
+          "start": 48.28,
+          "end": 49.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "That",
+          "start": 50.06,
+          "end": 50.28,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy and purple cosmic backdrop, neon-pink and acid-green nebula wisps, electric-blue star clusters scattered, split-frame CHANGE visual format]. Viewer witnesses the direct comparison between Earth and Mars orbits. LEFT half (muted blue-gray tones): Earth's nearly circular orbit — a very round teal ring around a small sun, very slight stretch. Earth as a tiny blue dot on the ring. RIGHT half (full neon palette — hot orange, acid green, electric blue): Mars's dramatically elongated neon-orange orbit ellipse — visibly six times more stretched. Mars as a rust-orange dot at the far end. The contrast between the two orbit shapes is stark and immediate. Both halves cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_10.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene11",
+      "type": "content",
+      "start": 50.28,
+      "end": 54.4,
+      "text": "means Mars swings 42 million kilometers closer to the",
+      "words": [
+        {
+          "text": "means",
+          "start": 50.28,
+          "end": 50.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 50.6,
+          "end": 51.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "swings",
+          "start": 51.1,
+          "end": 51.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "42",
+          "start": 51.74,
+          "end": 52.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "million",
+          "start": 52.4,
+          "end": 52.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "kilometers",
+          "start": 52.9,
+          "end": 53.44,
+          "confidence": 1.0
+        },
+        {
+          "text": "closer",
+          "start": 53.44,
+          "end": 53.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 53.94,
+          "end": 54.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 54.18,
+          "end": 54.4,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy cosmic backdrop with toxic-green and alien-purple nebulae billowing, neon-pink stars scattered, cartoon sun blazing at lower center with chunky neon-yellow corona spikes]. Viewer witnesses the orbital swing from above the solar system — cosmic zoom. Mars as a rust-orange circle is shown at TWO positions on its elongated neon-orange ellipse orbit: one position CLOSE to the sun (perihelion — at lower-left, Mars nearly touching the sun's corona glow) and one position FAR from the sun (aphelion — upper-right, Mars tiny and distant). A thick neon-yellow double-headed arrow stretches dramatically between the two Mars positions showing the ENORMOUS swing distance — left-to-right across the frame. The gap between the two positions is exaggerated and vast. Wide cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_11.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene12",
+      "type": "content",
+      "start": 54.4,
+      "end": 59.22,
+      "text": "sun at perihelion than at aphelion. For comparison, that",
+      "words": [
+        {
+          "text": "sun",
+          "start": 54.4,
+          "end": 54.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "at",
+          "start": 54.66,
+          "end": 54.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "perihelion",
+          "start": 54.98,
+          "end": 55.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "than",
+          "start": 55.88,
+          "end": 56.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "at",
+          "start": 56.28,
+          "end": 56.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "aphelion.",
+          "start": 56.54,
+          "end": 57.02,
+          "confidence": 1.0
+        },
+        {
+          "text": "For",
+          "start": 57.02,
+          "end": 57.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "comparison,",
+          "start": 57.5,
+          "end": 58.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 59.12,
+          "end": 59.22,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy space with electric-blue and toxic-green alien nebulae, dense neon-pink star field, swirling sci-fi energy at corners]. Viewer witnesses the solar system from cosmic distance — perihelion vs aphelion comparison framing. The FULL elongated neon-orange Mars orbit ellipse dominates the frame. At one focus sits the cartoon sun blazing yellow. The PERIHELION point (closest) is marked by Mars as a large rust-orange circle close to the sun. The APHELION point (farthest) shows Mars as a smaller rust-orange circle far away. A thick glowing neon-yellow measurement arrow stretches the full horizontal width of the ellipse between perihelion and aphelion — emphasizing the 42-million-km gap is HUGE. The measurement arrow is bold and dramatic. Wide cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_12.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene13",
+      "type": "content",
+      "start": 59.22,
+      "end": 66.6,
+      "text": "distance is roughly the entire orbital radius of Mercury. The result is a planet that receives",
+      "words": [
+        {
+          "text": "distance",
+          "start": 59.22,
+          "end": 59.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 59.78,
+          "end": 60.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "roughly",
+          "start": 60.18,
+          "end": 60.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 60.66,
+          "end": 61.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "entire",
+          "start": 61.14,
+          "end": 61.7,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbital",
+          "start": 61.7,
+          "end": 62.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "radius",
+          "start": 62.26,
+          "end": 62.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 62.8,
+          "end": 63.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mercury.",
+          "start": 63.1,
+          "end": 63.58,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 64.04,
+          "end": 64.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "result",
+          "start": 64.18,
+          "end": 64.68,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 64.68,
+          "end": 65.04,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 65.04,
+          "end": 65.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 65.2,
+          "end": 65.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 65.62,
+          "end": 66.04,
+          "confidence": 1.0
+        },
+        {
+          "text": "receives",
+          "start": 66.04,
+          "end": 66.6,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: chaotic alien laboratory — neon-blue and acid-green walls packed with bubbling beakers, holographic planet models floating, sci-fi gadgets and swirling portal vortexes, deep charcoal and purple background]. Viewer inside the lab at human scale. ONE stick figure scientist stands pointing with one arm at a large glowing holographic side-by-side diagram. The hologram shows: LEFT side — Mars's elongated orange ellipse orbit. RIGHT side — Mercury's orbital ring shown as a separate small glowing circle. A bold neon-yellow measurement arrow spans the gap distance on Mars's orbit and lines up exactly with the size of Mercury's orbital ring — showing they are roughly the same scale. Stick figure's eyes are wide circles (awestruck expression), other arm raised gesturing at the comparison. Human-scale zoom, figure 35% frame height. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_13.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene14",
+      "type": "content",
+      "start": 66.6,
+      "end": 74.2,
+      "text": "44 % more solar energy at its closest approach than at its farthest, producing seasonal",
+      "words": [
+        {
+          "text": "44",
+          "start": 66.6,
+          "end": 67.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "%",
+          "start": 67.26,
+          "end": 67.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "more",
+          "start": 67.86,
+          "end": 68.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "solar",
+          "start": 68.28,
+          "end": 68.68,
+          "confidence": 1.0
+        },
+        {
+          "text": "energy",
+          "start": 68.68,
+          "end": 69.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "at",
+          "start": 69.26,
+          "end": 69.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 69.52,
+          "end": 69.82,
+          "confidence": 1.0
+        },
+        {
+          "text": "closest",
+          "start": 69.82,
+          "end": 70.22,
+          "confidence": 1.0
+        },
+        {
+          "text": "approach",
+          "start": 70.22,
+          "end": 70.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "than",
+          "start": 70.8,
+          "end": 71.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "at",
+          "start": 71.5,
+          "end": 71.82,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 71.82,
+          "end": 72.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "farthest,",
+          "start": 72.1,
+          "end": 72.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "producing",
+          "start": 73.12,
+          "end": 73.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "seasonal",
+          "start": 73.54,
+          "end": 74.2,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy and charcoal cosmic backdrop with swirling toxic-green and neon-pink nebulae, electric-blue energy waves radiating from the cartoon sun, alien mechanical contraptions floating at edges]. Viewer witnesses Mars on its orbit from cosmic distance — CLIMAX framing for the 44% energy swing. The elongated neon-orange Mars orbit ellipse fills 65% of frame. At PERIHELION (left): Mars is a large rust-orange disk close to a blazing cartoon sun — thick neon-yellow solar energy bolt arrows hammer into Mars from the left, dense and numerous. At APHELION (right): Mars is a smaller rust-orange disk far from the sun — only thin sparse pale-yellow energy arrows reach it, few and weak. The dramatic contrast in arrow density and thickness shows the 44% energy difference visually. Cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_14.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene15",
+      "type": "content",
+      "start": 74.2,
+      "end": 81.56,
+      "text": "extremes that no atmosphere can fully buffer. Jupiter's gravitational influence, tugging on Mars across",
+      "words": [
+        {
+          "text": "extremes",
+          "start": 74.2,
+          "end": 74.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 74.74,
+          "end": 75.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "no",
+          "start": 75.26,
+          "end": 75.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "atmosphere",
+          "start": 75.64,
+          "end": 76.24,
+          "confidence": 1.0
+        },
+        {
+          "text": "can",
+          "start": 76.24,
+          "end": 76.58,
+          "confidence": 1.0
+        },
+        {
+          "text": "fully",
+          "start": 76.58,
+          "end": 76.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "buffer.",
+          "start": 76.88,
+          "end": 77.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "Jupiter's",
+          "start": 77.84,
+          "end": 78.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "gravitational",
+          "start": 78.5,
+          "end": 79.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "influence,",
+          "start": 79.12,
+          "end": 79.82,
+          "confidence": 1.0
+        },
+        {
+          "text": "tugging",
+          "start": 80.22,
+          "end": 80.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "on",
+          "start": 80.54,
+          "end": 80.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 80.78,
+          "end": 81.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "across",
+          "start": 81.1,
+          "end": 81.56,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: vast deep-space cosmic backdrop — deep navy and alien purple, enormous cartoon Jupiter at right side of frame with exaggerated orange and cream banded stripes and bold black outlines, swirling toxic-green gravity vortex energy lines radiating from Jupiter across the frame]. Viewer witnesses the outer solar system from cosmic distance. Enormous Jupiter dominates the RIGHT half of the frame. Across to the LEFT, tiny Mars is shown on its orbit ellipse. Thick wavy neon-green gravity-pull lines stretch from Jupiter across the void toward Mars — like giant cartoon tug-of-war ropes. Mars's orbit ellipse is shown being STRETCHED and PULLED out of round shape by these lines — the far end of the ellipse pulled slightly rightward toward Jupiter. Jupiter's gravity is the SUBJECT. Wide cosmic establishing zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_15.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene16",
+      "type": "content",
+      "start": 81.56,
+      "end": 88.02,
+      "text": "billions of orbital cycles, stretched the orbit into this elongated shape and kept it there.",
+      "words": [
+        {
+          "text": "billions",
+          "start": 81.56,
+          "end": 82.02,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 82.02,
+          "end": 82.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbital",
+          "start": 82.4,
+          "end": 82.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "cycles,",
+          "start": 82.74,
+          "end": 83.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "stretched",
+          "start": 83.3,
+          "end": 84.04,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 84.04,
+          "end": 84.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbit",
+          "start": 84.34,
+          "end": 84.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "into",
+          "start": 84.64,
+          "end": 84.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "this",
+          "start": 84.98,
+          "end": 85.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "elongated",
+          "start": 85.3,
+          "end": 86.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "shape",
+          "start": 86.12,
+          "end": 86.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 86.5,
+          "end": 87.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "kept",
+          "start": 87.06,
+          "end": 87.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "it",
+          "start": 87.32,
+          "end": 87.56,
+          "confidence": 1.0
+        },
+        {
+          "text": "there.",
+          "start": 87.56,
+          "end": 88.02,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep navy cosmic backdrop with swirling alien-purple and electric-blue nebulae, neon-pink star fields, multiple overlapping faint Mars orbit ellipses layered behind the current one suggesting billions of repeated orbital cycles stretching across time]. Viewer witnesses the cumulative deformation of Mars's orbit from cosmic distance. CENTER FRAME: a dramatically elongated neon-orange Mars orbit ellipse — visibly stretched far beyond a circle. Behind it: multiple faint ghost ellipses in muted orange showing the progressive STRETCHING of the orbit over many cycles — each one slightly more elongated than the last. Jupiter as a large banded cartoon planet glows at upper-right, gravity lines still tugging. Mars on its current maximally-stretched elongated orbit. The ghost ellipses visually tell the story of billions of cycles of deformation. Medium cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_16.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene17",
+      "type": "content",
+      "start": 88.02,
+      "end": 95.58,
+      "text": "Mars did not choose instability. The largest planet in the solar system imposed it, and an unstable orbit means",
+      "words": [
+        {
+          "text": "Mars",
+          "start": 88.5,
+          "end": 88.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "did",
+          "start": 88.52,
+          "end": 88.82,
+          "confidence": 1.0
+        },
+        {
+          "text": "not",
+          "start": 88.82,
+          "end": 89.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "choose",
+          "start": 89.06,
+          "end": 89.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "instability.",
+          "start": 89.48,
+          "end": 90.22,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 90.76,
+          "end": 90.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "largest",
+          "start": 90.88,
+          "end": 91.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 91.26,
+          "end": 91.68,
+          "confidence": 1.0
+        },
+        {
+          "text": "in",
+          "start": 91.68,
+          "end": 91.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 91.9,
+          "end": 92.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "solar",
+          "start": 92.06,
+          "end": 92.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "system",
+          "start": 92.36,
+          "end": 92.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "imposed",
+          "start": 92.76,
+          "end": 93.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "it,",
+          "start": 93.26,
+          "end": 93.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 93.98,
+          "end": 93.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "an",
+          "start": 93.98,
+          "end": 94.24,
+          "confidence": 1.0
+        },
+        {
+          "text": "unstable",
+          "start": 94.24,
+          "end": 94.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "orbit",
+          "start": 94.78,
+          "end": 95.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "means",
+          "start": 95.26,
+          "end": 95.58,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep charcoal and navy cosmic backdrop with toxic-green and neon-pink nebulae, electric-blue energy crackling, massive cartoon Jupiter looming at upper-right with thick bold outlines and exaggerated gravity-vortex glow]. Viewer witnesses the full solar system power dynamic from cosmic distance — CLIMAX framing. Enormous Jupiter on the right dominates 40% of the frame. Tiny Mars on its dramatically elongated neon-orange ellipse orbit at center-left — dwarfed by Jupiter. Thick neon-green gravitational force arrows reach from Jupiter ACROSS to Mars and CLAMP onto the elongated orbit shape, holding it stretched open. The force arrows are rigid and locked — showing Jupiter IMPOSED and KEPT the shape. Mars looks trapped on its stretched orbit path. Cosmic zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_17.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene18",
+      "type": "content",
+      "start": 95.58,
+      "end": 101.48,
+      "text": "an unstable climate, compounding every other process that was already pulling Mars apart.",
+      "words": [
+        {
+          "text": "an",
+          "start": 95.58,
+          "end": 95.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "unstable",
+          "start": 95.92,
+          "end": 96.46,
+          "confidence": 1.0
+        },
+        {
+          "text": "climate,",
+          "start": 96.46,
+          "end": 97.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "compounding",
+          "start": 97.72,
+          "end": 98.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "every",
+          "start": 98.32,
+          "end": 98.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "other",
+          "start": 98.6,
+          "end": 98.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "process",
+          "start": 98.96,
+          "end": 99.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 99.42,
+          "end": 99.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "was",
+          "start": 99.66,
+          "end": 99.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "already",
+          "start": 99.94,
+          "end": 100.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "pulling",
+          "start": 100.34,
+          "end": 100.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 100.66,
+          "end": 101.0,
+          "confidence": 1.0
+        },
+        {
+          "text": "apart.",
+          "start": 101.0,
+          "end": 101.48,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: chaotic alien laboratory interior — neon-blue and acid-green walls, bubbling beakers, swirling portal vortexes, holographic displays showing chaotic weather patterns and crashing atmospheric graphs, deep purple and charcoal tones]. Viewer inside the lab at human scale. ONE stick figure scientist stands center-frame, body language of stunned overwhelm — both hands raised to head, round eyes bulging wide as large circles, mouth agape in an O shape, sweat drops flying off in multiple directions. Behind the figure, a large holographic screen shows the elongated Mars orbit on one panel and a chaotic swirling storm climate graph on an adjacent panel — the connection between unstable orbit and unstable climate made visual. Human-scale zoom, figure 45% frame height. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_18.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene19",
+      "type": "content",
+      "start": 101.48,
+      "end": 109.02,
+      "text": "That was one piece of geometry. The next theory is about something far more fundamental, the size of the planet",
+      "words": [
+        {
+          "text": "That",
+          "start": 101.84,
+          "end": 102.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "was",
+          "start": 102.06,
+          "end": 102.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "one",
+          "start": 102.4,
+          "end": 102.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "piece",
+          "start": 102.64,
+          "end": 102.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 102.92,
+          "end": 103.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "geometry.",
+          "start": 103.2,
+          "end": 103.7,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 104.18,
+          "end": 104.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "next",
+          "start": 104.36,
+          "end": 104.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "theory",
+          "start": 104.64,
+          "end": 104.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 104.94,
+          "end": 105.24,
+          "confidence": 1.0
+        },
+        {
+          "text": "about",
+          "start": 105.24,
+          "end": 105.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "something",
+          "start": 105.48,
+          "end": 105.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "far",
+          "start": 105.94,
+          "end": 106.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "more",
+          "start": 106.3,
+          "end": 106.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "fundamental,",
+          "start": 106.6,
+          "end": 107.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 107.58,
+          "end": 107.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "size",
+          "start": 107.86,
+          "end": 108.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 108.26,
+          "end": 108.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 108.52,
+          "end": 108.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 108.76,
+          "end": 109.02,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: cosmic backdrop transitioning at the edges to deep purple-black, large neon-pink and electric-blue nebulae swirling, sparse alien star field — atmosphere of ending one chapter and opening the next]. Viewer witnesses cosmic scale with a sense of stepping back. Mars shown as a small rust-orange sphere on its elongated neon-orange orbit ellipse in the upper-left of the frame — the geometry story closing. The rest of the frame opens up to dark alien space — vast, empty, waiting. A sense of the NEXT mystery: the lower-right of the frame holds nothing yet, just deep purple alien void, slightly glowing as if something new is about to emerge. Wide cosmic zoom, contemplative framing. Motion energy is calm but anticipatory. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_19.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg10_scene20",
+      "type": "content",
+      "start": 109.02,
+      "end": 109.62,
+      "text": "itself.",
+      "words": [
+        {
+          "text": "itself.",
+          "start": 109.02,
+          "end": 109.62,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. [Environment: deep purple-black cosmic void backdrop with faint swirling neon-pink and acid-green nebula tendrils at the very edges, deep shadow at center giving a sense of vast scale and mystery]. Viewer is positioned at cosmic distance. A single small Mars shown as a tiny rust-orange sphere at center-frame — emphasized by the huge empty cosmic space surrounding it. The planet looks SMALL against the immensity of the universe. No orbit line visible — just the raw, naked size of Mars itself against the cosmos. The scene reads as a quiet dramatic pause — the smallness of Mars is the visual statement. Cosmic zoom, Mars occupies only 8% of frame. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_10_20.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 10,
+        "segment_title": "The orbital destabilization"
+      }
+    },
+    {
+      "id": "seg09_card",
+      "type": "number_card",
+      "start": 109.62,
+      "end": 110.82000000000001,
+      "text": "Number 9.",
+      "words": [
+        {
+          "text": "Number",
+          "start": 109.62,
+          "end": 110.34,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "Pure white background filling the entire 16:9 frame. Single large bold black number 9 centered. No other elements, no decorative details, no gradients, completely clean. 16:9 widescreen. No text or labels anywhere in the image.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\number_card_09.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene00",
+      "type": "content",
+      "start": 110.82000000000001,
+      "end": 118.26,
+      "text": "the thermal death. A rocky planet's long -term habitability depends on its internal heat engine.",
+      "words": [
+        {
+          "text": "the",
+          "start": 111.28,
+          "end": 111.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "thermal",
+          "start": 111.48,
+          "end": 111.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "death.",
+          "start": 111.92,
+          "end": 112.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "A",
+          "start": 113.02,
+          "end": 113.08,
+          "confidence": 1.0
+        },
+        {
+          "text": "rocky",
+          "start": 113.08,
+          "end": 113.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet's",
+          "start": 113.42,
+          "end": 114.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "long",
+          "start": 114.1,
+          "end": 114.38,
+          "confidence": 1.0
+        },
+        {
+          "text": "-term",
+          "start": 114.38,
+          "end": 114.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "habitability",
+          "start": 114.66,
+          "end": 115.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "depends",
+          "start": 115.42,
+          "end": 116.22,
+          "confidence": 1.0
+        },
+        {
+          "text": "on",
+          "start": 116.22,
+          "end": 116.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 116.5,
+          "end": 116.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "internal",
+          "start": 116.86,
+          "end": 117.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "heat",
+          "start": 117.36,
+          "end": 117.7,
+          "confidence": 1.0
+        },
+        {
+          "text": "engine.",
+          "start": 117.7,
+          "end": 118.26,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: deep underground cross-section of a rocky alien planet interior — glowing acid-green and toxic orange layers of rock and magma, swirling convection loops in bright neon orange, alien machinery-like patterns in the rock walls, dark deep-purple background at the outer edges representing cold space. Viewer positioned as a witness watching the interior from a wide cross-section view, feeling the overwhelming heat and churning energy of the planet's guts. One stick figure scientist stands at the left edge of the frame on the surface, round head, dot eyes, simple line body, mouth open in awe, one arm pointing downward into the glowing interior. The rocky planet cross-section is centered and fills most of the frame — concentric layers of sickly yellow core, neon orange mantle, muted gray crust. Wide establishing shot. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_00.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene01",
+      "type": "content",
+      "start": 118.26,
+      "end": 125.82,
+      "text": "Radioactive decay in the mantle drives convection, which drives volcanism, which recycles gases",
+      "words": [
+        {
+          "text": "Radioactive",
+          "start": 118.78,
+          "end": 119.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "decay",
+          "start": 119.52,
+          "end": 120.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "in",
+          "start": 120.14,
+          "end": 120.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 120.4,
+          "end": 120.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "mantle",
+          "start": 120.64,
+          "end": 121.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "drives",
+          "start": 121.06,
+          "end": 121.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "convection,",
+          "start": 121.66,
+          "end": 122.38,
+          "confidence": 1.0
+        },
+        {
+          "text": "which",
+          "start": 122.74,
+          "end": 122.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "drives",
+          "start": 122.98,
+          "end": 123.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "volcanism,",
+          "start": 123.32,
+          "end": 124.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "which",
+          "start": 124.46,
+          "end": 124.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "recycles",
+          "start": 124.74,
+          "end": 125.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "gases",
+          "start": 125.32,
+          "end": 125.82,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: deep underground cross-section of the same rocky alien planet — glowing neon orange mantle with large swirling convection loop arrows curving upward in electric blue, radioactive decay shown as small chaotic star-burst flashes of acid green scattered through the mantle layer, volcanic vents bursting upward through the gray crust releasing toxic yellow-green gas clouds, busy chaotic background packed with geological detail. Viewer positioned inside the planet cross-section, feeling the churning heat engine cycle in action. One stick figure scientist stands near the crust layer, leaning forward with concentrated expression — simple furrowed brow lines, pointing at the convection arrows with one stick arm. Medium zoom showing mantle convection, crust, and volcanic gas venting upward in one continuous chain. Left-to-right motion direction on convection arrows. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_01.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene02",
+      "type": "content",
+      "start": 125.82,
+      "end": 133.02,
+      "text": "into the atmosphere, which maintains surface pressure and temperature. Earth's mantle is still hot enough to",
+      "words": [
+        {
+          "text": "into",
+          "start": 125.82,
+          "end": 126.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 126.32,
+          "end": 126.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "atmosphere,",
+          "start": 126.66,
+          "end": 127.16,
+          "confidence": 1.0
+        },
+        {
+          "text": "which",
+          "start": 127.54,
+          "end": 127.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "maintains",
+          "start": 127.8,
+          "end": 128.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "surface",
+          "start": 128.26,
+          "end": 128.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "pressure",
+          "start": 128.84,
+          "end": 129.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 129.32,
+          "end": 129.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "temperature.",
+          "start": 129.66,
+          "end": 130.16,
+          "confidence": 1.0
+        },
+        {
+          "text": "Earth's",
+          "start": 130.64,
+          "end": 131.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "mantle",
+          "start": 131.18,
+          "end": 131.46,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 131.46,
+          "end": 131.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "still",
+          "start": 131.84,
+          "end": 132.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "hot",
+          "start": 132.14,
+          "end": 132.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "enough",
+          "start": 132.36,
+          "end": 132.7,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 132.7,
+          "end": 133.02,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: the rocky planet cross-section now zoomed to focus on the upper mantle and atmosphere — neon orange mantle below, toxic green gas swirling upward through volcanic vents into a sickly yellow-tinted atmosphere layer above, alien planet surface visible as a dark muted gray crust in the middle, deep purple space above the atmosphere with faint alien stars. Viewer positioned as a witness watching gases cycle from deep interior up into the sky, feeling the grand planetary recycling system. No character. The atmosphere layer above glows with pressure — pale electric blue tint radiating outward. Gas cloud arrows in acid green spiral upward from volcanic vents through the crust into the atmosphere. Medium zoom on crust-to-atmosphere transition. Upward motion left-to-right. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_02.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene03",
+      "type": "content",
+      "start": 133.02,
+      "end": 140.02,
+      "text": "sustain this cycle 4 .5 billion years after formation. The thermal engine runs because",
+      "words": [
+        {
+          "text": "sustain",
+          "start": 133.02,
+          "end": 133.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "this",
+          "start": 133.42,
+          "end": 133.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "cycle",
+          "start": 133.74,
+          "end": 134.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "4",
+          "start": 134.12,
+          "end": 134.82,
+          "confidence": 1.0
+        },
+        {
+          "text": ".5",
+          "start": 134.82,
+          "end": 135.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "billion",
+          "start": 135.52,
+          "end": 135.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "years",
+          "start": 135.9,
+          "end": 136.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "after",
+          "start": 136.4,
+          "end": 137.08,
+          "confidence": 1.0
+        },
+        {
+          "text": "formation.",
+          "start": 137.08,
+          "end": 137.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 137.8,
+          "end": 138.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "thermal",
+          "start": 138.4,
+          "end": 138.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "engine",
+          "start": 138.8,
+          "end": 139.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "runs",
+          "start": 139.1,
+          "end": 139.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "because",
+          "start": 139.54,
+          "end": 140.02,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: full wide cross-section of Earth — a large glowing planet centered, interior still blazing with neon orange and acid green heat, mantle convection loops swirling energetically, a healthy thick atmosphere glowing electric blue at the edges, alien star-field in deep purple-black background, tiny cartoon tick-mark indicators and swirling energy halos around the planet suggesting billions of years of continuous operation. Viewer positioned at cosmic scale, witnessing Earth's thermal engine still running after immense geological time, feeling awe at its endurance. No character. Earth occupies 50% of frame, centered, full of internal glowing energy. Wide cosmic establishing shot. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_03.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene04",
+      "type": "content",
+      "start": 140.02,
+      "end": 147.14,
+      "text": "the planet is massive enough to retain heat over geological time. Mars has 11 % of",
+      "words": [
+        {
+          "text": "the",
+          "start": 140.02,
+          "end": 140.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 140.34,
+          "end": 140.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 140.62,
+          "end": 140.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "massive",
+          "start": 140.98,
+          "end": 141.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "enough",
+          "start": 141.36,
+          "end": 141.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 141.76,
+          "end": 142.08,
+          "confidence": 1.0
+        },
+        {
+          "text": "retain",
+          "start": 142.08,
+          "end": 142.46,
+          "confidence": 1.0
+        },
+        {
+          "text": "heat",
+          "start": 142.46,
+          "end": 142.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "over",
+          "start": 142.92,
+          "end": 143.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "geological",
+          "start": 143.52,
+          "end": 144.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "time.",
+          "start": 144.26,
+          "end": 144.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 145.44,
+          "end": 145.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "has",
+          "start": 145.48,
+          "end": 145.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "11",
+          "start": 145.94,
+          "end": 146.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "%",
+          "start": 146.42,
+          "end": 146.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 146.9,
+          "end": 147.14,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: side-by-side cosmic space scene — deep purple-black alien starfield background packed with neon nebula wisps in pink and blue, two planets floating in space. Left planet is Earth: large, glowing warm neon orange from its interior, thick electric-blue atmosphere halo. Right planet is Mars: dramatically smaller, pale muted rust-red and gray, only a faint dim glow in its center suggesting weak internal heat, thin or nearly absent atmosphere halo. Both planets centered in frame, Earth roughly 4x larger than the Mars disk. Viewer positioned as a cosmic-scale witness comparing the two planets, feeling the stark size difference. No character. Wide shot. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_04.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene05",
+      "type": "content",
+      "start": 147.14,
+      "end": 154.18,
+      "text": "Earth's mass. That is not a minor difference. It is the difference between a planet that holds its heat for 10",
+      "words": [
+        {
+          "text": "Earth's",
+          "start": 147.14,
+          "end": 147.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "mass.",
+          "start": 147.64,
+          "end": 148.0,
+          "confidence": 1.0
+        },
+        {
+          "text": "That",
+          "start": 148.36,
+          "end": 148.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 148.62,
+          "end": 148.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "not",
+          "start": 148.9,
+          "end": 149.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 149.12,
+          "end": 149.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "minor",
+          "start": 149.32,
+          "end": 149.56,
+          "confidence": 1.0
+        },
+        {
+          "text": "difference.",
+          "start": 149.56,
+          "end": 150.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "It",
+          "start": 150.34,
+          "end": 150.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 150.6,
+          "end": 150.82,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 150.82,
+          "end": 151.04,
+          "confidence": 1.0
+        },
+        {
+          "text": "difference",
+          "start": 151.04,
+          "end": 151.38,
+          "confidence": 1.0
+        },
+        {
+          "text": "between",
+          "start": 151.38,
+          "end": 151.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 151.8,
+          "end": 152.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 152.2,
+          "end": 152.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 152.5,
+          "end": 152.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "holds",
+          "start": 152.84,
+          "end": 153.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 153.06,
+          "end": 153.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "heat",
+          "start": 153.36,
+          "end": 153.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "for",
+          "start": 153.6,
+          "end": 153.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "10",
+          "start": 153.88,
+          "end": 154.18,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: cosmic space split-panel — deep purple-black starfield with glowing alien nebulae in neon pink and electric blue. Left half: large glowing Earth-like planet, interior blazing neon orange, surrounded by swirling energy rings suggesting ten billion years of heat, labeled energy with cartoon starburst halos. Right half: tiny pale Mars-like planet, interior dim and barely glowing, surrounded by cold dull gray frost-crystal patterns radiating outward. Viewer positioned as a cosmic witness, feeling the enormous difference in longevity between these two worlds. No character. Both planets centered in their respective halves. Split vertically — left full neon palette, right muted cold palette. Wide shot. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_05.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene06",
+      "type": "content",
+      "start": 154.18,
+      "end": 161.26,
+      "text": "billion years and one that begins cooling within its first billion. Mars's smaller volume gave it a",
+      "words": [
+        {
+          "text": "billion",
+          "start": 154.18,
+          "end": 154.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "years",
+          "start": 154.54,
+          "end": 155.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 155.06,
+          "end": 155.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "one",
+          "start": 155.64,
+          "end": 155.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "that",
+          "start": 155.9,
+          "end": 156.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "begins",
+          "start": 156.2,
+          "end": 156.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "cooling",
+          "start": 156.64,
+          "end": 157.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "within",
+          "start": 157.18,
+          "end": 157.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 157.54,
+          "end": 157.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "first",
+          "start": 157.84,
+          "end": 158.16,
+          "confidence": 1.0
+        },
+        {
+          "text": "billion.",
+          "start": 158.16,
+          "end": 158.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars's",
+          "start": 159.22,
+          "end": 159.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "smaller",
+          "start": 159.94,
+          "end": 160.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "volume",
+          "start": 160.18,
+          "end": 160.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "gave",
+          "start": 160.64,
+          "end": 160.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "it",
+          "start": 160.86,
+          "end": 161.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 161.1,
+          "end": 161.26,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: closeup on the small Mars-like planet in deep purple-black space — the planet's surface is muted rust-red and pale gray, interior glow has faded to a faint toxic yellow-orange flicker in the core, surrounding space shows heat radiating outward as wavy neon orange lines escaping rapidly into the cold purple void, the planet visibly shrinking in heat with cartoon speed-line indicators suggesting rapid cooling, alien star-field background dense with cold blue stars. Viewer positioned as a close cosmic witness watching heat flee the small planet into space. No character. Mars-like planet fills 50% of frame, slightly off-center left. Heat escape lines move right-to-left out into space. Medium zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_06.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene07",
+      "type": "content",
+      "start": 161.26,
+      "end": 168.42,
+      "text": "higher surface area to volume ratio, meaning heat radiated into space faster than the interior could replace",
+      "words": [
+        {
+          "text": "higher",
+          "start": 161.26,
+          "end": 161.58,
+          "confidence": 1.0
+        },
+        {
+          "text": "surface",
+          "start": 161.58,
+          "end": 162.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "area",
+          "start": 162.18,
+          "end": 162.64,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 162.64,
+          "end": 162.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "volume",
+          "start": 162.9,
+          "end": 163.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "ratio,",
+          "start": 163.3,
+          "end": 163.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "meaning",
+          "start": 164.4,
+          "end": 164.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "heat",
+          "start": 164.76,
+          "end": 165.2,
+          "confidence": 1.0
+        },
+        {
+          "text": "radiated",
+          "start": 165.2,
+          "end": 165.74,
+          "confidence": 1.0
+        },
+        {
+          "text": "into",
+          "start": 165.74,
+          "end": 165.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "space",
+          "start": 165.94,
+          "end": 166.4,
+          "confidence": 1.0
+        },
+        {
+          "text": "faster",
+          "start": 166.4,
+          "end": 166.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "than",
+          "start": 166.92,
+          "end": 167.18,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 167.18,
+          "end": 167.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "interior",
+          "start": 167.42,
+          "end": 167.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "could",
+          "start": 167.78,
+          "end": 168.02,
+          "confidence": 1.0
+        },
+        {
+          "text": "replace",
+          "start": 168.02,
+          "end": 168.42,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: extreme close-up on the surface and near-interior edge of a small rocky planet — the muted rust-red rocky surface at the top of the frame, below it a thin barely-glowing mantle layer in dim faded orange, and large cartoon arrows in electric blue pointing OUTWARD from the surface in multiple directions showing heat escaping to cold purple space in all directions simultaneously. The surface-area-to-volume concept visualized as a large surface crust relative to a tiny dim interior — the interior circle is small, the surface boundary is thick and long by comparison. Background is cold deep purple with frost-crystal texture. No character. Extreme close-up zoom. Heat escape arrows move outward in all directions. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_07.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene08",
+      "type": "content",
+      "start": 168.42,
+      "end": 175.8,
+      "text": "it. The mantle cooled, convection slowed. Volcanism concentrated into fewer and fewer",
+      "words": [
+        {
+          "text": "it.",
+          "start": 168.42,
+          "end": 168.88,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 169.1,
+          "end": 169.22,
+          "confidence": 1.0
+        },
+        {
+          "text": "mantle",
+          "start": 169.22,
+          "end": 169.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "cooled,",
+          "start": 169.52,
+          "end": 170.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "convection",
+          "start": 170.48,
+          "end": 170.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "slowed.",
+          "start": 170.9,
+          "end": 171.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "Volcanism",
+          "start": 172.48,
+          "end": 172.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "concentrated",
+          "start": 172.86,
+          "end": 173.58,
+          "confidence": 1.0
+        },
+        {
+          "text": "into",
+          "start": 173.58,
+          "end": 174.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "fewer",
+          "start": 174.52,
+          "end": 174.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 174.96,
+          "end": 175.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "fewer",
+          "start": 175.34,
+          "end": 175.8,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: wide cross-section of Mars-like planet interior — muted rust-orange and gray rock layers, the mantle convection loops are now sluggish and barely moving, shown as slow drooping curved arrows in faded orange rather than energetic swirling, volcanic vents on the surface are mostly sealed and dark with only one or two tiny faint eruptions remaining, the crust is thick and stiff-looking with jagged cracked patterns suggesting hardening, overall palette muted and cold compared to earlier Earth interior scenes. Deep purple cold background. One stick figure scientist stands on the surface peering downward, expression horrified — bulging circle eyes, sweat drops, mouth wide open in O shape, arms raised. Viewer positioned as a witness watching the engine dying. Wide establishing shot. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_08.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene09",
+      "type": "content",
+      "start": 175.8,
+      "end": 181.5,
+      "text": "eruption sites instead of spreading across tectonic boundaries the way it does on Earth.",
+      "words": [
+        {
+          "text": "eruption",
+          "start": 175.8,
+          "end": 176.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "sites",
+          "start": 176.36,
+          "end": 176.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "instead",
+          "start": 176.9,
+          "end": 177.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 177.34,
+          "end": 177.68,
+          "confidence": 1.0
+        },
+        {
+          "text": "spreading",
+          "start": 177.68,
+          "end": 177.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "across",
+          "start": 177.92,
+          "end": 178.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "tectonic",
+          "start": 178.52,
+          "end": 179.16,
+          "confidence": 1.0
+        },
+        {
+          "text": "boundaries",
+          "start": 179.16,
+          "end": 179.72,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 179.72,
+          "end": 180.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "way",
+          "start": 180.28,
+          "end": 180.46,
+          "confidence": 1.0
+        },
+        {
+          "text": "it",
+          "start": 180.46,
+          "end": 180.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "does",
+          "start": 180.6,
+          "end": 180.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "on",
+          "start": 180.9,
+          "end": 181.22,
+          "confidence": 1.0
+        },
+        {
+          "text": "Earth.",
+          "start": 181.22,
+          "end": 181.5,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: wide top-down or side view of a Mars-like alien planet surface — muted rust-red terrain stretching across the frame, nearly no volcanic activity visible, only one single glowing volcanic vent still faintly active on the far right with a small plume of dim orange gas, the rest of the surface flat, cold, cracked and dark, no tectonic boundary lines splitting the crust the way a living world would show. Contrast implied with a ghostly faint echo-outline on the left showing what a geologically active world with multiple spread-out eruption sites would look like — multiple glowing vents in acid green ghost lines. No character. Wide shot, subject fills full frame. Muted cold palette dominant. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_09.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene10",
+      "type": "content",
+      "start": 181.5,
+      "end": 188.94,
+      "text": "Olympus Mons, the largest volcano in the solar system at 21 kilometers tall, three times the height of",
+      "words": [
+        {
+          "text": "Olympus",
+          "start": 181.92,
+          "end": 182.42,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mons,",
+          "start": 182.42,
+          "end": 182.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 183.22,
+          "end": 183.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "largest",
+          "start": 183.34,
+          "end": 183.72,
+          "confidence": 1.0
+        },
+        {
+          "text": "volcano",
+          "start": 183.72,
+          "end": 184.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "in",
+          "start": 184.28,
+          "end": 184.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 184.62,
+          "end": 184.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "solar",
+          "start": 184.76,
+          "end": 185.04,
+          "confidence": 1.0
+        },
+        {
+          "text": "system",
+          "start": 185.04,
+          "end": 185.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "at",
+          "start": 185.48,
+          "end": 185.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "21",
+          "start": 185.8,
+          "end": 186.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "kilometers",
+          "start": 186.3,
+          "end": 186.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "tall,",
+          "start": 186.86,
+          "end": 187.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "three",
+          "start": 187.68,
+          "end": 187.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "times",
+          "start": 187.96,
+          "end": 188.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 188.3,
+          "end": 188.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "height",
+          "start": 188.5,
+          "end": 188.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 188.66,
+          "end": 188.94,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: vast alien Martian landscape — deep rust-red and brown alien terrain stretching to a dark hazy horizon under a thin pale purple-pink sky, and dominating the entire scene is an enormous cartoon volcano rising from left-center all the way to the top of the frame, its base spanning most of the ground, its peak barely visible at the top edge — massively, absurdly tall compared to anything around it, drawn with bold wobbling outlines, flat rust-red and orange cel-shaded slopes, tiny faint wisps of pale gas drifting from the summit. One stick figure scientist stands at the base, absolutely dwarfed, dot eyes bulging into huge circles, arms spread wide in total bewilderment, mouth open in O shape. Viewer positioned as a tiny human-scale witness at the base of something incomprehensibly large. Wide establishing shot showing full volcano scale. Left-to-right orientation. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_10.png",
+      "status": "generated",
+      "include_character": true,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene11",
+      "type": "content",
+      "start": 188.94,
+      "end": 196.26,
+      "text": "Everest, is not evidence of a geologically active world. It is evidence of a dying one, a single",
+      "words": [
+        {
+          "text": "Everest,",
+          "start": 188.94,
+          "end": 189.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 189.74,
+          "end": 190.02,
+          "confidence": 1.0
+        },
+        {
+          "text": "not",
+          "start": 190.02,
+          "end": 190.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "evidence",
+          "start": 190.36,
+          "end": 190.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 190.8,
+          "end": 191.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 191.1,
+          "end": 191.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "geologically",
+          "start": 191.34,
+          "end": 191.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "active",
+          "start": 191.98,
+          "end": 192.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "world.",
+          "start": 192.6,
+          "end": 193.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "It",
+          "start": 193.1,
+          "end": 193.48,
+          "confidence": 1.0
+        },
+        {
+          "text": "is",
+          "start": 193.48,
+          "end": 193.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "evidence",
+          "start": 193.8,
+          "end": 194.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "of",
+          "start": 194.3,
+          "end": 194.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 194.6,
+          "end": 194.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "dying",
+          "start": 194.84,
+          "end": 195.1,
+          "confidence": 1.0
+        },
+        {
+          "text": "one,",
+          "start": 195.1,
+          "end": 195.44,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 195.62,
+          "end": 195.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "single",
+          "start": 195.84,
+          "end": 196.26,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: medium shot of the massive Martian volcano's mid-section and upper slopes — pale rust-red and muted gray rocky surface, the slopes enormous and still, no eruption, no flowing lava, the volcano clearly dormant and cold — the surface rock layers are thick and stiff-looking with hard cracked jagged patterns, faint dark purple frost-shadow on the rock face suggesting cold. The sky above is a thin pale toxic pink with a few faint alien stars visible even in daytime — thin dead atmosphere. No character. The volcano's mid-slope fills 65% of the frame. This is evidence of stillness and dying geological energy — convey through the absence of heat, cold palette of muted rust and pale gray. Medium zoom. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_11.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene12",
+      "type": "content",
+      "start": 196.26,
+      "end": 203.36,
+      "text": "hot spot punching through a thickening, stiffening lithosphere because the planet no longer had enough thermal",
+      "words": [
+        {
+          "text": "hot",
+          "start": 196.26,
+          "end": 196.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "spot",
+          "start": 196.66,
+          "end": 196.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "punching",
+          "start": 196.92,
+          "end": 197.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "through",
+          "start": 197.34,
+          "end": 197.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 197.86,
+          "end": 198.16,
+          "confidence": 1.0
+        },
+        {
+          "text": "thickening,",
+          "start": 198.16,
+          "end": 198.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "stiffening",
+          "start": 199.14,
+          "end": 199.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "lithosphere",
+          "start": 199.5,
+          "end": 200.16,
+          "confidence": 1.0
+        },
+        {
+          "text": "because",
+          "start": 200.16,
+          "end": 200.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 200.84,
+          "end": 201.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 201.14,
+          "end": 201.44,
+          "confidence": 1.0
+        },
+        {
+          "text": "no",
+          "start": 201.44,
+          "end": 201.76,
+          "confidence": 1.0
+        },
+        {
+          "text": "longer",
+          "start": 201.76,
+          "end": 202.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "had",
+          "start": 202.12,
+          "end": 202.52,
+          "confidence": 1.0
+        },
+        {
+          "text": "enough",
+          "start": 202.52,
+          "end": 202.94,
+          "confidence": 1.0
+        },
+        {
+          "text": "thermal",
+          "start": 202.94,
+          "end": 203.36,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: extreme close-up cross-section of the Martian lithosphere beneath the volcano — thick stiff gray and rust-brown rock layers stacked heavily, at the very bottom a single thin arrow of dim fading orange heat pushing upward from below — a single hotspot trying to punch through. The rock layers above it are dense and unyielding, the crust thick and rigid. The surrounding rock further from the hotspot is completely cold and dark purple-gray with no glow. The hotspot arrow in faded orange barely penetrates the lower crust. Background is dark muted purple-black. No character. Extreme close-up zoom. Hotspot energy moves upward. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_12.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene13",
+      "type": "content",
+      "start": 203.36,
+      "end": 210.7,
+      "text": "energy to crack its crust open anywhere else. Mars was too small to stay warm, and a cold planet",
+      "words": [
+        {
+          "text": "energy",
+          "start": 203.36,
+          "end": 203.9,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 203.9,
+          "end": 204.5,
+          "confidence": 1.0
+        },
+        {
+          "text": "crack",
+          "start": 204.5,
+          "end": 204.7,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 204.7,
+          "end": 205.0,
+          "confidence": 1.0
+        },
+        {
+          "text": "crust",
+          "start": 205.0,
+          "end": 205.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "open",
+          "start": 205.32,
+          "end": 205.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "anywhere",
+          "start": 205.78,
+          "end": 206.28,
+          "confidence": 1.0
+        },
+        {
+          "text": "else.",
+          "start": 206.28,
+          "end": 206.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 207.3,
+          "end": 207.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "was",
+          "start": 207.54,
+          "end": 207.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "too",
+          "start": 207.8,
+          "end": 208.06,
+          "confidence": 1.0
+        },
+        {
+          "text": "small",
+          "start": 208.06,
+          "end": 208.36,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 208.36,
+          "end": 208.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "stay",
+          "start": 208.62,
+          "end": 208.82,
+          "confidence": 1.0
+        },
+        {
+          "text": "warm,",
+          "start": 208.82,
+          "end": 209.24,
+          "confidence": 1.0
+        },
+        {
+          "text": "and",
+          "start": 209.58,
+          "end": 209.8,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 209.8,
+          "end": 209.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "cold",
+          "start": 209.98,
+          "end": 210.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet",
+          "start": 210.3,
+          "end": 210.7,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: wide cosmic view of Mars — small rust-red planet centered in deep cold purple-black space, interior now almost completely dark with only a final faint flicker of orange at the very core, the surface cold and featureless, no atmospheric glow, surrounded by cold blue alien stars and drifting dark rock debris suggesting a dead frozen world. The contrast with a living world is felt through total absence of energy — no convection halos, no gas venting, no warm atmosphere bloom. Small, cold, still. No character. Mars fills 40% of frame, centered. Wide shot. Muted cold palette — rust-gray planet, dark purple-black space. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_13.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene14",
+      "type": "content",
+      "start": 210.7,
+      "end": 217.92,
+      "text": "is a dead planet. The thermal problem explains why Mars lost its engine. This next theory explains",
+      "words": [
+        {
+          "text": "is",
+          "start": 210.7,
+          "end": 210.98,
+          "confidence": 1.0
+        },
+        {
+          "text": "a",
+          "start": 210.98,
+          "end": 211.12,
+          "confidence": 1.0
+        },
+        {
+          "text": "dead",
+          "start": 211.12,
+          "end": 211.34,
+          "confidence": 1.0
+        },
+        {
+          "text": "planet.",
+          "start": 211.34,
+          "end": 211.84,
+          "confidence": 1.0
+        },
+        {
+          "text": "The",
+          "start": 212.34,
+          "end": 212.56,
+          "confidence": 1.0
+        },
+        {
+          "text": "thermal",
+          "start": 212.56,
+          "end": 212.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "problem",
+          "start": 212.92,
+          "end": 213.32,
+          "confidence": 1.0
+        },
+        {
+          "text": "explains",
+          "start": 213.32,
+          "end": 213.96,
+          "confidence": 1.0
+        },
+        {
+          "text": "why",
+          "start": 213.96,
+          "end": 214.3,
+          "confidence": 1.0
+        },
+        {
+          "text": "Mars",
+          "start": 214.3,
+          "end": 214.66,
+          "confidence": 1.0
+        },
+        {
+          "text": "lost",
+          "start": 214.66,
+          "end": 215.08,
+          "confidence": 1.0
+        },
+        {
+          "text": "its",
+          "start": 215.08,
+          "end": 215.38,
+          "confidence": 1.0
+        },
+        {
+          "text": "engine.",
+          "start": 215.38,
+          "end": 215.78,
+          "confidence": 1.0
+        },
+        {
+          "text": "This",
+          "start": 216.3,
+          "end": 216.6,
+          "confidence": 1.0
+        },
+        {
+          "text": "next",
+          "start": 216.6,
+          "end": 216.92,
+          "confidence": 1.0
+        },
+        {
+          "text": "theory",
+          "start": 216.92,
+          "end": 217.24,
+          "confidence": 1.0
+        },
+        {
+          "text": "explains",
+          "start": 217.24,
+          "end": 217.92,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: cosmic side-by-side comparison one final time — deep purple-black starfield, left side shows a ghostly faint echo of a once-warm Mars cross-section (dim orange, barely glowing, labeled with cartoon frost crystals and extinguished volcano silhouettes), right side shows Mars today as a cold flat muted rust disk with no interior glow, no atmosphere, surrounded by cold blue nebula wisps. The transition from left to right tells the story of the thermal engine dying completely. No character. Wide shot. Left side muted warm remnant palette, right side fully cold muted palette. Split frame left-to-right showing before and after. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_14.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    },
+    {
+      "id": "seg09_scene15",
+      "type": "content",
+      "start": 217.92,
+      "end": 219.96,
+      "text": "what it lost the ability to do.",
+      "words": [
+        {
+          "text": "what",
+          "start": 217.92,
+          "end": 218.14,
+          "confidence": 1.0
+        },
+        {
+          "text": "it",
+          "start": 218.14,
+          "end": 218.38,
+          "confidence": 1.0
+        },
+        {
+          "text": "lost",
+          "start": 218.38,
+          "end": 218.62,
+          "confidence": 1.0
+        },
+        {
+          "text": "the",
+          "start": 218.62,
+          "end": 218.86,
+          "confidence": 1.0
+        },
+        {
+          "text": "ability",
+          "start": 218.86,
+          "end": 219.26,
+          "confidence": 1.0
+        },
+        {
+          "text": "to",
+          "start": 219.26,
+          "end": 219.54,
+          "confidence": 1.0
+        },
+        {
+          "text": "do.",
+          "start": 219.54,
+          "end": 219.96,
+          "confidence": 1.0
+        }
+      ],
+      "prompt": "2D Western Cartoon animation. Environment: wide cosmic view of cold dead Mars floating alone in deep purple-black alien space, surrounded by swirling neon question-mark symbols and electric blue portal vortex wisps at the edges of the frame hinting at something unseen beyond — the mystery of what else Mars lost. Mars sits off-center right as aftermath, small, cold, muted rust-red with no glow, while the left side of the frame opens toward dark swirling unknown space full of alien machinery silhouettes and neon pink energy tendrils suggesting the next concept is approaching. No character. Wide shot. Cold muted palette on Mars, neon chaos encroaching from the left. Bold wobbly black outlines, flat cel-shading, no gradients, no text anywhere.",
+      "prompt_source": "claude-api",
+      "image_path": "images\\TimiNiggerness_test\\scene_09_15.png",
+      "status": "generated",
+      "include_character": false,
+      "metadata": {
+        "segment_number": 9,
+        "segment_title": "The thermal death"
+      }
+    }
+  ],
+  "aligned_segments": [
+    {
+      "number": 10,
+      "title": "The orbital destabilization",
+      "body": "Number ten. The orbital destabilization.\nMars should orbit the sun on a near-circular path, the way Earth does. A stable, predictable ellipse with minimal seasonal variation. That is what the standard accretion model predicts for a rocky planet at 1.5 astronomical units from a G-type star. The orbit should be calm. The climate should be moderated by geometry alone. Every simulation of planetary formation in this region of the solar system produces a world with low eccentricity and steady insolation across its year. Mars does not follow that prediction. The planet's orbital eccentricity is 0.0934, nearly six times greater than Earth's 0.0167. That means Mars swings 42 million kilometers closer to the sun at perihelion than at aphelion. For comparison, that distance is roughly the entire orbital radius of Mercury. The result is a planet that receives 44 percent more solar energy at its closest approach than at its farthest, producing seasonal extremes that no atmosphere can fully buffer. Jupiter's gravitational influence, tugging on Mars across billions of orbital cycles, stretched the orbit into this elongated shape and kept it there. Mars did not choose instability. The largest planet in the solar system imposed it. And an unstable orbit means an unstable climate, compounding every other process that was already pulling Mars apart.\nThat was one piece of geometry. The next theory is about something far more fundamental. The size of the planet itself.",
+      "start": 1.72,
+      "end": 109.62,
+      "word_indices": [
+        5,
+        242
+      ],
+      "number_word_end": 2.52
+    },
+    {
+      "number": 9,
+      "title": "The thermal death",
+      "body": "Number nine. The thermal death.\nA rocky planet's long-term habitability depends on its internal heat engine. Radioactive decay in the mantle drives convection, which drives volcanism, which recycles gases into the atmosphere, which maintains surface pressure and temperature. Earth's mantle is still hot enough to sustain this cycle 4.5 billion years after formation. The thermal engine runs because the planet is massive enough to retain heat over geological time. Mars has 11 percent of Earth's mass. That is not a minor difference. It is the difference between a planet that holds its heat for ten billion years and one that begins cooling within its first billion. Mars' smaller volume gave it a higher surface-area-to-volume ratio, meaning heat radiated into space faster than the interior could replace it. The mantle cooled. Convection slowed. Volcanism concentrated into fewer and fewer eruption sites instead of spreading across tectonic boundaries the way it does on Earth. Olympus Mons, the largest volcano in the solar system at 21 kilometers tall, three times the height of Everest, is not evidence of a geologically active world. It is evidence of a dying one. A single hotspot punching through a thickening, stiffening lithosphere because the planet no longer had enough thermal energy to crack its crust open anywhere else. Mars was too small to stay warm. And a cold planet is a dead planet.\nThe thermal problem explains why Mars lost its engine. This next theory explains what it lost the ability to do.",
+      "start": 109.62,
+      "end": 219.96,
+      "word_indices": [
+        243,
+        494
+      ],
+      "number_word_end": 110.84
+    }
+  ]
+}
