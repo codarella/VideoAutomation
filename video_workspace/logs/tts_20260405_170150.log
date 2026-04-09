@@ -1,0 +1,12 @@
+2026-04-05 17:01:51,038 [INFO] === TTS Pipeline starting ===
+2026-04-05 17:01:51,038 [INFO] Backend : cloudtts
+2026-04-05 17:01:51,040 [INFO] Project : Animal Niche One Test
+2026-04-05 17:01:51,040 [INFO] Voice   : en-US-Chirp3-HD-Alnilam
+2026-04-05 17:01:51,040 [INFO] Style   : history
+2026-04-05 17:01:51,040 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-05 17:01:51,040 [INFO] Prompt  : Speak like a professional documentary narrator. Deep, authoritative, measured pa...
+2026-04-05 17:01:51,041 [INFO] GCP     : videoautomation-492323 / us-central1
+2026-04-05 17:01:51,041 [INFO] Note    : Emotional prompt is not used by Cloud TTS — voice quality comes from Chirp HD
+2026-04-05 17:01:51,041 [INFO] Split into 1 chunk(s)
+2026-04-05 17:01:51,041 [INFO] [1/1] Synthesizing: Right, let's do this. Number ten. The original affluent soci...
+2026-04-05 17:02:26,627 [ERROR] Pipeline failed: name 'pcm' is not defined

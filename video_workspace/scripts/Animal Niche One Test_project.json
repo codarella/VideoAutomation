@@ -1,6 +1,6 @@
 {
   "name": "Animal Niche One Test",
-  "audio_path": "C:/Users/OVERLORD/Downloads/Telegram Desktop/All right, let's go. (3).mp3",
+  "audio_path": "C:/Users/OVERLORD/Videos/VideoAutomation/video_workspace/audio/Animal Niche One Test.mp3",
   "script_path": "C:/Users/OVERLORD/Downloads/Telegram Desktop/top 10 animals niche.txt",
   "expected_count": 6,
   "counting_direction": "descending",

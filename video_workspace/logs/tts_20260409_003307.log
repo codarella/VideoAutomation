@@ -1,0 +1,26 @@
+2026-04-09 00:33:07,203 [INFO] === TTS Pipeline starting ===
+2026-04-09 00:33:07,203 [INFO] Backend : cloudtts
+2026-04-09 00:33:07,203 [INFO] Project : BackOfTheMoon
+2026-04-09 00:33:07,203 [INFO] Voice   : en-US-Chirp3-HD-Alnilam
+2026-04-09 00:33:07,203 [INFO] Style   : 2d_western_cartoon
+2026-04-09 00:33:07,203 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-09 00:33:07,203 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-09 00:33:07,203 [INFO] GCP     : videoautomation-492323 / us-central1
+2026-04-09 00:33:07,203 [INFO] Note    : Emotional prompt is not used by Cloud TTS — voice quality comes from Chirp HD
+2026-04-09 00:33:07,203 [INFO] Split into 7 chunk(s)
+2026-04-09 00:33:07,203 [INFO] [1/7] Synthesizing: Okay, here's the thing....
+2026-04-09 00:33:22,006 [INFO] [1/7] OK — 53804 bytes
+2026-04-09 00:33:22,007 [INFO] [2/7] Synthesizing: Number 10. The cracked shield. Every spacecraft that returns...
+2026-04-09 00:34:05,116 [INFO] [2/7] OK — 14079404 bytes
+2026-04-09 00:34:05,117 [INFO] [3/7] Synthesizing: On April 8, mission teams performed trajectory correction ma...
+2026-04-09 00:34:43,422 [INFO] [3/7] OK — 13451564 bytes
+2026-04-09 00:34:43,427 [INFO] [4/7] Synthesizing: If a severe solar particle event occurs while the crew is in...
+2026-04-09 00:35:21,421 [INFO] [4/7] OK — 12802604 bytes
+2026-04-09 00:35:21,426 [INFO] [5/7] Synthesizing: Conventional shielding, the kind that works against solar pa...
+2026-04-09 00:36:01,911 [INFO] [5/7] OK — 13165484 bytes
+2026-04-09 00:36:01,911 [INFO] [6/7] Synthesizing: Designed from heritage hardware tracing back to the Apollo p...
+2026-04-09 00:36:37,953 [INFO] [6/7] OK — 13238444 bytes
+2026-04-09 00:36:37,953 [INFO] [7/7] Synthesizing: Murtha left Naval Base San Diego on April 7 to meet them. Na...
+2026-04-09 00:36:48,890 [INFO] [7/7] OK — 3250604 bytes
+2026-04-09 00:36:48,892 [INFO] Stitching 7 chunk(s) → c:\Users\OVERLORD\Videos\VideoAutomation\video_workspace\audio\BackOfTheMoon.mp3 [wav]
+2026-04-09 00:36:53,822 [ERROR] Pipeline failed: name 'pcm_chunks' is not defined

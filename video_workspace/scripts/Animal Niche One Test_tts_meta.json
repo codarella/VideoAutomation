@@ -1,0 +1,19 @@
+{
+  "project_name": "Animal Niche One Test",
+  "timestamp": "2026-04-05T00:01:15.247078+00:00",
+  "script_path": "C:/Users/OVERLORD/Downloads/googlettstest.txt",
+  "output_audio": "C:\\Users\\OVERLORD\\Videos\\VideoAutomation\\video_workspace\\audio\\Animal Niche One Test.mp3",
+  "voice": "Puck",
+  "emotional_prompt": "Speak with energetic curiosity and wonder, like a science communicator explaining amazing phenomena. Keep it engaging and accessible.",
+  "num_chunks": 1,
+  "skipped_chunks": [],
+  "total_characters": 1245,
+  "audio_duration_seconds": 85.29,
+  "cost": {
+    "input_tokens": 311,
+    "audio_tokens": 2132,
+    "input_cost": 0.000156,
+    "audio_cost": 0.02132,
+    "total_cost": 0.021476
+  }
+}

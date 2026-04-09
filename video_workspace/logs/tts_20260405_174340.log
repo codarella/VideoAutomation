@@ -1,0 +1,10 @@
+2026-04-05 17:43:41,013 [INFO] === TTS Pipeline starting ===
+2026-04-05 17:43:41,014 [INFO] Backend : Cloud TTS (1M free/mo)
+2026-04-05 17:43:41,014 [INFO] Project : 4millionviews
+2026-04-05 17:43:41,014 [INFO] Voice   : en-US-Chirp3-HD-Alnilam
+2026-04-05 17:43:41,014 [INFO] Style   : 2d_western_cartoon
+2026-04-05 17:43:41,014 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-05 17:43:41,014 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-05 17:43:41,015 [INFO] Split into 6 chunk(s)
+2026-04-05 17:43:41,015 [INFO] [1/6] Synthesizing: Right, let's do this.  Number ten.  The core composition mys...
+2026-04-05 17:43:43,303 [ERROR] Pipeline failed: No API key was provided. Please pass a valid API key. Learn how to create an API key at https://ai.google.dev/gemini-api/docs/api-key.

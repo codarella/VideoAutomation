@@ -1,0 +1,20 @@
+2026-04-05 00:54:09,999 [INFO] === TTS Pipeline starting ===
+2026-04-05 00:54:10,000 [INFO] Backend : aistudio
+2026-04-05 00:54:10,000 [INFO] Project : Animal Niche One Test
+2026-04-05 00:54:10,000 [INFO] Voice   : Puck
+2026-04-05 00:54:10,000 [INFO] Style   : 2d_western_cartoon
+2026-04-05 00:54:10,000 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-05 00:54:10,000 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-05 00:54:10,000 [INFO] Split into 1 chunk(s)
+2026-04-05 00:54:10,000 [INFO] [1/1] Synthesizing: Right, let's do this. Number ten. The original affluent soci...
+2026-04-05 00:54:12,523 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 00:54:13,818 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-05 00:54:13,820 [WARNING] TTS attempt 1 failed (429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing.', 'status': 'RESOURCE_EXHAUSTED'}}). Retrying in 2s...
+2026-04-05 00:54:15,829 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 00:54:16,294 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-05 00:54:16,295 [WARNING] TTS attempt 2 failed (429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing.', 'status': 'RESOURCE_EXHAUSTED'}}). Retrying in 4s...
+2026-04-05 00:54:20,304 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 00:54:20,822 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-04-05 00:54:20,822 [ERROR] TTS failed after 3 attempts: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing.', 'status': 'RESOURCE_EXHAUSTED'}}
+2026-04-05 00:54:20,822 [ERROR] [1/1] SKIPPED after all retries: All 3 TTS attempts failed
+2026-04-05 00:54:20,822 [ERROR] Pipeline failed: All TTS chunks failed — no audio generated

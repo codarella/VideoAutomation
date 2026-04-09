@@ -1,0 +1,2 @@
+timestamp,project,voice,chars,audio_seconds,chunks,skipped,input_tokens,audio_tokens,input_cost_usd,audio_cost_usd,total_cost_usd
+2026-04-05T00:01:15.246082+00:00,Animal Niche One Test,Puck,1245,85.29,1,0,311,2132,0.000156,0.02132,0.021476

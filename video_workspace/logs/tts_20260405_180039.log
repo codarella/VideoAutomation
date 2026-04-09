@@ -1,0 +1,24 @@
+2026-04-05 18:00:39,847 [INFO] === TTS Pipeline starting ===
+2026-04-05 18:00:39,847 [INFO] Backend : cloudtts
+2026-04-05 18:00:39,847 [INFO] Project : 4millionViews
+2026-04-05 18:00:39,847 [INFO] Voice   : en-US-Chirp3-HD-Alnilam
+2026-04-05 18:00:39,848 [INFO] Style   : 2d_western_cartoon
+2026-04-05 18:00:39,848 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-05 18:00:39,848 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-05 18:00:39,848 [INFO] GCP     : videoautomation-492323 / us-central1
+2026-04-05 18:00:39,848 [INFO] Note    : Emotional prompt is not used by Cloud TTS — voice quality comes from Chirp HD
+2026-04-05 18:00:39,848 [INFO] Split into 6 chunk(s)
+2026-04-05 18:00:39,848 [INFO] [1/6] Synthesizing: Right, let's do this.  Number ten.  The core composition mys...
+2026-04-05 18:01:49,946 [INFO] [1/6] OK — 13157804 bytes
+2026-04-05 18:01:49,947 [INFO] [2/6] Synthesizing: Every correction burn assumes the gravity field is where GRA...
+2026-04-05 18:02:47,702 [INFO] [2/6] OK — 13708844 bytes
+2026-04-05 18:02:47,702 [INFO] [3/6] Synthesizing: Then silence. Then another burst.  The Moon's magnetic field...
+2026-04-05 18:03:37,488 [INFO] [3/6] OK — 13159724 bytes
+2026-04-05 18:03:37,489 [INFO] [4/6] Synthesizing: The leading theory for the medium duration events is gas ven...
+2026-04-05 18:04:26,115 [INFO] [4/6] OK — 14302124 bytes
+2026-04-05 18:04:26,115 [INFO] [5/6] Synthesizing: Over a thousand were identified less than four months ago fr...
+2026-04-05 18:05:18,799 [INFO] [5/6] OK — 13171244 bytes
+2026-04-05 18:05:18,799 [INFO] [6/6] Synthesizing: The theory that the Moon's interior density profile is incon...
+2026-04-05 18:06:01,976 [INFO] [6/6] OK — 11164844 bytes
+2026-04-05 18:06:01,979 [INFO] Stitching 6 chunk(s) → c:\Users\OVERLORD\Videos\VideoAutomation\video_workspace\audio\4millionViews.mp3 [wav]
+2026-04-05 18:06:07,634 [ERROR] Pipeline failed: name 'pcm_chunks' is not defined

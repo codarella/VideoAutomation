@@ -28,8 +28,12 @@ nicegui>=1.4.0
 # --- Claude API (optional, for batch prompt generation) ---
 anthropic>=0.25.0
 
-# --- Gemini (optional, for LLM scene splitting) ---
+# --- Gemini (LLM scene splitting + TTS audio generation) ---
 google-genai>=1.0.0
+
+# --- TTS pipeline ---
+python-dotenv>=1.0.0
+google-cloud-texttospeech>=2.16.0
 
 # --- Utility ---
 tqdm>=4.65.0

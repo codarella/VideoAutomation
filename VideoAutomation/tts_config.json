@@ -1,0 +1,41 @@
+{
+  "backend": "cloudtts",
+  "gcp_project": "videoautomation-492323",
+  "gcp_location": "us-central1",
+  "cloudtts_voices": [
+    "en-US-Chirp3-HD-Alnilam",
+    "en-US-Chirp-HD-D",
+    "en-US-Chirp-HD-F",
+    "en-US-Chirp-HD-O",
+    "en-US-Chirp-HD-A",
+    "en-US-Chirp3-HD-Achernar",
+    "en-US-Chirp3-HD-Aoede",
+    "en-US-Chirp3-HD-Charon",
+    "en-US-Chirp3-HD-Fenrir",
+    "en-US-Chirp3-HD-Kore",
+    "en-US-Chirp3-HD-Puck"
+  ],
+  "chunk_mode": "numbered_segments",
+  "chunk_size_fallback": 4500,
+  "max_retries": 3,
+  "output_format": "mp3",
+  "sample_rate": 24000,
+  "model": "gemini-2.5-flash-preview-tts",
+  "voices": [
+    "Kore",
+    "Charon",
+    "Fenrir",
+    "Puck",
+    "Aoede",
+    "Leda",
+    "Orus",
+    "Zephyr"
+  ],
+  "style_prompts": {
+    "2d_western_cartoon": "Speak with energetic curiosity and wonder, like a science communicator explaining amazing phenomena. Keep it engaging and accessible.",
+    "animals_nature": "Speak with warmth and reverent awe, like David Attenborough narrating a nature documentary. Calm, unhurried, letting the beauty breathe.",
+    "true_crime": "Speak with quiet gravitas and controlled tension. Measured, deliberate pacing — let silence do work. Never sensationalize.",
+    "history": "Speak like a professional documentary narrator. Deep, authoritative, measured pace, serious gravitas. Build tension naturally through the script.",
+    "tech_gadgets": "Speak with enthusiasm and clarity, like a tech reviewer who genuinely loves what they are discussing. Energetic but credible."
+  }
+}

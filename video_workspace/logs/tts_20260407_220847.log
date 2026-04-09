@@ -1,0 +1,22 @@
+2026-04-07 22:08:47,362 [INFO] === TTS Pipeline starting ===
+2026-04-07 22:08:47,362 [INFO] Backend : cloudtts
+2026-04-07 22:08:47,362 [INFO] Project : Back of the moon
+2026-04-07 22:08:47,362 [INFO] Voice   : en-US-Chirp3-HD-Alnilam
+2026-04-07 22:08:47,362 [INFO] Style   : 2d_western_cartoon
+2026-04-07 22:08:47,363 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-07 22:08:47,363 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-07 22:08:47,363 [INFO] GCP     : videoautomation-492323 / us-central1
+2026-04-07 22:08:47,363 [INFO] Note    : Emotional prompt is not used by Cloud TTS — voice quality comes from Chirp HD
+2026-04-07 22:08:47,363 [INFO] Split into 5 chunk(s)
+2026-04-07 22:08:47,363 [INFO] [1/5] Synthesizing: Forget the intro. Here it is. Number ten. The missing seas. ...
+2026-04-07 22:13:50,395 [INFO] [1/5] OK — 13962284 bytes
+2026-04-07 22:13:50,409 [INFO] [2/5] Synthesizing: One explanation is that the impactor did not strike head-on....
+2026-04-07 22:14:52,433 [INFO] [2/5] OK — 13701164 bytes
+2026-04-07 22:14:52,434 [INFO] [3/5] Synthesizing: The coldest recorded temperature on the far side of the Moon...
+2026-04-07 22:16:00,755 [INFO] [3/5] OK — 13334444 bytes
+2026-04-07 22:16:00,755 [INFO] [4/5] Synthesizing: We simply cannot hear it from where we stand. The far side o...
+2026-04-07 22:17:43,943 [INFO] [4/5] OK — 13637804 bytes
+2026-04-07 22:17:43,944 [INFO] [5/5] Synthesizing: And what they will find is a world that has been recording t...
+2026-04-07 22:18:11,048 [INFO] [5/5] OK — 1681964 bytes
+2026-04-07 22:18:11,053 [INFO] Stitching 5 chunk(s) → c:\Users\OVERLORD\Videos\VideoAutomation\video_workspace\audio\Back of the moon.mp3 [wav]
+2026-04-07 22:18:15,054 [ERROR] Pipeline failed: name 'pcm_chunks' is not defined

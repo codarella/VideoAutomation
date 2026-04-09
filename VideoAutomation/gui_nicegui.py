@@ -34,10 +34,14 @@ async def _pick_file(title: str = "Select file", filetypes: list = None,
         root = tk.Tk()
         root.withdraw()
         root.attributes('-topmost', True)
+        root.update()
+        root.lift()
+        root.focus_force()
         ft = filetypes or [("All files", "*.*")]
         path = filedialog.askopenfilename(
             title=title, filetypes=ft,
             initialdir=initial_dir or None,
+            parent=root,
         )
         root.destroy()
         return path or None
@@ -137,6 +141,10 @@ class GUIState:
         "start_from": "transcribe",
         "stop_after": "compile",
         "style": NICHE_LABELS[0],
+        "tts_mode": False,
+        "tts_voice": "en-US-Chirp-HD-D",
+        "tts_backend": "cloudtts",
+        "tts_gcp_project": "videoautomation-492323",
     }
 
     def __init__(self):
@@ -144,7 +152,7 @@ class GUIState:
         self._load()
 
     # Fields that should always be plain strings (select components)
-    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "openai_model", "start_from", "stop_after", "style"}
+    _select_fields = {"ai_model", "llm_provider", "llm_model", "claude_model", "openai_model", "start_from", "stop_after", "style", "tts_voice", "tts_backend"}
 
     def _load(self):
         if os.path.exists(STATE_FILE):
@@ -224,6 +232,11 @@ class AppState:
     find_dupes: bool = False
     dupe_threshold: str = "10"
     style: str = NICHE_LABELS[0]
+    tts_mode: bool = False
+    tts_voice: str = "Kore"
+    tts_backend: str = "cloudtts"
+    tts_gcp_project: str = "videoautomation-492323"
+    tts_emotional_prompt: str = ""  # runtime override; not persisted
 
 
 # ── CommandBuilder ────────────────────────────────────────────────────────────
@@ -253,11 +266,15 @@ def build_command(s: AppState) -> list[str]:
     if s.gemini_key.strip():
         cmd += ["--gemini-key", s.gemini_key.strip()]
 
+    # Always pass OpenAI key/model if set — used for scene splitting even when
+    # the prompt LLM provider is not OpenAI
+    if s.openai_key.strip():
+        cmd += ["--openai-key", s.openai_key.strip()]
+        cmd += ["--openai-model", s.openai_model]
+
     if s.use_llm:
         if s.llm_provider == "openai":
-            if s.openai_key.strip():
-                cmd += ["--openai-key", s.openai_key.strip()]
-            cmd += ["--openai-model", s.openai_model]
+            pass  # key/model already added above
         elif s.llm_provider == "claude":
             if s.anthropic_key.strip():
                 cmd += ["--anthropic-key", s.anthropic_key.strip()]
@@ -934,6 +951,16 @@ _regen_input = None   # shared reactive input in Settings + Gallery
 _log_tab = None       # tab reference for auto-switching to Log
 _prompts_reload = None  # closure to reload prompts editor on tab switch
 _gallery_tab = None   # tab reference for switching back to Gallery after single regen
+_prerecorded_col = None  # audio file row (hidden in TTS mode)
+_tts_card_el = None      # TTS settings card (hidden in pre-recorded mode)
+
+
+def _sync_audio_ui():
+    """Sync audio-related UI visibility with app_state.tts_mode."""
+    if _prerecorded_col is not None:
+        _prerecorded_col.set_visibility(not app_state.tts_mode)
+    if _tts_card_el is not None:
+        _tts_card_el.set_visibility(app_state.tts_mode)
 
 
 def _sel(args):
@@ -1086,6 +1113,7 @@ def _open_project(name: str):
 
     _selector_view.set_visibility(False)
     _project_view.set_visibility(True)
+    _sync_audio_ui()
     _refresh_gallery()
 
 
@@ -1093,6 +1121,8 @@ def _back_to_selector():
     gui_state["last_project"] = ""   # don't restore this session on reconnect
     app_state.audio_path = ""
     app_state.script_path = ""
+    app_state.tts_mode = False
+    _sync_audio_ui()
     _project_view.set_visibility(False)
     _selector_view.clear()
     _selector_view.set_visibility(True)
@@ -1227,8 +1257,18 @@ def _build_generate_tab():
     # ── Core ────────────────────────────────────────────────────────────────
     with ui.card().classes("w-full mb-3"):
         ui.label("Core").classes("text-subtitle1 font-semibold")
+
+        # Audio source toggle
+        audio_src_toggle = ui.toggle(
+            {False: "Pre-recorded audio", True: "Generate with TTS"},
+            value=app_state.tts_mode,
+        ).classes("mb-2")
+
         with ui.grid(columns=2).classes("w-full gap-2"):
-            with ui.column().classes("col-span-2"):
+            # Pre-recorded audio row (hidden in TTS mode)
+            with ui.column().classes("col-span-2") as prerecorded_col:
+                global _prerecorded_col
+                _prerecorded_col = prerecorded_col
                 with ui.row().classes("items-center gap-2 w-full"):
                     audio_inp = ui.input("Audio file path").classes("flex-1").bind_value(
                         app_state, "audio_path"
@@ -1255,6 +1295,13 @@ def _build_generate_tab():
                                 app_state.transcript_path = tx
                                 ui.notify(f"Auto-detected transcript: {os.path.basename(tx)}", type="positive")
                     ui.button(icon="folder_open", on_click=_pick_audio).props("flat round").tooltip("Browse for audio file")
+
+            audio_src_toggle.on("update:model-value", lambda e: (
+                setattr(app_state, "tts_mode", bool(e.args)),
+                gui_state.__setitem__("tts_mode", bool(e.args)),
+                _sync_audio_ui(),
+            ))
+            _sync_audio_ui()
 
             ui.label("Project Name (set by project selector)").classes("text-sm text-grey col-span-2")
 
@@ -1373,7 +1420,7 @@ def _build_generate_tab():
     # ── Gemini API Key (for LLM scene splitting) ──────────────────────────────
     with ui.card().classes("w-full mb-3"):
         ui.label("Gemini API Key").classes("text-subtitle1 font-semibold")
-        ui.label("For LLM-based scene splitting (free tier available)").classes("text-xs text-grey")
+        ui.label("For LLM-based scene splitting. OpenAI key (below) is used as fallback.").classes("text-xs text-grey")
         with ui.row().classes("items-center gap-2 w-full"):
             gk_inp = ui.input("Gemini API Key", password=True).classes("flex-1")
             gk_inp.bind_value(app_state, "gemini_key")
@@ -1409,6 +1456,176 @@ def _build_generate_tab():
                     if app_state.project_name:
                         gui_state.set_project_path(app_state.project_name, "script_path", path)
             ui.button(icon="folder_open", on_click=_pick_script).props("flat round").tooltip("Browse for script file")
+
+    # ── Text-to-Speech (visible only in TTS mode) ─────────────────────────────
+    with ui.card().classes("w-full mb-3") as tts_card:
+        global _tts_card_el
+        _tts_card_el = tts_card
+        ui.label("Text-to-Speech").classes("text-subtitle1 font-semibold")
+        ui.label("Generates audio from the script above using Gemini 2.5 Flash TTS."
+                 ).classes("text-xs text-grey mb-2")
+
+        # Backend toggle
+        backend_toggle = ui.toggle(
+            {"cloudtts": "Cloud TTS (1M free/mo)", "aistudio": "AI Studio", "vertex": "Vertex AI ($300 credits)"},
+            value=app_state.tts_backend,
+        ).classes("mb-2")
+        def _on_backend_change(e):
+            # Toggle with dict options returns the key directly
+            val = e.args
+            if isinstance(val, list):
+                val = val[0] if val else "cloudtts"
+            if isinstance(val, dict):
+                val = val.get("value", val.get("label", "cloudtts"))
+            val = str(val)
+            setattr(app_state, "tts_backend", val)
+            gui_state.__setitem__("tts_backend", val)
+            _update_backend_fields()
+
+        backend_toggle.on("update:model-value", _on_backend_change)
+
+        # GCP project field (Vertex only)
+        with ui.row().classes("items-center gap-2 w-full mb-2") as gcp_row:
+            ui.label("GCP Project ID:").classes("text-sm")
+            gcp_inp = ui.input(
+                placeholder="your-gcp-project-id",
+                value=app_state.tts_gcp_project,
+            ).classes("flex-1")
+            gcp_inp.on("update:model-value", lambda e: (
+                setattr(app_state, "tts_gcp_project", e.args or ""),
+                gui_state.__setitem__("tts_gcp_project", e.args or ""),
+            ))
+        ui.label(
+            "Ensure gcloud auth application-default login has been run once."
+        ).classes("text-xs text-grey mb-2") .bind_visibility_from(gcp_row, "visible")
+
+        def _update_backend_fields():
+            needs_gcp = app_state.tts_backend in ("vertex", "cloudtts")
+            gcp_row.set_visibility(needs_gcp)
+
+        _update_backend_fields()
+
+        with ui.row().classes("items-center gap-4 flex-wrap"):
+            # Voice selector — list loaded from tts_config.json at runtime
+            def _tts_voices() -> list[str]:
+                try:
+                    import json as _json
+                    _cfg = Path(__file__).parent / "tts_config.json"
+                    with open(_cfg, encoding="utf-8") as _f:
+                        data = _json.load(_f)
+                    if app_state.tts_backend == "cloudtts":
+                        return data.get("cloudtts_voices", ["en-US-Chirp-HD-D"])
+                    return data.get("voices", ["Kore"])
+                except Exception:
+                    if app_state.tts_backend == "cloudtts":
+                        return ["en-US-Chirp-HD-D", "en-US-Chirp-HD-F", "en-US-Chirp-HD-O"]
+                    return ["Kore", "Charon", "Fenrir", "Puck", "Aoede", "Leda", "Orus", "Zephyr"]
+
+            _voice_list = _tts_voices()
+            _voice_default = app_state.tts_voice if app_state.tts_voice in _voice_list else _voice_list[0]
+            if _voice_default != app_state.tts_voice:
+                app_state.tts_voice = _voice_default
+            voice_sel = ui.select(
+                _voice_list, label="Voice",
+                value=_voice_default,
+            ).classes("w-40")
+            voice_sel.on("update:model-value", lambda e: (
+                setattr(app_state, "tts_voice", _sel(e.args)),
+                gui_state.__setitem__("tts_voice", _sel(e.args)),
+            ))
+
+        # Emotional prompt textarea — pre-filled from style preset
+        def _default_tts_prompt() -> str:
+            try:
+                import json as _json
+                _cfg = Path(__file__).parent / "tts_config.json"
+                with open(_cfg, encoding="utf-8") as _f:
+                    data = _json.load(_f)
+                style_key = NICHE_MAP.get(app_state.style, "history")
+                return data.get("style_prompts", {}).get(style_key, "")
+            except Exception:
+                return ""
+
+        ui.label("Emotional Prompt").classes("text-sm font-semibold mt-2")
+        ui.label("Leave blank to use the style preset from Settings. Override here for this run only."
+                 ).classes("text-xs text-grey")
+        tts_prompt_area = ui.textarea(
+            value=app_state.tts_emotional_prompt or _default_tts_prompt(),
+            placeholder="e.g. Speak like a professional documentary narrator...",
+        ).props("outlined autogrow").classes("w-full mt-1")
+        tts_prompt_area.on("update:model-value", lambda e: setattr(
+            app_state, "tts_emotional_prompt", e.args or ""
+        ))
+
+        tts_status_label = ui.label("").classes("text-sm text-grey mt-1")
+
+        async def _generate_tts():
+            if not app_state.script_path or not os.path.exists(app_state.script_path):
+                ui.notify("Script file not found — set it in Script File above", type="negative")
+                return
+            if app_state.tts_backend == "aistudio" and not app_state.gemini_key.strip():
+                ui.notify("Gemini API key required (set it in the Gemini API Key card above)", type="negative")
+                return
+            if not app_state.project_name:
+                ui.notify("No project selected", type="negative")
+                return
+
+            tts_status_label.set_text("Generating audio...")
+            tts_generate_btn.props("disabled")
+            try:
+                style_key = NICHE_MAP.get(app_state.style, "history")
+                cmd = [
+                    PYTHON, "-X", "utf8", "-u",
+                    str(Path(__file__).parent / "tts_pipeline.py"),
+                    "--script",       app_state.script_path,
+                    "--project-name", app_state.project_name,
+                    "--workspace",    app_state.workspace,
+                    "--backend",      app_state.tts_backend,
+                    "--voice",        app_state.tts_voice,
+                    "--style",        style_key,
+                ]
+                if app_state.tts_backend == "vertex":
+                    if app_state.tts_gcp_project.strip():
+                        cmd += ["--gcp-project", app_state.tts_gcp_project.strip()]
+                else:
+                    if app_state.gemini_key.strip():
+                        cmd += ["--gemini-key", app_state.gemini_key.strip()]
+                prompt_override = tts_prompt_area.value.strip()
+                if prompt_override:
+                    cmd += ["--emotional-prompt", prompt_override]
+
+                if _log_el:
+                    _log_el.push(f"[TTS] {' '.join(cmd)}\n")
+
+                await proc.start(cmd)
+
+                # Auto-fill audio_path from expected output location
+                ext = "mp3"
+                expected = os.path.join(
+                    app_state.workspace, "audio",
+                    f"{app_state.project_name}.{ext}"
+                )
+                if os.path.exists(expected):
+                    app_state.audio_path = expected
+                    audio_inp.value = expected
+                    gui_state.set_project_path(app_state.project_name, "audio_path", expected)
+                    tts_status_label.set_text(f"Done — {os.path.basename(expected)}")
+                    ui.notify("Audio generated successfully", type="positive")
+                else:
+                    tts_status_label.set_text("Done (check log for output path)")
+            except Exception as exc:
+                tts_status_label.set_text(f"Error: {exc}")
+                ui.notify(str(exc), type="negative")
+            finally:
+                tts_generate_btn.props(remove="disabled")
+
+        tts_generate_btn = ui.button(
+            "Generate Audio", icon="record_voice_over", color="primary",
+            on_click=_generate_tts,
+        ).classes("mt-2")
+
+    # Initial TTS card visibility (prerecorded_col already handled above)
+    _sync_audio_ui()
 
     # ── Pipeline Control ──────────────────────────────────────────────────────
     with ui.card().classes("w-full mb-3"):
@@ -2047,6 +2264,8 @@ async def _regen_scene_now(snum: int):
         from video_automation.generate.ai33 import resolve_model
         model = resolve_model(app_state.ai_model)
         base_url = "https://api.ai33.pro"
+        _GEMINI_RESOLUTION_MAP = {"1080p": "1K", "720p": "1K"}
+        regen_resolution = _GEMINI_RESOLUTION_MAP.get("1080p", "1080p") if model.startswith("gemini-") else "1080p"
         session = _req.Session()
         session.headers.update({"xi-api-key": api_key})
 
@@ -2060,7 +2279,7 @@ async def _regen_scene_now(snum: int):
             "generations_count": "1",
             "model_parameters": json.dumps({
                 "aspect_ratio": "16:9",
-                "resolution": "1080p",
+                "resolution": regen_resolution,
             }),
         }
 
@@ -3206,6 +3425,60 @@ def _build_settings_tab():
             await proc.start(cmd)
         ui.button("Recompile Video", icon="movie", color="secondary",
                   on_click=_recompile)
+
+    # ── TTS Style Prompts ─────────────────────────────────────────────────────
+    with ui.card().classes("w-full mb-3 mt-4"):
+        ui.label("TTS Style Prompts").classes("text-subtitle1 font-semibold")
+        ui.label(
+            "Edit the emotional tone prompt used for each niche. "
+            "Saved to tts_config.json — takes effect on the next TTS run."
+        ).classes("text-xs text-grey mb-2")
+
+        _tts_cfg_path = Path(__file__).parent / "tts_config.json"
+
+        def _load_tts_style_prompts() -> dict[str, str]:
+            try:
+                import json as _json
+                with open(_tts_cfg_path, encoding="utf-8") as _f:
+                    return _json.load(_f).get("style_prompts", {})
+            except Exception:
+                return {}
+
+        style_prompt_inputs: dict[str, object] = {}
+        prompts_data = _load_tts_style_prompts()
+
+        for niche_key, niche_label in NICHES:
+            ui.label(niche_label).classes("text-sm font-semibold mt-2")
+            ta = ui.textarea(
+                value=prompts_data.get(niche_key, ""),
+                placeholder=f"Emotional prompt for {niche_label}...",
+            ).props("outlined autogrow").classes("w-full")
+            style_prompt_inputs[niche_key] = ta
+
+        def _save_tts_style_prompts():
+            import json as _json
+            updated = {k: style_prompt_inputs[k].value for k in style_prompt_inputs}
+            try:
+                if _tts_cfg_path.exists():
+                    with open(_tts_cfg_path, encoding="utf-8") as _f:
+                        raw = _json.load(_f)
+                else:
+                    raw = {}
+                raw["style_prompts"] = updated
+                with open(_tts_cfg_path, "w", encoding="utf-8") as _f:
+                    _json.dump(raw, _f, indent=2, ensure_ascii=False)
+                # Invalidate config singleton so next pipeline run picks up changes
+                try:
+                    from tts_config import TTSConfig
+                    TTSConfig.reload()
+                except Exception:
+                    pass
+                ui.notify("TTS style prompts saved", type="positive")
+            except Exception as exc:
+                ui.notify(f"Save failed: {exc}", type="negative")
+
+        ui.button("Save Style Prompts", icon="save", color="primary",
+                  on_click=_save_tts_style_prompts).classes("mt-2")
 
 
 # ── LOG TAB ───────────────────────────────────────────────────────────────────

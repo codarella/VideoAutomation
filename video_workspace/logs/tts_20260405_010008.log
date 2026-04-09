@@ -1,0 +1,20 @@
+2026-04-05 01:00:08,301 [INFO] === TTS Pipeline starting ===
+2026-04-05 01:00:08,302 [INFO] Backend : vertex
+2026-04-05 01:00:08,302 [INFO] Project : Animal Niche One Test
+2026-04-05 01:00:08,303 [INFO] Voice   : Puck
+2026-04-05 01:00:08,303 [INFO] Style   : 2d_western_cartoon
+2026-04-05 01:00:08,303 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-05 01:00:08,303 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-05 01:00:08,303 [INFO] GCP     : videoautomation-492323 / us-central1
+2026-04-05 01:00:08,304 [INFO] Split into 1 chunk(s)
+2026-04-05 01:00:08,304 [INFO] [1/1] Synthesizing: Right, let's do this. Number ten. The original affluent soci...
+2026-04-05 01:00:11,365 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 01:00:12,794 [WARNING] No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+2026-04-05 01:01:10,206 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/videoautomation-492323/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 200 OK"
+2026-04-05 01:01:14,610 [INFO] [1/1] OK — 4093966 bytes
+2026-04-05 01:01:14,616 [INFO] Stitching 1 chunk(s) → C:\Users\OVERLORD\Videos\VideoAutomation\video_workspace\audio\Animal Niche One Test.mp3
+2026-04-05 01:01:15,186 [INFO] Stitched 1 chunk(s) → Animal Niche One Test.mp3 (85.3s, mp3)
+2026-04-05 01:01:15,186 [INFO] Output: C:\Users\OVERLORD\Videos\VideoAutomation\video_workspace\audio\Animal Niche One Test.mp3 (85.3s)
+2026-04-05 01:01:15,244 [INFO] Updated audio_path in Animal Niche One Test_project.json
+2026-04-05 01:01:15,249 [INFO] Metadata: C:\Users\OVERLORD\Videos\VideoAutomation\video_workspace\scripts\Animal Niche One Test_tts_meta.json
+2026-04-05 01:01:15,250 [INFO] === Done — estimated cost: $0.0215 (input $0.0002 + audio $0.0213) ===

@@ -1,0 +1,22 @@
+2026-04-05 00:57:19,135 [INFO] === TTS Pipeline starting ===
+2026-04-05 00:57:19,135 [INFO] Backend : vertex
+2026-04-05 00:57:19,135 [INFO] Project : Animal Niche One Test
+2026-04-05 00:57:19,136 [INFO] Voice   : Puck
+2026-04-05 00:57:19,136 [INFO] Style   : 2d_western_cartoon
+2026-04-05 00:57:19,136 [INFO] Model   : gemini-2.5-flash-preview-tts
+2026-04-05 00:57:19,136 [INFO] Prompt  : Speak with energetic curiosity and wonder, like a science communicator explainin...
+2026-04-05 00:57:19,136 [INFO] GCP     : videoautomation-492323 / us-central1
+2026-04-05 00:57:19,136 [INFO] Split into 1 chunk(s)
+2026-04-05 00:57:19,137 [INFO] [1/1] Synthesizing: Right, let's do this. Number ten. The original affluent soci...
+2026-04-05 00:57:21,430 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 00:57:23,430 [WARNING] No project ID could be determined. Consider running `gcloud config set project` or setting the GOOGLE_CLOUD_PROJECT environment variable
+2026-04-05 00:57:26,335 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/videoautomation-492323/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 400 Bad Request"
+2026-04-05 00:57:26,336 [WARNING] TTS (Vertex) attempt 1 failed (400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Request contains an invalid argument.', 'status': 'INVALID_ARGUMENT'}}). Retrying in 2s...
+2026-04-05 00:57:28,350 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 00:57:28,991 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/videoautomation-492323/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 400 Bad Request"
+2026-04-05 00:57:28,993 [WARNING] TTS (Vertex) attempt 2 failed (400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Request contains an invalid argument.', 'status': 'INVALID_ARGUMENT'}}). Retrying in 4s...
+2026-04-05 00:57:33,007 [INFO] AFC is enabled with max remote calls: 10.
+2026-04-05 00:57:33,941 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/videoautomation-492323/locations/us-central1/publishers/google/models/gemini-2.5-flash-preview-tts:generateContent "HTTP/1.1 400 Bad Request"
+2026-04-05 00:57:33,942 [ERROR] TTS (Vertex) failed after 3 attempts: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Request contains an invalid argument.', 'status': 'INVALID_ARGUMENT'}}
+2026-04-05 00:57:33,943 [ERROR] [1/1] SKIPPED after all retries: All 3 Vertex TTS attempts failed
+2026-04-05 00:57:33,943 [ERROR] Pipeline failed: All TTS chunks failed — no audio generated

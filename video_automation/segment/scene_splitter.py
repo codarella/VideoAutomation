@@ -48,11 +48,15 @@ class SceneSplitter:
     """
 
     def __init__(self, pacing: PacingProfile, character_rate: float = 0.20,
-                 gemini_api_key: str = ""):
+                 gemini_api_key: str = "", openai_api_key: str = "",
+                 openai_model: str = "gpt-4.1"):
         self.pacing = pacing
         self.character_rate = character_rate
         self.gemini_api_key = gemini_api_key
+        self.openai_api_key = openai_api_key
+        self.openai_model = openai_model
         self._gemini_model = None
+        self._openai_client = None
 
     def split_all(
         self,
@@ -139,14 +143,24 @@ class SceneSplitter:
             return scenes
 
         # Try LLM splitting, fall back to time-based
-        used_gemini = False
+        # Priority: Gemini → OpenAI → time-based
+        split_method = "time_based"
+        content_scenes = None
+
         if self.gemini_api_key:
             content_scenes = self._split_content_llm(seg, remaining_words)
-            if content_scenes is None:
-                content_scenes = self._split_content_time(seg, remaining_words)
-            else:
-                used_gemini = True
-        else:
+            if content_scenes is not None:
+                split_method = "gemini"
+            elif self.openai_api_key:
+                content_scenes = self._split_content_openai(seg, remaining_words)
+                if content_scenes is not None:
+                    split_method = "openai"
+        elif self.openai_api_key:
+            content_scenes = self._split_content_openai(seg, remaining_words)
+            if content_scenes is not None:
+                split_method = "openai"
+
+        if content_scenes is None:
             content_scenes = self._split_content_time(seg, remaining_words)
 
         # Build Scene objects from word groups
@@ -170,7 +184,7 @@ class SceneSplitter:
                 metadata={
                     "segment_number": seg.number,
                     "segment_title": seg.title,
-                    "split_method": "gemini" if used_gemini else "time_based",
+                    "split_method": split_method,
                 },
             )
             scenes.append(scene)
@@ -267,6 +281,89 @@ class SceneSplitter:
         word_groups = self._enforce_guardrails(word_groups)
 
         print(f"   Segment {seg.number}: Gemini split into {len(word_groups)} scenes")
+        return word_groups
+
+    # ── OpenAI-based splitting ────────────────────────────────────────────
+
+    def _get_openai_client(self):
+        """Lazy-init the OpenAI client."""
+        if self._openai_client is not None:
+            return self._openai_client
+
+        try:
+            from openai import OpenAI
+        except ImportError:
+            print("   WARNING: openai not installed. Run: pip install openai")
+            return None
+
+        self._openai_client = OpenAI(api_key=self.openai_api_key)
+        return self._openai_client
+
+    def _split_content_openai(
+        self, seg: AlignedSegment, remaining_words: list[Word]
+    ) -> list[list[Word]] | None:
+        """
+        Use OpenAI to split the segment text into semantic scenes.
+        Returns list of word groups, or None on failure (triggers fallback).
+        """
+        client = self._get_openai_client()
+        if client is None:
+            return None
+
+        segment_text = " ".join(w.text for w in remaining_words)
+        prompt = SCENE_SPLIT_PROMPT.format(segment_text=segment_text)
+
+        try:
+            response = client.chat.completions.create(
+                model=self.openai_model,
+                messages=[{"role": "user", "content": prompt}],
+                response_format={"type": "json_object"},
+                temperature=0.2,
+            )
+            raw = response.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"   WARNING: OpenAI API error for segment {seg.number}: {e}")
+            return None
+
+        # Unwrap {"scenes": [...]} if the model wraps it in an object
+        try:
+            if raw.startswith("```"):
+                raw = re.sub(r"^```(?:json)?\s*", "", raw)
+                raw = re.sub(r"\s*```$", "", raw)
+            parsed = json.loads(raw)
+            if isinstance(parsed, dict):
+                # Extract the list from common wrapper keys
+                for key in ("scenes", "chunks", "segments", "result"):
+                    if key in parsed and isinstance(parsed[key], list):
+                        parsed = parsed[key]
+                        break
+                else:
+                    # Take the first list value found
+                    for v in parsed.values():
+                        if isinstance(v, list):
+                            parsed = v
+                            break
+            chunks = parsed
+        except json.JSONDecodeError as e:
+            print(f"   WARNING: OpenAI returned invalid JSON for segment {seg.number}: {e}")
+            return None
+
+        if not isinstance(chunks, list) or not all(isinstance(c, str) for c in chunks):
+            print(f"   WARNING: OpenAI returned unexpected format for segment {seg.number}")
+            return None
+
+        if len(chunks) < 1:
+            print(f"   WARNING: OpenAI returned empty scene list for segment {seg.number}")
+            return None
+
+        word_groups = self._map_chunks_to_words(chunks, remaining_words)
+        if word_groups is None:
+            print(f"   WARNING: Could not map OpenAI chunks to words for segment {seg.number}")
+            return None
+
+        word_groups = self._enforce_guardrails(word_groups)
+
+        print(f"   Segment {seg.number}: OpenAI split into {len(word_groups)} scenes")
         return word_groups
 
     def _map_chunks_to_words(

@@ -243,18 +243,20 @@ class SceneStage(Stage):
             pacing=self.config.pacing,
             character_rate=self.config.character_rate,
             gemini_api_key=self.config.gemini_api_key,
+            openai_api_key=self.config.openai_api_key,
+            openai_model=self.config.openai_model,
         )
 
-        # Detect which segment numbers were already split by Gemini
+        # Detect which segment numbers were already split by LLM (Gemini or OpenAI)
         already_split = set()
         for s in project.scenes:
             if s.type == "content":
                 meta_num = s.metadata.get("segment_number")
-                if meta_num is not None and s.metadata.get("split_method") == "gemini":
+                if meta_num is not None and s.metadata.get("split_method") in ("gemini", "openai"):
                     already_split.add(meta_num)
 
         if already_split:
-            print(f"   Skipping segments already split by Gemini: {sorted(already_split, reverse=True)}")
+            print(f"   Skipping segments already split by LLM: {sorted(already_split, reverse=True)}")
 
         segments_to_split = [seg for seg in aligned if seg.number not in already_split]
         resplit_nums = {seg.number for seg in segments_to_split}
